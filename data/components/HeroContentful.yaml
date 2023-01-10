@@ -1,6 +1,6 @@
 id: HeroContentful
 name: Hero Contentful
-icon: components
+icon: format-heading
 parameters:
   - id: Entry
     name: Contentful Entry
@@ -16,5 +16,5 @@ parameters:
 useTeamPermissions: true
 slots: []
 canBeComposition: false
-created: '2022-12-28T17:04:01.215122+00:00'
-updated: '2023-01-10T12:49:37.988954+00:00'
+created: '2023-01-10T16:49:47.044933+00:00'
+updated: '2023-01-10T17:14:10.605877+00:00'
