@@ -42,5 +42,5 @@ slugSettings:
   regularExpression: ^[^/\\#?-]([A-Za-z0-9\-\ ]+)
   regularExpressionMessage: No forward slash in beginning of Slug
 canBeComposition: true
-created: '2022-12-28T17:04:01.183834+00:00'
-updated: '2023-01-10T12:49:38.700875+00:00'
+created: '2023-01-10T16:49:48.126868+00:00'
+updated: '2023-01-10T16:49:48.126868+00:00'
