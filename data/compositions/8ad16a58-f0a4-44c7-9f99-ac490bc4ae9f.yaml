@@ -1,0 +1,197 @@
+composition:
+  _name: Home
+  _id: 8ad16a58-f0a4-44c7-9f99-ac490bc4ae9f
+  _slug: home
+  type: Page
+  parameters: {}
+  slots:
+    Footer:
+      - type: Footer
+    Header:
+      - type: Header
+    Content:
+      - type: $personalization
+        slots:
+          pz:
+            - type: HeroContentful
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: callForPapersCampaign
+                        r: 0
+                        op: '>'
+                    name: pz-hero-marketer
+                Entry:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 5VwTiQVfimLm1iQNaNG9Mu
+            - type: HeroContentful
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: '1_2'
+                        r: 0
+                        op: '>'
+                    name: pz-hero-marketer
+                Entry:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 7oDALbrtFTBzBPVX1qbvF8
+            - type: HeroContentful
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: '1_1'
+                        r: 0
+                        op: '>'
+                    name: pz-hero-developer
+                Entry:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 7EQvlYWfqu0s2y92BqEEJV
+            - type: HeroContentful
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit: []
+                    name: pz-hero-default
+                Entry:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 4CHJuBQLA1jI9ntIFkGHVe
+        parameters:
+          trackingEventName:
+            type: text
+            value: P13N Hero
+      - type: $personalization
+        slots:
+          pz:
+            - type: TalkList
+              slots:
+                Talks:
+                  - type: Talk
+                    parameters:
+                      Entry:
+                        type: contentfulEntry
+                        value:
+                          source: default
+                          entryId: 6oHJVoV4O7nLJG8bjoVcoZ
+                  - type: Talk
+                    parameters:
+                      Entry:
+                        type: contentfulEntry
+                        value:
+                          source: default
+                          entryId: 3IwIot1CNI1uT9MBRqIuvX
+                  - type: Talk
+                    parameters:
+                      Entry:
+                        type: contentfulEntry
+                        value:
+                          source: default
+                          entryId: pkZcUE4SpYHTO1RtvyBxR
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: '1_2'
+                        r: 0
+                        op: '>'
+                    name: pz-talklist-mrkt
+                Entry:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 2JOufkNkure7kRO9TDJoif
+            - type: TalkList
+              slots:
+                Talks:
+                  - type: Talk
+                    parameters:
+                      Entry:
+                        type: contentfulEntry
+                        value:
+                          source: default
+                          entryId: 4vxlCGkZuxFQYComTccjrU
+                  - type: Talk
+                    parameters:
+                      Entry:
+                        type: contentfulEntry
+                        value:
+                          source: default
+                          entryId: 3qTWWoreFUvRPHndh3YcqY
+                  - type: Talk
+                    parameters:
+                      Entry:
+                        type: contentfulEntry
+                        value:
+                          source: default
+                          entryId: 4eiVl7wuASXnHDBavMvyJr
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: '1_1'
+                        r: 0
+                        op: '>'
+                    name: pz-talklist-dev
+                Entry:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 2JOufkNkure7kRO9TDJoif
+            - type: TalkList
+              slots:
+                Talks:
+                  - type: Talk
+                    parameters:
+                      Entry:
+                        type: contentfulEntry
+                        value:
+                          source: default
+                          entryId: 4vxlCGkZuxFQYComTccjrU
+                  - type: Talk
+                    parameters:
+                      Entry:
+                        type: contentfulEntry
+                        value:
+                          source: default
+                          entryId: 7IxWILLYiArU26r2UqtnaI
+                  - type: Talk
+                    parameters:
+                      Entry:
+                        type: contentfulEntry
+                        value:
+                          source: default
+                          entryId: 4eiVl7wuASXnHDBavMvyJr
+              parameters:
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit: []
+                    name: pz-talklist-default
+                Entry:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 2JOufkNkure7kRO9TDJoif
+        parameters:
+          trackingEventName:
+            type: text
+            value: P13N Talks
+created: '2022-12-28T17:55:05.662552+00:00'
+modified: '2023-01-10T12:49:41.400428+00:00'
+pattern: false

@@ -1,0 +1,28 @@
+composition:
+  _name: Developers
+  _id: 835d59f0-5afd-40de-98c2-63bd45a8f153
+  _slug: developers
+  type: Page
+  parameters:
+    $enr:
+      type: $enr
+      value:
+        - cat: '1'
+          key: '1'
+          str: 100
+  slots:
+    Footer:
+      - type: Footer
+    Header:
+      - type: Header
+    Content:
+      - type: HeroContentful
+        parameters:
+          Entry:
+            type: contentfulEntry
+            value:
+              source: default
+              entryId: 2viemq4DCI47ZfC7IybE9a
+created: '2022-12-28T18:16:26.59007+00:00'
+modified: '2023-01-10T12:49:40.377894+00:00'
+pattern: false

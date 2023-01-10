@@ -1,0 +1,20 @@
+id: RegistrationForm
+name: Registration Form
+icon: format-indent-increase
+parameters:
+  - id: Entry
+    name: Contentful Entry
+    type: contentfulEntry
+    helpText: ''
+    typeConfig:
+      source: default
+      required: true
+      allowedContentTypes:
+        RegistrationForm:
+          id: RegistrationForm
+          name: RegistrationForm
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2022-12-28T17:04:00.380866+00:00'
+updated: '2023-01-10T12:49:38.937327+00:00'

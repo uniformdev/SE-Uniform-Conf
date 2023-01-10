@@ -1,0 +1,5 @@
+{
+  // IMPORTANT: if you are not using stackblitz (where SWC is not yet supported) you can remove this
+  // file to enable Next's SWC compiler.
+  "presets": ["next/babel"]
+}
