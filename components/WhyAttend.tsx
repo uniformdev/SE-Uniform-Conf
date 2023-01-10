@@ -18,17 +18,20 @@ export type WhyAttendProps = {
       height?: number;
     }
   },
-  variant: string;
+  component: {
+    variant: string;
+  }
 };
 
 export function WhyAttend(props : WhyAttendProps) {
+
   return (
     <section className="bg-white border-b py-8">
       <div
         className="container mx-auto flex flex-wrap pt-4 pb-12"
         style={{
           flexDirection:
-            props.variant === "imageAlignmentLeft" ? "row" : "row-reverse",
+            props.component?.variant === "whyattendleft" ? "row" : "row-reverse",
         }}
       >
         {props?.Entry?.image ? (
