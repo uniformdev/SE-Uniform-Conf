@@ -1,0 +1,3943 @@
+{
+  "contentTypes": [
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "cta",
+        "type": "ContentType",
+        "createdAt": "2023-01-10T13:50:19.618Z",
+        "updatedAt": "2023-01-10T13:50:20.407Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:20.407Z",
+        "firstPublishedAt": "2023-01-10T13:50:20.407Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        }
+      },
+      "displayField": "heading",
+      "name": "Call To Action",
+      "description": "",
+      "fields": [
+        {
+          "id": "heading",
+          "name": "Heading",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "subheading",
+          "name": "Subheading",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "buttonLink",
+          "name": "Button Link",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "regexp": {
+                "pattern": "^(http|https):\\/\\/(\\w+:{0,1}\\w*@)?(\\S+)(:[0-9]+)?(\\/|\\/([\\w#!:.?+=&%@!\\-/]))?$",
+                "flags": null
+              },
+              "message": "Doesn't look like a URL"
+            }
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "buttonText",
+          "name": "Button Text",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "buttonImage",
+          "name": "Button Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "hero",
+        "type": "ContentType",
+        "createdAt": "2023-01-10T13:50:19.645Z",
+        "updatedAt": "2023-01-10T13:50:22.127Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:22.127Z",
+        "firstPublishedAt": "2023-01-10T13:50:22.127Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Hero",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "buttonText",
+          "name": "Button Text",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "buttonLinkSlug",
+          "name": "Button Link Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "whyAttend",
+        "type": "ContentType",
+        "createdAt": "2023-01-10T13:50:19.648Z",
+        "updatedAt": "2023-01-10T13:50:21.485Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:21.485Z",
+        "firstPublishedAt": "2023-01-10T13:50:21.485Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Why Attend",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "Text",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "Link",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "linkMimetypeGroup": [
+                "image"
+              ]
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "linkType": "Asset"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "registrationForm",
+        "type": "ContentType",
+        "createdAt": "2023-01-10T13:50:19.679Z",
+        "updatedAt": "2023-01-10T13:50:20.774Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:20.774Z",
+        "firstPublishedAt": "2023-01-10T13:50:20.774Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        }
+      },
+      "displayField": "heading",
+      "name": "RegistrationForm",
+      "description": "",
+      "fields": [
+        {
+          "id": "heading",
+          "name": "Heading",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "buttonText",
+          "name": "ButtonText",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "registeredText",
+          "name": "Registered Text",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "homeLinkText",
+          "name": "Home Link Text",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "success",
+          "name": "Success",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "product",
+        "type": "ContentType",
+        "createdAt": "2023-01-10T13:50:20.012Z",
+        "updatedAt": "2023-01-10T13:50:23.133Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:23.133Z",
+        "firstPublishedAt": "2023-01-10T13:50:23.133Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Product",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": false,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "talk",
+        "type": "ContentType",
+        "createdAt": "2023-01-10T13:50:20.127Z",
+        "updatedAt": "2023-01-10T13:50:22.496Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:22.496Z",
+        "firstPublishedAt": "2023-01-10T13:50:22.496Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Talk",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "audience",
+          "name": "Audience",
+          "type": "Array",
+          "localized": false,
+          "required": false,
+          "validations": [
+            {
+              "size": {
+                "min": null,
+                "max": 1
+              }
+            }
+          ],
+          "disabled": false,
+          "omitted": false,
+          "items": {
+            "type": "Symbol",
+            "validations": [
+              {
+                "in": [
+                  "Developers",
+                  "Marketers"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "intro",
+          "name": "Intro",
+          "type": "Text",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    },
+    {
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "talkList",
+        "type": "ContentType",
+        "createdAt": "2023-01-10T13:50:20.157Z",
+        "updatedAt": "2023-01-10T13:50:22.821Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:22.821Z",
+        "firstPublishedAt": "2023-01-10T13:50:22.821Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        }
+      },
+      "displayField": "title",
+      "name": "Talk List",
+      "description": "",
+      "fields": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "Symbol",
+          "localized": true,
+          "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        }
+      ]
+    }
+  ],
+  "tags": [
+  ],
+  "editorInterfaces": [
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "siy7a16chotr",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-01-10T13:50:20.543Z",
+        "createdBy": {
+          "sys": {
+            "id": "3CYK5AqtUQsHiTCblzpoYQ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-01-10T13:50:24.955Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3CYK5AqtUQsHiTCblzpoYQ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "cta",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "heading",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "subheading",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "buttonLink",
+          "widgetId": "urlEditor",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "buttonText",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "buttonImage",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "siy7a16chotr",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-01-10T13:50:22.263Z",
+        "createdBy": {
+          "sys": {
+            "id": "3CYK5AqtUQsHiTCblzpoYQ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-01-10T13:50:24.226Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3CYK5AqtUQsHiTCblzpoYQ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "hero",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "buttonText",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "buttonLinkSlug",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "siy7a16chotr",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-01-10T13:50:21.574Z",
+        "createdBy": {
+          "sys": {
+            "id": "3CYK5AqtUQsHiTCblzpoYQ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-01-10T13:50:25.779Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3CYK5AqtUQsHiTCblzpoYQ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "whyAttend",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "description",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "image",
+          "widgetId": "assetLinkEditor",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "siy7a16chotr",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-01-10T13:50:20.894Z",
+        "createdBy": {
+          "sys": {
+            "id": "3CYK5AqtUQsHiTCblzpoYQ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-01-10T13:50:23.960Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3CYK5AqtUQsHiTCblzpoYQ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "registrationForm",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "heading",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "buttonText",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "registeredText",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "homeLinkText",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "success",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "siy7a16chotr",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-01-10T13:50:23.227Z",
+        "createdBy": {
+          "sys": {
+            "id": "3CYK5AqtUQsHiTCblzpoYQ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-01-10T13:50:25.823Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3CYK5AqtUQsHiTCblzpoYQ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "product",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "siy7a16chotr",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-01-10T13:50:22.587Z",
+        "createdBy": {
+          "sys": {
+            "id": "3CYK5AqtUQsHiTCblzpoYQ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-01-10T13:50:24.951Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3CYK5AqtUQsHiTCblzpoYQ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "talk",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "audience",
+          "widgetId": "checkbox",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "intro",
+          "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    },
+    {
+      "sys": {
+        "id": "default",
+        "type": "EditorInterface",
+        "space": {
+          "sys": {
+            "id": "siy7a16chotr",
+            "type": "Link",
+            "linkType": "Space"
+          }
+        },
+        "version": 2,
+        "createdAt": "2023-01-10T13:50:22.892Z",
+        "createdBy": {
+          "sys": {
+            "id": "3CYK5AqtUQsHiTCblzpoYQ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "updatedAt": "2023-01-10T13:50:24.937Z",
+        "updatedBy": {
+          "sys": {
+            "id": "3CYK5AqtUQsHiTCblzpoYQ",
+            "type": "Link",
+            "linkType": "User"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "id": "talkList",
+            "type": "Link",
+            "linkType": "ContentType"
+          }
+        },
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        }
+      },
+      "controls": [
+        {
+          "fieldId": "title",
+          "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        }
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "7oDALbrtFTBzBPVX1qbvF8",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:52.262Z",
+        "updatedAt": "2023-01-10T13:50:57.143Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:57.143Z",
+        "firstPublishedAt": "2023-01-10T13:50:57.143Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "hero"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Howdy, marketer! ",
+          "nl-NL": "Hey daar, marketeer!"
+        },
+        "description": {
+          "en-US": "Your behavior interest indicates that you may be a marketer. That's why you are seeing this.",
+          "nl-NL": "Uw gedragsinteresse geeft aan dat u mogelijk een marketeer bent. Daarom zie je dit."
+        },
+        "buttonText": {
+          "en-US": "Register now",
+          "nl-NL": "Registreer nu"
+        },
+        "buttonLinkSlug": {
+          "en-US": "/registration"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2HquYLn9LDf6yqxmQ2525o"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "2viemq4DCI47ZfC7IybE9a",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:52.281Z",
+        "updatedAt": "2023-01-10T13:50:56.047Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:56.047Z",
+        "firstPublishedAt": "2023-01-10T13:50:56.047Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "hero"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Ok, you are more of a developer now ✅",
+          "nl-NL": "Oké, je bent nu meer een ontwikkelaar ✅"
+        },
+        "description": {
+          "en-US": "This page is tagged with developer enrichment, meaning score 50 for developer enrichment was added to the current visitor profile. You should be seeing more developer content now.",
+          "nl-NL": "Deze pagina is getagd met ontwikkelaarsverrijking, wat betekent dat score 50 voor ontwikkelaarsverrijking is toegevoegd aan het huidige bezoekersprofiel. Je zou nu meer inhoud voor ontwikkelaars moeten zien."
+        },
+        "buttonText": {
+          "en-US": "Go Home",
+          "nl-NL": "Naar Home"
+        },
+        "buttonLinkSlug": {
+          "en-US": "/"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5y9i3cZVJslNZOY7Is0UEh"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "4R0PlMJcQjZlM44fEllQFs",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:52.295Z",
+        "updatedAt": "2023-01-10T13:50:56.776Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:56.776Z",
+        "firstPublishedAt": "2023-01-10T13:50:56.776Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "cta"
+          }
+        }
+      },
+      "fields": {
+        "heading": {
+          "en-US": "Like what you see?"
+        },
+        "subheading": {
+          "en-US": "Get a demo of Uniform Optimize for Contentful and signup for early access."
+        },
+        "buttonLink": {
+          "en-US": "https://uniform.dev/uniform-for-contentful"
+        },
+        "buttonText": {
+          "en-US": "Learn more"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "4eiVl7wuASXnHDBavMvyJr",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:52.305Z",
+        "updatedAt": "2023-01-10T13:50:55.660Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:55.660Z",
+        "firstPublishedAt": "2023-01-10T13:50:55.660Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "talk"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Jamstack 101",
+          "nl-NL": "Jamstack 101"
+        },
+        "audience": {
+          "en-US": [
+            "Developers"
+          ]
+        },
+        "intro": {
+          "en-US": "Learn what Jamstack is in this introductory course for both developers and marketers.",
+          "nl-NL": "Leer wat Jamstack is in deze introductiesessie voor zowel ontwikkelaars als marketeers."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "7EQvlYWfqu0s2y92BqEEJV",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:52.310Z",
+        "updatedAt": "2023-01-10T13:50:57.493Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:57.493Z",
+        "firstPublishedAt": "2023-01-10T13:50:57.493Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "hero"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Hey, developer! ",
+          "nl-NL": "Hey, ontwikkelaar!"
+        },
+        "description": {
+          "en-US": "Your behavior interest indicates that you may be a developer. That's why you are seeing this.",
+          "nl-NL": "Uw gedragsinteresse geeft aan dat u mogelijk een ontwikkelaar bent. Daarom zie je dit."
+        },
+        "buttonText": {
+          "en-US": "Register now!",
+          "nl-NL": "Registreer nu!"
+        },
+        "buttonLinkSlug": {
+          "en-US": "/registration"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "5y9i3cZVJslNZOY7Is0UEh"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "7tgiG1wIzaVVwvoNPHGZX",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:52.353Z",
+        "updatedAt": "2023-01-10T13:50:56.417Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:56.417Z",
+        "firstPublishedAt": "2023-01-10T13:50:56.417Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "hero"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Alrighty, you are more of a marketer now! ☑️",
+          "nl-NL": "Oké, je bent nu meer een marketeer! ☑️"
+        },
+        "description": {
+          "en-US": "This page is tagged with marketer enrichment, meaning score 50 for marketer enrichment was added to the current visitor profile. You should be seeing more marketer content now.",
+          "nl-NL": " Deze pagina is getagd met marketeerverrijking, wat betekent dat score 50 voor marketeerverrijking is toegevoegd aan het huidige bezoekersprofiel. Je zou nu meer content van marketeers moeten zien."
+        },
+        "buttonText": {
+          "en-US": "Go Home",
+          "nl-NL": "Naar Home"
+        },
+        "buttonLinkSlug": {
+          "en-US": "/"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "2HquYLn9LDf6yqxmQ2525o"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "2R2jeG8L825iF3hrgRzdob",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:53.235Z",
+        "updatedAt": "2023-01-10T13:50:59.731Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:59.731Z",
+        "firstPublishedAt": "2023-01-10T13:50:59.731Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "whyAttend"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Why You Should Attend",
+          "nl-NL": "Waarom u aanwezig moet zijn"
+        },
+        "description": {
+          "en-US": "This conference has something to offer developers and marketers alike. From basics to advanced, learn more about:\n\n1. Enterprise JAMstack Personalization\n2. Uniform Personalization with Contentful\n3. Uniform DXP\n\nExpand your knowledge on these subjects and engage with professionals from all over the world.",
+          "nl-NL": "Deze conferentie heeft zowel ontwikkelaars als marketeers iets te bieden. Van basis tot geavanceerd, leer meer over:\n\n1. Enterprise JAMstack-personalisatie\n2. Uniforme personalisatie met Contentful\n3. Uniforme DXP\n\nBreid uw kennis over deze onderwerpen uit en ga in gesprek met professionals van over de hele wereld."
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1E3JfPDUH5YaBx0ETxnFlN"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "6GGPMm8Hi3W0Jq4W887Ae0",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:53.242Z",
+        "updatedAt": "2023-01-10T13:50:58.184Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:58.184Z",
+        "firstPublishedAt": "2023-01-10T13:50:58.184Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "talk"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Edge-side computing basics",
+          "nl-NL": " Basisprincipes van edge-side computing"
+        },
+        "audience": {
+          "en-US": [
+            "Developers"
+          ]
+        },
+        "intro": {
+          "en-US": "Learn how to take the static to the new realm by adding edge-side logic to your application.",
+          "nl-NL": "Leer hoe u de statische naar het nieuwe rijk kunt brengen door edge-side logica toe te voegen aan uw toepassing."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "3IwIot1CNI1uT9MBRqIuvX",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:53.243Z",
+        "updatedAt": "2023-01-10T13:51:00.114Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:51:00.114Z",
+        "firstPublishedAt": "2023-01-10T13:51:00.114Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "talk"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "3rd party scripts and performance",
+          "nl-NL": " Scripts en prestaties van derden"
+        },
+        "audience": {
+          "en-US": [
+            "Marketers"
+          ]
+        },
+        "intro": {
+          "en-US": "The effect of 3rd party scripts on performance can be huge and the additional JavaScript payload coming from 3rd party scripts can easily exceed the amount of JavaScript you need to render your site.",
+          "nl-NL": "Het effect van scripts van derden op de prestaties kan enorm zijn en de extra JavaScript-payload die afkomstig is van scripts van derden kan gemakkelijk de hoeveelheid JavaScript overschrijden die u nodig heeft om uw site weer te geven."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "7hcStxNFKJCaUroZ5GPxQE",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:53.249Z",
+        "updatedAt": "2023-01-10T13:50:59.256Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:59.256Z",
+        "firstPublishedAt": "2023-01-10T13:50:59.256Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "hero"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Can't wait to see you soon at UniformConf!",
+          "nl-NL": "We kunnen niet wachten om je snel te zien bij UniformConf!"
+        },
+        "description": {
+          "en-US": "Now check out the conference sessions and add them to your agenda.",
+          "nl-NL": " Bekijk nu de conferentiesessies en voeg ze toe aan jouw agenda."
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "26T6EMvuCgohcpN4uacXTc"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "3qTWWoreFUvRPHndh3YcqY",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:53.250Z",
+        "updatedAt": "2023-01-10T13:50:58.927Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:58.927Z",
+        "firstPublishedAt": "2023-01-10T13:50:58.927Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "talk"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Jamstack for Enterprise Architects",
+          "nl-NL": "Jamstack voor Enterprise-architecten"
+        },
+        "audience": {
+          "en-US": [
+            "Developers"
+          ]
+        },
+        "intro": {
+          "en-US": "Jamstack brings huge benefits to Enterprise use cases. As an architect, learn about how to adopt Jamstack for your company.",
+          "nl-NL": "Jamstack biedt enorme voordelen voor Enterprise use cases. Leer als architect hoe u Jamstack voor uw bedrijf kunt gebruiken."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "5VwTiQVfimLm1iQNaNG9Mu",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:53.253Z",
+        "updatedAt": "2023-01-10T13:50:58.518Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:58.518Z",
+        "firstPublishedAt": "2023-01-10T13:50:58.518Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "hero"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Call for papers open now!",
+          "nl-NL": " Oproep voor papers nu geopend!"
+        },
+        "description": {
+          "en-US": "We can't wait to receive your talk submission!",
+          "nl-NL": "We kunnen niet wachten om je inzending voor je talk te ontvangen!"
+        },
+        "buttonText": {
+          "en-US": "Submit your talk",
+          "nl-NL": "Dien je talk in"
+        },
+        "buttonLinkSlug": {
+          "en-US": "/"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "61CDPV29br6sNo9wwH2VRg"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "4vxlCGkZuxFQYComTccjrU",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:53.258Z",
+        "updatedAt": "2023-01-10T13:50:57.855Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:50:57.855Z",
+        "firstPublishedAt": "2023-01-10T13:50:57.855Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "talk"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Personalization for developers",
+          "nl-NL": "Personalisatie voor ontwikkelaars"
+        },
+        "audience": {
+          "en-US": [
+            "Developers"
+          ]
+        },
+        "intro": {
+          "en-US": "Developers should know the basics of personalization and how to do it the Jamstack way.",
+          "nl-NL": "Ontwikkelaars moeten de basisprincipes van personalisatie kennen en weten hoe ze dit op de Jamstack-manier kunnen doen."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "6oHJVoV4O7nLJG8bjoVcoZ",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:54.226Z",
+        "updatedAt": "2023-01-10T13:51:02.328Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:51:02.328Z",
+        "firstPublishedAt": "2023-01-10T13:51:02.328Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "talk"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "How to be friends with your web development team",
+          "nl-NL": " Hoe u vrienden kunt worden met uw webontwikkelingsteam"
+        },
+        "audience": {
+          "en-US": [
+            "Marketers"
+          ]
+        },
+        "intro": {
+          "en-US": "In this interactive session you will master the art of effective web dev memes and become unbelievably cool for your web dev team.",
+          "nl-NL": "In deze interactieve sessie beheers je de kunst van effectieve webdev-memes en word je ongelooflijk cool voor je webdev-team."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "4CHJuBQLA1jI9ntIFkGHVe",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:54.240Z",
+        "updatedAt": "2023-01-10T13:51:03.193Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:51:03.193Z",
+        "firstPublishedAt": "2023-01-10T13:51:03.193Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "hero"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Welcome to UniformConf",
+          "nl-NL": "Welkom bij de Uniform Conferentie"
+        },
+        "description": {
+          "en-US": "This is a Uniform demo",
+          "nl-NL": "Dit is een Uniform demo"
+        },
+        "image": {
+          "en-US": {
+            "sys": {
+              "type": "Link",
+              "linkType": "Asset",
+              "id": "1SvhzHGTcZUWO0J92wzBWq"
+            }
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "1ieiO4ikK5Mx1w0i1EGAvB",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:54.245Z",
+        "updatedAt": "2023-01-10T13:51:01.006Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:51:01.006Z",
+        "firstPublishedAt": "2023-01-10T13:51:01.006Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "registrationForm"
+          }
+        }
+      },
+      "fields": {
+        "heading": {
+          "en-US": "Register Now",
+          "nl-NL": "Registreer Nu"
+        },
+        "buttonText": {
+          "en-US": "Complete Registration",
+          "nl-NL": "Voltooi Registratie"
+        },
+        "registeredText": {
+          "en-US": "Thanks for registering for UniformConf!",
+          "nl-NL": "Bedankt voor uw registratie voor UniformConf!"
+        },
+        "homeLinkText": {
+          "en-US": "Return Home",
+          "nl-NL": "Naar Home"
+        },
+        "success": {
+          "en-US": "You are successfully registered.",
+          "nl-NL": " U bent succesvol geregistreerd."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "pkZcUE4SpYHTO1RtvyBxR",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:54.250Z",
+        "updatedAt": "2023-01-10T13:51:00.474Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:51:00.474Z",
+        "firstPublishedAt": "2023-01-10T13:51:00.474Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "talk"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "What marketers need to know about web performance",
+          "nl-NL": " Wat marketeers moeten weten over webprestaties"
+        },
+        "audience": {
+          "en-US": [
+            "Marketers"
+          ]
+        },
+        "intro": {
+          "en-US": "It's no secret that great SEO ranking requires great performance these days. Learn how to prioritize performance as a feature in your organization, so it's not an afterthought.",
+          "nl-NL": "Het is geen geheim dat geweldige SEO-ranking tegenwoordig geweldige prestaties vereist. Leer hoe u prioriteit kunt geven aan prestaties als een functie in uw organisatie, zodat het geen bijzaak is."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "7IxWILLYiArU26r2UqtnaI",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:54.252Z",
+        "updatedAt": "2023-01-10T13:51:02.864Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:51:02.864Z",
+        "firstPublishedAt": "2023-01-10T13:51:02.864Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "talk"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Personalization and Jamstack",
+          "nl-NL": "Personalisatie en Jamstack"
+        },
+        "audience": {
+          "en-US": [
+            "Marketers"
+          ]
+        },
+        "intro": {
+          "en-US": "Marketers can learn about the challenges of running personalization on a Jamstack site and how to address them.",
+          "nl-NL": "Marketeers kunnen meer te weten komen over de uitdagingen van het uitvoeren van personalisatie op een Jamstack-site en hoe ze deze kunnen aanpakken."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "3L6ZXx4bSPcfcL5hs9AnnJ",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:54.274Z",
+        "updatedAt": "2023-01-10T13:51:01.980Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:51:01.980Z",
+        "firstPublishedAt": "2023-01-10T13:51:01.980Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "talk"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "What's next in Next.js?",
+          "nl-NL": " Wat biedt de toekomst in Next.js?"
+        },
+        "audience": {
+          "en-US": [
+            "Developers"
+          ]
+        },
+        "intro": {
+          "en-US": "Find out what's new in the latest Next.js release.",
+          "nl-NL": "Ontdek wat er nieuw is in de nieuwste Next.js-release."
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "1j2Go5aj8an0g3Uy5DbGTA",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:55.221Z",
+        "updatedAt": "2023-01-10T13:51:04.187Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:51:04.187Z",
+        "firstPublishedAt": "2023-01-10T13:51:04.187Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "talkList"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Our Talks from Algolia",
+          "nl-NL": "Onze Sessies via Algolia"
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "2JOufkNkure7kRO9TDJoif",
+        "type": "Entry",
+        "createdAt": "2023-01-10T13:50:55.228Z",
+        "updatedAt": "2023-01-10T13:51:03.865Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 1,
+        "publishedAt": "2023-01-10T13:51:03.865Z",
+        "firstPublishedAt": "2023-01-10T13:51:03.865Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 2,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "contentType": {
+          "sys": {
+            "type": "Link",
+            "linkType": "ContentType",
+            "id": "talkList"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Our Talks",
+          "nl-NL": "Onze Sessies"
+        }
+      }
+    }
+  ],
+  "assets": [
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "2HquYLn9LDf6yqxmQ2525o",
+        "type": "Asset",
+        "createdAt": "2023-01-10T13:50:26.078Z",
+        "updatedAt": "2023-01-10T13:50:51.184Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-01-10T13:50:51.184Z",
+        "firstPublishedAt": "2023-01-10T13:50:51.184Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "marketer-hero-image"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/siy7a16chotr/2HquYLn9LDf6yqxmQ2525o/996d08a4fde91ba0005f2ac358b17fd2/marketer.svg",
+            "details": {
+              "size": 7021,
+              "image": {
+                "width": 560,
+                "height": 560
+              }
+            },
+            "fileName": "marketer.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "1SvhzHGTcZUWO0J92wzBWq",
+        "type": "Asset",
+        "createdAt": "2023-01-10T13:50:26.097Z",
+        "updatedAt": "2023-01-10T13:50:50.622Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-01-10T13:50:50.622Z",
+        "firstPublishedAt": "2023-01-10T13:50:50.622Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "default-hero-image"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/siy7a16chotr/1SvhzHGTcZUWO0J92wzBWq/632f42efde3cbf17acaf5c3f32869b3a/default.svg",
+            "details": {
+              "size": 8836,
+              "image": {
+                "width": 561,
+                "height": 560
+              }
+            },
+            "fileName": "default.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "26T6EMvuCgohcpN4uacXTc",
+        "type": "Asset",
+        "createdAt": "2023-01-10T13:50:26.098Z",
+        "updatedAt": "2023-01-10T13:50:50.239Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-01-10T13:50:50.239Z",
+        "firstPublishedAt": "2023-01-10T13:50:50.239Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "success"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/siy7a16chotr/26T6EMvuCgohcpN4uacXTc/fa88cef9b2d89e658684c715d71bd24a/success.svg",
+            "details": {
+              "size": 8721,
+              "image": {
+                "width": 560,
+                "height": 560
+              }
+            },
+            "fileName": "success.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "61CDPV29br6sNo9wwH2VRg",
+        "type": "Asset",
+        "createdAt": "2023-01-10T13:50:26.107Z",
+        "updatedAt": "2023-01-10T13:50:50.919Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-01-10T13:50:50.919Z",
+        "firstPublishedAt": "2023-01-10T13:50:50.919Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "call-for-papers"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/siy7a16chotr/61CDPV29br6sNo9wwH2VRg/d2fd1ac16f5c391846523705d18c81a1/registered.svg",
+            "details": {
+              "size": 9703,
+              "image": {
+                "width": 560,
+                "height": 560
+              }
+            },
+            "fileName": "registered.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "5y9i3cZVJslNZOY7Is0UEh",
+        "type": "Asset",
+        "createdAt": "2023-01-10T13:50:26.848Z",
+        "updatedAt": "2023-01-10T13:50:51.962Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-01-10T13:50:51.962Z",
+        "firstPublishedAt": "2023-01-10T13:50:51.962Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "developer-hero-image"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/siy7a16chotr/5y9i3cZVJslNZOY7Is0UEh/ef8e061c291bad49adca547cfc63c718/developer.svg",
+            "details": {
+              "size": 2440,
+              "image": {
+                "width": 560,
+                "height": 560
+              }
+            },
+            "fileName": "developer.svg",
+            "contentType": "image/svg+xml"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "8InPjOqh7YKXnmy86FHac",
+        "type": "Asset",
+        "createdAt": "2023-01-10T13:50:26.857Z",
+        "updatedAt": "2023-01-10T13:50:51.709Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-01-10T13:50:51.709Z",
+        "firstPublishedAt": "2023-01-10T13:50:51.709Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Developer"
+        },
+        "description": {
+          "en-US": ""
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/siy7a16chotr/8InPjOqh7YKXnmy86FHac/d1786c05adbec8574177c02391347a90/Software-Developer-Flat-Icon-Graphics-13375448-1.jpg",
+            "details": {
+              "size": 12367,
+              "image": {
+                "width": 560,
+                "height": 373
+              }
+            },
+            "fileName": "Software-Developer-Flat-Icon-Graphics-13375448-1.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    },
+    {
+      "metadata": {
+        "tags": [
+        ]
+      },
+      "sys": {
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "id": "1E3JfPDUH5YaBx0ETxnFlN",
+        "type": "Asset",
+        "createdAt": "2023-01-10T13:50:26.886Z",
+        "updatedAt": "2023-01-10T13:50:51.449Z",
+        "environment": {
+          "sys": {
+            "id": "master",
+            "type": "Link",
+            "linkType": "Environment"
+          }
+        },
+        "publishedVersion": 2,
+        "publishedAt": "2023-01-10T13:50:51.449Z",
+        "firstPublishedAt": "2023-01-10T13:50:51.449Z",
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "publishedCounter": 1,
+        "version": 3,
+        "publishedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        }
+      },
+      "fields": {
+        "title": {
+          "en-US": "Why Everyone Should Join"
+        },
+        "file": {
+          "en-US": {
+            "url": "//images.ctfassets.net/siy7a16chotr/1E3JfPDUH5YaBx0ETxnFlN/5f7c40ba5f2a1decd9f9779b57255734/pexels-luis-quintero-2774556.jpg",
+            "details": {
+              "size": 76280,
+              "image": {
+                "width": 640,
+                "height": 426
+              }
+            },
+            "fileName": "pexels-luis-quintero-2774556.jpg",
+            "contentType": "image/jpeg"
+          }
+        }
+      }
+    }
+  ],
+  "locales": [
+    {
+      "name": "U.S. English",
+      "code": "en-US",
+      "fallbackCode": null,
+      "default": true,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": false,
+      "sys": {
+        "type": "Locale",
+        "id": "4vKKH1DY8ji7ttR6ndD43n",
+        "version": 2,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "eb65fcdb-9519-4c8c-8d32-52a53fffaa29"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "createdAt": "2023-01-10T13:49:51Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedAt": "2023-01-10T13:50:18Z"
+      }
+    },
+    {
+      "name": "Dutch (Netherlands)",
+      "code": "nl-NL",
+      "fallbackCode": "en-US",
+      "default": false,
+      "contentManagementApi": true,
+      "contentDeliveryApi": true,
+      "optional": true,
+      "sys": {
+        "type": "Locale",
+        "id": "50TVtBGgO4yK5AAoOGzuTM",
+        "version": 1,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "environment": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Environment",
+            "id": "master",
+            "uuid": "eb65fcdb-9519-4c8c-8d32-52a53fffaa29"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "createdAt": "2023-01-10T13:50:19Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedAt": "2023-01-10T13:50:19Z"
+      }
+    }
+  ],
+  "webhooks": [
+  ],
+  "roles": [
+    {
+      "name": "Author",
+      "description": "Allows editing of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "4wi8r85hSwdGqAvZnkj3Bf",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "createdAt": "2023-01-10T13:49:51Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedAt": "2023-01-10T13:49:51Z"
+      }
+    },
+    {
+      "name": "Editor",
+      "description": "Allows editing, publishing and archiving of content",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": "all",
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "4wjHOYlev7M92xIqdKqypj",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "createdAt": "2023-01-10T13:49:51Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedAt": "2023-01-10T13:49:51Z"
+      }
+    },
+    {
+      "name": "Freelancer",
+      "description": "Allows only editing of content they created themselves",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "create"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "delete"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "delete"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "equals": [
+                  {
+                    "doc": "sys.createdBy.sys.id"
+                  },
+                  "User.current()"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "4wll4yTwAsbvZTrX44IoLT",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "createdAt": "2023-01-10T13:49:51Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedAt": "2023-01-10T13:49:51Z"
+      }
+    },
+    {
+      "name": "Translator",
+      "description": "Allows editing of localized fields in the specified language",
+      "policies": [
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "read"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Entry"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "effect": "allow",
+          "actions": [
+            "update"
+          ],
+          "constraint": {
+            "and": [
+              {
+                "equals": [
+                  {
+                    "doc": "sys.type"
+                  },
+                  "Asset"
+                ]
+              },
+              {
+                "paths": [
+                  {
+                    "doc": "fields.%.%"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "permissions": {
+        "ContentModel": [
+          "read"
+        ],
+        "Settings": [
+        ],
+        "ContentDelivery": [
+        ],
+        "Environments": [
+        ],
+        "EnvironmentAliases": [
+        ],
+        "Tags": [
+        ]
+      },
+      "sys": {
+        "type": "Role",
+        "id": "4wmXg6scglubtWMongw6KZ",
+        "version": 0,
+        "space": {
+          "sys": {
+            "type": "Link",
+            "linkType": "Space",
+            "id": "siy7a16chotr"
+          }
+        },
+        "createdBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "createdAt": "2023-01-10T13:49:52Z",
+        "updatedBy": {
+          "sys": {
+            "type": "Link",
+            "linkType": "User",
+            "id": "3CYK5AqtUQsHiTCblzpoYQ"
+          }
+        },
+        "updatedAt": "2023-01-10T13:49:52Z"
+      }
+    }
+  ]
+}

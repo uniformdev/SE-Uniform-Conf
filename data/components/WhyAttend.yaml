@@ -1,0 +1,25 @@
+id: WhyAttend
+name: Why Attend
+icon: yinyang
+parameters:
+  - id: Entry
+    name: Contentful Entry
+    type: contentfulEntry
+    helpText: ''
+    typeConfig:
+      source: default
+      required: true
+      allowedContentTypes:
+        whyAttend:
+          id: WhyAttend
+          name: Why Attend
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2022-12-28T17:04:01.203181+00:00'
+updated: '2023-01-10T12:49:39.668137+00:00'
+variants:
+  - id: whyattendleft
+    name: Why Attend Left
+  - id: whyattendright
+    name: Why Attend Right

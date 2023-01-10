@@ -1,0 +1,8 @@
+id: '1'
+name: Interest
+cap: 100
+values:
+  - id: '1'
+    value: Developer
+  - id: '2'
+    value: Marketing

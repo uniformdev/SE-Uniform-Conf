@@ -1,0 +1,22 @@
+composition:
+  _name: Registration
+  _id: 3fc48aa9-6300-4b03-bc3c-a24c2480da14
+  _slug: registration
+  type: Page
+  parameters: {}
+  slots:
+    Footer:
+      - type: Footer
+    Header:
+      - type: Header
+    Content:
+      - type: RegistrationForm
+        parameters:
+          Entry:
+            type: contentfulEntry
+            value:
+              source: default
+              entryId: 1ieiO4ikK5Mx1w0i1EGAvB
+created: '2022-12-28T18:18:21.009762+00:00'
+modified: '2023-01-10T12:49:43.423249+00:00'
+pattern: false

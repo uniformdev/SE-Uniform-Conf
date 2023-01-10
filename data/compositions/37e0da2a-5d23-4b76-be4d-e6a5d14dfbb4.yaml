@@ -1,0 +1,28 @@
+composition:
+  _name: Marketers
+  _id: 37e0da2a-5d23-4b76-be4d-e6a5d14dfbb4
+  _slug: marketers
+  type: Page
+  parameters: {}
+  slots:
+    Footer:
+      - type: Footer
+    Header:
+      - type: Header
+    Content:
+      - type: HeroContentful
+        parameters:
+          $enr:
+            type: $enr
+            value:
+              - cat: '1'
+                key: '2'
+                str: 100
+          Entry:
+            type: contentfulEntry
+            value:
+              source: default
+              entryId: 7tgiG1wIzaVVwvoNPHGZX
+created: '2022-12-28T18:17:45.134465+00:00'
+modified: '2023-01-10T12:49:42.382541+00:00'
+pattern: false

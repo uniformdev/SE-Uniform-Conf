@@ -1,0 +1,27 @@
+id: TalkList
+name: Talk List
+icon: mic
+parameters:
+  - id: Entry
+    name: Contentful Entry
+    type: contentfulEntry
+    helpText: ''
+    typeConfig:
+      source: default
+      required: true
+      allowedContentTypes:
+        TalkList:
+          id: TalkList
+          name: Talk List
+useTeamPermissions: true
+slots:
+  - id: Talks
+    name: Talks
+    allowedComponents:
+      - Talk
+      - $personalization
+      - $loop
+    inheritAllowedComponents: false
+canBeComposition: false
+created: '2022-12-28T17:04:01.275248+00:00'
+updated: '2023-01-10T12:49:39.434988+00:00'
