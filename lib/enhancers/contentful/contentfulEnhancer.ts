@@ -5,6 +5,7 @@ import {
 } from "@uniformdev/canvas-contentful";
 import { createClient } from "contentful";
 import { GetStaticPropsContext } from "next";
+
 const { serverRuntimeConfig } = getConfig();
 const { contentfulSpaceId, contentfulDeliveryToken, contentfulPreviewToken } =
   serverRuntimeConfig;
