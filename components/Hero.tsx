@@ -1,8 +1,5 @@
 import Link from "next/link";
 import Splitter from "./Splitter";
-import {
-  registerUniformComponent,
-} from "@uniformdev/canvas-react";
 
 export type HeroProps = {
   Entry: {
@@ -16,11 +13,6 @@ export type HeroProps = {
     }
   }
 };
-
-registerUniformComponent({
-  type: ["HeroContentful", "HeroContentstack", "HeroKontent"],
-  component: Hero,
-});
 
  export function Hero(props: HeroProps) {
   return (

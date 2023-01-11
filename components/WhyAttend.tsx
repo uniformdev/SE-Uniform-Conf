@@ -1,7 +1,3 @@
-import {
-  registerUniformComponent,
-} from "@uniformdev/canvas-react";
-
 export const WhyAttendLoading = () => {
   return (
     <div
@@ -26,11 +22,6 @@ export type WhyAttendProps = {
     variant: string;
   }
 };
-
-registerUniformComponent({
-  type: "WhyAttend",
-  component: WhyAttend,
-});
 
 export function WhyAttend(props : WhyAttendProps) {
 
