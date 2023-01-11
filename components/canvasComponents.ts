@@ -6,39 +6,44 @@ import { RegisterForm } from './RegisterForm';
 
 import Navbar from './Navbar';
 import Footer from './Footer';
-import { registerUniformComponent } from '@uniformdev/canvas-react';
+import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
 
-registerUniformComponent({
+type UniformComponent = {
+  type: string | string[];
+  component: React.ComponentType<ComponentProps<any>>; 
+}
+
+const components: UniformComponent[] = [
+  {
     type: ["HeroContentful", "HeroContentstack", "HeroKontent"],
     component: Hero,
-  });
-
-registerUniformComponent({
+  },
+  {
     type: "TalkList",
     component: TalkList,
-  });
-
-  registerUniformComponent({
+  },
+  {
     type: "Talk",
     component: Talk,
-  });
-
-  registerUniformComponent({
+  },
+  {
     type: "WhyAttend",
     component: WhyAttend,
-  });
-
-  registerUniformComponent({
+  },
+  {
     type: "RegistrationForm",
     component: RegisterForm,
-  });
-
-  registerUniformComponent({
+  },
+  {
     type: "Header",
     component: Navbar,
-  });
-
-  registerUniformComponent({
+  },
+  {
     type: "Footer",
     component: Footer,
-  });
+  }
+]
+
+components.forEach(component => {
+  registerUniformComponent(component);
+});
