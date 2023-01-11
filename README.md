@@ -14,6 +14,8 @@ pnpm install
 
 Import the relevant CMS export into your CMS. 
 
+Import help: https://www.contentful.com/developers/docs/tutorials/cli/import-and-export/
+
 Path:
 ```shell
 data/contentful/contentful-export-siy7a16chotr-master-2023-01-10T14-52-24.json
@@ -30,7 +32,7 @@ Create your .env file based on the example provided (.env.example) and remove th
 ### Import and publish Uniform packages and Uniforms Intent Manifest
 
 ```shell
-pnpm push
+pnpm run push
 ```
 ### [Optional] Add 1 or more integrations to your project
 
