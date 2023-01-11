@@ -1,6 +1,5 @@
 import { GetStaticPaths, GetStaticPropsContext } from "next";
 import Head from "next/head";
-import dynamic from "next/dynamic";
 import {
   RootComponentInstance,
   CANVAS_DRAFT_STATE,
@@ -19,10 +18,6 @@ import { projectMapClient } from "../lib/projectMapClient";
 import { resolveRenderer } from "../components";
 import getConfig from "next/config";
 import { enhancers } from "lib/enhancers";
-
-// const PreviewDevPanel = dynamic(
-//   () => import("lib/preview/PreviewDevPanel/PreviewDevPanel")
-// );
 
 const {
   serverRuntimeConfig: { projectMapId },
@@ -59,9 +54,6 @@ export default function Home({
           <Slot name="Content" />
           <Slot name="Footer" />
         </Composition>
-        {/* {preview && (
-          <PreviewDevPanel preview={preview} composition={composition} />
-        )} */}
       </div>
     </>
   );
