@@ -34,6 +34,19 @@ Create your .env file based on the example provided (.env.example) and remove th
 ```shell
 pnpm run push
 ```
+
+### Update Project Map in env file.
+In your Uniform Project navigate to Settings > Canvas Settings > scroll down to the <strong>Project map</strong> section. 
+Copy the ID and add it to <strong>UNIFORM_PROJECT_MAP_ID</strong> in the .env file.
+### Setup Preview
+Add a value to <strong>UNIFORM_PREVIEW_SECRET</strong> in the .env file. (Remember to save the file!)
+
+In your Uniform Project navigate to Settings > Canvas Settings. 
+If you just want to run everything with default settings, add
+```shell
+http://localhost:3210/api/preview?secret=previewsecret_from_env_file
+```
+to the <strong>Preview Configuration</strong>
 ### [Optional] Add 1 or more integrations to your project
 
 Optionally add 1 or more relevant integrations to your Uniform project.
