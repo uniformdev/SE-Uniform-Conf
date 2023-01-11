@@ -3,6 +3,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import { ToggleEmbeddedContextDevTools } from "@uniformdev/context-devtools";
 import getConfig from "next/config";
+
 const { serverRuntimeConfig } = getConfig();
 const { projectId, apiKey, apiHost } = serverRuntimeConfig;
 
