@@ -5,6 +5,8 @@ import {
   CANVAS_DRAFT_STATE,
   CANVAS_PUBLISHED_STATE,
   enhance,
+  compose,
+  EnhancerBuilder,
 } from "@uniformdev/canvas";
 import {
   Composition,
@@ -18,6 +20,9 @@ import { projectMapClient } from "../lib/projectMapClient";
 import { resolveRenderer } from "../components";
 import getConfig from "next/config";
 import { enhancers } from "lib/enhancers";
+import { CANVAS_PARAMETER_TYPES } from "@uniformdev/canvas-graphcms";
+import { hygraphEnhancerDefault, hygraphEnhancerDutch } from "lib/enhancers/hygraph/hygraphEnhancer";
+import { hygraphModelConverter } from "lib/enhancers/hygraph/hyGraphModelConverter";
 
 const {
   serverRuntimeConfig: { projectMapId },
@@ -89,6 +94,29 @@ async function getProps(context: GetStaticPropsContext) {
     unstable_resolveData: true,
     unstable_dynamicVariables: { Audience: "Developers", locale: context.locale ?? context.defaultLocale ?? 'en-US' },
   });
+
+  //Hygraph hack because of localisation issue with the current integration SDK:
+  const { serverRuntimeConfig } = getConfig();
+  const {
+    hygraphUrl,
+    hygraphToken
+  } = serverRuntimeConfig;
+
+  const hygraphConfigured: boolean =
+  hygraphUrl !== undefined && hygraphToken !== undefined;
+
+  if (hygraphConfigured) {
+    const locale = context.locale ?? context.defaultLocale ?? 'en-US';
+    switch (locale)
+    {
+      case 'nl-NL':
+       await enhance({ composition, enhancers: new EnhancerBuilder().parameterType(CANVAS_PARAMETER_TYPES, compose(hygraphEnhancerDutch(), hygraphModelConverter)), context });
+      break;
+      default:
+        await enhance({ composition, enhancers: new EnhancerBuilder().parameterType(CANVAS_PARAMETER_TYPES, compose(hygraphEnhancerDefault(), hygraphModelConverter)), context });
+      break;
+    }
+  }
 
   await enhance({ composition, enhancers, context });
 

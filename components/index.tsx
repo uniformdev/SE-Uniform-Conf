@@ -14,6 +14,7 @@ import Footer from './Footer';
 const mappings: ComponentMapping = {
   HeroContentful: Hero,
   HeroContentstack: Hero,
+  HeroHygraph: Hero,
   HeroKontent: Hero,
   TalkList: TalkList,
   Talk: Talk,

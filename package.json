@@ -12,10 +12,9 @@
     "build:next": "next build",
     "context:manifest": "uniform context manifest download --output ./lib/context/manifest.json",
     "deploy:experiment": "cp .env.example .env && WITH_NETLIFY_BUILD_FLAG=true tsx ../../scripts/deploy-to-netlify.ts",
-
     "pull": "run-s pull:canvas pull:project-map pull:context",
     "pull:canvas": "run-s pull:components pull:compositions",
-    "pull:project-map":"run-s pull:project-map-definition pull:project-map-nodes",
+    "pull:project-map": "run-s pull:project-map-definition pull:project-map-nodes",
     "pull:context": "run-s pull:context:signals pull:context:enrichments pull:context:quirks pull:context:tests pull:context:aggregates",
     "pull:compositions": "uniform canvas composition pull ./data/compositions",
     "pull:components": "uniform canvas component pull ./data/components",
@@ -26,10 +25,9 @@
     "pull:context:tests": "uniform context test pull ./data/context/tests",
     "pull:project-map-definition": "uniform project-map definition pull ./data/project-map/definition",
     "pull:project-map-nodes": "uniform project-map node pull ./data/project-map/nodes",
-  
     "push": "run-s push:canvas push:project-map push:context",
     "push:canvas": "run-s push:components push:compositions",
-    "push:project-map":"run-s push:project-map-definition push:project-map-nodes",
+    "push:project-map": "run-s push:project-map-definition push:project-map-nodes",
     "push:context": "run-s push:context:signals push:context:enrichments push:context:publish-manifest",
     "push:components": "uniform canvas component push ./data/components",
     "push:compositions": "uniform canvas composition push ./data/compositions --state published",
@@ -39,9 +37,8 @@
     "push:context:enrichments": "uniform context enrichment push ./data/context/enrichments",
     "push:context:aggregates": "uniform context aggregate push ./data/context/aggregates",
     "push:context:quirks": "uniform context quirk push ./data/context/quirks",
-    "push:context:tests": "uniform context test push ./data/context/tests",    
+    "push:context:tests": "uniform context test push ./data/context/tests",
     "push:context:publish-manifest": "uniform context manifest publish",
-
     "package": "run-s package:canvas package:context",
     "package:canvas": "run-s package:components package:compositions",
     "package:compositions": "uniform canvas composition pull ./data/uniformconf.yaml",
@@ -52,7 +49,6 @@
     "package:context:quirks": "uniform context quirk pull ./data/uniformconf.yaml",
     "package:context:tests": "uniform context test pull ./data/uniformconf.yaml",
     "package:context": "run-s package:context:signals package:context:enrichments package:context:quirks package:context:tests package:context:aggregates",
-
     "build:preview": "tsup"
   },
   "dependencies": {
@@ -63,6 +59,7 @@
     "@uniformdev/canvas-algolia": "^17.7.0",
     "@uniformdev/canvas-contentful": "^17.7.0",
     "@uniformdev/canvas-contentstack": "^17.7.0",
+    "@uniformdev/canvas-graphcms": "^17.1.0",
     "@uniformdev/canvas-kontent": "^17.7.0",
     "@uniformdev/canvas-next": "^17.7.0",
     "@uniformdev/canvas-react": "^17.7.0",
@@ -78,6 +75,8 @@
     "contentful": "^9.2.14",
     "contentstack": "^3.15.5",
     "cookie": "0.5.0",
+    "graphql": "^16.6.0",
+    "graphql-request": "^5.1.0",
     "next": "13.0.6",
     "nookies": "2.5.2",
     "react": "18.2.0",

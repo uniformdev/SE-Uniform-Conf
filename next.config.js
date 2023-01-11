@@ -24,7 +24,9 @@ const nextConfig = {
     contentstackApiKey: process.env.CONTENTSTACK_API_KEY,
     contentstackDeliveryToken: process.env.CONTENTSTACK_DELIVERY_TOKEN,
     contentstackEnvironment: process.env.CONTENTSTACK_ENVIRONMENT,
-    contentstackRegion: process.env.CONTENTSTACK_REGION
+    contentstackRegion: process.env.CONTENTSTACK_REGION,
+    hygraphUrl: process.env.HYGRAPH_URL,
+    hygraphToken: process.env.HYGRAPH_TOKEN
   },
   publicRuntimeConfig: {
     gaTrackingId: process.env.GA4_ID,

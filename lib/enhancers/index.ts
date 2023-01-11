@@ -22,6 +22,8 @@ const {
   contentstackDeliveryToken,
   contentstackEnvironment,
   contentstackRegion,
+  hygraphUrl,
+  hygraphToken
 } = serverRuntimeConfig;
 
 const contentfulConfigured: boolean =
@@ -32,6 +34,9 @@ const kontentConfigured: boolean =
 
 const contentstackConfigured: boolean = 
   contentstackApiKey !== undefined && contentstackDeliveryToken !== undefined && contentstackEnvironment !== undefined && contentstackRegion !== undefined;
+
+const hygraphConfigured: boolean =
+  hygraphUrl !== undefined && hygraphToken !== undefined;
 
 export const enhancers = new EnhancerBuilder();
 
@@ -49,6 +54,11 @@ if (contentstackConfigured) {
   console.log("Registered Contentstack Enhancer");
   enhancers.parameterType(CANVAS_CONTENTSTACK_PARAMETER_TYPES, compose(contentstackEnhancer(), contentStackModelConverter))
 }
+
+// if (hygraphConfigured) {
+//   console.log("Registered Hygraph Enhancer");
+//   enhancers.parameterType(CANVAS_PARAMETER_TYPES, compose(hygraphEnhancerDefault(), hygraphModelConverter));
+// }
 
 enhancers.parameter((e) => {
   if (typeof e.parameter.value === "string") {
