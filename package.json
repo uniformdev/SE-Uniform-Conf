@@ -12,24 +12,36 @@
     "build:next": "next build",
     "context:manifest": "uniform context manifest download --output ./lib/context/manifest.json",
     "deploy:experiment": "cp .env.example .env && WITH_NETLIFY_BUILD_FLAG=true tsx ../../scripts/deploy-to-netlify.ts",
-    "pull": "run-s pull:canvas pull:context",
+
+    "pull": "run-s pull:canvas pull:project-map pull:context",
     "pull:canvas": "run-s pull:components pull:compositions",
+    "pull:project-map":"run-s pull:project-map-definition pull:project-map-nodes",
+    "pull:context": "run-s pull:context:signals pull:context:enrichments pull:context:quirks pull:context:tests pull:context:aggregates",
     "pull:compositions": "uniform canvas composition pull ./data/compositions",
     "pull:components": "uniform canvas component pull ./data/components",
-    "push:context:signals": "uniform context signal push ./data/context/signals",
-    "push:context:enrichments": "uniform context enrichment push ./data/context/enrichments",
-    "push:context:aggregates": "uniform context aggregate push ./data/context/aggregates",
-    "push:context:quirks": "uniform context quirk push ./data/context/quirks",
-    "push:context:tests": "uniform context test push ./data/context/tests",
-    "push:context": "run-s push:context:signals push:context:enrichments push:context:quirks push:context:tests push:context:aggregates",
     "pull:context:signals": "uniform context signal pull ./data/context/signals",
     "pull:context:enrichments": "uniform context enrichment pull ./data/context/enrichments",
     "pull:context:aggregates": "uniform context aggregate pull ./data/context/aggregates",
     "pull:context:quirks": "uniform context quirk pull ./data/context/quirks",
     "pull:context:tests": "uniform context test pull ./data/context/tests",
-    "pull:context": "run-s pull:context:signals pull:context:enrichments pull:context:quirks pull:context:tests pull:context:aggregates",
-    "push:compositions": "uniform canvas composition push ./data/compositions",
+    "pull:project-map-definition": "uniform project-map definition pull ./data/project-map/definition",
+    "pull:project-map-nodes": "uniform project-map node pull ./data/project-map/nodes",
+  
+    "push": "run-s push:canvas push:project-map push:context",
+    "push:canvas": "run-s push:components push:compositions",
+    "push:project-map":"run-s push:project-map-definition push:project-map-nodes",
+    "push:context": "run-s push:context:signals push:context:enrichments push:context:publish-manifest",
     "push:components": "uniform canvas component push ./data/components",
+    "push:compositions": "uniform canvas composition push ./data/compositions --state published",
+    "push:project-map-definition": "uniform project-map definition push ./data/project-map/definition",
+    "push:project-map-nodes": "uniform project-map node push ./data/project-map/nodes",
+    "push:context:signals": "uniform context signal push ./data/context/signals",
+    "push:context:enrichments": "uniform context enrichment push ./data/context/enrichments",
+    "push:context:aggregates": "uniform context aggregate push ./data/context/aggregates",
+    "push:context:quirks": "uniform context quirk push ./data/context/quirks",
+    "push:context:tests": "uniform context test push ./data/context/tests",    
+    "push:context:publish-manifest": "uniform context manifest publish",
+
     "package": "run-s package:canvas package:context",
     "package:canvas": "run-s package:components package:compositions",
     "package:compositions": "uniform canvas composition pull ./data/uniformconf.yaml",
@@ -40,7 +52,7 @@
     "package:context:quirks": "uniform context quirk pull ./data/uniformconf.yaml",
     "package:context:tests": "uniform context test pull ./data/uniformconf.yaml",
     "package:context": "run-s package:context:signals package:context:enrichments package:context:quirks package:context:tests package:context:aggregates",
-    "start:stackblitz": "npm run dev:next",
+
     "build:preview": "tsup"
   },
   "dependencies": {
@@ -97,9 +109,5 @@
     "ts-loader": "9.4.2",
     "tsup": "6.5.0",
     "typescript": "4.9.3"
-  },
-  "stackblitz": {
-    "startCommand": "npm run start:stackblitz",
-    "compileTrigger": "save"
   }
 }
