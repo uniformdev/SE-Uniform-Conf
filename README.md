@@ -27,32 +27,11 @@ Create an empty project at uniform.app
 
 Create your .env file based on the example provided (.env.example) and remove the keys related to CMS platforms that you're not using.
 
-### Import Uniform packages
+### Import and publish Uniform packages and Uniforms Intent Manifest
 
 ```shell
-uniform context enrichment push ./data/context/enrichments
-uniform context signal push ./data/context/signals
-
-uniform canvas component push ./data/components
-uniform canvas composition push ./data/compositions
-
-uniform project-map definition push ./data/project-map/definition
-uniform project-map node push ./data/project-map/nodes
+pnpm push
 ```
-
-### Publish Manifest and Canvas
-
-- Go into your Uniform project and publish the Context manifest (Project -> Personalization -> Publish).
-- Go into your Uniform project and publish the different compositions (Project -> Canvas -> Compositions -> Publish each composition).
-
-OR
-
-Run these two commands in a terminal from the root directory of the project:
-```shell
-uniform canvas composition publish --all
-uniform context manifest publish
-```
-
 ### [Optional] Add 1 or more integrations to your project
 
 Optionally add 1 or more relevant integrations to your Uniform project.

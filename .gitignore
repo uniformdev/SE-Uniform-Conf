@@ -44,3 +44,6 @@ lib/context/manifest.json
 
 # env
 .env
+
+# lock files
+.lock
