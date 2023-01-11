@@ -6,15 +6,15 @@ import {
 import contentstack from "contentstack";
 import { GetStaticPropsContext } from "next";
 
-export const contentstackEnhancer = () => {
-  const { serverRuntimeConfig } = getConfig();
-  const {
-    contentstackEnvironment,
-    contentstackRegion,
-    contentstackDeliveryToken,
-    contentstackApiKey,
-  } = serverRuntimeConfig;
+const { serverRuntimeConfig } = getConfig();
+const {
+  contentstackEnvironment,
+  contentstackRegion,
+  contentstackDeliveryToken,
+  contentstackApiKey,
+} = serverRuntimeConfig;
 
+export const contentstackEnhancer = () => {
   const client = contentstack.Stack({
     api_key: contentstackApiKey,
     delivery_token: contentstackDeliveryToken,
