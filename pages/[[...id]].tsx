@@ -9,13 +9,12 @@ import {
 import {
   Composition,
   createApiEnhancer,
-  RenderComponentResolver,
   Slot,
   useContextualEditing,
 } from "@uniformdev/canvas-react";
 import { canvasClient } from "lib/canvasClient";
 import { projectMapClient } from "../lib/projectMapClient";
-import { resolveRenderer } from "../components";
+import "../components/canvasComponents"
 import getConfig from "next/config";
 import { enhancers } from "lib/enhancers";
 
@@ -46,10 +45,7 @@ export default function Home({
         <meta name="description" content="UniformConf"></meta>
       </Head>
       <div>
-        <Composition
-          data={compositionInstance}
-          resolveRenderer={resolveRenderer as RenderComponentResolver}
-        >
+        <Composition data={compositionInstance}>
           <Slot name="Header" />
           <Slot name="Content" />
           <Slot name="Footer" />

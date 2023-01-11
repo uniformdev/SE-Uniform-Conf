@@ -1,5 +1,4 @@
 import { Slot } from "@uniformdev/canvas-react";
-
 export type TalkListProps = {
   Entry: {
     title: string;

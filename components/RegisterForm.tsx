@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { parse } from "cookie";
 import Link from "next/link";
 import { useUniformContext } from "@uniformdev/context-react";
-import { ComponentProps } from "@uniformdev/canvas-react";
 import Splitter from "./Splitter";
 
 declare global {
