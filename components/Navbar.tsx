@@ -7,6 +7,10 @@ import Logo from "./Logo";
 import { useUniformContext } from "@uniformdev/context-react";
 import { useRouter } from "next/router";
 
+import {
+  registerUniformComponent,
+} from "@uniformdev/canvas-react";
+
 const locales = {
   locales: [
     {code: 'en-US', flag: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="40" viewBox="0 0 7410 3900">\
@@ -171,5 +175,10 @@ const ActionLink = ({ onClick, label, isScrolled, icon }: ActionLinkProps) => (
     </div>
   </button>
 );
+
+registerUniformComponent({
+  type: "Header",
+  component: Nav,
+});
 
 export default Nav;

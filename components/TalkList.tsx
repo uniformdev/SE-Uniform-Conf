@@ -1,10 +1,19 @@
 import { Slot } from "@uniformdev/canvas-react";
+import {
+  registerUniformComponent,
+} from "@uniformdev/canvas-react";
 
 export type TalkListProps = {
   Entry: {
     title: string;
   }
 };
+
+
+registerUniformComponent({
+  type: "TalkList",
+  component: TalkList,
+});
 
 export function TalkList(props: TalkListProps) {
   return (

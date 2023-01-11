@@ -1,3 +1,7 @@
+import {
+  registerUniformComponent,
+} from "@uniformdev/canvas-react";
+
 export type TalkProps = {
   Entry: {
     title: string;
@@ -29,6 +33,11 @@ export const Talk = (props: TalkProps) => (
     />
   </div>
 );
+
+registerUniformComponent({
+  type: "Talk",
+  component: Talk,
+});
 
 export interface AudienceLabelProps {
   audienceName?: string;

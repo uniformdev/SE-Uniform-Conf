@@ -3,6 +3,10 @@ import Link from "next/link";
 import Logo from "./Logo";
 import { ToggleEmbeddedContextDevTools } from "@uniformdev/context-devtools";
 import getConfig from "next/config";
+import {
+  registerUniformComponent,
+} from "@uniformdev/canvas-react";
+
 const { serverRuntimeConfig } = getConfig();
 const { projectId, apiKey, apiHost } = serverRuntimeConfig;
 
@@ -35,5 +39,10 @@ const Footer = () => {
     </footer>
   );
 };
+
+registerUniformComponent({
+  type: "Footer",
+  component: Footer,
+});
 
 export default Footer;
