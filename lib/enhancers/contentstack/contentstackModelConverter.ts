@@ -1,6 +1,6 @@
 import { ComponentInstance } from '@uniformdev/canvas';
 
-export const contentStackModelConverter = ({ component, parameter }: { component: ComponentInstance; parameter: any }) => {
+export const contentstackModelConverter = ({ component, parameter }: { component: ComponentInstance; parameter: any }) => {
   
     if (component.type === 'HeroContentstack') {
     

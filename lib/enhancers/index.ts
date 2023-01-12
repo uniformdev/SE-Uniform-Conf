@@ -61,7 +61,7 @@ if (contentstackConfigured) {
   enhancers.parameterType(CANVAS_CONTENTSTACK_PARAMETER_TYPES, compose(contentstackEnhancer(), contentstackModelConverter))
 }
 
-if (contentstackConfigured) {
+if (sanityConfigured) {
   console.log("Registered Sanity Enhancer");
   enhancers.parameterType(CANVAS_SANITY_PARAMETER_TYPES, compose(sanityEnhancer(), sanityModelConverter))
 }
