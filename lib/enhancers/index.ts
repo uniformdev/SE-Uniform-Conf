@@ -9,7 +9,7 @@ import { kontentEnhancer } from "./kontent/kontentEnhancer";
 import { kontentModelConverter } from "./kontent/kontentModelConverter";
 import { CANVAS_CONTENTSTACK_PARAMETER_TYPES } from "@uniformdev/canvas-contentstack";
 import { contentstackEnhancer } from "./contentstack/contentstackEnhancer";
-import { contentStackModelConverter } from "./contentstack/contentstackModelConverter";
+import { contentstackModelConverter } from "./contentstack/contentstackModelConverter";
 
 const { serverRuntimeConfig } = getConfig();
 const {
@@ -47,7 +47,7 @@ if (kontentConfigured) {
 
 if (contentstackConfigured) {
   console.log("Registered Contentstack Enhancer");
-  enhancers.parameterType(CANVAS_CONTENTSTACK_PARAMETER_TYPES, compose(contentstackEnhancer(), contentStackModelConverter))
+  enhancers.parameterType(CANVAS_CONTENTSTACK_PARAMETER_TYPES, compose(contentstackEnhancer(), contentstackModelConverter))
 }
 
 enhancers.parameter((e) => {
