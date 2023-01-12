@@ -28,11 +28,12 @@
     "pull:project-map-nodes": "uniform project-map node pull ./data/project-map/nodes",
   
     "push": "run-s push:canvas push:project-map push:context",
-    "push:canvas": "run-s push:components push:compositions",
+    "push:canvas": "run-s push:canvas:components push:canvas:compositions push:canvas:publish_compositions",
     "push:project-map":"run-s push:project-map-definition push:project-map-nodes",
     "push:context": "run-s push:context:signals push:context:enrichments push:context:publish-manifest",
-    "push:components": "uniform canvas component push ./data/components",
-    "push:compositions": "uniform canvas composition push ./data/compositions --state published",
+    "push:canvas:components": "uniform canvas component push ./data/components",
+    "push:canvas:compositions": "uniform canvas composition push ./data/compositions",
+    "push:canvas:publish_compositions": "uniform canvas composition publish --all",
     "push:project-map-definition": "uniform project-map definition push ./data/project-map/definition",
     "push:project-map-nodes": "uniform project-map node push ./data/project-map/nodes",
     "push:context:signals": "uniform context signal push ./data/context/signals",
@@ -41,6 +42,7 @@
     "push:context:quirks": "uniform context quirk push ./data/context/quirks",
     "push:context:tests": "uniform context test push ./data/context/tests",    
     "push:context:publish-manifest": "uniform context manifest publish",
+    
 
     "package": "run-s package:canvas package:context",
     "package:canvas": "run-s package:components package:compositions",
