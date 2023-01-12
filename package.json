@@ -12,10 +12,9 @@
     "build:next": "next build",
     "context:manifest": "uniform context manifest download --output ./lib/context/manifest.json",
     "deploy:experiment": "cp .env.example .env && WITH_NETLIFY_BUILD_FLAG=true tsx ../../scripts/deploy-to-netlify.ts",
-
     "pull": "run-s pull:canvas pull:project-map pull:context",
     "pull:canvas": "run-s pull:components pull:compositions",
-    "pull:project-map":"run-s pull:project-map-definition pull:project-map-nodes",
+    "pull:project-map": "run-s pull:project-map-definition pull:project-map-nodes",
     "pull:context": "run-s pull:context:signals pull:context:enrichments pull:context:quirks pull:context:tests pull:context:aggregates",
     "pull:compositions": "uniform canvas composition pull ./data/compositions",
     "pull:components": "uniform canvas component pull ./data/components",
@@ -26,10 +25,9 @@
     "pull:context:tests": "uniform context test pull ./data/context/tests",
     "pull:project-map-definition": "uniform project-map definition pull ./data/project-map/definition",
     "pull:project-map-nodes": "uniform project-map node pull ./data/project-map/nodes",
-  
     "push": "run-s push:canvas push:project-map push:context",
     "push:canvas": "run-s push:canvas:components push:canvas:compositions push:canvas:publish_compositions",
-    "push:project-map":"run-s push:project-map-definition push:project-map-nodes",
+    "push:project-map": "run-s push:project-map-definition push:project-map-nodes",
     "push:context": "run-s push:context:signals push:context:enrichments push:context:publish-manifest",
     "push:canvas:components": "uniform canvas component push ./data/components",
     "push:canvas:compositions": "uniform canvas composition push ./data/compositions",
@@ -40,9 +38,8 @@
     "push:context:enrichments": "uniform context enrichment push ./data/context/enrichments",
     "push:context:aggregates": "uniform context aggregate push ./data/context/aggregates",
     "push:context:quirks": "uniform context quirk push ./data/context/quirks",
-    "push:context:tests": "uniform context test push ./data/context/tests",    
+    "push:context:tests": "uniform context test push ./data/context/tests",
     "push:context:publish-manifest": "uniform context manifest publish",
-
     "package": "run-s package:canvas package:context",
     "package:canvas": "run-s package:components package:compositions",
     "package:compositions": "uniform canvas composition pull ./data/uniformconf.yaml",
@@ -53,13 +50,14 @@
     "package:context:quirks": "uniform context quirk pull ./data/uniformconf.yaml",
     "package:context:tests": "uniform context test pull ./data/uniformconf.yaml",
     "package:context": "run-s package:context:signals package:context:enrichments package:context:quirks package:context:tests package:context:aggregates",
-
     "build:preview": "tsup"
   },
   "dependencies": {
     "@analytics/google-analytics": "1.0.5",
     "@kentico/kontent-delivery": "^11.13.0",
     "@react-hook/window-scroll": "1.3.0",
+    "@sanity/client": "^4.0.1",
+    "@sanity/image-url": "^1.0.1",
     "@uniformdev/canvas": "^17.7.0",
     "@uniformdev/canvas-algolia": "^17.7.0",
     "@uniformdev/canvas-contentful": "^17.7.0",
@@ -67,6 +65,7 @@
     "@uniformdev/canvas-kontent": "^17.7.0",
     "@uniformdev/canvas-next": "^17.7.0",
     "@uniformdev/canvas-react": "^17.7.0",
+    "@uniformdev/canvas-sanity": "^17.7.0",
     "@uniformdev/canvas-strapi": "^17.1.0",
     "@uniformdev/context": "^17.7.0",
     "@uniformdev/context-devtools": "^17.7.0",

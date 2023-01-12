@@ -24,7 +24,12 @@ const nextConfig = {
     contentstackApiKey: process.env.CONTENTSTACK_API_KEY,
     contentstackDeliveryToken: process.env.CONTENTSTACK_DELIVERY_TOKEN,
     contentstackEnvironment: process.env.CONTENTSTACK_ENVIRONMENT,
-    contentstackRegion: process.env.CONTENTSTACK_REGION
+    contentstackRegion: process.env.CONTENTSTACK_REGION,
+    sanityProjectId: process.env.SANITY_PROJECT_ID,
+    sanityCdnProjectId: process.env.SANITY_CDN_PROJECT_ID,
+    sanityDataset: process.env.SANITY_DATASET,
+    sanityUseCdn: process.env.SANITY_USE_CDN,
+    sanityApiVersion: process.env.SANITY_API_VERSION
   },
   publicRuntimeConfig: {
     gaTrackingId: process.env.GA4_ID,

@@ -1,0 +1,75 @@
+import {defineConfig} from 'sanity'
+import {deskTool} from 'sanity/desk'
+import {visionTool} from '@sanity/vision'
+import { documentInternationalization } from '@sanity/document-internationalization'
+
+export const Hero = {
+    name: 'Hero',
+    title: 'Hero',
+    type: 'document',
+    fields: [
+        {
+            name: 'name',
+            title: 'Name',
+            type: 'string'
+        },{
+            name: 'title',
+            title: 'Title',
+            type: 'string'
+        },
+        {
+            name: 'description',
+            title: 'Description',
+            type: 'string'
+        },
+        {
+            name: 'buttonText',
+            title: 'Button Text',
+            type: 'string'
+        },
+        {
+            name: 'buttonLinkSlug',
+            title: 'Button Link Slug',
+            type: 'string'
+        },
+        {
+            name: 'image',
+            title: 'Image',
+            type: 'image'
+        },
+        {
+          name: 'language',
+          type: 'string',
+          readOnly: true,
+          hidden: true,
+        }
+    ],
+    preview: {
+      select: {
+        title: 'name'
+      }
+    }
+}
+ 
+export default defineConfig({
+  name: 'default',
+  title: 'Sanity Project',
+
+  projectId: '***REMOVED***',
+  dataset: 'production',
+
+  plugins: [deskTool(), visionTool(),
+    documentInternationalization({
+      supportedLanguages: [
+        {id: 'nl_NL', title: 'Dutch (Netherlands)'},
+        {id: 'en_US', title: 'English (United States)'}
+      ],
+      schemaTypes: ['Hero'],
+      languageField: `language`,
+      bulkPublish: true
+    })],
+
+  schema: {
+    types: [Hero],
+  },
+})

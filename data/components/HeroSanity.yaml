@@ -1,0 +1,19 @@
+id: HeroSanity
+name: Hero Sanity
+icon: format-heading
+parameters:
+  - id: Entry
+    name: Sanity Entry
+    type: sanityEntrySelector
+    helpText: ''
+    typeConfig:
+      required: true
+      allowedContentTypes:
+        - Hero
+      searchableFieldNames:
+        - name
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-01-12T17:28:57.326531+00:00'
+updated: '2023-01-12T17:29:30.947941+00:00'
