@@ -42,7 +42,6 @@
     "push:context:quirks": "uniform context quirk push ./data/context/quirks",
     "push:context:tests": "uniform context test push ./data/context/tests",    
     "push:context:publish-manifest": "uniform context manifest publish",
-    
 
     "package": "run-s package:canvas package:context",
     "package:canvas": "run-s package:components package:compositions",
