@@ -5,6 +5,7 @@ import {
   CANVAS_DRAFT_STATE,
   CANVAS_PUBLISHED_STATE,
   enhance,
+  localize
 } from "@uniformdev/canvas";
 import {
   Composition,
@@ -59,15 +60,17 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   const slug = context?.params?.id;
   const slugString = Array.isArray(slug) ? slug.join("/") : slug;
   const { preview } = context;
+  const locale = context.locale ?? context.defaultLocale ?? 'en-US';
   //API still in development...hence the unstable.
   const { composition } = await canvasClient.unstable_getCompositionByNodePath({
     projectMapNodePath: slugString ? `/${slugString}` : "/",
     state: process.env.NODE_ENV === 'development' || preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
     projectMapId: projectMapId,
     unstable_resolveData: true,
-    unstable_dynamicVariables: { Audience: "Developers", locale: context.locale ?? context.defaultLocale ?? 'en-US' },
+    unstable_dynamicVariables: { Audience: "Developers", locale: locale },
   });
 
+  await localize({ composition, locale })
   await enhance({ composition, enhancers, context });
 
   return {
