@@ -56,24 +56,6 @@ export default function Home({
 }
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  return await getProps(context);
-}
-
-export const getStaticPaths: GetStaticPaths = async () => {
-  const { nodes } = await projectMapClient.getNodes({ projectMapId });
-
-  const ids = nodes?.filter((node) => node.compositionId!).map((node) => node.path.split('/').filter(Boolean)) ?? []
-  const paths =ids.flatMap((id) => [
-    { params: { id }, locale: 'en-US' },
-    { params: { id }, locale: 'nl-NL' }
-  ])
-  return {
-    paths,
-    fallback: false,
-  };
-};
-
-async function getProps(context: GetStaticPropsContext) {
   const slug = context?.params?.id;
   const slugString = Array.isArray(slug) ? slug.join("/") : slug;
   const { preview } = context;
@@ -96,3 +78,16 @@ async function getProps(context: GetStaticPropsContext) {
   };
 }
 
+export const getStaticPaths: GetStaticPaths = async () => {
+  const { nodes } = await projectMapClient.getNodes({ projectMapId });
+
+  const ids = nodes?.filter((node) => node.compositionId!).map((node) => node.path.split('/').filter(Boolean)) ?? []
+  const paths =ids.flatMap((id) => [
+    { params: { id }, locale: 'en-US' },
+    { params: { id }, locale: 'nl-NL' }
+  ])
+  return {
+    paths,
+    fallback: false,
+  };
+};
