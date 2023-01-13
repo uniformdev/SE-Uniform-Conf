@@ -1,3 +1,4 @@
+import getConfig from "next/config";
 import { GetStaticPaths, GetStaticPropsContext } from "next";
 import Head from "next/head";
 import {
@@ -16,8 +17,7 @@ import {
 import { canvasClient } from "lib/canvasClient";
 import { projectMapClient } from "../lib/projectMapClient";
 import "../components/canvasComponents"
-import getConfig from "next/config";
-import { enhancers } from "lib/enhancers";
+import { enhancerBuilder } from "lib/enhancers";
 
 const {
   serverRuntimeConfig: { projectMapId },
@@ -25,7 +25,6 @@ const {
 
 export default function Home({
   composition,
-  preview,
 }: {
   preview: boolean;
   composition: RootComponentInstance;
@@ -70,7 +69,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   });
 
   await localize({ composition, locale })
-  await enhance({ composition, enhancers, context });
+  await enhance({ composition, enhancers: enhancerBuilder, context });
 
   return {
     props: {

@@ -3,21 +3,18 @@ import createSanityClient from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 import getConfig from "next/config";
 
-const { serverRuntimeConfig } = getConfig();
 const {
-	sanityProjectId,
-	sanityCdnProjectId,
-	sanityDataset,
-	sanityUseCdn,
-	sanityApiVersion,
-} = serverRuntimeConfig;
+	serverRuntimeConfig: {
+		sanityConfig: { projectId, dataset, useCdn, apiVersion, cdnProjectId },
+	},
+} = getConfig();
 
 const sanityConfigured: boolean =
-	sanityProjectId !== undefined &&
-	sanityCdnProjectId !== undefined &&
-	sanityDataset !== undefined &&
-	sanityUseCdn !== undefined &&
-	sanityApiVersion !== undefined;
+	projectId !== undefined &&
+	cdnProjectId !== undefined &&
+	dataset !== undefined &&
+	useCdn !== undefined &&
+	apiVersion !== undefined;
 
 export const sanityModelConverter = ({
 	component,
@@ -40,17 +37,17 @@ export const sanityModelConverter = ({
 
 		if (sanityConfigured) {
 			const client = new createSanityClient({
-				projectId: sanityCdnProjectId,
-				dataset: sanityDataset,
-				useCdn: sanityUseCdn,
-				apiVersion: sanityApiVersion,
+				projectId: cdnProjectId,
+				dataset: dataset,
+				useCdn: useCdn,
+				apiVersion: apiVersion,
 			});
 
 			const builder = imageUrlBuilder(client);
 			returnValue.image.src = builder
 				.image(parameter?.value?.image)
 				.url()
-				.replace(sanityCdnProjectId, sanityProjectId);
+				.replace(cdnProjectId, projectId);
 		}
 
 		return returnValue;
