@@ -10,9 +10,7 @@ import { enableNextSsr } from "@uniformdev/context-next";
 import { createUniformContext } from "../lib/context/uniformContext";
 import getConfig from "next/config";
 
-const {
-  publicRuntimeConfig: { gaTrackingId },
-} = getConfig();
+const gaTrackingId = getConfig()?.publicRuntimeConfig?.gaTrackingId || undefined;
 
 class MyDocument extends Document {
   static async getInitialProps(

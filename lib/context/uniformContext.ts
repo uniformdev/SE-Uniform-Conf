@@ -11,9 +11,7 @@ import manifest from "./manifest.json";
 import { enableGoogleGtagAnalytics } from "@uniformdev/context-gtag";
 import getConfig from "next/config";
 
-const {
-	publicRuntimeConfig: { gaTrackingId },
-} = getConfig();
+const gaTrackingId = getConfig()?.publicRuntimeConfig?.gaTrackingId || undefined;
 
 export function createUniformContext(serverContext?: NextPageContext) {
 	const plugins: ContextPlugin[] = [
