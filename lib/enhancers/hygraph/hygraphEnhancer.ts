@@ -1,6 +1,8 @@
 import getConfig from "next/config";
 import { GraphQLClient } from "graphql-request";
-import { createEnhancer, GetEntryQueryOptionsArgs } from "@uniformdev/canvas-graphcms";
+import {
+	createEnhancer,
+} from "@uniformdev/canvas-graphcms";
 
 const { serverRuntimeConfig } = getConfig();
 const { hygraphUrl, hygraphToken } = serverRuntimeConfig;
@@ -13,6 +15,6 @@ export const hygraphEnhancer = () => {
 	});
 
 	return createEnhancer({
-    client
-  })
+		client,
+	});
 };
