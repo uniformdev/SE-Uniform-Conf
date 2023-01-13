@@ -69,7 +69,7 @@ const enhancers: UniformEnhancer[] = [
 		type: CANVAS_PARAMETER_TYPES,
 		enhancer: hygraphEnhancer,
 		converter: hygraphModelConverter,
-		config: [kontentConfig.projectId, kontentConfig.deliveryKey],
+		config: [hygraphConfig.url, hygraphConfig.token],
 	},
 	{
 		name: "Kontent",
