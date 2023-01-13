@@ -12,18 +12,6 @@ const { contentfulSpaceId, contentfulDeliveryToken, contentfulPreviewToken } =
 const contentfulEnvironment = process.env.CONTENTFUL_ENVIRONMENT ?? "master";
 
 export const contentfulEnhancer = () => {
-	if (!contentfulSpaceId) {
-		throw new Error("CONTENTFUL_SPACE_ID env not set.");
-	}
-
-	if (!contentfulDeliveryToken) {
-		throw new Error("CONTENTFUL_CDA_ACCESS_TOKEN env not set.");
-	}
-
-	if (!contentfulPreviewToken) {
-		throw new Error("CONTENTFUL_CDA_ACCESS_TOKEN env not set.");
-	}
-
 	const client = createClient({
 		space: contentfulSpaceId,
 		environment: contentfulEnvironment,
