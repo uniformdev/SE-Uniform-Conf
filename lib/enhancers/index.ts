@@ -20,14 +20,18 @@ import { sanityEnhancer } from "./sanity/sanityEnhancer";
 import { CANVAS_PARAMETER_TYPES } from "@uniformdev/canvas-graphcms";
 import { hygraphEnhancer } from "./hygraph/hygraphEnhancer";
 import { hygraphModelConverter } from "./hygraph/hygraphModelConverter";
+import { STRAPI_PARAMETER_TYPES } from "@uniformdev/canvas-strapi";
+import { strapiEnhancer } from "./strapi/strapiEnhancer";
+import { strapiModelConverter } from "./strapi/strapiModelConverter";
 
 const {
 	serverRuntimeConfig: {
 		contentfulConfig,
-		kontentConfig,
 		contentstackConfig,
-		sanityConfig,
 		hygraphConfig,
+		kontentConfig,
+		sanityConfig,
+		strapiConfig,
 	},
 } = getConfig();
 
@@ -82,6 +86,13 @@ const enhancers: EnhancerConfiguration[] = [
 			sanityConfig.useCdn,
 			sanityConfig.apiVersion,
 		],
+	},
+	{
+		name: "Strapi",
+		type: STRAPI_PARAMETER_TYPES,
+		enhancer: strapiEnhancer,
+		converter: strapiModelConverter,
+		config: [strapiConfig.apiHost, strapiConfig.apiToken],
 	},
 ];
 

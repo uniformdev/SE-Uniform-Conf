@@ -42,6 +42,10 @@ const nextConfig = {
 			useCdn: process.env.SANITY_USE_CDN,
 			apiVersion: process.env.SANITY_API_VERSION,
 		},
+		strapiConfig: {
+			apiHost: process.env.STRAPI_API_HOST,
+			apiToken: process.env.STRAPI_API_TOKEN
+		}
 	},
 	publicRuntimeConfig: {
 		gaTrackingId: process.env.GA4_ID,

@@ -1,0 +1,49 @@
+id: HeroStrapi
+name: Hero Strapi
+icon: format-heading
+parameters:
+  - id: Entry
+    name: Strapi Entry
+    type: strapi-content
+    helpText: ''
+    typeConfig:
+      required: true
+      displayName: Title
+      allowedContentTypes:
+        api::hero.hero:
+          id: api::hero.hero
+          name: Hero
+          schema:
+            kind: collectionType
+            visible: true
+            attributes:
+              Image:
+                type: media
+                multiple: false
+                required: false
+                allowedTypes:
+                  - images
+                  - files
+                  - videos
+                  - audios
+              Title:
+                type: string
+              ButtonText:
+                type: string
+              Description:
+                type: text
+              ButtonLinkSlug:
+                type: string
+            pluralName: heroes
+            description: ''
+            displayName: Hero
+            singularName: hero
+            pluginOptions: {}
+            collectionName: heroes
+            draftAndPublish: true
+            restrictRelationsTo: null
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-01-13T17:13:33.947743+00:00'
+updated: '2023-01-13T17:13:33.947743+00:00'
