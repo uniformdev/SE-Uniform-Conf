@@ -5,22 +5,16 @@ import getConfig from "next/config";
 
 const {
 	serverRuntimeConfig: {
-		sanityConfig: {
-			sanityProjectId,
-			sanityDataset,
-			sanityUseCdn,
-			sanityApiVersion,
-			sanityCdnProjectId,
-		},
+		sanityConfig: { projectId, dataset, useCdn, apiVersion, cdnProjectId },
 	},
 } = getConfig();
 
 const sanityConfigured: boolean =
-	sanityProjectId !== undefined &&
-	sanityCdnProjectId !== undefined &&
-	sanityDataset !== undefined &&
-	sanityUseCdn !== undefined &&
-	sanityApiVersion !== undefined;
+	projectId !== undefined &&
+	cdnProjectId !== undefined &&
+	dataset !== undefined &&
+	useCdn !== undefined &&
+	apiVersion !== undefined;
 
 export const sanityModelConverter = ({
 	component,
@@ -43,17 +37,17 @@ export const sanityModelConverter = ({
 
 		if (sanityConfigured) {
 			const client = new createSanityClient({
-				projectId: sanityCdnProjectId,
-				dataset: sanityDataset,
-				useCdn: sanityUseCdn,
-				apiVersion: sanityApiVersion,
+				projectId: cdnProjectId,
+				dataset: dataset,
+				useCdn: useCdn,
+				apiVersion: apiVersion,
 			});
 
 			const builder = imageUrlBuilder(client);
 			returnValue.image.src = builder
 				.image(parameter?.value?.image)
 				.url()
-				.replace(sanityCdnProjectId, sanityProjectId);
+				.replace(cdnProjectId, projectId);
 		}
 
 		return returnValue;

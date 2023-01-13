@@ -33,47 +33,63 @@ const {
 
 type UniformEnhancer = {
 	name: string | string[];
-	config: any;
 	type: string | readonly string[];
-	enhancer: ComponentParameterEnhancer<any, any>;
+	enhancer: () => ComponentParameterEnhancer<any, any>;
 	converter: ComponentParameterEnhancerFunction<any>;
+	config: string[];
 };
 
 const enhancers: UniformEnhancer[] = [
 	{
 		name: "Contentful",
-		config: contentfulConfig,
 		type: CANVAS_CONTENTFUL_PARAMETER_TYPES,
-		enhancer: contentfulEnhancer(),
+		enhancer: contentfulEnhancer,
 		converter: contentfulModelConverter,
+		config: [
+			contentfulConfig.spaceId,
+			contentfulConfig.environment,
+			contentfulConfig.previewToken,
+			contentfulConfig.deliveryToken,
+		],
 	},
 	{
 		name: "Contentstack",
-		config: contentstackConfig,
 		type: CANVAS_CONTENTSTACK_PARAMETER_TYPES,
-		enhancer: contentstackEnhancer(),
+		enhancer: contentstackEnhancer,
 		converter: contentstackModelConverter,
-	},
-	{
-		name: "Kontent",
-		config: kontentConfig,
-		type: CANVAS_KONTENT_PARAMETER_TYPES,
-		enhancer: kontentEnhancer(),
-		converter: kontentModelConverter,
+		config: [
+			contentstackConfig.apiKey,
+			contentstackConfig.deliveryToken,
+			contentstackConfig.environment,
+			contentstackConfig.region,
+		],
 	},
 	{
 		name: "Hygraph",
-		config: hygraphConfig,
 		type: CANVAS_PARAMETER_TYPES,
-		enhancer: hygraphEnhancer(),
+		enhancer: hygraphEnhancer,
 		converter: hygraphModelConverter,
+		config: [kontentConfig.projectId, kontentConfig.deliveryKey],
+	},
+	{
+		name: "Kontent",
+		type: CANVAS_KONTENT_PARAMETER_TYPES,
+		enhancer: kontentEnhancer,
+		converter: kontentModelConverter,
+		config: [kontentConfig.projectId, kontentConfig.deliveryKey],
 	},
 	{
 		name: "Sanity",
-		config: sanityConfig,
 		type: CANVAS_SANITY_PARAMETER_TYPES,
-		enhancer: sanityEnhancer(),
+		enhancer: sanityEnhancer,
 		converter: sanityModelConverter,
+		config: [
+			sanityConfig.projectId,
+			sanityConfig.cdnProjectId,
+			sanityConfig.dataset,
+			sanityConfig.useCdn,
+			sanityConfig.apiVersion,
+		],
 	},
 ];
 
@@ -83,8 +99,9 @@ enhancers.forEach((enhancer) => {
 	if (isConfigured(enhancer.config)) {
 		enhancerBuilder.parameterType(
 			enhancer.type,
-			compose(enhancer.enhancer, enhancer.converter)
+			compose(enhancer.enhancer(), enhancer.converter)
 		);
+
 		console.log("Registered ", enhancer.name, " Enhancer.");
 	}
 });
@@ -95,12 +112,11 @@ enhancerBuilder.parameter((e) => {
 	}
 });
 
-function isConfigured(config: any) {
-	Object.entries(config).forEach((setting: any) => {
-		if (setting === undefined) {
+function isConfigured(config: string[]): boolean {
+	for (let index = 0; index < config.length; index++) {
+		if (config[index] === undefined) {
 			return false;
 		}
-	});
-
+	}
 	return true;
 }

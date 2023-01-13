@@ -17,13 +17,9 @@ const nextConfig = {
 		apiHost: process.env.UNIFORM_CLI_BASE_URL || "https://uniform.app",
 		contentfulConfig: {
 			spaceId: process.env.CONTENTFUL_SPACE_ID,
-			environment: process.env.CONTENTFUL_ENVIRONMENT || "master",
+			environment: process.env.CONTENTFUL_ENVIRONMENT,
 			previewToken: process.env.CONTENTFUL_CPA_ACCESS_TOKEN,
 			deliveryToken: process.env.CONTENTFUL_CDA_ACCESS_TOKEN,
-		},
-		kontentConfig: {
-			projectId: process.env.KONTENT_PROJECT_ID,
-			deliveryKey: process.env.KONTENT_DELIVERY_API_KEY,
 		},
 		contentstackConfig: {
 			apiKey: process.env.CONTENTSTACK_API_KEY,
@@ -31,16 +27,20 @@ const nextConfig = {
 			environment: process.env.CONTENTSTACK_ENVIRONMENT,
 			region: process.env.CONTENTSTACK_REGION,
 		},
+		hygraphConfig: {
+			url: process.env.HYGRAPH_URL,
+			token: process.env.HYGRAPH_TOKEN,
+		},
+		kontentConfig: {
+			projectId: process.env.KONTENT_PROJECT_ID,
+			deliveryKey: process.env.KONTENT_DELIVERY_API_KEY,
+		},
 		sanityConfig: {
 			projectId: process.env.SANITY_PROJECT_ID,
 			cdnProjectId: process.env.SANITY_CDN_PROJECT_ID,
 			dataset: process.env.SANITY_DATASET,
 			useCdn: process.env.SANITY_USE_CDN,
 			apiVersion: process.env.SANITY_API_VERSION,
-		},
-		hygraphConfig: {
-			url: process.env.HYGRAPH_URL,
-			token: process.env.HYGRAPH_TOKEN,
 		},
 	},
 	publicRuntimeConfig: {
