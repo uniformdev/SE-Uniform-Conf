@@ -7,12 +7,16 @@ import {
 import { DeliveryClient } from "@kentico/kontent-delivery";
 import { GetStaticPropsContext } from "next";
 
+const {
+	serverRuntimeConfig: {
+		kontentConfig: { projectId, deliveryKey },
+	},
+} = getConfig();
+
 export const kontentEnhancer = () => {
-	const { serverRuntimeConfig } = getConfig();
-	const { kontentProjectId, kontentDeliveryKey } = serverRuntimeConfig;
 	const client = new DeliveryClient({
-		projectId: kontentProjectId,
-		secureApiKey: kontentDeliveryKey,
+		projectId: projectId,
+		secureApiKey: deliveryKey,
 	});
 
 	const clientList = new KontentClientList({ client });

@@ -6,22 +6,23 @@ import {
 import { createClient } from "contentful";
 import { GetStaticPropsContext } from "next";
 
-const { serverRuntimeConfig } = getConfig();
-const { contentfulSpaceId, contentfulDeliveryToken, contentfulPreviewToken } =
-	serverRuntimeConfig;
-const contentfulEnvironment = process.env.CONTENTFUL_ENVIRONMENT ?? "master";
+const {
+	serverRuntimeConfig: {
+		contentfulConfig: { spaceId, deliveryToken, previewToken, environment },
+	},
+} = getConfig();
 
 export const contentfulEnhancer = () => {
 	const client = createClient({
-		space: contentfulSpaceId,
-		environment: contentfulEnvironment,
-		accessToken: contentfulDeliveryToken,
+		space: spaceId,
+		environment: environment,
+		accessToken: deliveryToken,
 	});
 
 	const previewClient = createClient({
-		space: contentfulSpaceId,
-		environment: contentfulEnvironment,
-		accessToken: contentfulPreviewToken,
+		space: spaceId,
+		environment: environment,
+		accessToken: previewToken,
 		host: "preview.contentful.com",
 	});
 

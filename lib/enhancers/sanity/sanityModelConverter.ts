@@ -3,14 +3,17 @@ import createSanityClient from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 import getConfig from "next/config";
 
-const { serverRuntimeConfig } = getConfig();
 const {
-	sanityProjectId,
-	sanityCdnProjectId,
-	sanityDataset,
-	sanityUseCdn,
-	sanityApiVersion,
-} = serverRuntimeConfig;
+	serverRuntimeConfig: {
+		sanityConfig: {
+			sanityProjectId,
+			sanityDataset,
+			sanityUseCdn,
+			sanityApiVersion,
+			sanityCdnProjectId,
+		},
+	},
+} = getConfig();
 
 const sanityConfigured: boolean =
 	sanityProjectId !== undefined &&

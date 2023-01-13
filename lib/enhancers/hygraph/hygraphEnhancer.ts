@@ -1,16 +1,17 @@
 import getConfig from "next/config";
 import { GraphQLClient } from "graphql-request";
-import {
-	createEnhancer,
-} from "@uniformdev/canvas-graphcms";
+import { createEnhancer } from "@uniformdev/canvas-graphcms";
 
-const { serverRuntimeConfig } = getConfig();
-const { hygraphUrl, hygraphToken } = serverRuntimeConfig;
+const {
+	serverRuntimeConfig: {
+		hygraphConfig: { url, token },
+	},
+} = getConfig();
 
 export const hygraphEnhancer = () => {
-	const client = new GraphQLClient(hygraphUrl, {
+	const client = new GraphQLClient(url, {
 		headers: {
-			Authorization: hygraphToken,
+			Authorization: token,
 		},
 	});
 

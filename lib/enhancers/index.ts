@@ -1,6 +1,10 @@
-import { compose, EnhancerBuilder } from "@uniformdev/canvas";
 import getConfig from "next/config";
-
+import {
+	ComponentParameterEnhancer,
+	ComponentParameterEnhancerFunction,
+	compose,
+	EnhancerBuilder,
+} from "@uniformdev/canvas";
 import { CANVAS_CONTENTFUL_PARAMETER_TYPES } from "@uniformdev/canvas-contentful";
 import { contentfulEnhancer } from "./contentful/contentfulEnhancer";
 import { contentfulModelConverter } from "./contentful/contentfulModelConverter";
@@ -17,94 +21,86 @@ import { CANVAS_PARAMETER_TYPES } from "@uniformdev/canvas-graphcms";
 import { hygraphEnhancer } from "./hygraph/hygraphEnhancer";
 import { hygraphModelConverter } from "./hygraph/hygraphModelConverter";
 
-const { serverRuntimeConfig } = getConfig();
 const {
-	contentfulSpaceId,
-	contentfulDeliveryToken,
-	contentfulEnvironment,
-	kontentProjectId,
-	kontentDeliveryKey,
-	contentstackApiKey,
-	contentstackDeliveryToken,
-	contentstackEnvironment,
-	contentstackRegion,
-	sanityProjectId,
-	sanityCdnProjectId,
-	sanityDataset,
-	sanityUseCdn,
-	sanityApiVersion,
-	hygraphUrl,
-	hygraphToken,
-} = serverRuntimeConfig;
+	serverRuntimeConfig: {
+		contentfulConfig,
+		kontentConfig,
+		contentstackConfig,
+		sanityConfig,
+		hygraphConfig,
+	},
+} = getConfig();
 
-const contentfulConfigured: boolean =
-	contentfulSpaceId !== undefined &&
-	contentfulDeliveryToken !== undefined &&
-	contentfulEnvironment !== undefined;
+type UniformEnhancer = {
+	name: string | string[];
+	config: any;
+	type: string | readonly string[];
+	enhancer: ComponentParameterEnhancer<any, any>;
+	converter: ComponentParameterEnhancerFunction<any>;
+};
 
-const kontentConfigured: boolean =
-	kontentProjectId !== undefined && kontentDeliveryKey !== undefined;
+const enhancers: UniformEnhancer[] = [
+	{
+		name: "Contentful",
+		config: contentfulConfig,
+		type: CANVAS_CONTENTFUL_PARAMETER_TYPES,
+		enhancer: contentfulEnhancer(),
+		converter: contentfulModelConverter,
+	},
+	{
+		name: "Contentstack",
+		config: contentstackConfig,
+		type: CANVAS_CONTENTSTACK_PARAMETER_TYPES,
+		enhancer: contentstackEnhancer(),
+		converter: contentstackModelConverter,
+	},
+	{
+		name: "Kontent",
+		config: kontentConfig,
+		type: CANVAS_KONTENT_PARAMETER_TYPES,
+		enhancer: kontentEnhancer(),
+		converter: kontentModelConverter,
+	},
+	{
+		name: "Hygraph",
+		config: hygraphConfig,
+		type: CANVAS_PARAMETER_TYPES,
+		enhancer: hygraphEnhancer(),
+		converter: hygraphModelConverter,
+	},
+	{
+		name: "Sanity",
+		config: sanityConfig,
+		type: CANVAS_SANITY_PARAMETER_TYPES,
+		enhancer: sanityEnhancer(),
+		converter: sanityModelConverter,
+	},
+];
 
-const contentstackConfigured: boolean =
-	contentstackApiKey !== undefined &&
-	contentstackDeliveryToken !== undefined &&
-	contentstackEnvironment !== undefined &&
-	contentstackRegion !== undefined;
+export const enhancerBuilder = new EnhancerBuilder();
 
-const sanityConfigured: boolean =
-	sanityProjectId !== undefined &&
-	sanityCdnProjectId !== undefined &&
-	sanityDataset !== undefined &&
-	sanityUseCdn !== undefined &&
-	sanityApiVersion !== undefined;
+enhancers.forEach((enhancer) => {
+	if (isConfigured(enhancer.config)) {
+		enhancerBuilder.parameterType(
+			enhancer.type,
+			compose(enhancer.enhancer, enhancer.converter)
+		);
+		console.log("Registered ", enhancer.name, " Enhancer.");
+	}
+});
 
-const hygraphConfigured: boolean =
-	hygraphUrl !== undefined && hygraphToken !== undefined;
-
-export const enhancers = new EnhancerBuilder();
-
-if (contentfulConfigured) {
-	console.log("Registered Contentful Enhancer");
-	enhancers.parameterType(
-		CANVAS_CONTENTFUL_PARAMETER_TYPES,
-		compose(contentfulEnhancer(), contentfulModelConverter)
-	);
-}
-
-if (kontentConfigured) {
-	console.log("Registered Kontent Enhancer");
-	enhancers.parameterType(
-		CANVAS_KONTENT_PARAMETER_TYPES,
-		compose(kontentEnhancer(), kontentModelConverter)
-	);
-}
-
-if (contentstackConfigured) {
-	console.log("Registered Contentstack Enhancer");
-	enhancers.parameterType(
-		CANVAS_CONTENTSTACK_PARAMETER_TYPES,
-		compose(contentstackEnhancer(), contentstackModelConverter)
-	);
-}
-
-if (sanityConfigured) {
-	console.log("Registered Sanity Enhancer");
-	enhancers.parameterType(
-		CANVAS_SANITY_PARAMETER_TYPES,
-		compose(sanityEnhancer(), sanityModelConverter)
-	);
-}
-
-if (hygraphConfigured) {
-	console.log("Registered Hygraph Enhancer");
-	enhancers.parameterType(
-		CANVAS_PARAMETER_TYPES,
-		compose(hygraphEnhancer(), hygraphModelConverter)
-	);
-}
-
-enhancers.parameter((e) => {
+enhancerBuilder.parameter((e) => {
 	if (typeof e.parameter.value === "string") {
 		return e.parameter.value.replace(/personalization/gi, "p13n");
 	}
 });
+
+function isConfigured(config: any) {
+	Object.entries(config).forEach((setting: any) => {
+		if (setting === undefined) {
+			return false;
+		}
+	});
+
+	return true;
+}
