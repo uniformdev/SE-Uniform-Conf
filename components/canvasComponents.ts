@@ -8,11 +8,6 @@ import Navbar from './Navbar';
 import Footer from './Footer';
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
 
-type UniformComponent = {
-  type: string | string[];
-  component: React.ComponentType<ComponentProps<any>>; 
-}
-
 const components: UniformComponent[] = [
   {
     type: ["HeroContentful", "HeroContentstack", "HeroKontent", "HeroSanity", "HeroHygraph"],
@@ -47,3 +42,8 @@ const components: UniformComponent[] = [
 components.forEach(component => {
   registerUniformComponent(component);
 });
+
+type UniformComponent = {
+  type: string | string[];
+  component: React.ComponentType<ComponentProps<any>>; 
+}
