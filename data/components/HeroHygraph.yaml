@@ -1,0 +1,20 @@
+id: HeroHygraph
+name: Hero Hygraph
+icon: format-heading
+parameters:
+  - id: Entry
+    name: Hygraph Entry
+    type: graphcms-entry
+    helpText: ''
+    typeConfig:
+      source: default
+      required: true
+      allowedModels:
+        Hero:
+          apiId: Hero
+          displayName: Hero
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-01-13T09:52:26.939999+00:00'
+updated: '2023-01-13T09:52:26.939999+00:00'
