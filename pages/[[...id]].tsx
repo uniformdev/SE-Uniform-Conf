@@ -40,9 +40,8 @@ export default function Home({
   return (
     <>
       <Head>
-        <title>{`UniformConf${
-          composition?._name ? ` | ${composition?._name}` : ""
-        }`}</title>
+        <title>{`UniformConf${composition?._name ? ` | ${composition?._name}` : ""
+          }`}</title>
         <meta name="description" content="UniformConf"></meta>
       </Head>
       <div>
@@ -85,7 +84,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const { nodes } = await projectMapClient.getNodes({ projectMapId });
 
   const ids = nodes?.filter((node) => node.compositionId!).map((node) => node.path.split('/').filter(Boolean)) ?? []
-  const paths =ids.flatMap((id) => [
+  const paths = ids.flatMap((id) => [
     { params: { id }, locale: 'en-US' },
     { params: { id }, locale: 'nl-NL' }
   ])
