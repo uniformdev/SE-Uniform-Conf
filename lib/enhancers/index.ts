@@ -31,14 +31,6 @@ const {
 	},
 } = getConfig();
 
-type EnhancerConfiguration = {
-	name: string | string[];
-	type: string | readonly string[];
-	enhancer: () => ComponentParameterEnhancer<any, any>;
-	converter: ComponentParameterEnhancerFunction<any>;
-	config: string[];
-};
-
 const enhancers: EnhancerConfiguration[] = [
 	{
 		name: "Contentful",
@@ -120,3 +112,11 @@ function isConfigured(config: string[]): boolean {
 	}
 	return true;
 }
+
+type EnhancerConfiguration = {
+	name: string | string[];
+	type: string | readonly string[];
+	enhancer: () => ComponentParameterEnhancer<any, any>;
+	converter: ComponentParameterEnhancerFunction<any>;
+	config: string[];
+};
