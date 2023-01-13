@@ -31,7 +31,7 @@ const {
 	},
 } = getConfig();
 
-type UniformEnhancer = {
+type EnhancerConfiguration = {
 	name: string | string[];
 	type: string | readonly string[];
 	enhancer: () => ComponentParameterEnhancer<any, any>;
@@ -39,7 +39,7 @@ type UniformEnhancer = {
 	config: string[];
 };
 
-const enhancers: UniformEnhancer[] = [
+const enhancers: EnhancerConfiguration[] = [
 	{
 		name: "Contentful",
 		type: CANVAS_CONTENTFUL_PARAMETER_TYPES,
