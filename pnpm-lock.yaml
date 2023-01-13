@@ -20,6 +20,7 @@ specifiers:
   '@uniformdev/canvas-algolia': ^17.7.0
   '@uniformdev/canvas-contentful': ^17.7.0
   '@uniformdev/canvas-contentstack': ^17.7.0
+  '@uniformdev/canvas-graphcms': ^17.1.0
   '@uniformdev/canvas-kontent': ^17.7.0
   '@uniformdev/canvas-next': ^17.7.0
   '@uniformdev/canvas-react': ^17.7.0
@@ -39,6 +40,7 @@ specifiers:
   contentstack: ^3.15.5
   cookie: 0.5.0
   dotenv: 16.0.3
+  graphql-request: ^5.1.0
   netlify-cli: 12.2.8
   next: 13.0.6
   node-fetch: 2.6.1
@@ -66,6 +68,7 @@ dependencies:
   '@uniformdev/canvas-algolia': 17.8.0_algoliasearch@4.14.3
   '@uniformdev/canvas-contentful': 17.7.0_rdaxaa7fx6wy2epa6ixqdmav5i
   '@uniformdev/canvas-contentstack': 17.7.0_contentstack@3.15.5
+  '@uniformdev/canvas-graphcms': 17.1.0_svupn32hnko57qr7n76svn34re
   '@uniformdev/canvas-kontent': 17.7.0_urs7zdscilrnwhemglwzxpuwo4
   '@uniformdev/canvas-next': 17.7.0_6jx7hpii6hgsrmhxgqrmo3277u
   '@uniformdev/canvas-react': 17.7.0_biqbaboplfbrettd7655fr4n2y
@@ -82,6 +85,7 @@ dependencies:
   contentful: 9.2.15
   contentstack: 3.15.5
   cookie: 0.5.0
+  graphql-request: 5.1.0_graphql@16.5.0
   next: 13.0.6_3jhb72aeqbjgxy5pbxhzqa7t5e
   nookies: 2.5.2
   react: 18.2.0
@@ -695,6 +699,14 @@ packages:
     resolution: {integrity: sha512-TSogMPVxbRe77QCj1dt8NmRiJasPvuc+eT5jnJ6YpLqgOD2zXc5UA3S1qwybN+GVCDNdKfpKy1oj8RpzLJvh6A==}
     dependencies:
       '@floating-ui/core': 1.1.0
+    dev: false
+
+  /@graphql-typed-document-node/core/3.1.1_graphql@16.5.0:
+    resolution: {integrity: sha512-NQ17ii0rK1b34VZonlmT2QMJFI70m0TRwbknO/ihlbatXyaktDhN/98vBiUU6kNBPljqGqyIrl2T4nY2RpFANg==}
+    peerDependencies:
+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
+    dependencies:
+      graphql: 16.5.0
     dev: false
 
   /@humanwhocodes/momoa/2.0.4:
@@ -2356,6 +2368,18 @@ packages:
     dependencies:
       '@uniformdev/canvas': 17.7.0
       contentstack: 3.15.5
+    dev: false
+
+  /@uniformdev/canvas-graphcms/17.1.0_svupn32hnko57qr7n76svn34re:
+    resolution: {integrity: sha512-DmTtYgFX6mvNJIJfHcQfJrYKwc2uDIIiiai9wl2BIxRvYY2SNDpWLtpMokwhLL2bwfSaPLDLRQlR2r0mLs4Krg==}
+    peerDependencies:
+      graphql: '>=16.0.0'
+      graphql-request: '>=4.0.0'
+    dependencies:
+      '@uniformdev/canvas': 17.1.0
+      dataloader: 2.1.0
+      graphql: 16.5.0
+      graphql-request: 5.1.0_graphql@16.5.0
     dev: false
 
   /@uniformdev/canvas-kontent/17.7.0_urs7zdscilrnwhemglwzxpuwo4:
@@ -4220,6 +4244,14 @@ packages:
       luxon: 3.2.1
     dev: true
 
+  /cross-fetch/3.1.5:
+    resolution: {integrity: sha512-lvb1SBsI0Z7GDwmuid+mU3kWVBwTVUbe7S0H52yaaAdQOXq2YktTCZdlAcNKFzE6QtRz0snpw9bNiPeOIkkQvw==}
+    dependencies:
+      node-fetch: 2.6.7
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
   /cross-spawn/6.0.5:
     resolution: {integrity: sha512-eTVLrBSt7fjbDygz805pMnstIs2VTBNkRm0qxZd+M7A5XDdxVRWO5MxGBXZhjY4cqLYLdtrGqRf8mBPmzwSpWQ==}
     engines: {node: '>=4.8'}
@@ -4315,6 +4347,10 @@ packages:
     resolution: {integrity: sha512-Vr3mLBA8qWmcuschSLAOogKgQ/Jwxulv3RNE4FXnYWRGujzrRWQI4m12fQqRkwX06C0KanhLr4hK+GydchZsaA==}
     engines: {node: '>= 12'}
     dev: true
+
+  /dataloader/2.1.0:
+    resolution: {integrity: sha512-qTcEYLen3r7ojZNgVUaRggOI+KM7jrKxXeSHhogh/TWxYMeONEMqY+hmkobiYQozsGIyg9OYVzO4ZIfoB4I0pQ==}
+    dev: false
 
   /date-fns/1.30.1:
     resolution: {integrity: sha512-hBSVCvSmWC+QypYObzwGOd9wqdDpOt+0wl0KbU+R+uuZBS1jN8VsD1ss3irQDknRj5NvxiTF6oj/nDRnN/UQNw==}
@@ -5518,6 +5554,11 @@ packages:
       - supports-color
     dev: true
 
+  /extract-files/9.0.0:
+    resolution: {integrity: sha512-CvdFfHkC95B4bBBk36hcEmvdR2awOdhhVUYH6S/zrVj3477zven/fJMYg7121h4T1xHZC+tetUpubpAhxwI7hQ==}
+    engines: {node: ^10.17.0 || ^12.0.0 || >= 13.7.0}
+    dev: false
+
   /fast-copy/2.1.7:
     resolution: {integrity: sha512-ozrGwyuCTAy7YgFCua8rmqmytECYk/JYAMXcswOcm0qvGoE3tPb7ivBeIHTOK2DiapBhDZgacIhzhQIKU5TCfA==}
     dev: false
@@ -5826,7 +5867,6 @@ packages:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.35
-    dev: true
 
   /form-data/4.0.0:
     resolution: {integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==}
@@ -6352,10 +6392,23 @@ packages:
     resolution: {integrity: sha512-9ByhssR2fPVsNZj478qUUbKfmL0+t5BDVyjShtyZZLiK7ZDAArFFfopyOTj0M05wE2tJPisA4iTnnXl2YoPvOA==}
     dev: true
 
+  /graphql-request/5.1.0_graphql@16.5.0:
+    resolution: {integrity: sha512-0OeRVYigVwIiXhNmqnPDt+JhMzsjinxHE7TVy3Lm6jUzav0guVcL0lfSbi6jVTRAxcbwgyr6yrZioSHxf9gHzw==}
+    peerDependencies:
+      graphql: 14 - 16
+    dependencies:
+      '@graphql-typed-document-node/core': 3.1.1_graphql@16.5.0
+      cross-fetch: 3.1.5
+      extract-files: 9.0.0
+      form-data: 3.0.1
+      graphql: 16.5.0
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
   /graphql/16.5.0:
     resolution: {integrity: sha512-qbHgh8Ix+j/qY+a/ZcJnFQ+j8ezakqPiHwPiZhV/3PgGlgf96QMBB5/f2rkiC9sgLoy/xvT6TSiaf2nTHJh5iA==}
     engines: {node: ^12.22.0 || ^14.16.0 || ^16.0.0 || >=17.0.0}
-    dev: true
 
   /gzip-size/6.0.0:
     resolution: {integrity: sha512-ax7ZYomf6jqPTQ4+XCpUGyXKHk5WweS+e05MBO4/y3WJ5RkmPXNKvX+bx1behVILVwr6JSQvZAku021CHPXG3Q==}

@@ -13,6 +13,9 @@ import { contentstackModelConverter } from "./contentstack/contentstackModelConv
 import { CANVAS_SANITY_PARAMETER_TYPES } from "@uniformdev/canvas-sanity";
 import { sanityModelConverter } from "./sanity/sanityModelConverter";
 import { sanityEnhancer } from "./sanity/sanityEnhancer";
+import { CANVAS_PARAMETER_TYPES } from "@uniformdev/canvas-graphcms";
+import { hygraphEnhancer } from "./hygraph/hygraphEnhancer";
+import { hygraphModelConverter } from "./hygraph/hygraphModelConverter";
 
 const { serverRuntimeConfig } = getConfig();
 const {
@@ -29,7 +32,9 @@ const {
   sanityCdnProjectId,
   sanityDataset,
   sanityUseCdn,
-  sanityApiVersion 
+  sanityApiVersion,
+  hygraphUrl,
+  hygraphToken
 } = serverRuntimeConfig
 
 const contentfulConfigured: boolean =
@@ -44,6 +49,9 @@ const contentstackConfigured: boolean =
 const sanityConfigured: boolean = 
   sanityProjectId !== undefined && sanityCdnProjectId !== undefined && sanityDataset !== undefined && sanityUseCdn !== undefined && sanityApiVersion !== undefined;
 
+  const hygraphConfigured: boolean =
+  hygraphUrl !== undefined && hygraphToken !== undefined;
+  
 export const enhancers = new EnhancerBuilder();
 
 if (contentfulConfigured) {
@@ -64,6 +72,11 @@ if (contentstackConfigured) {
 if (sanityConfigured) {
   console.log("Registered Sanity Enhancer");
   enhancers.parameterType(CANVAS_SANITY_PARAMETER_TYPES, compose(sanityEnhancer(), sanityModelConverter))
+}
+
+if (hygraphConfigured) {
+  console.log("Registered Hygraph Enhancer");
+  enhancers.parameterType(CANVAS_PARAMETER_TYPES, compose(hygraphEnhancer(), hygraphModelConverter));
 }
 
 enhancers.parameter((e) => {

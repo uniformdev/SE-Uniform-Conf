@@ -15,7 +15,7 @@ type UniformComponent = {
 
 const components: UniformComponent[] = [
   {
-    type: ["HeroContentful", "HeroContentstack", "HeroKontent", "HeroSanity"],
+    type: ["HeroContentful", "HeroContentstack", "HeroKontent", "HeroSanity", "HeroHygraph"],
     component: Hero,
   },
   {

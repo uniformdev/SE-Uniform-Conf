@@ -29,7 +29,9 @@ const nextConfig = {
     sanityCdnProjectId: process.env.SANITY_CDN_PROJECT_ID,
     sanityDataset: process.env.SANITY_DATASET,
     sanityUseCdn: process.env.SANITY_USE_CDN,
-    sanityApiVersion: process.env.SANITY_API_VERSION
+    sanityApiVersion: process.env.SANITY_API_VERSION,
+    hygraphUrl: process.env.HYGRAPH_URL,
+    hygraphToken: process.env.HYGRAPH_TOKEN
   },
   publicRuntimeConfig: {
     gaTrackingId: process.env.GA4_ID,
