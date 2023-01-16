@@ -23,33 +23,35 @@ export const sanityModelConverter = ({
 	component: ComponentInstance;
 	parameter: any;
 }) => {
-	if (component.type === "HeroSanity") {
-		const returnValue = {
-			title: parameter?.value?.title || "",
-			description: parameter?.value?.description || "",
-			buttonText: parameter?.value?.buttonText || "",
-			buttonLink: parameter?.value?.buttonLinkSug || "",
-			image: {
-				src: "",
-				alt: "",
-			},
-		};
+	switch (component.type) {
+		case "HeroSanity": {
+			const returnValue = {
+				title: parameter?.value?.title || "",
+				description: parameter?.value?.description || "",
+				buttonText: parameter?.value?.buttonText || "",
+				buttonLink: parameter?.value?.buttonLinkSug || "",
+				image: {
+					src: "",
+					alt: "",
+				},
+			};
 
-		if (sanityConfigured) {
-			const client = new createSanityClient({
-				projectId: cdnProjectId,
-				dataset: dataset,
-				useCdn: useCdn,
-				apiVersion: apiVersion,
-			});
+			if (sanityConfigured) {
+				const client = new createSanityClient({
+					projectId: cdnProjectId,
+					dataset: dataset,
+					useCdn: useCdn,
+					apiVersion: apiVersion,
+				});
 
-			const builder = imageUrlBuilder(client);
-			returnValue.image.src = builder
-				.image(parameter?.value?.image)
-				.url()
-				.replace(cdnProjectId, projectId);
+				const builder = imageUrlBuilder(client);
+				returnValue.image.src = builder
+					.image(parameter?.value?.image)
+					.url()
+					.replace(cdnProjectId, projectId);
+			}
+
+			return returnValue;
 		}
-
-		return returnValue;
 	}
 };
