@@ -8,56 +8,58 @@ export const contentfulModelConverter = ({
 	component: ComponentInstance;
 	parameter: any;
 }) => {
-	if (component.type === "HeroContentful") {
-		const returnValue = {
-			title: parameter?.value?.fields?.title || "",
-			description: parameter?.value?.fields?.description || "",
-			buttonText: parameter?.value?.fields?.buttonText || "",
-			buttonLink: parameter?.value?.fields?.buttonLinkSlug || "",
-			image: transformContentfulImage(parameter?.value?.fields?.image) || "",
-		};
+	switch (component.type) {
+		case "HeroContentful": {
+			const returnValue = {
+				title: parameter?.value?.fields?.title || "",
+				description: parameter?.value?.fields?.description || "",
+				buttonText: parameter?.value?.fields?.buttonText || "",
+				buttonLink: parameter?.value?.fields?.buttonLinkSlug || "",
+				image: transformContentfulImage(parameter?.value?.fields?.image) || "",
+			};
 
-		return returnValue;
-	}
+			return returnValue;
+		}
 
-	if (component.type === "WhyAttend") {
-		const returnValue = {
-			title: parameter?.value?.fields?.title || "",
-			description: parameter?.value?.fields?.description || "",
-			image: transformContentfulImage(parameter?.value?.fields?.image) || "",
-		};
+		case "WhyAttend": {
+			const returnValue = {
+				title: parameter?.value?.fields?.title || "",
+				description: parameter?.value?.fields?.description || "",
+				image: transformContentfulImage(parameter?.value?.fields?.image) || "",
+			};
 
-		return returnValue;
-	}
+			return returnValue;
+		}
 
-	if (component.type === "TalkList") {
-		const returnValue = {
-			title: parameter?.value?.fields?.title || "",
-		};
+		case "TalkList": {
+			const returnValue = {
+				title: parameter?.value?.fields?.title || "",
+			};
 
-		return returnValue;
-	}
+			return returnValue;
+		}
 
-	if (component.type === "Talk") {
-		const returnValue = {
-			title: parameter?.value?.fields?.title || "",
-			description: parameter?.value?.fields?.intro || "",
-			audience: parameter?.value?.fields?.audience || "",
-		};
+		case "Talk": {
+			const returnValue = {
+				title: parameter?.value?.fields?.title || "",
+				description: parameter?.value?.fields?.intro || "",
+				audience: parameter?.value?.fields?.audience || "",
+			};
 
-		return returnValue;
-	}
+			return returnValue;
+		}
 
-	if (component.type === "RegistrationForm") {
-		const returnValue = {
-			heading: parameter?.value?.fields?.heading || "",
-			buttonText: parameter?.value?.fields?.buttonText || "",
-			registeredText: parameter?.value?.fields?.registeredText || "",
-			homeLinkText: parameter?.value?.fields?.homeLinkText || "",
-			success: parameter?.value?.fields?.success || "",
-		};
+		case "RegistrationForm": {
+			const returnValue = {
+				heading: parameter?.value?.fields?.heading || "",
+				buttonText: parameter?.value?.fields?.buttonText || "",
+				registeredText: parameter?.value?.fields?.registeredText || "",
+				homeLinkText: parameter?.value?.fields?.homeLinkText || "",
+				success: parameter?.value?.fields?.success || "",
+			};
 
-		return returnValue;
+			return returnValue;
+		}
 	}
 };
 
