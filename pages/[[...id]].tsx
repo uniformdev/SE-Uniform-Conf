@@ -1,3 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import getConfig from "next/config";
 import { GetStaticPaths, GetStaticPropsContext } from "next";
 import Head from "next/head";
@@ -54,7 +56,7 @@ export default function Home({
   );
 }
 
-export async function getServerSideProps(context: GetStaticPropsContext) {
+export async function getStaticProps(context: GetStaticPropsContext) {
   const slug = context?.params?.id;
   const slugString = Array.isArray(slug) ? slug.join("/") : slug;
   const { preview } = context;
@@ -76,20 +78,20 @@ export async function getServerSideProps(context: GetStaticPropsContext) {
       composition,
       preview: Boolean(preview),
     },
-    // revalidate: 3,
+    revalidate: 3,
   };
 }
 
-// export const getStaticPaths: GetStaticPaths = async () => {
-//   const { nodes } = await projectMapClient.getNodes({ projectMapId });
+export const getStaticPaths: GetStaticPaths = async () => {
+  const { nodes } = await projectMapClient.getNodes({ projectMapId });
 
-//   const ids = nodes?.filter((node) => node.compositionId!).map((node) => node.path.split('/').filter(Boolean)) ?? []
-//   const paths = ids.flatMap((id) => [
-//     { params: { id }, locale: 'en-US' },
-//     { params: { id }, locale: 'nl-NL' }
-//   ])
-//   return {
-//     paths,
-//     fallback: false,
-//   };
-// };
+  const ids = nodes?.filter((node) => node.compositionId!).map((node) => node.path.split('/').filter(Boolean)) ?? []
+  const paths = ids.flatMap((id) => [
+    { params: { id }, locale: 'en-US' },
+    { params: { id }, locale: 'nl-NL' }
+  ])
+  return {
+    paths,
+    fallback: 'blocking',
+  };
+};
