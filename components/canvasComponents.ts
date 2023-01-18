@@ -1,4 +1,5 @@
 import { Hero } from "./Hero";
+import { HeroEdgehanced } from "./HeroEdgehanced";
 import { TalkList } from "./TalkList";
 import { WhyAttend } from "./WhyAttend";
 import { Talk } from "./Talk";
@@ -22,6 +23,10 @@ const components: UniformComponent[] = [
 			"HeroStrapi",
 		],
 		component: Hero,
+	},
+	{
+		type: "HeroEdgehanced",
+		component: HeroEdgehanced,
 	},
 	{
 		type: "TalkList",
