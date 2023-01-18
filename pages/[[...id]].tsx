@@ -1,5 +1,3 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 import getConfig from "next/config";
 import { GetStaticPaths, GetStaticPropsContext } from "next";
 import Head from "next/head";
