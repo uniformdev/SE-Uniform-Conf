@@ -86,7 +86,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const ids = nodes?.filter((node) => node.compositionId!).map((node) => node.path.split('/').filter(Boolean)) ?? []
   const paths = ids.flatMap((id) => [
     { params: { id }, locale: 'en-US' },
-    // { params: { id }, locale: 'nl-NL' }
+    { params: { id }, locale: 'nl-NL' }
   ])
   return {
     paths,
