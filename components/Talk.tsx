@@ -10,7 +10,7 @@ export const Talk = (props: TalkProps) => (
   <div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow space-y-2 pt-2">
     <div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden">
       <div className="mt-3 mb-3 flex items-center justify-start">
-        <AudienceLabel audienceName={props?.Entry?.audience[0]} />
+        <AudienceLabel audienceName={props?.Entry?.audience?.length > 0 ? props.Entry.audience[0] : ''} />
       </div>
     </div>
     <a href="#" className="flex flex-wrap no-underline hover:no-underline">
