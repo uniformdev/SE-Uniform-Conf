@@ -9,6 +9,9 @@ import Footer from "./Footer";
 import {
 	ComponentProps,
 	registerUniformComponent,
+	createComponentStoreResolver,
+	DefaultNotImplementedComponent,
+	componentStore,
 } from "@uniformdev/canvas-react";
 
 const components: UniformComponent[] = [
@@ -56,4 +59,11 @@ components.forEach((component) => {
 type UniformComponent = {
 	type: string | string[];
 	component: React.ComponentType<ComponentProps<any>>;
+};
+
+export const RenderComponentResolver = () => {
+	return createComponentStoreResolver({
+		store: componentStore,
+		defaultComponent: DefaultNotImplementedComponent,
+	});
 };

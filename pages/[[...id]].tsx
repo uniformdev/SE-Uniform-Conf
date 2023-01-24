@@ -18,6 +18,7 @@ import { canvasClient } from "lib/canvasClient";
 import { projectMapClient } from "../lib/projectMapClient";
 import "../components/canvasComponents"
 import { enhancerBuilder } from "lib/enhancers";
+import { RenderComponentResolver } from "../components/canvasComponents";
 
 const {
   serverRuntimeConfig: { projectMapId },
@@ -36,6 +37,8 @@ export default function Home({
     }),
   });
 
+  const componentStore = RenderComponentResolver();
+
   return (
     <>
       <Head>
@@ -44,7 +47,7 @@ export default function Home({
         <meta name="description" content="UniformConf"></meta>
       </Head>
       <div>
-        <Composition data={compositionInstance}>
+        <Composition data={compositionInstance} resolveRenderer={componentStore}>
           <Slot name="Header" />
           <Slot name="Content" />
           <Slot name="Footer" />
