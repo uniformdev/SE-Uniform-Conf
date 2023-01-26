@@ -6,13 +6,13 @@ import {
   CANVAS_DRAFT_STATE,
   CANVAS_PUBLISHED_STATE,
   enhance,
-  localize
+  localize,
+  createUniformApiEnhancer
 } from "@uniformdev/canvas";
 import {
-  Composition,
-  createApiEnhancer,
-  Slot,
-  useContextualEditing,
+  UniformSlot,
+  UniformComposition,
+  useUniformContextualEditing,
 } from "@uniformdev/canvas-react";
 import { canvasClient } from "lib/canvasClient";
 import { projectMapClient } from "../lib/projectMapClient";
@@ -30,9 +30,9 @@ export default function Home({
   preview: boolean;
   composition: RootComponentInstance;
 }) {
-  const { composition: compositionInstance } = useContextualEditing({
+  const { composition: compositionInstance } = useUniformContextualEditing({
     initialCompositionValue: composition,
-    enhance: createApiEnhancer({
+    enhance: createUniformApiEnhancer({
       apiUrl: "/api/preview",
     }),
   });
@@ -47,11 +47,11 @@ export default function Home({
         <meta name="description" content="UniformConf"></meta>
       </Head>
       <div>
-        <Composition data={compositionInstance} resolveRenderer={componentStore}>
-          <Slot name="Header" />
-          <Slot name="Content" />
-          <Slot name="Footer" />
-        </Composition>
+        <UniformComposition data={compositionInstance} resolveRenderer={componentStore}>
+          <UniformSlot name="Header" />
+          <UniformSlot name="Content" />
+          <UniformSlot name="Footer" />
+        </UniformComposition>
       </div>
     </>
   );
