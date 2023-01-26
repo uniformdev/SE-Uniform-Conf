@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 import { ToggleEmbeddedContextDevTools } from "@uniformdev/context-devtools";
