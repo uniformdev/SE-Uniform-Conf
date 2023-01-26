@@ -116,14 +116,9 @@ enhancerBuilder.parameter((e) => {
 });
 
 function isConfigured(config: string[]): boolean {
-	let isConfigured = true;
-	config.forEach((cfg) => {
-		if (cfg === undefined) {
-			isConfigured = false;
-		}
+	return config.every((cfg) => {
+		return cfg !== undefined;
 	});
-
-	return isConfigured;
 }
 
 type EnhancerConfiguration = {
