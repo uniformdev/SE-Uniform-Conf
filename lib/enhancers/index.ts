@@ -99,7 +99,7 @@ const enhancers: EnhancerConfiguration[] = [
 export const enhancerBuilder = new EnhancerBuilder();
 
 enhancers.forEach((enhancer) => {
-	if (isConfigured(enhancer.config)) {
+	if (enhancer.config.every((cfg) => cfg !== undefined)) {
 		enhancerBuilder.parameterType(
 			enhancer.type,
 			compose(enhancer.enhancer(), enhancer.converter)
@@ -114,12 +114,6 @@ enhancerBuilder.parameter((e) => {
 		return e.parameter.value.replace(/personalization/gi, "p13n");
 	}
 });
-
-function isConfigured(config: string[]): boolean {
-	return config.every((cfg) => {
-		return cfg !== undefined;
-	});
-}
 
 type EnhancerConfiguration = {
 	name: string | string[];
