@@ -9,7 +9,8 @@ import { useRouter } from "next/router";
 
 const locales = {
   locales: [
-    {code: 'en-US', flag: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="40" viewBox="0 0 7410 3900">\
+    {
+      code: 'en-US', flag: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="40" viewBox="0 0 7410 3900">\
     <rect width="7410" height="3900" fill="#b22234"/>\
     <path d="M0,450H7410m0,600H0m0,600H7410m0,600H0m0,600H7410m0,600H0" stroke="#fff" stroke-width="300"/>\
     <rect xmlns="http://www.w3.org/2000/svg" width="2964" height="2100" fill="#3c3b6e"/>\
@@ -34,7 +35,8 @@ const locales = {
     <use xlink:href="#s5" x="2470"/>\
     </g>\
     </svg>'},
-    {code: 'nl-NL', flag:'<svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 0 9 6">\
+    {
+      code: 'nl-NL', flag: '<svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 0 9 6">\
     <rect fill="#21468B" width="9" height="6"/>\
     <rect fill="#FFF" width="9" height="4"/>\
     <rect fill="#AE1C28" width="9" height="2"/>\
@@ -62,7 +64,7 @@ const LockIcon = () => (
   </svg>
 );
 
-const Nav = () => {
+const Nav: React.FC = () => {
   const [submenuVisible, setSubmenuVisible] = useState(false);
   const [isScrolled, setScrolled] = useState(false);
   const { context } = useUniformContext();
@@ -115,9 +117,8 @@ const Nav = () => {
         </div>
         <div
           id="nav-content"
-          className={`w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 lg:bg-transparent text-black p-4 lg:p-0 z-20 ${
-            submenuVisible ? "bg-gray-100" : "hidden bg-white"
-          }  ${isScrolled ? "bg-white" : "bg-gray-100"}`}
+          className={`w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 lg:bg-transparent text-black p-4 lg:p-0 z-20 ${submenuVisible ? "bg-gray-100" : "hidden bg-white"
+            }  ${isScrolled ? "bg-white" : "bg-gray-100"}`}
         >
           <NavMenu />
           <ActionLink
@@ -132,15 +133,16 @@ const Nav = () => {
             icon={<LockIcon />}
           />
 
-        <ul className="list-reset lg:flex justify-end flex-1 items-center space-x-2 lg:mr-4">
-          {locales.locales.map((locale, index) => {
-            const url = "/" + locale.code;
-            return (
-            <li key={index}>
-              <a href={url}><div dangerouslySetInnerHTML={{ __html: locale.flag? locale.flag : '' }} /></a>
-            </li>
-          )})}
-        </ul>
+          <ul className="list-reset lg:flex justify-end flex-1 items-center space-x-2 lg:mr-4">
+            {locales.locales.map((locale, index) => {
+              const url = "/" + locale.code;
+              return (
+                <li key={index}>
+                  <a href={url}><div dangerouslySetInnerHTML={{ __html: locale.flag ? locale.flag : '' }} /></a>
+                </li>
+              )
+            })}
+          </ul>
         </div>
       </div>
       <hr className="border-b border-gray-100 opacity-25 my-0 py-0" />
@@ -159,9 +161,8 @@ const ActionLink = ({ onClick, label, isScrolled, icon }: ActionLinkProps) => (
   <button
     onClick={onClick}
     id="navAction"
-    className={`mx-auto lg:mx-0 hover:underline font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 ${
-      isScrolled ? "gradient text-white" : "bg-white text-gray-800"
-    }`}
+    className={`mx-auto lg:mx-0 hover:underline font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 ${isScrolled ? "gradient text-white" : "bg-white text-gray-800"
+      }`}
   >
     <div className="flex items-center">
       <div>
