@@ -14,25 +14,25 @@ import {
   UniformComposition,
 } from "@uniformdev/canvas-react";
 import { canvasClient } from "lib/canvasClient";
-import { projectMapClient } from "../lib/projectMapClient";
-import "../components/canvasComponents"
+import "../../components/canvasComponents"
 import { enhancerBuilder } from "lib/enhancers";
-import { RenderComponentResolver } from "../components/canvasComponents";
+import { RenderComponentResolver } from "../../components/canvasComponents";
 import { MenuItem } from "@/components/NavMenu";
 import { MenuItemsProvider } from "lib/providers/MenuItemsProvider";
 import { GetMenuItems } from "lib/helpers/menuItems";
+import { useRouter } from 'next/router'
+import { DynamicTalkList } from "@/components/DynamicTalkList";
+import { createClient } from "contentful";
 
-const {
-  serverRuntimeConfig: { projectMapId },
-} = getConfig();
-
-export default function Page({
+export default function Talk({
   composition,
-  menuItems
+  menuItems,
+  talk
 }: {
   preview: boolean;
   composition: RootComponentInstance;
-  menuItems: MenuItem[]
+  menuItems: MenuItem[];
+  talk: any
 }) {
   const contextualEditingEnhancer = createUniformApiEnhancer({
     apiUrl: "/api/preview"
@@ -40,17 +40,19 @@ export default function Page({
 
   const componentStore = RenderComponentResolver();
 
+  const router = useRouter();
+  const id = router.query.id;
   return (
     <MenuItemsProvider menuItems={menuItems}>
       <Head>
-        <title>{`UniformConf${composition?._name ? ` | ${composition?._name}` : ""
-          }`}</title>
+        <title>{`UniformConf${composition?._name ? ` | ${composition?._name}` : ""}`}</title>
         <meta name="description" content="UniformConf"></meta>
       </Head>
       <div>
         <UniformComposition data={composition} resolveRenderer={componentStore} contextualEditingEnhancer={contextualEditingEnhancer}>
           <UniformSlot name="Header" />
-          <UniformSlot name="Content" />
+          <br />
+          <DynamicTalkList Entries={[{ title: talk.fields.title, audience: talk.fields.audience, intro: talk.fields.intro, slug: id ? id[0] : "" }]} />
           <UniformSlot name="Footer" />
         </UniformComposition>
       </div>
@@ -60,14 +62,13 @@ export default function Page({
 
 export async function getStaticProps(context: GetStaticPropsContext) {
   const slug = context?.params?.id;
-  const slugString = Array.isArray(slug) ? slug.join("/") : slug;
   const { preview } = context;
   const locale = context.locale ?? context.defaultLocale ?? 'en-US';
   //API still in development...hence the unstable.
-  const { composition } = await canvasClient.unstable_getCompositionByNodePath({
-    projectMapNodePath: slugString ? `/${slugString}` : "/",
+  //Retrieving the Talks composition by ID directly.
+  const { composition } = await canvasClient.getCompositionById({
     state: process.env.NODE_ENV === 'development' || preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
-    projectMapId: projectMapId,
+    compositionId: '59dcfc87-5352-47ed-b442-d9a463705863',
     unstable_resolveData: true,
     unstable_dynamicVariables: { locale: locale },
   });
@@ -75,22 +76,48 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   await localize({ composition, locale })
   await enhance({ composition, enhancers: enhancerBuilder, context });
 
+  const {
+    serverRuntimeConfig: {
+      contentfulConfig: { spaceId, deliveryToken, environment },
+    },
+  } = getConfig();
+
+  const client = createClient({
+    space: spaceId,
+    environment: environment,
+    accessToken: deliveryToken,
+  });
+
+  var talks = await client.getEntries({ locale: locale, content_type: "talk", "fields.slug": slug ? slug[0] : "" });
+
   return {
     props: {
       composition,
       preview: Boolean(preview),
-      menuItems: await GetMenuItems()
+      menuItems: await GetMenuItems(),
+      talk: talks.items[0]
     },
   };
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const { nodes } = await projectMapClient.getNodes({ projectMapId });
 
-  const ids = nodes?.filter((node) => node.compositionId!).map((node) => node.path.split('/').filter(Boolean)) ?? [];
-  const paths = ids.flatMap((id) => [
-    { params: { id }, locale: 'en-US' },
-    { params: { id }, locale: 'nl-NL' }
+  const {
+    serverRuntimeConfig: {
+      contentfulConfig: { spaceId, deliveryToken, environment },
+    },
+  } = getConfig();
+
+  const client = createClient({
+    space: spaceId,
+    environment: environment,
+    accessToken: deliveryToken,
+  });
+
+  var talks = await client.getEntries({ content_type: "talk" });
+  const paths = talks.items.flatMap((talk: any) => [
+    { params: { id: [talk.fields.slug] }, locale: 'en-US' },
+    { params: { id: [talk.fields.slug] }, locale: 'nl-NL' }
   ]);
 
   return {

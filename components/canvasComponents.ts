@@ -13,6 +13,7 @@ import {
 	DefaultNotImplementedComponent,
 	componentStore,
 } from "@uniformdev/canvas-react";
+import { DynamicTalkList } from "./DynamicTalkList";
 
 const components: UniformComponent[] = [
 	{
@@ -50,6 +51,10 @@ const components: UniformComponent[] = [
 		type: "Footer",
 		component: Footer,
 	},
+	{
+		type: "DynamicTalkList",
+		component: DynamicTalkList
+	}
 ];
 
 components.forEach((component) => {

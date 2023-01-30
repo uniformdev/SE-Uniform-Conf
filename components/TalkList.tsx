@@ -1,4 +1,5 @@
-import { Slot } from "@uniformdev/canvas-react";
+import { UniformSlot } from "@uniformdev/canvas-react";
+
 export type TalkListProps = {
   Entry: {
     title: string;
@@ -14,7 +15,7 @@ export function TalkList(props: TalkListProps) {
             className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
             dangerouslySetInnerHTML={{ __html: props?.Entry?.title }}
           />
-          <Slot name="Talks">
+          <UniformSlot name="Talks">
             {({ child, key }) => (
               <div
                 key={key}
@@ -23,7 +24,7 @@ export function TalkList(props: TalkListProps) {
                 {child}
               </div>
             )}
-          </Slot>
+          </UniformSlot>
         </div>
       </section>
     </fieldset>
