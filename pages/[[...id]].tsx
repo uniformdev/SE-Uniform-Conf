@@ -18,6 +18,9 @@ import { projectMapClient } from "../lib/projectMapClient";
 import "../components/canvasComponents"
 import { enhancerBuilder } from "lib/enhancers";
 import { RenderComponentResolver } from "../components/canvasComponents";
+import { MenuItem } from "@/components/NavMenu";
+import { MenuItemsProvider } from "lib/providers/MenuItemsProvider";
+import { GetMenuItems } from "lib/helpers/menuItems";
 
 const {
   serverRuntimeConfig: { projectMapId },
@@ -25,9 +28,11 @@ const {
 
 export default function Home({
   composition,
+  menuItems
 }: {
   preview: boolean;
   composition: RootComponentInstance;
+  menuItems: MenuItem[]
 }) {
   const contextualEditingEnhancer = createUniformApiEnhancer({
     apiUrl: "/api/preview"
@@ -36,7 +41,7 @@ export default function Home({
   const componentStore = RenderComponentResolver();
 
   return (
-    <>
+    <MenuItemsProvider menuItems={menuItems}>
       <Head>
         <title>{`UniformConf${composition?._name ? ` | ${composition?._name}` : ""
           }`}</title>
@@ -49,7 +54,7 @@ export default function Home({
           <UniformSlot name="Footer" />
         </UniformComposition>
       </div>
-    </>
+    </MenuItemsProvider>
   );
 }
 
@@ -74,6 +79,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     props: {
       composition,
       preview: Boolean(preview),
+      menuItems: await GetMenuItems()
     },
   };
 }
