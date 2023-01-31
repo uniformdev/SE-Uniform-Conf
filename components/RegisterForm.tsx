@@ -48,17 +48,9 @@ export function RegisterForm(props: RegisterFormProps) {
           <div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
             <p className="uppercase tracking-loose w-full">Uniform conf</p>
             {registered ? (
-              <h1
-                className="my-4 text-5xl font-bold leading-tight"
-                dangerouslySetInnerHTML={{
-                  __html: props?.Entry?.success,
-                }}
-              />
+              <h1 className="my-4 text-5xl font-bold leading-tight">{props?.Entry?.success}</h1>              
             ) : (
-              <h1
-                className="my-4 text-5xl font-bold leading-tight"
-                dangerouslySetInnerHTML={{ __html: props?.Entry?.heading }}
-              />
+              <h1 className="my-4 text-5xl font-bold leading-tight">{props?.Entry?.heading}</h1>
             )}
             <form>
               {registered ? (

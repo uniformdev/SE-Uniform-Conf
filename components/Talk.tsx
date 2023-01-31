@@ -14,19 +14,13 @@ export const Talk = (props: TalkProps) => (
       </div>
     </div>
     <a href="#" className="flex flex-wrap no-underline hover:no-underline">
-      <div
-        className="w-full font-bold text-xl text-gray-800 px-6"
-        dangerouslySetInnerHTML={{
-          __html: props?.Entry?.title,
-        }}
-      />
+      <div className="w-full font-bold text-xl text-gray-800 px-6">
+        {props?.Entry?.title}
+      </div>
     </a>
-    <div
-      className="text-gray-800 px-6 pb-6 text-sm"
-      dangerouslySetInnerHTML={{
-        __html: props?.Entry?.description,
-      }}
-    />
+    <div className="text-gray-800 px-6 pb-6 text-sm">
+      {props?.Entry?.description}
+    </div>
   </div>
 );
 

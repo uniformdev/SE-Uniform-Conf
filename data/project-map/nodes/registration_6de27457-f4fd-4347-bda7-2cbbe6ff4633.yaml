@@ -1,6 +1,7 @@
 id: 6de27457-f4fd-4347-bda7-2cbbe6ff4633
 name: Registration
 type: composition
+data: {}
 order: 600
 path: /registration
 compositionId: 3fc48aa9-6300-4b03-bc3c-a24c2480da14

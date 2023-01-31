@@ -3,18 +3,42 @@ composition:
   _id: 8ad16a58-f0a4-44c7-9f99-ac490bc4ae9f
   _slug: home
   type: Page
-  parameters: {}
   slots:
     Footer:
-      - type: Footer
+      - _id: d62d8f53-526a-4c31-bf80-d1d54096b477
+        type: Footer
     Header:
-      - type: Header
+      - _id: 9e35bae7-3cd7-4cfa-8e1c-594cf15184ca
+        type: Header
     Content:
-      - type: $personalization
+      - _id: 1edc8903-846b-4521-b8b1-cdfc08e6c02b
+        type: $personalization
         slots:
           pz:
-            - type: HeroContentful
+            - _id: 5d961246-aa2a-4909-b1ac-ba06bc6a41d1
+              type: HeroContentful
               parameters:
+                Entry:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 7hcStxNFKJCaUroZ5GPxQE
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: registeredCookie
+                        r: 0
+                        op: '>'
+                    name: pz-hero-marketer
+            - _id: 67e3536b-cc9e-41e6-982b-960d1bee2f0e
+              type: HeroContentful
+              parameters:
+                Entry:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 5VwTiQVfimLm1iQNaNG9Mu
                 $pzCrit:
                   type: $pzCrit
                   value:
@@ -23,13 +47,14 @@ composition:
                         r: 0
                         op: '>'
                     name: pz-hero-marketer
+            - _id: 97f55394-d814-4102-8b0e-ed5d39178cb8
+              type: HeroContentful
+              parameters:
                 Entry:
                   type: contentfulEntry
                   value:
                     source: default
-                    entryId: 5VwTiQVfimLm1iQNaNG9Mu
-            - type: HeroContentful
-              parameters:
+                    entryId: 7oDALbrtFTBzBPVX1qbvF8
                 $pzCrit:
                   type: $pzCrit
                   value:
@@ -38,13 +63,14 @@ composition:
                         r: 0
                         op: '>'
                     name: pz-hero-marketer
+            - _id: c0e59649-52ea-4fd3-94b6-03ed991dc711
+              type: HeroContentful
+              parameters:
                 Entry:
                   type: contentfulEntry
                   value:
                     source: default
-                    entryId: 7oDALbrtFTBzBPVX1qbvF8
-            - type: HeroContentful
-              parameters:
+                    entryId: 7EQvlYWfqu0s2y92BqEEJV
                 $pzCrit:
                   type: $pzCrit
                   value:
@@ -53,48 +79,49 @@ composition:
                         r: 0
                         op: '>'
                     name: pz-hero-developer
-                Entry:
-                  type: contentfulEntry
-                  value:
-                    source: default
-                    entryId: 7EQvlYWfqu0s2y92BqEEJV
-            - type: HeroContentful
+            - _id: afddb4f0-8ab2-4585-94f0-ff07592e8126
+              type: HeroContentful
               parameters:
-                $pzCrit:
-                  type: $pzCrit
-                  value:
-                    crit: []
-                    name: pz-hero-default
                 Entry:
                   type: contentfulEntry
                   value:
                     source: default
                     entryId: 4CHJuBQLA1jI9ntIFkGHVe
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit: []
+                    name: pz-hero-default
         parameters:
           trackingEventName:
             type: text
             value: P13N Hero
-      - type: $personalization
+      - _id: 0e64a207-713b-44ca-bd99-039d0e0eb49c
+        type: $personalization
         slots:
           pz:
-            - type: TalkList
+            - _id: 5e65cf98-3919-4b8f-aa88-fa6c6451fc14
+              type: TalkList
               slots:
                 Talks:
-                  - type: Talk
+                  - _id: fad36e8e-c93e-4bfe-a044-20b8dce227c6
+                    type: Talk
                     parameters:
                       Entry:
                         type: contentfulEntry
                         value:
                           source: default
                           entryId: 6oHJVoV4O7nLJG8bjoVcoZ
-                  - type: Talk
+                  - _id: 213dd64d-459f-45d9-ab1c-72d8824792ce
+                    type: Talk
                     parameters:
                       Entry:
                         type: contentfulEntry
                         value:
                           source: default
                           entryId: 3IwIot1CNI1uT9MBRqIuvX
-                  - type: Talk
+                  - _id: 2610a60e-9579-44c2-92f7-4f11baaa2f1b
+                    type: Talk
                     parameters:
                       Entry:
                         type: contentfulEntry
@@ -102,6 +129,11 @@ composition:
                           source: default
                           entryId: pkZcUE4SpYHTO1RtvyBxR
               parameters:
+                Entry:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 2JOufkNkure7kRO9TDJoif
                 $pzCrit:
                   type: $pzCrit
                   value:
@@ -110,29 +142,28 @@ composition:
                         r: 0
                         op: '>'
                     name: pz-talklist-mrkt
-                Entry:
-                  type: contentfulEntry
-                  value:
-                    source: default
-                    entryId: 2JOufkNkure7kRO9TDJoif
-            - type: TalkList
+            - _id: ccbc92d2-571f-42d8-a725-d929eb2261ec
+              type: TalkList
               slots:
                 Talks:
-                  - type: Talk
+                  - _id: 5f8f4974-8afd-4527-a8de-74f3fccfedb6
+                    type: Talk
                     parameters:
                       Entry:
                         type: contentfulEntry
                         value:
                           source: default
                           entryId: 4vxlCGkZuxFQYComTccjrU
-                  - type: Talk
+                  - _id: 714d63d6-6fac-4c11-8c65-db1e23cff449
+                    type: Talk
                     parameters:
                       Entry:
                         type: contentfulEntry
                         value:
                           source: default
                           entryId: 3qTWWoreFUvRPHndh3YcqY
-                  - type: Talk
+                  - _id: ca7b94e3-cafa-4182-9394-dc531cb82497
+                    type: Talk
                     parameters:
                       Entry:
                         type: contentfulEntry
@@ -140,6 +171,11 @@ composition:
                           source: default
                           entryId: 4eiVl7wuASXnHDBavMvyJr
               parameters:
+                Entry:
+                  type: contentfulEntry
+                  value:
+                    source: default
+                    entryId: 2JOufkNkure7kRO9TDJoif
                 $pzCrit:
                   type: $pzCrit
                   value:
@@ -148,29 +184,28 @@ composition:
                         r: 0
                         op: '>'
                     name: pz-talklist-dev
-                Entry:
-                  type: contentfulEntry
-                  value:
-                    source: default
-                    entryId: 2JOufkNkure7kRO9TDJoif
-            - type: TalkList
+            - _id: e99ed02a-f04f-4c49-a65d-7a2c243ccfc0
+              type: TalkList
               slots:
                 Talks:
-                  - type: Talk
+                  - _id: 4cfb9445-abbd-4d71-a889-f426fd502f45
+                    type: Talk
                     parameters:
                       Entry:
                         type: contentfulEntry
                         value:
                           source: default
                           entryId: 4vxlCGkZuxFQYComTccjrU
-                  - type: Talk
+                  - _id: 2ff74fb6-6dc2-4de0-ba95-886253e6e1c6
+                    type: Talk
                     parameters:
                       Entry:
                         type: contentfulEntry
                         value:
                           source: default
                           entryId: 7IxWILLYiArU26r2UqtnaI
-                  - type: Talk
+                  - _id: aca63f6f-cb52-43b8-b762-ac5842218309
+                    type: Talk
                     parameters:
                       Entry:
                         type: contentfulEntry
@@ -178,20 +213,132 @@ composition:
                           source: default
                           entryId: 4eiVl7wuASXnHDBavMvyJr
               parameters:
-                $pzCrit:
-                  type: $pzCrit
-                  value:
-                    crit: []
-                    name: pz-talklist-default
                 Entry:
                   type: contentfulEntry
                   value:
                     source: default
                     entryId: 2JOufkNkure7kRO9TDJoif
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit: []
+                    name: pz-talklist-default
         parameters:
           trackingEventName:
             type: text
             value: P13N Talks
-created: '2022-12-28T17:55:05.662552+00:00'
-modified: '2023-01-10T12:49:41.400428+00:00'
+      - _id: dffec2f0-3953-48ab-9229-3bca7bf8a10e
+        type: HeroContentstack
+        parameters:
+          Entry:
+            type: contentstackEntrySelector
+            value:
+              entryUid: blte757ae3b2236cdd4
+              contentTypeUid: hero
+      - _id: 2c3ea3a4-538c-4446-85b1-5d7b27a8a33b
+        type: HeroContentful
+        parameters:
+          Entry:
+            type: contentfulEntry
+            value:
+              source: default
+              entryId: 4CHJuBQLA1jI9ntIFkGHVe
+      - _id: 0bcade84-1400-4afd-9820-15a17777357e
+        type: HeroKontent
+        parameters:
+          Entry:
+            type: kontentEntry
+            value:
+              source: default
+              entryCodename: welcome_to_uniformconf
+      - _id: bf7d795e-6ef2-48ea-96a2-e0e2fdfb3664
+        type: $localization
+        slots:
+          localized:
+            - _id: 2ef19938-735b-4a31-96d4-dc13b4d9190c
+              type: HeroStrapi
+              parameters:
+                Entry:
+                  type: strapi-content
+                  value:
+                    entries:
+                      - id: 2-api::hero.hero
+                        cmsId: '2'
+                        contentType:
+                          id: api::hero.hero
+                          name: Hero
+                          schema:
+                            pluralName: heroes
+                locale:
+                  type: localeSelect
+                  value: nl-NL
+            - _id: 4f27322c-4ac4-491c-be03-6b6994f9f469
+              type: HeroStrapi
+              parameters:
+                Entry:
+                  type: strapi-content
+                  value:
+                    entries:
+                      - id: 1-api::hero.hero
+                        cmsId: '1'
+                        contentType:
+                          id: api::hero.hero
+                          name: Hero
+                          schema:
+                            pluralName: heroes
+                locale:
+                  type: localeSelect
+                  value: en-US
+      - _id: 51575222-e6a5-4fd7-8196-d26397b13127
+        type: $localization
+        slots:
+          localized:
+            - _id: 83a3f267-7501-461e-8eb8-5bb30a4a3b18
+              type: HeroHygraph
+              parameters:
+                Entry:
+                  type: graphcms-entry
+                  value:
+                    source: default
+                    entryIds:
+                      - clcujarxv1d4k0butfn5z8gkw
+                locale:
+                  type: localeSelect
+                  value: en-US
+            - _id: ad0c7221-3c63-4992-8b68-3e074cd71cac
+              type: HeroHygraph
+              parameters:
+                Entry:
+                  type: graphcms-entry
+                  value:
+                    source: default
+                    entryIds:
+                      - clcujbjim1cwk0aw21lqjcy90
+                locale:
+                  type: localeSelect
+                  value: nl-NL
+      - _id: 7020a06e-742e-49de-906e-1ca1d1b3e58e
+        type: $localization
+        slots:
+          localized:
+            - _id: 1b9082f4-8a52-46f8-831a-f03473a5beb3
+              type: HeroSanity
+              parameters:
+                Entry:
+                  type: sanityEntrySelector
+                  value: bf105509-992a-4013-b3d6-3a755ee98f23
+                locale:
+                  type: localeSelect
+                  value: nl-NL
+            - _id: ac3e7872-b9e1-4427-9313-41a783e5004e
+              type: HeroSanity
+              parameters:
+                Entry:
+                  type: sanityEntrySelector
+                  value: d55fdeef-23ba-4368-98fd-7eea213bbec1
+                locale:
+                  type: localeSelect
+                  value: en-US
+created: '2023-01-10T16:49:51.839524+00:00'
+modified: '2023-01-31T13:30:08.757548+00:00'
 pattern: false

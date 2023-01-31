@@ -506,7 +506,7 @@
         "id": "talk",
         "type": "ContentType",
         "createdAt": "2023-01-10T13:50:20.127Z",
-        "updatedAt": "2023-01-10T13:50:22.496Z",
+        "updatedAt": "2023-01-30T22:33:24.498Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -514,8 +514,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-01-10T13:50:22.496Z",
+        "publishedVersion": 5,
+        "publishedAt": "2023-01-30T22:33:24.498Z",
         "firstPublishedAt": "2023-01-10T13:50:22.496Z",
         "createdBy": {
           "sys": {
@@ -531,8 +531,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 3,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -590,6 +590,17 @@
           "type": "Text",
           "localized": true,
           "required": false,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "slug",
+          "name": "Slug",
+          "type": "Symbol",
+          "localized": false,
+          "required": true,
           "validations": [
           ],
           "disabled": false,
@@ -1001,7 +1012,7 @@
             "linkType": "Space"
           }
         },
-        "version": 2,
+        "version": 6,
         "createdAt": "2023-01-10T13:50:22.587Z",
         "createdBy": {
           "sys": {
@@ -1010,7 +1021,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-01-10T13:50:24.951Z",
+        "updatedAt": "2023-01-30T22:33:24.989Z",
         "updatedBy": {
           "sys": {
             "id": "3CYK5AqtUQsHiTCblzpoYQ",
@@ -1047,6 +1058,11 @@
         {
           "fieldId": "intro",
           "widgetId": "markdown",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "slug",
+          "widgetId": "singleLine",
           "widgetNamespace": "builtin"
         }
       ]
@@ -1154,6 +1170,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1239,6 +1257,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1324,6 +1344,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1363,7 +1385,7 @@
         "id": "4eiVl7wuASXnHDBavMvyJr",
         "type": "Entry",
         "createdAt": "2023-01-10T13:50:52.305Z",
-        "updatedAt": "2023-01-10T13:50:55.660Z",
+        "updatedAt": "2023-01-30T22:30:35.791Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1371,8 +1393,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-01-10T13:50:55.660Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-01-30T22:30:35.791Z",
         "firstPublishedAt": "2023-01-10T13:50:55.660Z",
         "createdBy": {
           "sys": {
@@ -1388,8 +1410,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1397,6 +1419,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1418,6 +1442,9 @@
         "intro": {
           "en-US": "Learn what Jamstack is in this introductory course for both developers and marketers.",
           "nl-NL": "Leer wat Jamstack is in deze introductiesessie voor zowel ontwikkelaars als marketeers."
+        },
+        "slug": {
+          "en-US": "jamstack-101"
         }
       }
     },
@@ -1471,6 +1498,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1556,6 +1585,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1641,6 +1672,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1685,7 +1718,7 @@
         "id": "6GGPMm8Hi3W0Jq4W887Ae0",
         "type": "Entry",
         "createdAt": "2023-01-10T13:50:53.242Z",
-        "updatedAt": "2023-01-10T13:50:58.184Z",
+        "updatedAt": "2023-01-30T22:30:26.277Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1693,8 +1726,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-01-10T13:50:58.184Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-01-30T22:30:26.277Z",
         "firstPublishedAt": "2023-01-10T13:50:58.184Z",
         "createdBy": {
           "sys": {
@@ -1710,8 +1743,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1719,6 +1752,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1740,6 +1775,9 @@
         "intro": {
           "en-US": "Learn how to take the static to the new realm by adding edge-side logic to your application.",
           "nl-NL": "Leer hoe u de statische naar het nieuwe rijk kunt brengen door edge-side logica toe te voegen aan uw toepassing."
+        },
+        "slug": {
+          "en-US": "edge-side-computing"
         }
       }
     },
@@ -1759,7 +1797,7 @@
         "id": "3IwIot1CNI1uT9MBRqIuvX",
         "type": "Entry",
         "createdAt": "2023-01-10T13:50:53.243Z",
-        "updatedAt": "2023-01-10T13:51:00.114Z",
+        "updatedAt": "2023-01-30T22:30:02.355Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1767,8 +1805,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-01-10T13:51:00.114Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-01-30T22:30:02.355Z",
         "firstPublishedAt": "2023-01-10T13:51:00.114Z",
         "createdBy": {
           "sys": {
@@ -1784,8 +1822,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1793,6 +1831,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1814,6 +1854,9 @@
         "intro": {
           "en-US": "The effect of 3rd party scripts on performance can be huge and the additional JavaScript payload coming from 3rd party scripts can easily exceed the amount of JavaScript you need to render your site.",
           "nl-NL": "Het effect van scripts van derden op de prestaties kan enorm zijn en de extra JavaScript-payload die afkomstig is van scripts van derden kan gemakkelijk de hoeveelheid JavaScript overschrijden die u nodig heeft om uw site weer te geven."
+        },
+        "slug": {
+          "en-US": "scripts-and-performance"
         }
       }
     },
@@ -1867,6 +1910,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1911,7 +1956,7 @@
         "id": "3qTWWoreFUvRPHndh3YcqY",
         "type": "Entry",
         "createdAt": "2023-01-10T13:50:53.250Z",
-        "updatedAt": "2023-01-10T13:50:58.927Z",
+        "updatedAt": "2023-01-30T22:30:14.918Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1919,8 +1964,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-01-10T13:50:58.927Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-01-30T22:30:14.918Z",
         "firstPublishedAt": "2023-01-10T13:50:58.927Z",
         "createdBy": {
           "sys": {
@@ -1936,8 +1981,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1945,6 +1990,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -1966,6 +2013,9 @@
         "intro": {
           "en-US": "Jamstack brings huge benefits to Enterprise use cases. As an architect, learn about how to adopt Jamstack for your company.",
           "nl-NL": "Jamstack biedt enorme voordelen voor Enterprise use cases. Leer als architect hoe u Jamstack voor uw bedrijf kunt gebruiken."
+        },
+        "slug": {
+          "en-US": "jamstack-enterprise-architects"
         }
       }
     },
@@ -2019,6 +2069,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2070,7 +2122,7 @@
         "id": "4vxlCGkZuxFQYComTccjrU",
         "type": "Entry",
         "createdAt": "2023-01-10T13:50:53.258Z",
-        "updatedAt": "2023-01-10T13:50:57.855Z",
+        "updatedAt": "2023-01-30T22:33:06.160Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2078,8 +2130,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-01-10T13:50:57.855Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-01-30T22:33:06.160Z",
         "firstPublishedAt": "2023-01-10T13:50:57.855Z",
         "createdBy": {
           "sys": {
@@ -2095,8 +2147,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2104,6 +2156,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2125,6 +2179,9 @@
         "intro": {
           "en-US": "Developers should know the basics of personalization and how to do it the Jamstack way.",
           "nl-NL": "Ontwikkelaars moeten de basisprincipes van personalisatie kennen en weten hoe ze dit op de Jamstack-manier kunnen doen."
+        },
+        "slug": {
+          "en-US": "personalization-for-developers"
         }
       }
     },
@@ -2144,7 +2201,7 @@
         "id": "6oHJVoV4O7nLJG8bjoVcoZ",
         "type": "Entry",
         "createdAt": "2023-01-10T13:50:54.226Z",
-        "updatedAt": "2023-01-10T13:51:02.328Z",
+        "updatedAt": "2023-01-30T22:29:27.621Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2152,8 +2209,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-01-10T13:51:02.328Z",
+        "publishedVersion": 4,
+        "publishedAt": "2023-01-30T22:29:27.621Z",
         "firstPublishedAt": "2023-01-10T13:51:02.328Z",
         "createdBy": {
           "sys": {
@@ -2169,8 +2226,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 5,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2178,6 +2235,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2199,6 +2258,9 @@
         "intro": {
           "en-US": "In this interactive session you will master the art of effective web dev memes and become unbelievably cool for your web dev team.",
           "nl-NL": "In deze interactieve sessie beheers je de kunst van effectieve webdev-memes en word je ongelooflijk cool voor je webdev-team."
+        },
+        "slug": {
+          "en-US": "friends-with-webdev-team"
         }
       }
     },
@@ -2218,7 +2280,7 @@
         "id": "4CHJuBQLA1jI9ntIFkGHVe",
         "type": "Entry",
         "createdAt": "2023-01-10T13:50:54.240Z",
-        "updatedAt": "2023-01-10T13:51:03.193Z",
+        "updatedAt": "2023-01-30T14:47:41.068Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2226,8 +2288,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-01-10T13:51:03.193Z",
+        "publishedVersion": 8,
+        "publishedAt": "2023-01-30T14:47:41.068Z",
         "firstPublishedAt": "2023-01-10T13:51:03.193Z",
         "createdBy": {
           "sys": {
@@ -2243,8 +2305,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 4,
+        "version": 9,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2252,6 +2314,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2262,8 +2326,8 @@
       },
       "fields": {
         "title": {
-          "en-US": "Welcome to UniformConf",
-          "nl-NL": "Welkom bij de Uniform Conferentie"
+          "en-US": "Welcome to UniformConf with Contentful",
+          "nl-NL": "Welkom bij de Uniform Conferentie met Contentful"
         },
         "description": {
           "en-US": "This is a Uniform demo",
@@ -2330,6 +2394,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2377,7 +2443,7 @@
         "id": "pkZcUE4SpYHTO1RtvyBxR",
         "type": "Entry",
         "createdAt": "2023-01-10T13:50:54.250Z",
-        "updatedAt": "2023-01-10T13:51:00.474Z",
+        "updatedAt": "2023-01-30T22:29:53.811Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2385,8 +2451,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-01-10T13:51:00.474Z",
+        "publishedVersion": 4,
+        "publishedAt": "2023-01-30T22:29:53.811Z",
         "firstPublishedAt": "2023-01-10T13:51:00.474Z",
         "createdBy": {
           "sys": {
@@ -2402,8 +2468,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 5,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2411,6 +2477,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2432,6 +2500,9 @@
         "intro": {
           "en-US": "It's no secret that great SEO ranking requires great performance these days. Learn how to prioritize performance as a feature in your organization, so it's not an afterthought.",
           "nl-NL": "Het is geen geheim dat geweldige SEO-ranking tegenwoordig geweldige prestaties vereist. Leer hoe u prioriteit kunt geven aan prestaties als een functie in uw organisatie, zodat het geen bijzaak is."
+        },
+        "slug": {
+          "en-US": "marketers-web-performance"
         }
       }
     },
@@ -2451,7 +2522,7 @@
         "id": "7IxWILLYiArU26r2UqtnaI",
         "type": "Entry",
         "createdAt": "2023-01-10T13:50:54.252Z",
-        "updatedAt": "2023-01-10T13:51:02.864Z",
+        "updatedAt": "2023-01-30T22:29:11.942Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2459,8 +2530,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-01-10T13:51:02.864Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-01-30T22:29:11.942Z",
         "firstPublishedAt": "2023-01-10T13:51:02.864Z",
         "createdBy": {
           "sys": {
@@ -2476,8 +2547,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2485,6 +2556,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2506,6 +2579,9 @@
         "intro": {
           "en-US": "Marketers can learn about the challenges of running personalization on a Jamstack site and how to address them.",
           "nl-NL": "Marketeers kunnen meer te weten komen over de uitdagingen van het uitvoeren van personalisatie op een Jamstack-site en hoe ze deze kunnen aanpakken."
+        },
+        "slug": {
+          "en-US": "personalization-and-jamstack"
         }
       }
     },
@@ -2525,7 +2601,7 @@
         "id": "3L6ZXx4bSPcfcL5hs9AnnJ",
         "type": "Entry",
         "createdAt": "2023-01-10T13:50:54.274Z",
-        "updatedAt": "2023-01-10T13:51:01.980Z",
+        "updatedAt": "2023-01-30T22:29:37.978Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2533,8 +2609,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-01-10T13:51:01.980Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-01-30T22:29:37.978Z",
         "firstPublishedAt": "2023-01-10T13:51:01.980Z",
         "createdBy": {
           "sys": {
@@ -2550,8 +2626,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2559,6 +2635,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2580,6 +2658,9 @@
         "intro": {
           "en-US": "Find out what's new in the latest Next.js release.",
           "nl-NL": "Ontdek wat er nieuw is in de nieuwste Next.js-release."
+        },
+        "slug": {
+          "en-US": "next-nextjs"
         }
       }
     },
@@ -2633,6 +2714,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",
@@ -2698,6 +2781,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
+        "automationTags": [
+        ],
         "contentType": {
           "sys": {
             "type": "Link",

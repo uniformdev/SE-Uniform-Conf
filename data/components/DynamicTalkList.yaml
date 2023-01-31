@@ -1,0 +1,20 @@
+id: DynamicTalkList
+name: Dynamic Talk List
+icon: search-loading
+parameters:
+  - id: Entries
+    name: Contentful Entries
+    type: contentfulQuery
+    helpText: ''
+    typeConfig:
+      source: default
+      required: false
+      allowedContentTypes:
+        talk:
+          id: talk
+          name: Talk
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-01-30T19:15:39.068383+00:00'
+updated: '2023-01-30T19:15:39.068383+00:00'

@@ -3,9 +3,6 @@ import { TalkList } from "./TalkList";
 import { WhyAttend } from "./WhyAttend";
 import { Talk } from "./Talk";
 import { RegisterForm } from "./RegisterForm";
-
-import Navbar from "./Navbar";
-import Footer from "./Footer";
 import {
 	ComponentProps,
 	registerUniformComponent,
@@ -13,6 +10,10 @@ import {
 	DefaultNotImplementedComponent,
 	componentStore,
 } from "@uniformdev/canvas-react";
+import { DynamicTalkList } from "./DynamicTalkList";
+import { DynamicTalk } from "./DynamicTalk";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
 
 const components: UniformComponent[] = [
 	{
@@ -44,12 +45,20 @@ const components: UniformComponent[] = [
 	},
 	{
 		type: "Header",
-		component: Navbar,
+		component: Header,
 	},
 	{
 		type: "Footer",
 		component: Footer,
 	},
+	{
+		type: "DynamicTalkList",
+		component: DynamicTalkList
+	},
+	{
+		type: "DynamicTalk",
+		component: DynamicTalk
+	}
 ];
 
 components.forEach((component) => {

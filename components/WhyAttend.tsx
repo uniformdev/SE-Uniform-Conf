@@ -48,15 +48,13 @@ export function WhyAttend(props : WhyAttendProps) {
         ) : null}
         <div className="w-1/2">
           <div className="p-10">
-            <h2
-              className="w-full my-2 text-4xl font-bold leading-tight text-center text-gray-800"
-              dangerouslySetInnerHTML={{ __html: props?.Entry?.title }}
-            />
+            <h2 className="w-full my-2 text-4xl font-bold leading-tight text-center text-gray-800">
+              {props?.Entry?.title}
+            </h2>
             <hr />
-            <p
-              className="text-gray-800 p-10 whitespace-pre-line"
-              dangerouslySetInnerHTML={{ __html: props?.Entry?.description }}
-            />
+            <p className="text-gray-800 p-10 whitespace-pre-line">
+              {props?.Entry?.description}
+            </p>
           </div>
         </div>
       </div>

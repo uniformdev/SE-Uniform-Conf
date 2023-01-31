@@ -64,7 +64,7 @@ const LockIcon = () => (
   </svg>
 );
 
-const Nav: React.FC = () => {
+export function Header() {
   const [submenuVisible, setSubmenuVisible] = useState(false);
   const [isScrolled, setScrolled] = useState(false);
   const { context } = useUniformContext();
@@ -168,9 +168,7 @@ const ActionLink = ({ onClick, label, isScrolled, icon }: ActionLinkProps) => (
       <div>
         <>{icon}</>
       </div>
-      <div className="ml-1" dangerouslySetInnerHTML={{ __html: label }}></div>
+      <div className="ml-1">{label}</div>
     </div>
   </button>
 );
-
-export default Nav;
