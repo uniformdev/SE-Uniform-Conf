@@ -11,6 +11,9 @@ const handler = createPreviewHandler({
 			enhancers: enhancerBuilder,
 			context: { preview: true },
 		}),
+	resolveFullPath: ({ path }) => {
+		return path;
+	}
 });
 
 export default handler;

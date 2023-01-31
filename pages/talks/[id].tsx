@@ -21,7 +21,7 @@ import { MenuItem } from "@/components/NavMenu";
 import { MenuItemsProvider } from "lib/providers/MenuItemsProvider";
 import { GetMenuItems } from "lib/helpers/menuItems";
 import { createClient } from "contentful";
-import { DynamicTalkProvider } from "lib/providers/DynamicTalkProvider";
+import { DynamicTalkProvider, PlaceholderTalk } from "lib/providers/DynamicTalkProvider";
 import { Talk } from "@/components/DynamicTalk";
 
 const talkContentEntryType = "talk";
@@ -91,18 +91,28 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
   var talks = await client.getEntries<Talk>({ locale: locale, content_type: talkContentEntryType, "fields.slug": slug ? slug : "" });
 
+  if (talks.items.length) {
+    return {
+      props: {
+        composition,
+        preview: Boolean(preview),
+        menuItems: await GetMenuItems(),
+        talk: talks.items[0]
+      },
+    };
+  }
+
   return {
     props: {
       composition,
       preview: Boolean(preview),
       menuItems: await GetMenuItems(),
-      talk: talks.items[0]
+      talk: PlaceholderTalk
     },
   };
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-
   const {
     serverRuntimeConfig: {
       contentfulConfig: { spaceId, deliveryToken, environment },
