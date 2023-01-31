@@ -9,9 +9,8 @@ const {
   },
 } = getConfig();
 
-const Footer = () => {
-  return (
-    <footer className="bg-white">
+export function Footer() {
+    return (<footer className="bg-white">
       <div className="mx-auto px-8">
         <div className="w-full flex flex-col md:flex-row py-4">
           <div className="flex-1 mb-6">
@@ -38,5 +37,3 @@ const Footer = () => {
     </footer>
   );
 };
-
-export default Footer;

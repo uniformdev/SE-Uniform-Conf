@@ -1,12 +1,14 @@
 import Link from "next/link";
 
+type Talk = {
+  title: string;
+  audience: string[];
+  intro: string;
+  slug: string;
+}
+
 export type DynamicTalkListProps = {
-  Entries: {
-    title: string,
-    audience: string[],
-    intro: string
-    slug: string
-  }[]
+  Entries: Talk[];
 };
 
 export function DynamicTalkList(props: DynamicTalkListProps) {
@@ -24,20 +26,15 @@ export function DynamicTalkList(props: DynamicTalkListProps) {
                         <AudienceLabel audienceName={talk?.audience?.length > 0 ? talk?.audience[0] : ''} />
                       </div>
                     </div>
-                    <Link legacyBehavior href={"/talks/" + talk.slug} className="flex flex-wrap no-underline hover:no-underline">
-                      <div
-                        className="w-full font-bold text-xl text-gray-800 px-6"
-                        dangerouslySetInnerHTML={{
-                          __html: talk?.title,
-                        }}
-                      />
+                    <Link legacyBehavior href={"/talks/" + talk.slug} className="flex flex-wrap">
+                      <div className="w-full font-bold text-xl text-gray-800 px-6">
+                        <a>{talk?.title}</a>
+                      </div>
+
                     </Link>
-                    <div
-                      className="text-gray-800 px-6 pb-6 text-sm"
-                      dangerouslySetInnerHTML={{
-                        __html: talk?.intro,
-                      }}
-                    />
+                    <div className="text-gray-800 px-6 pb-6 text-sm">
+                      {talk?.intro}
+                    </div>
                   </div>
                 </div>)
               })}

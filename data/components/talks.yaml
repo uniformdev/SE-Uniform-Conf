@@ -1,6 +1,6 @@
-id: Page
-name: Page
-icon: file-document
+id: talks
+name: Talks
+icon: layout-list
 parameters: []
 useTeamPermissions: true
 slots:
@@ -12,19 +12,7 @@ slots:
   - id: Content
     name: Content
     allowedComponents:
-      - $test
-      - $personalization
-      - $loop
-      - $localization
-      - RegistrationForm
-      - TalkList
-      - WhyAttend
-      - HeroContentful
-      - HeroKontent
-      - HeroContentstack
-      - HeroSanity
-      - HeroHygraph
-      - HeroStrapi
+      - DynamicTalkList
     inheritAllowedComponents: false
   - id: Footer
     name: Footer
@@ -32,17 +20,28 @@ slots:
       - Footer
     inheritAllowedComponents: false
 defaults:
-  type: Page
+  type: talks
   slots:
     Footer:
       - type: Footer
     Header:
       - type: Header
+    Content:
+      - type: DynamicTalkList
+        parameters:
+          Entries:
+            type: contentfulQuery
+            value:
+              count: 30
+              sortBy: fields.title
+              source: default
+              sortOrder: asc
+              contentType: talk
 slugSettings:
   unique: global
   required: 'yes'
   regularExpression: ^[^/\\#?-]([A-Za-z0-9\-\ ]+)
   regularExpressionMessage: No forward slash in beginning of Slug
 canBeComposition: true
-created: '2023-01-10T16:49:48.126868+00:00'
-updated: '2023-01-30T19:27:27.062472+00:00'
+created: '2023-01-30T19:38:05.81616+00:00'
+updated: '2023-01-30T19:38:40.208672+00:00'

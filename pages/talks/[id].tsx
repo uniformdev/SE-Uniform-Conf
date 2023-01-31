@@ -20,13 +20,13 @@ import { RenderComponentResolver } from "../../components/canvasComponents";
 import { MenuItem } from "@/components/NavMenu";
 import { MenuItemsProvider } from "lib/providers/MenuItemsProvider";
 import { GetMenuItems } from "lib/helpers/menuItems";
-import { useRouter } from 'next/router'
-import { DynamicTalkList } from "@/components/DynamicTalkList";
 import { createClient } from "contentful";
+import { DynamicTalkProvider } from "lib/providers/DynamicTalkProvider";
+import { Talk } from "@/components/DynamicTalk";
 
 const talkContentEntryType = "talk";
 
-export default function Talk({
+export default function DynamicTalkPage({
   composition,
   menuItems,
   talk
@@ -34,16 +34,13 @@ export default function Talk({
   preview: boolean;
   composition: RootComponentInstance;
   menuItems: MenuItem[];
-  talk: any
+  talk: Talk;
 }) {
   const contextualEditingEnhancer = createUniformApiEnhancer({
     apiUrl: "/api/preview"
   });
 
   const componentStore = RenderComponentResolver();
-
-  const router = useRouter();
-  const id = router.query.id as string;
 
   return (
     <MenuItemsProvider menuItems={menuItems}>
@@ -54,7 +51,9 @@ export default function Talk({
       <div>
         <UniformComposition data={composition} resolveRenderer={componentStore} contextualEditingEnhancer={contextualEditingEnhancer}>
           <UniformSlot name="Header" />
-          <DynamicTalkList Entries={[{ title: talk.fields.title, audience: talk.fields.audience, intro: talk.fields.intro, slug: id ? id : "" }]} />
+          <DynamicTalkProvider talk={talk} >
+            <UniformSlot name="Content" />
+          </DynamicTalkProvider>
           <UniformSlot name="Footer" />
         </UniformComposition>
       </div>
@@ -70,7 +69,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   //Retrieving the Talks composition by ID directly.
   const { composition } = await canvasClient.getCompositionById({
     state: process.env.NODE_ENV === 'development' || preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
-    compositionId: '59dcfc87-5352-47ed-b442-d9a463705863',
+    compositionId: '2f7908ab-8aeb-4bb4-aabd-dfe7616ce870',
     unstable_resolveData: true,
     unstable_dynamicVariables: { locale: locale },
   });
@@ -90,7 +89,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     accessToken: deliveryToken,
   });
 
-  var talks = await client.getEntries({ locale: locale, content_type: talkContentEntryType, "fields.slug": slug ? slug : "" });
+  var talks = await client.getEntries<Talk>({ locale: locale, content_type: talkContentEntryType, "fields.slug": slug ? slug : "" });
 
   return {
     props: {

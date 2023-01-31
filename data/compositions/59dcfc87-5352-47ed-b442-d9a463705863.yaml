@@ -1,0 +1,25 @@
+composition:
+  _name: Talks
+  _id: 59dcfc87-5352-47ed-b442-d9a463705863
+  _slug: talks
+  type: talks
+  parameters: {}
+  slots:
+    Footer:
+      - type: Footer
+    Header:
+      - type: Header
+    Content:
+      - type: DynamicTalkList
+        parameters:
+          Entries:
+            type: contentfulQuery
+            value:
+              count: 30
+              sortBy: fields.title
+              source: default
+              sortOrder: asc
+              contentType: talk
+created: '2023-01-30T19:40:26.046581+00:00'
+modified: '2023-01-30T19:40:26.046581+00:00'
+pattern: false
