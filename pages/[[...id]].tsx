@@ -64,7 +64,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   const { preview } = context;
   const locale = context.locale ?? context.defaultLocale ?? 'en-US';
   //API still in development...hence the unstable.
-  const { composition } = await canvasClient.unstable_getCompositionByNodePath({
+    const { composition } = await canvasClient.unstable_getCompositionByNodePath({
     projectMapNodePath: slugString ? `/${slugString}` : "/",
     state: process.env.NODE_ENV === 'development' || preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
     projectMapId: projectMapId,
