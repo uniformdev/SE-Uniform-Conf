@@ -44,6 +44,7 @@ export const contentfulModelConverter = ({
 				title: parameter?.value?.fields?.title || "",
 				description: parameter?.value?.fields?.intro || "",
 				audience: parameter?.value?.fields?.audience || "",
+				slug: parameter?.value?.fields?.slug || "",
 			};
 
 			return returnValue;

@@ -1,8 +1,11 @@
+import Link from "next/link";
+
 export type TalkProps = {
   Entry: {
     title: string;
     description: string;
     audience: string;
+    slug: string;
   }
 };
 
@@ -13,11 +16,11 @@ export const Talk = (props: TalkProps) => (
         <AudienceLabel audienceName={props?.Entry?.audience?.length > 0 ? props.Entry.audience[0] : ''} />
       </div>
     </div>
-    <a href="#" className="flex flex-wrap no-underline hover:no-underline">
+    <Link legacyBehavior href={"/talks/" + props?.Entry?.slug} className="flex flex-wrap">
       <div className="w-full font-bold text-xl text-gray-800 px-6">
-        {props?.Entry?.title}
+        <a>{props?.Entry?.title}</a>
       </div>
-    </a>
+    </Link>
     <div className="text-gray-800 px-6 pb-6 text-sm">
       {props?.Entry?.description}
     </div>
