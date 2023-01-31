@@ -24,6 +24,8 @@ import { useRouter } from 'next/router'
 import { DynamicTalkList } from "@/components/DynamicTalkList";
 import { createClient } from "contentful";
 
+const talkContentEntryType = "talk";
+
 export default function Talk({
   composition,
   menuItems,
@@ -41,7 +43,8 @@ export default function Talk({
   const componentStore = RenderComponentResolver();
 
   const router = useRouter();
-  const id = router.query.id;
+  const id = router.query.id as string;
+
   return (
     <MenuItemsProvider menuItems={menuItems}>
       <Head>
@@ -52,7 +55,7 @@ export default function Talk({
         <UniformComposition data={composition} resolveRenderer={componentStore} contextualEditingEnhancer={contextualEditingEnhancer}>
           <UniformSlot name="Header" />
           <br />
-          <DynamicTalkList Entries={[{ title: talk.fields.title, audience: talk.fields.audience, intro: talk.fields.intro, slug: id ? id[0] : "" }]} />
+          <DynamicTalkList Entries={[{ title: talk.fields.title, audience: talk.fields.audience, intro: talk.fields.intro, slug: id ? id : "" }]} />
           <UniformSlot name="Footer" />
         </UniformComposition>
       </div>
@@ -88,7 +91,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     accessToken: deliveryToken,
   });
 
-  var talks = await client.getEntries({ locale: locale, content_type: "talk", "fields.slug": slug ? slug[0] : "" });
+  var talks = await client.getEntries({ locale: locale, content_type: talkContentEntryType, "fields.slug": slug ? slug : "" });
 
   return {
     props: {
@@ -114,10 +117,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
     accessToken: deliveryToken,
   });
 
-  var talks = await client.getEntries({ content_type: "talk" });
+  var talks = await client.getEntries({ content_type: talkContentEntryType });
+
   const paths = talks.items.flatMap((talk: any) => [
-    { params: { id: [talk.fields.slug] }, locale: 'en-US' },
-    { params: { id: [talk.fields.slug] }, locale: 'nl-NL' }
+    { params: { id: talk.fields.slug }, locale: 'en-US' },
+    { params: { id: talk.fields.slug }, locale: 'nl-NL' }
   ]);
 
   return {
