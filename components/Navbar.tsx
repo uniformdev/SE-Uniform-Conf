@@ -135,7 +135,7 @@ const Nav: React.FC = () => {
 
           <ul className="list-reset lg:flex justify-end flex-1 items-center space-x-2 lg:mr-4">
             {locales.locales.map((locale, index) => {
-              const url = "/" + locale.code;
+              const url = "/" + locale.code + router.asPath;
               return (
                 <li key={index}>
                   <a href={url}><div dangerouslySetInnerHTML={{ __html: locale.flag ? locale.flag : '' }} /></a>
