@@ -54,7 +54,6 @@ export default function Talk({
       <div>
         <UniformComposition data={composition} resolveRenderer={componentStore} contextualEditingEnhancer={contextualEditingEnhancer}>
           <UniformSlot name="Header" />
-          <br />
           <DynamicTalkList Entries={[{ title: talk.fields.title, audience: talk.fields.audience, intro: talk.fields.intro, slug: id ? id : "" }]} />
           <UniformSlot name="Footer" />
         </UniformComposition>
