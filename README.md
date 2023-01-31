@@ -36,7 +36,7 @@ pnpm run push
 ```
 
 ### [Optional] Update Project Map in env file if necessary.
-If you are not important the Project Map definition from this project you need to setup your own Project Map. In your Uniform Project navigate to Settings > Canvas Settings > scroll down to the <strong>Project map</strong> section. 
+If you are not importing the Project Map definition from this project you need to setup your own Project Map. In your Uniform Project navigate to Settings > Canvas Settings > scroll down to the <strong>Project map</strong> section. 
 Copy the ID and add it to <strong>UNIFORM_PROJECT_MAP_ID</strong> in the .env file.
 ### Setup Preview
 Add a value to <strong>UNIFORM_PREVIEW_SECRET</strong> in the .env file. (Remember to save the file!)
