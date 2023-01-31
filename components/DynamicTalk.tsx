@@ -27,19 +27,13 @@ export function DynamicTalk() {
                     </div>
                   </div>
                   <Link legacyBehavior href={"/talks/" + talk.fields?.slug} className="flex flex-wrap no-underline hover:no-underline">
-                    <div
-                      className="w-full font-bold text-xl text-gray-800 px-6"
-                      dangerouslySetInnerHTML={{
-                        __html: talk?.fields?.title,
-                      }}
-                    />
+                    <div className="w-full font-bold text-xl text-gray-800 px-6">
+                      {talk?.fields?.title}
+                    </div>
                   </Link>
-                  <div
-                    className="text-gray-800 px-6 pb-6 text-sm"
-                    dangerouslySetInnerHTML={{
-                      __html: talk?.fields?.intro,
-                    }}
-                  />
+                  <div className="text-gray-800 px-6 pb-6 text-sm">
+                    {talk?.fields?.intro}
+                  </div>
                 </div>
               </div>
             </div>

@@ -67,7 +67,6 @@ export default function DynamicTalkPage({
 }
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  console.log("test")
   const slug = context?.params?.id;
   const { preview } = context;
   const locale = context.locale ?? context.defaultLocale ?? 'en-US';
@@ -75,7 +74,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   var getNodesResult = await projectMapClient.getNodes({ projectMapId, path: '/talks' });
 
    // dynamic Talk page composition ID
-  let compositionId = '2f7908ab-8aeb-4bb4-aabd-dfe7616ce870';
+  let compositionId = '7ab998d3-4a21-423e-bef8-588ab404fcc7';
 
   // if there is a node where the path segment matches our id
   // and the node has a composition attached
@@ -84,8 +83,6 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       compositionId = n.compositionId;
     }
   });
-
-  console.log(compositionId);
 
   //API still in development...hence the unstable.
   //Retrieving the Talks composition by ID directly.
