@@ -23,6 +23,11 @@ import { GetMenuItems } from "lib/helpers/menuItems";
 import { createClient } from "contentful";
 import { DynamicTalkProvider, PlaceholderTalk } from "lib/providers/DynamicTalkProvider";
 import { Talk } from "@/components/DynamicTalk";
+import { projectMapClient } from "lib/projectMapClient";
+
+const {
+  serverRuntimeConfig: { projectMapId },
+} = getConfig();
 
 const talkContentEntryType = "talk";
 
@@ -62,14 +67,31 @@ export default function DynamicTalkPage({
 }
 
 export async function getStaticProps(context: GetStaticPropsContext) {
+  console.log("test")
   const slug = context?.params?.id;
   const { preview } = context;
   const locale = context.locale ?? context.defaultLocale ?? 'en-US';
+
+  var getNodesResult = await projectMapClient.getNodes({ projectMapId, path: '/talks' });
+
+   // dynamic Talk page composition ID
+  let compositionId = '2f7908ab-8aeb-4bb4-aabd-dfe7616ce870';
+
+  // if there is a node where the path segment matches our id
+  // and the node has a composition attached
+  getNodesResult?.nodes?.forEach(n => {
+    if (n.pathSegment === slug && n.compositionId) {
+      compositionId = n.compositionId;
+    }
+  });
+
+  console.log(compositionId);
+
   //API still in development...hence the unstable.
   //Retrieving the Talks composition by ID directly.
   const { composition } = await canvasClient.getCompositionById({
     state: process.env.NODE_ENV === 'development' || preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
-    compositionId: '2f7908ab-8aeb-4bb4-aabd-dfe7616ce870',
+    compositionId: compositionId,
     unstable_resolveData: true,
     unstable_dynamicVariables: { locale: locale },
   });
@@ -125,9 +147,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
     accessToken: deliveryToken,
   });
 
-  var talks = await client.getEntries({ content_type: talkContentEntryType });
+  const contentfulResult = await client.getEntries({ content_type: talkContentEntryType });
 
-  const paths = talks.items.flatMap((talk: any) => [
+  const paths = contentfulResult.items.flatMap((talk: any) => [
     { params: { id: talk.fields.slug }, locale: 'en-US' },
     { params: { id: talk.fields.slug }, locale: 'nl-NL' }
   ]);

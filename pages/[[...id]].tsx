@@ -64,7 +64,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   const { preview } = context;
   const locale = context.locale ?? context.defaultLocale ?? 'en-US';
   //API still in development...hence the unstable.
-    const { composition } = await canvasClient.unstable_getCompositionByNodePath({
+  const { composition } = await canvasClient.unstable_getCompositionByNodePath({
     projectMapNodePath: slugString ? `/${slugString}` : "/",
     state: process.env.NODE_ENV === 'development' || preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
     projectMapId: projectMapId,
@@ -86,8 +86,13 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const { nodes } = await projectMapClient.getNodes({ projectMapId });
+  const ids = nodes?.filter((node) =>
+    node.compositionId! &&
+    // Filter out pages that are children of the talks node
+    // but include the talks node itself and the talk-placeholder.
+    (!node.path.startsWith('/talks') || node.pathSegment === 'talks' || node.pathSegment === 'talk'))
+    .map((node) => node.path.split('/').filter(Boolean)) ?? [];
 
-  const ids = nodes?.filter((node) => node.compositionId!).map((node) => node.path.split('/').filter(Boolean)) ?? [];
   const paths = ids.flatMap((id) => [
     { params: { id }, locale: 'en-US' },
     { params: { id }, locale: 'nl-NL' }

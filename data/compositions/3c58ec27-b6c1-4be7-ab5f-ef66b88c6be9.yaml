@@ -1,0 +1,26 @@
+composition:
+  _name: Personalization For Developers
+  _id: 3c58ec27-b6c1-4be7-ab5f-ef66b88c6be9
+  _slug: personalization-for-developers
+  type: dynamicTalkPage
+  slots:
+    Footer:
+      - _id: ca61013c-6650-422f-ae14-063b9860fca1
+        type: Footer
+    Header:
+      - _id: bc75c733-fcf3-4f77-bb55-6445a3c86030
+        type: Header
+    Content:
+      - _id: aed41430-d8be-4ee4-84bb-7d7eee60088d
+        type: HeroContentful
+        parameters:
+          Entry:
+            type: contentfulEntry
+            value:
+              source: default
+              entryId: N0rzm4xIQbPt3bvQNpKQ6
+      - _id: 60df15ca-3428-45c8-b849-be2322cf6597
+        type: DynamicTalk
+created: '2023-01-31T19:12:41.349054+00:00'
+modified: '2023-01-31T19:15:48.829744+00:00'
+pattern: false

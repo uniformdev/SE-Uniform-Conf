@@ -13,7 +13,6 @@ export type Talk = {
 
 export function DynamicTalk() {
   const talk = useContext(DynamicTalkContext);
-
   return (
     <div className="pt-24">
       <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">

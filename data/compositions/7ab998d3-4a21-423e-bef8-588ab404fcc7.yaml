@@ -1,0 +1,16 @@
+composition:
+  _name: Talk
+  _id: 7ab998d3-4a21-423e-bef8-588ab404fcc7
+  _slug: talk
+  type: dynamicTalkPage
+  parameters: {}
+  slots:
+    Footer:
+      - type: Footer
+    Header:
+      - type: Header
+    Content:
+      - type: DynamicTalk
+created: '2023-01-31T22:17:23.429817+00:00'
+modified: '2023-01-31T22:17:23.429817+00:00'
+pattern: false
