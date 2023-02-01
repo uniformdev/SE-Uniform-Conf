@@ -118,6 +118,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
         menuItems: await GetMenuItems(),
         talk: talks.items[0]
       },
+      revalidate: 30
     };
   }
 
