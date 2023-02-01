@@ -47,6 +47,11 @@ export default function DynamicTalkPage({
 
   const componentStore = RenderComponentResolver();
 
+  if (composition === undefined)
+  {
+    return null;
+  }
+
   return (
     <MenuItemsProvider menuItems={menuItems}>
       <Head>
@@ -129,7 +134,8 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       menuItems: await GetMenuItems(),
       talk: PlaceholderTalk
     },
-    revalidate: 30
+    revalidate: 30,
+    notFound: true
   };
 }
 
