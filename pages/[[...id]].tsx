@@ -81,6 +81,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       preview: Boolean(preview),
       menuItems: await GetMenuItems()
     },
+    revalidate: 30
   };
 }
 
@@ -99,7 +100,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
   ]);
 
   return {
-    paths: [],
+    paths: paths,
     fallback: 'blocking',
   };
 };
