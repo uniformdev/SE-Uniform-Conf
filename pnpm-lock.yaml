@@ -40,6 +40,7 @@ specifiers:
   contentstack: ^3.15.6
   cookie: 0.5.0
   dotenv: 16.0.3
+  follow-redirects: ^1.15.2
   graphql-request: ^5.1.0
   netlify-cli: 12.10.0
   next: 13.1.5
@@ -85,6 +86,7 @@ dependencies:
   contentful: 9.3.0
   contentstack: 3.15.6
   cookie: 0.5.0
+  follow-redirects: 1.15.2
   graphql-request: 5.1.0_graphql@16.6.0
   next: 13.1.5_23e7ztf2chqi3ri6onem3l5mii
   nookies: 2.5.2
