@@ -14,31 +14,34 @@ import {
   UniformComposition,
 } from "@uniformdev/canvas-react";
 import { canvasClient } from "lib/canvasClient";
-import { projectMapClient } from "../lib/projectMapClient";
-import "../components/canvasComponents"
+import { projectMapClient } from "lib/projectMapClient";
 import { enhancerBuilder } from "lib/enhancers";
 import { RenderComponentResolver } from "../components/canvasComponents";
-import { MenuItem } from "@/components/NavMenu";
+import { MenuItem } from "components/NavMenu";
 import { MenuItemsProvider } from "lib/providers/MenuItemsProvider";
-import { GetMenuItems } from "lib/helpers/menuItems";
-import { FourOhFourCompositionId, TalkCompositionId, TalksCompositionId } from "constants/compositions";
-import { localeDutchNetherlands, localeEnglishUnitedStates } from "constants/locales";
+import { getNavigationMenu } from "lib/helpers/menuItems";
+import {
+  FOUR_OH_FOUR_COMPOSITION_ID,
+  TALK_COMPOSITION_ID,
+  TALKS_COMPOSITION_ID
+} from "constants/compositions";
+import {
+  LOCALE_DUTCH_NETHERLANDS,
+  LOCALE_ENGLISH_UNITED_STATES
+} from "constants/locales";
 
 const {
-  serverRuntimeConfig: { projectMapId },
+  serverRuntimeConfig: { projectMapId }
 } = getConfig();
 
-export default function Page({
-  composition,
-  menuItems
-}: {
-  preview: boolean;
+interface Props {
   composition: RootComponentInstance;
-  menuItems: MenuItem[]
-}) {
-  if (composition === undefined) {
-    return null;
-  }
+  preview: boolean;
+  menuItems: MenuItem[];
+}
+
+const Page = ({ composition, menuItems }: Props) => {
+  if (!composition) return null;
 
   const contextualEditingEnhancer = createUniformApiEnhancer({
     apiUrl: "/api/preview"
@@ -49,12 +52,15 @@ export default function Page({
   return (
     <MenuItemsProvider menuItems={menuItems}>
       <Head>
-        <title>{`UniformConf${composition?._name ? ` | ${composition?._name}` : ""
-          }`}</title>
+        <title>{`UniformConf${composition._name ? ` | ${composition._name}` : ""}`}</title>
         <meta name="description" content="UniformConf"></meta>
       </Head>
       <div>
-        <UniformComposition data={composition} resolveRenderer={componentStore} contextualEditingEnhancer={contextualEditingEnhancer}>
+        <UniformComposition
+          data={composition}
+          resolveRenderer={componentStore}
+          contextualEditingEnhancer={contextualEditingEnhancer}
+        >
           <UniformSlot name="Header" />
           <UniformSlot name="Content" />
           <UniformSlot name="Footer" />
@@ -62,66 +68,65 @@ export default function Page({
       </div>
     </MenuItemsProvider>
   );
-}
+};
+
+export default Page;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const slug = context?.params?.id;
-  const slugString = Array.isArray(slug) ? slug.join("/") : slug;
-  const { preview } = context;
-  const locale = context.locale ?? context.defaultLocale ?? 'en-US';
-  //API still in development...hence the unstable.
+  const { params, preview, locale = "en-US" } = context;
+  const nodePath = params?.id ? `/${Array.isArray(params.id) ? params.id.join("/") : params.id}` : "/";
+  const env = process.env.NODE_ENV;
+  const state = env === 'development' || preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE;
+
   try {
     const { composition } = await canvasClient.unstable_getCompositionByNodePath({
-      projectMapNodePath: slugString ? `/${slugString}` : "/",
-      state: process.env.NODE_ENV === 'development' || preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
-      projectMapId: projectMapId,
+      projectMapNodePath: nodePath,
+      state,
+      projectMapId,
       unstable_resolveData: true,
-      unstable_dynamicVariables: { locale: locale },
+      unstable_dynamicVariables: { locale },
     });
 
-    await localize({ composition, locale })
+    await localize({ composition, locale });
     await enhance({ composition, enhancers: enhancerBuilder, context });
 
     return {
       props: {
         composition,
-        preview: Boolean(preview),
-        menuItems: await GetMenuItems()
+        isPreview: Boolean(preview),
+        menuItems: await getNavigationMenu(),
       },
-      revalidate: 30
+      revalidate: 30,
     };
   } catch (error: any) {
     if (error?.statusCode === 404) {
-      console.log("Composition not found. Let's respond with our 404 page.");
-      return {       
+      console.log("Composition not found. Responding with 404 page.");
+      return {
         revalidate: 30,
-        notFound: true
+        notFound: true,
       };
-    } else {
-      throw error;
     }
+    throw error;
   }
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const { nodes } = await projectMapClient.getNodes({ projectMapId });
-  const ids = nodes?.filter((node) =>
-    node.compositionId! &&
-    // Filter out our 404 page
-    // Filter out pages that are children of the talks node
-    // but include the talks node itself and the talk-placeholder.
-    (node.compositionId !== FourOhFourCompositionId && (!node.path.startsWith('/talks')
-    || node.compositionId === TalksCompositionId || node.compositionId === TalkCompositionId)))
-    .map((node) => node.path.split('/').filter(Boolean)) ?? [];
-
-
-  const paths = ids.flatMap((id) => [
-    { params: { id }, locale: localeEnglishUnitedStates },
-    { params: { id }, locale: localeDutchNetherlands }
-  ]);
+  const ids = (nodes?.filter(({ compositionId, path }) => (
+    compositionId &&
+    compositionId !== FOUR_OH_FOUR_COMPOSITION_ID && (
+      !path.startsWith('/talks') ||
+      compositionId === TALKS_COMPOSITION_ID ||
+      compositionId === TALK_COMPOSITION_ID
+    )
+  ))?.map(({ path }) => path.split('/').filter(Boolean)) ?? [])
+    .flatMap((id) => [
+      { params: { id }, locale: LOCALE_ENGLISH_UNITED_STATES },
+      { params: { id }, locale: LOCALE_DUTCH_NETHERLANDS },
+    ]);
 
   return {
-    paths: paths,
+    paths: ids,
     fallback: 'blocking',
   };
 };

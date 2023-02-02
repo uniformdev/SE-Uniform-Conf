@@ -12,8 +12,8 @@ const {
 
 export const strapiEnhancer = () => {
 	const client = new StrapiClient({
-		apiToken: apiToken,
-		apiHost: apiHost,
+		apiToken,
+		apiHost,
         populate: ["Image"]
 	});
 

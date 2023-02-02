@@ -6,7 +6,7 @@ const {
 } = getConfig();
 
 export const canvasClient = new CanvasClient({
-	apiKey: apiKey,
-	apiHost: apiHost,
-	projectId: projectId,
+	apiKey,
+	apiHost,
+	projectId,
 });

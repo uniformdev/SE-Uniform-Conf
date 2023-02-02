@@ -1,4 +1,5 @@
-import { FourOhFourCompositionId } from "constants/compositions";
+import { MenuItem } from "@/components/NavMenu";
+import { FOUR_OH_FOUR_COMPOSITION_ID } from "constants/compositions";
 import { projectMapClient } from "lib/projectMapClient";
 import getConfig from "next/config";
 
@@ -6,24 +7,11 @@ const {
 	serverRuntimeConfig: { projectMapId },
 } = getConfig();
 
-export async function GetMenuItems() {
-	const tree = await projectMapClient.getSubtree({
-		projectMapId,
-		depth: 1,
-	});
+export async function getNavigationMenu(): Promise<MenuItem[]> {
+	const tree = await projectMapClient.getSubtree({ projectMapId, depth: 1 });
+	const children = tree?.children || [];
 
-	if (tree?.children?.length) {
-		let childItems: Array<{ name: string; url: string }> = [];
-		tree.children.forEach((childItem) => {
-      // Filter out our 404 composition.
-      if (childItem.compositionId !== FourOhFourCompositionId)
-      {
-			  childItems.push({ name: childItem.name, url: childItem.path });
-      }
-		});
-
-		return childItems;
-	}
-
-	return [];
+	return children
+		.filter(({ compositionId }) => compositionId !== FOUR_OH_FOUR_COMPOSITION_ID)
+		.map(({ name, path }) => ({ name, url: path }));
 }

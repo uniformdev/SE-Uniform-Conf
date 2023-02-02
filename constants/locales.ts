@@ -1,2 +1,2 @@
-export const localeEnglishUnitedStates = 'en-US';
-export const localeDutchNetherlands = 'nl-NL';
+export const LOCALE_ENGLISH_UNITED_STATES = 'en-US';
+export const LOCALE_DUTCH_NETHERLANDS = 'nl-NL';

@@ -1,10 +1,10 @@
 import { UniformContext } from "@uniformdev/context-react";
 import { UniformAppProps } from "@uniformdev/context-next";
-import { createUniformContext } from "../lib/context/uniformContext";
+import { createContext } from "../lib/context/uniformContext";
 
 import "../styles/style.css";
 
-const clientContext = createUniformContext();
+const clientContext = createContext();
 
 export default function UniformConfApp({
   Component,

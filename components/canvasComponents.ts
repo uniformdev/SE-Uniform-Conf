@@ -14,49 +14,50 @@ import { DynamicTalkList } from "./DynamicTalkList";
 import { DynamicTalk } from "./DynamicTalk";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
+import { COMPONENT_DYNAMIC_TALK, COMPONENT_DYNAMIC_TALK_LIST, COMPONENT_FOOTER, COMPONENT_HEADER, COMPONENT_HERO_CONTENTFUL, COMPONENT_HERO_CONTENTSTACK, COMPONENT_HERO_HYGRAPH, COMPONENT_HERO_KONTENT, COMPONENT_HERO_SANITY, COMPONENT_HERO_STRAPI, COMPONENT_REGISTRATION_FORM, COMPONENT_TALK, COMPONENT_TALK_LIST, COMPONENT_WHY_ATTEND } from "constants/components";
 
 const components: UniformComponent[] = [
 	{
 		type: [
-			"HeroContentful",
-			"HeroContentstack",
-			"HeroKontent",
-			"HeroSanity",
-			"HeroHygraph",
-			"HeroStrapi",
+			COMPONENT_HERO_CONTENTFUL,
+			COMPONENT_HERO_CONTENTSTACK,
+			COMPONENT_HERO_KONTENT,
+			COMPONENT_HERO_SANITY,
+			COMPONENT_HERO_HYGRAPH,
+			COMPONENT_HERO_STRAPI,
 		],
 		component: Hero,
 	},
 	{
-		type: "TalkList",
+		type: COMPONENT_TALK_LIST,
 		component: TalkList,
 	},
 	{
-		type: "Talk",
+		type: COMPONENT_TALK,
 		component: Talk,
 	},
 	{
-		type: "WhyAttend",
+		type: COMPONENT_WHY_ATTEND,
 		component: WhyAttend,
 	},
 	{
-		type: "RegistrationForm",
+		type: COMPONENT_REGISTRATION_FORM,
 		component: RegisterForm,
 	},
 	{
-		type: "Header",
+		type: COMPONENT_HEADER,
 		component: Header,
 	},
 	{
-		type: "Footer",
+		type: COMPONENT_FOOTER,
 		component: Footer,
 	},
 	{
-		type: "DynamicTalkList",
+		type: COMPONENT_DYNAMIC_TALK_LIST,
 		component: DynamicTalkList
 	},
 	{
-		type: "DynamicTalk",
+		type: COMPONENT_DYNAMIC_TALK,
 		component: DynamicTalk
 	}
 ];

@@ -19,50 +19,50 @@ import { enhancerBuilder } from "lib/enhancers";
 import { RenderComponentResolver } from "../../components/canvasComponents";
 import { MenuItem } from "@/components/NavMenu";
 import { MenuItemsProvider } from "lib/providers/MenuItemsProvider";
-import { GetMenuItems } from "lib/helpers/menuItems";
+import { getNavigationMenu } from "lib/helpers/menuItems";
 import { createClient } from "contentful";
 import { DynamicTalkProvider, PlaceholderTalk } from "lib/providers/DynamicTalkProvider";
 import { Talk } from "@/components/DynamicTalk";
 import { projectMapClient } from "lib/projectMapClient";
-import { DynamicTalkCompositionId } from "constants/compositions";
-import { localeDutchNetherlands, localeEnglishUnitedStates } from "constants/locales";
+import { DYNAMIC_TALK_COMPOSITION_ID } from "constants/compositions";
+import { LOCALE_DUTCH_NETHERLANDS, LOCALE_ENGLISH_UNITED_STATES } from "constants/locales";
+import { TALK_CONTENT_ENTRY_TYPE } from "constants/contentful";
 
 const {
   serverRuntimeConfig: { projectMapId },
 } = getConfig();
 
-const talkContentEntryType = "talk";
-
-export default function DynamicTalkPage({
-  composition,
-  menuItems,
-  talk
-}: {
-  preview: boolean;
+interface Props {
   composition: RootComponentInstance;
   menuItems: MenuItem[];
   talk: Talk;
-}) {
-  if (composition === undefined) {
-    return null;
-  }
+}
 
-  const contextualEditingEnhancer = createUniformApiEnhancer({
-    apiUrl: "/api/preview"
+const DynamicTalkPage = ({
+  composition,
+  menuItems,
+  talk
+}: Props ) => {
+  if (!composition) return null;
+
+  const contextEditingEnhancer = createUniformApiEnhancer({
+    apiUrl: "/api/preview",
   });
-
   const componentStore = RenderComponentResolver();
 
   return (
     <MenuItemsProvider menuItems={menuItems}>
       <Head>
-        <title>{`UniformConf${composition?._name ? ` | ${composition?._name}` : ""}`}</title>
-        <meta name="description" content="UniformConf"></meta>
+        <title>{`UniformConf${composition._name ? ` | ${composition._name}` : ""}`}</title>
+        <meta name="description" content="UniformConf" />
       </Head>
       <div>
-        <UniformComposition data={composition} resolveRenderer={componentStore} contextualEditingEnhancer={contextualEditingEnhancer}>
+        <UniformComposition
+          data={composition}
+          resolveRenderer={componentStore}
+          contextualEditingEnhancer={contextEditingEnhancer}>
           <UniformSlot name="Header" />
-          <DynamicTalkProvider talk={talk} >
+          <DynamicTalkProvider talk={talk}>
             <UniformSlot name="Content" />
           </DynamicTalkProvider>
           <UniformSlot name="Footer" />
@@ -72,71 +72,58 @@ export default function DynamicTalkPage({
   );
 }
 
+export default DynamicTalkPage;
+
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const slug = context?.params?.id;
+  const { id: slug } = context.params || {};
   const { preview } = context;
-  const locale = context.locale ?? context.defaultLocale ?? 'en-US';
+  const locale = context.locale || context.defaultLocale || LOCALE_ENGLISH_UNITED_STATES;
 
-  var getNodesResult = await projectMapClient.getNodes({ projectMapId, path: '/talks' });
+  const nodesResult = await projectMapClient.getNodes({ projectMapId, path: "/talks" });
+  let compositionId = DYNAMIC_TALK_COMPOSITION_ID;
 
-  // dynamic Talk page composition ID
-  let compositionId = DynamicTalkCompositionId;
-
-  // if there is a node where the path segment matches our id
-  // and the node has a composition attached
-  getNodesResult?.nodes?.forEach(n => {
-    if (n.pathSegment === slug && n.compositionId) {
-      compositionId = n.compositionId;
+  nodesResult?.nodes?.forEach((node) => {
+    if (node.pathSegment === slug && node.compositionId) {
+      compositionId = node.compositionId;
     }
   });
 
-  //API still in development...hence the unstable.
-  //Retrieving the Talks composition by ID directly.
   const { composition } = await canvasClient.getCompositionById({
-    state: process.env.NODE_ENV === 'development' || preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
-    compositionId: compositionId,
+    state: preview || process.env.NODE_ENV === "development" ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
+    compositionId,
     unstable_resolveData: true,
-    unstable_dynamicVariables: { locale: locale },
+    unstable_dynamicVariables: { locale },
   });
 
-  await localize({ composition, locale })
+  await localize({ composition, locale });
   await enhance({ composition, enhancers: enhancerBuilder, context });
 
   const {
     serverRuntimeConfig: {
       contentfulConfig: { spaceId, deliveryToken, environment },
     },
-  } = getConfig();
-
+  } = getConfig();  
+  
   const client = createClient({
     space: spaceId,
-    environment: environment,
+    environment,
     accessToken: deliveryToken,
   });
 
-  var talks = await client.getEntries<Talk>({ locale: locale, content_type: talkContentEntryType, "fields.slug": slug ? slug : "" });
-
-  if (talks.items.length) {
-    return {
-      props: {
-        composition,
-        preview: Boolean(preview),
-        menuItems: await GetMenuItems(),
-        talk: talks.items[0]
-      },
-      revalidate: 30
-    };
-  }
+  const talks = await client.getEntries<Talk>({
+    locale,
+    content_type: TALK_CONTENT_ENTRY_TYPE,
+    "fields.slug": slug || "",
+  });
 
   return {
     props: {
       composition,
       preview: Boolean(preview),
-      menuItems: await GetMenuItems(),
-      talk: PlaceholderTalk
+      menuItems: await getNavigationMenu(),
+      talk: talks.items.length ? talks.items[0] : PlaceholderTalk,
     },
     revalidate: 30,
-    notFound: true
   };
 }
 
@@ -153,11 +140,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
     accessToken: deliveryToken,
   });
 
-  const contentfulResult = await client.getEntries({ content_type: talkContentEntryType });
+  const contentfulResult = await client.getEntries({ content_type: TALK_CONTENT_ENTRY_TYPE });
 
   const paths = contentfulResult.items.flatMap((talk: any) => [
-    { params: { id: talk.fields.slug }, locale: localeEnglishUnitedStates },
-    { params: { id: talk.fields.slug }, locale: localeDutchNetherlands }
+    { params: { id: talk.fields.slug }, locale: LOCALE_ENGLISH_UNITED_STATES },
+    { params: { id: talk.fields.slug }, locale: LOCALE_DUTCH_NETHERLANDS }
   ]);
 
   return {

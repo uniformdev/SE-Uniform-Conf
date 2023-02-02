@@ -6,8 +6,8 @@ specifiers:
   '@emotion/react': 11.10.5
   '@kentico/kontent-delivery': ^11.13.0
   '@netlify/functions': 1.4.0
-  '@netlify/plugin-nextjs': 4.30.2
-  '@next/bundle-analyzer': 13.1.5
+  '@netlify/plugin-nextjs': 4.30.3
+  '@next/bundle-analyzer': 13.1.6
   '@react-hook/window-scroll': 1.3.0
   '@sanity/client': ^4.0.1
   '@sanity/image-url': ^1.0.2
@@ -16,23 +16,23 @@ specifiers:
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
   '@types/styled-components': 5.1.26
-  '@uniformdev/canvas': ^18.2.2
+  '@uniformdev/canvas': ^18.4.0
   '@uniformdev/canvas-algolia': ^17.8.0
-  '@uniformdev/canvas-contentful': ^18.2.2
-  '@uniformdev/canvas-contentstack': ^18.2.2
+  '@uniformdev/canvas-contentful': ^18.4.0
+  '@uniformdev/canvas-contentstack': ^18.4.0
   '@uniformdev/canvas-graphcms': ^17.1.0
-  '@uniformdev/canvas-kontent': ^18.2.2
-  '@uniformdev/canvas-next': ^18.2.2
-  '@uniformdev/canvas-react': ^18.2.2
-  '@uniformdev/canvas-sanity': ^18.2.2
+  '@uniformdev/canvas-kontent': ^18.4.0
+  '@uniformdev/canvas-next': ^18.4.0
+  '@uniformdev/canvas-react': ^18.4.0
+  '@uniformdev/canvas-sanity': ^18.4.0
   '@uniformdev/canvas-strapi': ^17.1.0
-  '@uniformdev/cli': ^18.2.2
-  '@uniformdev/context': ^18.2.2
-  '@uniformdev/context-devtools': ^18.2.2
-  '@uniformdev/context-gtag': ^18.2.2
-  '@uniformdev/context-next': ^18.2.2
-  '@uniformdev/context-react': ^18.2.2
-  '@uniformdev/project-map': ^18.2.2
+  '@uniformdev/cli': ^18.4.0
+  '@uniformdev/context': ^18.4.0
+  '@uniformdev/context-devtools': ^18.4.0
+  '@uniformdev/context-gtag': ^18.4.0
+  '@uniformdev/context-next': ^18.4.0
+  '@uniformdev/context-react': ^18.4.0
+  '@uniformdev/project-map': ^18.4.0
   algoliasearch: ^4.14.3
   analytics: 0.8.1
   autoprefixer: 10.4.13
@@ -43,7 +43,7 @@ specifiers:
   follow-redirects: ^1.15.2
   graphql-request: ^5.1.0
   netlify-cli: 12.10.0
-  next: 13.1.5
+  next: 13.1.6
   node-fetch: 2.6.1
   nookies: 2.5.2
   npm-run-all: 4.1.5
@@ -51,13 +51,13 @@ specifiers:
   prettier: ^2.8.3
   react: 18.2.0
   react-dom: 18.2.0
-  sass: 1.57.1
+  sass: 1.58.0
   strapi-sdk-js: ^2.2.0
   styled-components: 5.3.6
   tailwindcss: 3.2.4
   ts-loader: 9.4.2
   tsup: 6.5.0
-  typescript: 4.9.4
+  typescript: 4.9.5
 
 dependencies:
   '@analytics/google-analytics': 1.0.5
@@ -65,22 +65,22 @@ dependencies:
   '@react-hook/window-scroll': 1.3.0_react@18.2.0
   '@sanity/client': 4.0.1
   '@sanity/image-url': 1.0.2
-  '@uniformdev/canvas': 18.2.2
+  '@uniformdev/canvas': 18.4.0
   '@uniformdev/canvas-algolia': 17.8.0_algoliasearch@4.14.3
-  '@uniformdev/canvas-contentful': 18.2.2_z2e3v3yhfbnykfd4haz6v7zsya
-  '@uniformdev/canvas-contentstack': 18.2.2_contentstack@3.15.6
+  '@uniformdev/canvas-contentful': 18.4.0_z2e3v3yhfbnykfd4haz6v7zsya
+  '@uniformdev/canvas-contentstack': 18.4.0_contentstack@3.15.6
   '@uniformdev/canvas-graphcms': 17.1.0_mvbpkrlomotgouznb4aiye7i74
-  '@uniformdev/canvas-kontent': 18.2.2_urs7zdscilrnwhemglwzxpuwo4
-  '@uniformdev/canvas-next': 18.2.2_s6zlkfvllybxhmcq5pkr2zsuza
-  '@uniformdev/canvas-react': 18.2.2_biqbaboplfbrettd7655fr4n2y
-  '@uniformdev/canvas-sanity': 18.2.2_@sanity+client@4.0.1
+  '@uniformdev/canvas-kontent': 18.4.0_urs7zdscilrnwhemglwzxpuwo4
+  '@uniformdev/canvas-next': 18.4.0_3vryta7zmbcsw4rrqf4axjqggm
+  '@uniformdev/canvas-react': 18.4.0_biqbaboplfbrettd7655fr4n2y
+  '@uniformdev/canvas-sanity': 18.4.0_@sanity+client@4.0.1
   '@uniformdev/canvas-strapi': 17.1.0_strapi-sdk-js@2.2.0
-  '@uniformdev/context': 18.2.2
-  '@uniformdev/context-devtools': 18.2.2_57czaiyk6rdr5iy5tfs5pior4u
-  '@uniformdev/context-gtag': 18.2.2
-  '@uniformdev/context-next': 18.2.2_s6zlkfvllybxhmcq5pkr2zsuza
-  '@uniformdev/context-react': 18.2.2_biqbaboplfbrettd7655fr4n2y
-  '@uniformdev/project-map': 18.2.2
+  '@uniformdev/context': 18.4.0
+  '@uniformdev/context-devtools': 18.4.0_57czaiyk6rdr5iy5tfs5pior4u
+  '@uniformdev/context-gtag': 18.4.0
+  '@uniformdev/context-next': 18.4.0_3vryta7zmbcsw4rrqf4axjqggm
+  '@uniformdev/context-react': 18.4.0_biqbaboplfbrettd7655fr4n2y
+  '@uniformdev/project-map': 18.4.0
   algoliasearch: 4.14.3
   analytics: 0.8.1_@types+dlv@1.1.2
   contentful: 9.3.0
@@ -88,7 +88,7 @@ dependencies:
   cookie: 0.5.0
   follow-redirects: 1.15.2
   graphql-request: 5.1.0_graphql@16.6.0
-  next: 13.1.5_23e7ztf2chqi3ri6onem3l5mii
+  next: 13.1.6_fcop3xylqakmbilfhdeuva2xj4
   nookies: 2.5.2
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -99,14 +99,14 @@ devDependencies:
   '@contentful/rich-text-html-renderer': 16.0.2
   '@emotion/react': 11.10.5_yxdp3dl3eazy3vwpbmv4fq727a
   '@netlify/functions': 1.4.0
-  '@netlify/plugin-nextjs': 4.30.2
-  '@next/bundle-analyzer': 13.1.5
+  '@netlify/plugin-nextjs': 4.30.3
+  '@next/bundle-analyzer': 13.1.6
   '@types/cookie': 0.5.1
   '@types/node': 18.11.18
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
   '@types/styled-components': 5.1.26
-  '@uniformdev/cli': 18.2.2
+  '@uniformdev/cli': 18.4.0
   autoprefixer: 10.4.13_postcss@8.4.21
   dotenv: 16.0.3
   netlify-cli: 12.10.0_@types+node@18.11.18
@@ -114,11 +114,11 @@ devDependencies:
   npm-run-all: 4.1.5
   postcss: 8.4.21
   prettier: 2.8.3
-  sass: 1.57.1
+  sass: 1.58.0
   tailwindcss: 3.2.4_postcss@8.4.21
-  ts-loader: 9.4.2_3fkjkrd3audxnith3e7fo4fnxi
-  tsup: 6.5.0_k22f457wtryv7dv7ltdlwpdpdm
-  typescript: 4.9.4
+  ts-loader: 9.4.2_hhrrucqyg4eysmfpujvov2ym5u
+  tsup: 6.5.0_uujdqti2krmttzhqvubwnsmcci
+  typescript: 4.9.5
 
 packages:
 
@@ -975,8 +975,8 @@ packages:
       supports-color: 9.3.1
       terminal-link: 3.0.0
       tmp-promise: 3.0.3
-      ts-node: 10.9.1_awa2wsr5thmg3i7jqycphctjfq
-      typescript: 4.9.4
+      ts-node: 10.9.1_bdgp3l2zgaopogaavxusmetvge
+      typescript: 4.9.5
       update-notifier: 5.1.0
       uuid: 8.3.2
       yargs: 17.6.2
@@ -1466,8 +1466,8 @@ packages:
     resolution: {integrity: sha512-RKImnmGwHtGH3ycQ9LnqOiyWOFmsQ+07cz8wOyOfRJzNZVOdUs5P6nu0GHed9lIsAOUs4bCCPrlB9OxwpUOCrA==}
     dev: true
 
-  /@netlify/plugin-nextjs/4.30.2:
-    resolution: {integrity: sha512-hqvdHlQEMfpTXh+fM0jwvtKla/gUS4gVKEZeQEkJlCzAJO+8XT2bTFAGrusNHLQ53L081nLXVXx1c+HUo0LFfQ==}
+  /@netlify/plugin-nextjs/4.30.3:
+    resolution: {integrity: sha512-3dUQd9qbjoqvQLSR7Uq3KwHQb/ffiJwLYvr0fap5kPpnRzKl4NPPMJjkOruIshBAMnRieqsJnZAOvIQpDH7Yvg==}
     engines: {node: '>=12.0.0'}
     dependencies:
       '@netlify/esbuild': 0.14.39
@@ -1594,8 +1594,8 @@ packages:
       - supports-color
     dev: true
 
-  /@next/bundle-analyzer/13.1.5:
-    resolution: {integrity: sha512-Z+1gyS0Hy+Lpt2k/067YIxmYoKQt0RtHy3EMyR3SMZyZGmx3muZPUBS0Aj+tdfdReVNOK2nQdT8ghSZG9Lwmbw==}
+  /@next/bundle-analyzer/13.1.6:
+    resolution: {integrity: sha512-rJS9CtLoGT58mL+v2ISKANosFFWP/0YKYByHQ3vTaZrbQP8b1rYRxd2QVMJmnSXaFkiP9URt1XJ6OdGyVq5b6g==}
     dependencies:
       webpack-bundle-analyzer: 4.7.0
     transitivePeerDependencies:
@@ -1603,12 +1603,12 @@ packages:
       - utf-8-validate
     dev: true
 
-  /@next/env/13.1.5:
-    resolution: {integrity: sha512-0Ry4NhJy6qLbXhvxPRUQ1H6RzgtryGdUto7hfgAK0Iw/bScgeVjwLZdfhm2iT7qsOS32apo9cWzLCxjc6iGPsA==}
+  /@next/env/13.1.6:
+    resolution: {integrity: sha512-s+W9Fdqh5MFk6ECrbnVmmAOwxKQuhGMT7xXHrkYIBMBcTiOqNWhv5KbJIboKR5STXxNXl32hllnvKaffzFaWQg==}
     dev: false
 
-  /@next/swc-android-arm-eabi/13.1.5:
-    resolution: {integrity: sha512-QAEf3YM9U0qWVQTxgF3Tsh4OeCN1i9Smsf6cVlwZsPzoLyj2nQ879joCoN+ONqDknkBgG6OG/ajefywL3jw9Cg==}
+  /@next/swc-android-arm-eabi/13.1.6:
+    resolution: {integrity: sha512-F3/6Z8LH/pGlPzR1AcjPFxx35mPqjE5xZcf+IL+KgbW9tMkp7CYi1y7qKrEWU7W4AumxX/8OINnDQWLiwLasLQ==}
     engines: {node: '>= 10'}
     cpu: [arm]
     os: [android]
@@ -1616,8 +1616,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-android-arm64/13.1.5:
-    resolution: {integrity: sha512-ZmtGPTghRuT5YKL0nNcC2bBVSiG1O0is16eIZ2rWSP/hRW64ZCcAew6pxw2rihntNp22UfequjSTHd91WE/tyQ==}
+  /@next/swc-android-arm64/13.1.6:
+    resolution: {integrity: sha512-cMwQjnB8vrYkWyK/H0Rf2c2pKIH4RGjpKUDvbjVAit6SbwPDpmaijLio0LWFV3/tOnY6kvzbL62lndVA0mkYpw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [android]
@@ -1625,8 +1625,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-darwin-arm64/13.1.5:
-    resolution: {integrity: sha512-aeFXK+M/zmG/CNdMJ0tGNs0MWcLueUe7vZ2V6fa+2yz/ZgYJLI7fEfFvVh1p1yBMzupSbZDowvMuCSFTaeg3MA==}
+  /@next/swc-darwin-arm64/13.1.6:
+    resolution: {integrity: sha512-KKRQH4DDE4kONXCvFMNBZGDb499Hs+xcFAwvj+rfSUssIDrZOlyfJNy55rH5t2Qxed1e4K80KEJgsxKQN1/fyw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
@@ -1634,8 +1634,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-darwin-x64/13.1.5:
-    resolution: {integrity: sha512-6mPX0GNRg8NzjV70at8I8pD9YBnPHDpxJCoMuIqysdTjtQhd09Xk6GUhquNhp1kEJzzVk7OW5l2ch4XIJjtY3A==}
+  /@next/swc-darwin-x64/13.1.6:
+    resolution: {integrity: sha512-/uOky5PaZDoaU99ohjtNcDTJ6ks/gZ5ykTQDvNZDjIoCxFe3+t06bxsTPY6tAO6uEAw5f6vVFX5H5KLwhrkZCA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
@@ -1643,8 +1643,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-freebsd-x64/13.1.5:
-    resolution: {integrity: sha512-nR4a/SNblG0w8hhYRflTZjk4yD99ld18w/FCftw99ziw8sgciBlOXRICJIiRIaMRU8UH7QLSgBOQVnfNcVNKMA==}
+  /@next/swc-freebsd-x64/13.1.6:
+    resolution: {integrity: sha512-qaEALZeV7to6weSXk3Br80wtFQ7cFTpos/q+m9XVRFggu+8Ib895XhMWdJBzew6aaOcMvYR6KQ6JmHA2/eMzWw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [freebsd]
@@ -1652,8 +1652,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-linux-arm-gnueabihf/13.1.5:
-    resolution: {integrity: sha512-EzkltCVKg3gUzamoeKPhGeSgXTTLAhSzc7v/+g1Y+HQa7JKMrlzdRkrJf+H4LJXcz7lnxgNKHGRyZBSXnmJKJw==}
+  /@next/swc-linux-arm-gnueabihf/13.1.6:
+    resolution: {integrity: sha512-OybkbC58A1wJ+JrJSOjGDvZzrVEQA4sprJejGqMwiZyLqhr9Eo8FXF0y6HL+m1CPCpPhXEHz/2xKoYsl16kNqw==}
     engines: {node: '>= 10'}
     cpu: [arm]
     os: [linux]
@@ -1661,8 +1661,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-linux-arm64-gnu/13.1.5:
-    resolution: {integrity: sha512-E7HMkdoxStmTUJU4KzBUU4vZ5DHT4Gd327tC3KFZS5lda0NRerJAOCfsRg+fBj22FvCb1UWsX6XI+weL6xhyeQ==}
+  /@next/swc-linux-arm64-gnu/13.1.6:
+    resolution: {integrity: sha512-yCH+yDr7/4FDuWv6+GiYrPI9kcTAO3y48UmaIbrKy8ZJpi7RehJe3vIBRUmLrLaNDH3rY1rwoHi471NvR5J5NQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -1670,8 +1670,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-linux-arm64-musl/13.1.5:
-    resolution: {integrity: sha512-qlO0Fd3GQwJS6YpbF9NyL5NGHVZ43dKtZDC/jP4vdeMIYDtSu13HcY/nmA1NdW+RpMwDxSCpx4WKsCCEZGIX8Q==}
+  /@next/swc-linux-arm64-musl/13.1.6:
+    resolution: {integrity: sha512-ECagB8LGX25P9Mrmlc7Q/TQBb9rGScxHbv/kLqqIWs2fIXy6Y/EiBBiM72NTwuXUFCNrWR4sjUPSooVBJJ3ESQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -1679,8 +1679,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-linux-x64-gnu/13.1.5:
-    resolution: {integrity: sha512-GftSBFAay2nocGl+KNqFsj6EVSvomaM/bp86hzezbKsTwQmu76PjOCVcejI1gE+4k7f5zPDgCuorF6F04BV0HQ==}
+  /@next/swc-linux-x64-gnu/13.1.6:
+    resolution: {integrity: sha512-GT5w2mruk90V/I5g6ScuueE7fqj/d8Bui2qxdw6lFxmuTgMeol5rnzAv4uAoVQgClOUO/MULilzlODg9Ib3Y4Q==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -1688,8 +1688,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-linux-x64-musl/13.1.5:
-    resolution: {integrity: sha512-UD+3lxU4yuAjd+uBkCDfBpAcbGAVfEcE8mX/efIxUGIImmzN0QzgTHYEpKFnY3Lxu02dIBcwQRT3Q5mfO4obng==}
+  /@next/swc-linux-x64-musl/13.1.6:
+    resolution: {integrity: sha512-keFD6KvwOPzmat4TCnlnuxJCQepPN+8j3Nw876FtULxo8005Y9Ghcl7ACcR8GoiKoddAq8gxNBrpjoxjQRHeAQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -1697,8 +1697,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-win32-arm64-msvc/13.1.5:
-    resolution: {integrity: sha512-uzsvkQY+K3EbL+97IUHPWZPwjsCmCkdH/O5Cf9wCnh0k0gaj7ob1mGKqr1vNNak+9U7HloGwuHcXnZpijWSP7w==}
+  /@next/swc-win32-arm64-msvc/13.1.6:
+    resolution: {integrity: sha512-OwertslIiGQluFvHyRDzBCIB07qJjqabAmINlXUYt7/sY7Q7QPE8xVi5beBxX/rxTGPIbtyIe3faBE6Z2KywhQ==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
@@ -1706,8 +1706,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-win32-ia32-msvc/13.1.5:
-    resolution: {integrity: sha512-v0NaC1w8mPf620GlJaHBdEm3dm4G4AEQMasDqjzQvo0yCRrvtvzMgCIe8MocBxFHzaF6868NybMqvumxP5YxEg==}
+  /@next/swc-win32-ia32-msvc/13.1.6:
+    resolution: {integrity: sha512-g8zowiuP8FxUR9zslPmlju7qYbs2XBtTLVSxVikPtUDQedhcls39uKYLvOOd1JZg0ehyhopobRoH1q+MHlIN/w==}
     engines: {node: '>= 10'}
     cpu: [ia32]
     os: [win32]
@@ -1715,8 +1715,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-win32-x64-msvc/13.1.5:
-    resolution: {integrity: sha512-IZHwvd649ccbWyLCfu92IXEpR250NpmBkaRelPV+WVm4jrd62FKRFCNdqdCXq6TrEg9wN8cK4YG8tm44uEZqLA==}
+  /@next/swc-win32-x64-msvc/13.1.6:
+    resolution: {integrity: sha512-Ls2OL9hi3YlJKGNdKv8k3X/lLgc3VmLG3a/DeTkAd+lAituJp8ZHmRmm9f9SL84fT3CotlzcgbdaCDfFwFA6bA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -2289,7 +2289,7 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@typescript-eslint/typescript-estree/5.48.1_5e3hwdzh7amjvied4y7czab76m:
+  /@typescript-eslint/typescript-estree/5.48.1_f3ayjdur22n6pzwmkq7wnsyriu:
     resolution: {integrity: sha512-Hut+Osk5FYr+sgFh8J/FHjqX6HFcDzTlWLrFqGoK5kVUN3VBHF/QzZmAsIXCQ8T/W9nQNBTqalxi1P3LSqWnRA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -2304,13 +2304,13 @@ packages:
       globby: 11.1.0
       is-glob: 4.0.3
       semver: 7.3.8
-      tsutils: 3.21.0_typescript@4.9.4
-      typescript: 4.9.4
+      tsutils: 3.21.0_typescript@4.9.5
+      typescript: 4.9.5
     transitivePeerDependencies:
       - supports-color
     dev: true
 
-  /@typescript-eslint/typescript-estree/5.48.1_typescript@4.9.4:
+  /@typescript-eslint/typescript-estree/5.48.1_typescript@4.9.5:
     resolution: {integrity: sha512-Hut+Osk5FYr+sgFh8J/FHjqX6HFcDzTlWLrFqGoK5kVUN3VBHF/QzZmAsIXCQ8T/W9nQNBTqalxi1P3LSqWnRA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -2325,8 +2325,8 @@ packages:
       globby: 11.1.0
       is-glob: 4.0.3
       semver: 7.3.8
-      tsutils: 3.21.0_typescript@4.9.4
-      typescript: 4.9.4
+      tsutils: 3.21.0_typescript@4.9.5
+      typescript: 4.9.5
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2348,23 +2348,23 @@ packages:
       algoliasearch: 4.14.3
     dev: false
 
-  /@uniformdev/canvas-contentful/18.2.2_z2e3v3yhfbnykfd4haz6v7zsya:
-    resolution: {integrity: sha512-g6owdPgEb6xecdA+RjYznmWxHbqMBfYf8ECw1q5eReHhMh8gwsJ4BA8zs3DxQJxfeOsKIZI5ruxLkhXilTtQuQ==}
+  /@uniformdev/canvas-contentful/18.4.0_z2e3v3yhfbnykfd4haz6v7zsya:
+    resolution: {integrity: sha512-oaudoH1cT9E6QVA8YORjjucdmuzzNM03w8wQ7ZTgXgHTPHmEzFEkQ7QOrzNerCWMtgUI9FCHsOR3xdp/argJ9A==}
     peerDependencies:
       '@contentful/rich-text-html-renderer': '>= 14'
       contentful: '>= 8'
     dependencies:
       '@contentful/rich-text-html-renderer': 16.0.2
-      '@uniformdev/canvas': 18.2.2
+      '@uniformdev/canvas': 18.4.0
       contentful: 9.3.0
     dev: false
 
-  /@uniformdev/canvas-contentstack/18.2.2_contentstack@3.15.6:
-    resolution: {integrity: sha512-s5T69ldGviOjlGaTk+5e3OkTLaoekl+fZWTj1EXRqIFTz1JYlw3YWBg4B6+BXLJMhLqU2feGbic8l+w3Fm6h0g==}
+  /@uniformdev/canvas-contentstack/18.4.0_contentstack@3.15.6:
+    resolution: {integrity: sha512-ZH4UFxBDx0TIYqLlYtcTrjFWMnOBh0l8ARFbuYjcuczj87zHL9aDymWxIZzAza867fjKvTvTWF4IsAydjg0a9g==}
     peerDependencies:
       contentstack: '>=3.13'
     dependencies:
-      '@uniformdev/canvas': 18.2.2
+      '@uniformdev/canvas': 18.4.0
       contentstack: 3.15.6
     dev: false
 
@@ -2380,51 +2380,52 @@ packages:
       graphql-request: 5.1.0_graphql@16.6.0
     dev: false
 
-  /@uniformdev/canvas-kontent/18.2.2_urs7zdscilrnwhemglwzxpuwo4:
-    resolution: {integrity: sha512-xgsYdbmkO0xwgxnpHlDv+yQU3r3kKncpFUNYfhRl8wkIZRoBK7z74tKhMxBdKeCt76WxENfdJvJAfeyIzt1o5Q==}
+  /@uniformdev/canvas-kontent/18.4.0_urs7zdscilrnwhemglwzxpuwo4:
+    resolution: {integrity: sha512-EvCYQPAZPjVWTQHIkpOLA3zBkC4u59rf5CPO8W8J33Ygj0gL83bIfuRB8ROc3y/bKcH9oFSTvZv5ZDkhIpweBQ==}
     peerDependencies:
       '@contentful/rich-text-html-renderer': '>= 14'
       '@kentico/kontent-delivery': '>=11.0.0'
     dependencies:
       '@contentful/rich-text-html-renderer': 16.0.2
       '@kentico/kontent-delivery': 11.13.0
-      '@uniformdev/canvas': 18.2.2
+      '@uniformdev/canvas': 18.4.0
     dev: false
 
-  /@uniformdev/canvas-next/18.2.2_s6zlkfvllybxhmcq5pkr2zsuza:
-    resolution: {integrity: sha512-7gfnLsjMxLWPmQTAcAc0WzB/mKcBh2xEoOPDFUcMNlWiutkwgSaJZw8v5K+/e7W/S7OTMd0EODGneYgBHCxnZw==}
+  /@uniformdev/canvas-next/18.4.0_3vryta7zmbcsw4rrqf4axjqggm:
+    resolution: {integrity: sha512-d64YKb1b27O1HDEYW1zh28eK25WNB3D2beQDArMzucuXqjZJ6Zv86twjqjrSy3MBTtjOJZ7H/FhCVXpEsp/Lcg==}
     peerDependencies:
       next: '>= 12.0.0'
       react: '>= 16 || 17 || 18'
       react-dom: '>=16'
     dependencies:
-      '@uniformdev/canvas': 18.2.2
-      '@uniformdev/canvas-react': 18.2.2_biqbaboplfbrettd7655fr4n2y
-      next: 13.1.5_23e7ztf2chqi3ri6onem3l5mii
+      '@uniformdev/canvas': 18.4.0
+      '@uniformdev/canvas-react': 18.4.0_biqbaboplfbrettd7655fr4n2y
+      '@uniformdev/project-map': 18.4.0
+      next: 13.1.6_fcop3xylqakmbilfhdeuva2xj4
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /@uniformdev/canvas-react/18.2.2_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-0dxkHq7B3nvKHPvx+G8B8gTgUYecSRaAu6WM9QXXljcfVmE1/kUEDmiuRQ74ikDgZ9k4ROzArdd8LZxMXbuylw==}
+  /@uniformdev/canvas-react/18.4.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-IACF3cOlKAZy3O5Fz7b/VEHI38avVoCAteVQqoh8qJLy1inx+WavU6mvvTkk45r6V3AsSZl1mHSWA2yC/q/MxQ==}
     peerDependencies:
       react: '>= 16 || 17 || 18'
       react-dom: '>=16'
     dependencies:
-      '@uniformdev/canvas': 18.2.2
-      '@uniformdev/context': 18.2.2
-      '@uniformdev/context-react': 18.2.2_biqbaboplfbrettd7655fr4n2y
+      '@uniformdev/canvas': 18.4.0
+      '@uniformdev/context': 18.4.0
+      '@uniformdev/context-react': 18.4.0_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /@uniformdev/canvas-sanity/18.2.2_@sanity+client@4.0.1:
-    resolution: {integrity: sha512-0DLudP2wfVPdbwJlMmZ0MPi0T3/Ov5QiiQcPwULU/4p1zS/GHJOH7HZ8JCHqB3xSfEc+oeg9XzFvbqBBCANIcA==}
+  /@uniformdev/canvas-sanity/18.4.0_@sanity+client@4.0.1:
+    resolution: {integrity: sha512-6G4lnfKeg/fP7cpXxrg/MapEuCVpnENpvK2/VgOINLlt+4zc/NevAL/JnSNvg1MZ+S3OJseaoLFBwOiFrT8nRw==}
     peerDependencies:
       '@sanity/client': '>=2.13.0'
     dependencies:
       '@sanity/client': 4.0.1
-      '@uniformdev/canvas': 18.2.2
+      '@uniformdev/canvas': 18.4.0
     dev: false
 
   /@uniformdev/canvas-strapi/17.1.0_strapi-sdk-js@2.2.0:
@@ -2448,17 +2449,17 @@ packages:
       '@uniformdev/context': 17.7.0
     dev: false
 
-  /@uniformdev/canvas/18.2.2:
-    resolution: {integrity: sha512-vtpd80PDnPphB4OlscRPhBYKOhHnmgwk/QQeFZsA/qtgzx1kKA6qpKVrShYgyFxOr/Y/ELMFzHb0JIybbL3ong==}
+  /@uniformdev/canvas/18.4.0:
+    resolution: {integrity: sha512-4R0HosSr4LjghgqLOjP3vV57bawLHJuRtC2otgGfU0Lv59pZvT1yLbrIXQPNbSkRH9tQFVPMOfAyXvgEpNjwEA==}
     dependencies:
-      '@uniformdev/context': 18.2.2
+      '@uniformdev/context': 18.4.0
     dev: false
 
-  /@uniformdev/cli/18.2.2:
-    resolution: {integrity: sha512-EDNObtYBMZ0Hs3AAxY7kXHGMYrCrOLJqy7DHu33/jrDxyR3CNjHnhu7O5OmhRCOGKjk3jDry9zlPWmarT8AXFA==}
+  /@uniformdev/cli/18.4.0:
+    resolution: {integrity: sha512-VhAD/t4N4tuzXKrmORhEDWD82xeM6qmwM1c4l9XzppQ3YSmaub8/4zY2AwOltjcjfEYMuLN+C0rZRrrMbpSEdA==}
     hasBin: true
     dependencies:
-      '@uniformdev/uniform-new': 18.2.2
+      '@uniformdev/uniform-new': 18.4.0
       diff: 5.1.0
       dotenv: 16.0.3
       https-proxy-agent: 5.0.1
@@ -2471,15 +2472,15 @@ packages:
       - supports-color
     dev: true
 
-  /@uniformdev/context-devtools/18.2.2_57czaiyk6rdr5iy5tfs5pior4u:
-    resolution: {integrity: sha512-7GDxkcaho76xInCPjsMbSBiGlZW32z17mK/Stfqv/difjxA5GyZQcScBy2IvKPyPK4MAlKLZhSAPe0ubv7LopQ==}
+  /@uniformdev/context-devtools/18.4.0_57czaiyk6rdr5iy5tfs5pior4u:
+    resolution: {integrity: sha512-KNFAJ7G2qta/2VNfsToaQx4mebidJI95yUkTIXDqzsi3QMkYWLdpcCbiICMOAlNWLrfAq5IAnqEK1sprL7nyvA==}
     peerDependencies:
       react: '>=17 || 17 || 18'
       react-dom: '>=17'
     dependencies:
       '@emotion/react': 11.10.5_yxdp3dl3eazy3vwpbmv4fq727a
-      '@uniformdev/context': 18.2.2
-      '@uniformdev/design-system': 18.2.2_57czaiyk6rdr5iy5tfs5pior4u
+      '@uniformdev/context': 18.4.0
+      '@uniformdev/design-system': 18.4.0_57czaiyk6rdr5iy5tfs5pior4u
       formik: 2.2.9_react@18.2.0
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -2491,33 +2492,33 @@ packages:
       - '@types/react'
     dev: false
 
-  /@uniformdev/context-gtag/18.2.2:
-    resolution: {integrity: sha512-LpIKrD6YMC3btR16Rxl8gmWPQ0JM1S+GqeoNbyl1W0XAHw1IEJ5iRKLCSMGU9mUIoSjK1NhaEWkrcu8KQewF1A==}
+  /@uniformdev/context-gtag/18.4.0:
+    resolution: {integrity: sha512-+11sNPe9kGT7FXmqLFaCNq0qkv8nbtyMCzaBkn5gJ+V46ZVB9UWfFmcqmu6hWX/twWgasGhTiyZVBksxeQiTdg==}
     dependencies:
-      '@uniformdev/context': 18.2.2
+      '@uniformdev/context': 18.4.0
     dev: false
 
-  /@uniformdev/context-next/18.2.2_s6zlkfvllybxhmcq5pkr2zsuza:
-    resolution: {integrity: sha512-WIBWU3lHNEz/aJNbTtPftAuejHFM2CDObaVXyzTFfS4BMEHRtHn2P1OhnNuz4oKm+2AgQneWUTaaIO0BoHARJg==}
+  /@uniformdev/context-next/18.4.0_3vryta7zmbcsw4rrqf4axjqggm:
+    resolution: {integrity: sha512-qMLgR1jIyO97Gjbe6DDPvrQULBG3c0YU3c2dR8hiFVbSGQhizdos1g0Ofafws63+nooSm5A0Z81inLkZ2KoGlw==}
     peerDependencies:
       next: '>= 12.0.0'
       react: '>=16.13.1 || 17 || 18'
       react-dom: '>=16.13.1'
     dependencies:
-      '@uniformdev/context': 18.2.2
+      '@uniformdev/context': 18.4.0
       cookie: 0.5.0
-      next: 13.1.5_23e7ztf2chqi3ri6onem3l5mii
+      next: 13.1.6_fcop3xylqakmbilfhdeuva2xj4
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /@uniformdev/context-react/18.2.2_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-2z8wuDLR0uHyHMRiY0zt/euue5ry37vBaFdWj/MeGF4yBblnN16dHkw5Ys7Gp5ONHSkv88UIT29SUwODQlnUrQ==}
+  /@uniformdev/context-react/18.4.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-I5enbWslVMy7xDfrZoeidaLtb5tRe9aN2DUY3k5/ZJ7W4EeLW0YLu+TF6EWMkrBt94nTo1ADPyNKDUNOsCLLSw==}
     peerDependencies:
       react: '>=16.13.1 || 17 || 18'
       react-dom: '>=16.13.1'
     dependencies:
-      '@uniformdev/context': 18.2.2
+      '@uniformdev/context': 18.4.0
       cookie: 0.5.0
       dequal: 2.0.3
       react: 18.2.0
@@ -2534,8 +2535,8 @@ packages:
       rfdc: 1.3.0
     dev: false
 
-  /@uniformdev/context/18.2.2:
-    resolution: {integrity: sha512-+HKdyIsiKsQTs1vlkkTfPo4DPzUa06jPKJ292gdk95nGRN+VClM6XjcpgPvM1pmHDqGrMJ8hv7HFjANL/xydxw==}
+  /@uniformdev/context/18.4.0:
+    resolution: {integrity: sha512-6Iz5NvYv13Kuxa7wweqq4KYMCvc4YKcxkHcpcMgOtUkLl2DrjQerj34BrlUmYQgbj5mwvPdtwbuQDaTdQBruyg==}
     dependencies:
       dequal: 2.0.3
       js-cookie: 3.0.1
@@ -2544,8 +2545,8 @@ packages:
       rfdc: 1.3.0
     dev: false
 
-  /@uniformdev/design-system/18.2.2_57czaiyk6rdr5iy5tfs5pior4u:
-    resolution: {integrity: sha512-T8D/MOr3iT4RCT9DZNaGtDddh/iKYhNCCqyB1F13dz+xRuZWfJiiu6hgXj6phNEnaLBlqPTxwIIOoKPHk9fmmQ==}
+  /@uniformdev/design-system/18.4.0_57czaiyk6rdr5iy5tfs5pior4u:
+    resolution: {integrity: sha512-cqfPEdzk5BtrtcODANiqPfKo98lut6cijtsGwed+AyK+aKjMMpgueI3srknj1Ia1ziHMD5NQJzfiP1Yobb4bew==}
     peerDependencies:
       react: '>=17 || 17 || 18'
       react-dom: '>=17'
@@ -2565,16 +2566,16 @@ packages:
       - '@types/react'
     dev: false
 
-  /@uniformdev/project-map/18.2.2:
-    resolution: {integrity: sha512-3pmyvBLVnokHzmylUbyC7MDF0FlUqRAgJ4pfZQN/48BF+z5/OdVtXwzWsDvB8+SY0o9/utIU74QZvxA5OWtzUA==}
+  /@uniformdev/project-map/18.4.0:
+    resolution: {integrity: sha512-oTfGQEikHJtnAIm9sfz7XbNiSeYIpOCy7A3cllBmotjAQh+eDl6T7NaX5sVAn8l5vyDEh+k/i7st+5bv8BUfCA==}
     dependencies:
-      '@uniformdev/canvas': 18.2.2
-      '@uniformdev/context': 18.2.2
+      '@uniformdev/canvas': 18.4.0
+      '@uniformdev/context': 18.4.0
       p-limit: 3.1.0
     dev: false
 
-  /@uniformdev/uniform-new/18.2.2:
-    resolution: {integrity: sha512-Zyl+btIAZpDTLqPFFcCbAfC/aKrbMQyQvWlm3kMuuKYDfd8gvnofULJLvrPSktsBfwlnc4lenub+2pOibKa20g==}
+  /@uniformdev/uniform-new/18.4.0:
+    resolution: {integrity: sha512-UxgeAhYNn23zfPdamoCyCCDeE15t65f+99gaTl6KvvwtAu8buJvPwgMwczSr080p9vmWSB5YgjC0KY2mr7w5Hg==}
     dependencies:
       degit: 2.8.4
       execa: 5.1.1
@@ -4813,10 +4814,10 @@ packages:
     resolution: {integrity: sha512-lR78AugfUSBojwlSRZBeEqQ1l8LI7rbxOl1qTUnGLcjZQDjZmrZCb7R46rK8U8B5WzFvJrxa7fEBA8FoD/n5fA==}
     engines: {node: ^12.20.0 || ^14.14.0 || >=16.0.0}
     dependencies:
-      '@typescript-eslint/typescript-estree': 5.48.1_typescript@4.9.4
+      '@typescript-eslint/typescript-estree': 5.48.1_typescript@4.9.5
       ast-module-types: 3.0.0
       node-source-walk: 5.0.0
-      typescript: 4.9.4
+      typescript: 4.9.5
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -4825,10 +4826,10 @@ packages:
     resolution: {integrity: sha512-lR78AugfUSBojwlSRZBeEqQ1l8LI7rbxOl1qTUnGLcjZQDjZmrZCb7R46rK8U8B5WzFvJrxa7fEBA8FoD/n5fA==}
     engines: {node: ^12.20.0 || ^14.14.0 || >=16.0.0}
     dependencies:
-      '@typescript-eslint/typescript-estree': 5.48.1_5e3hwdzh7amjvied4y7czab76m
+      '@typescript-eslint/typescript-estree': 5.48.1_f3ayjdur22n6pzwmkq7wnsyriu
       ast-module-types: 3.0.0
       node-source-walk: 5.0.0
-      typescript: 4.9.4
+      typescript: 4.9.5
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -8709,8 +8710,8 @@ packages:
       qs: 6.11.0
     dev: true
 
-  /next/13.1.5_23e7ztf2chqi3ri6onem3l5mii:
-    resolution: {integrity: sha512-rmpYZFCxxWAi2nJCT9sSqMLGC3cu+Pf689hx9clcyP0KbVIhh/7Dus5QcKrVd/PrAd6AjsuogSRR1mCP7BoYRw==}
+  /next/13.1.6_fcop3xylqakmbilfhdeuva2xj4:
+    resolution: {integrity: sha512-hHlbhKPj9pW+Cymvfzc15lvhaOZ54l+8sXDXJWm3OBNBzgrVj6hwGPmqqsXg40xO1Leq+kXpllzRPuncpC0Phw==}
     engines: {node: '>=14.6.0'}
     hasBin: true
     peerDependencies:
@@ -8727,28 +8728,28 @@ packages:
       sass:
         optional: true
     dependencies:
-      '@next/env': 13.1.5
+      '@next/env': 13.1.6
       '@swc/helpers': 0.4.14
       caniuse-lite: 1.0.30001442
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      sass: 1.57.1
+      sass: 1.58.0
       styled-jsx: 5.1.1_2exiyaescjxorpwwmy4ejghgte
     optionalDependencies:
-      '@next/swc-android-arm-eabi': 13.1.5
-      '@next/swc-android-arm64': 13.1.5
-      '@next/swc-darwin-arm64': 13.1.5
-      '@next/swc-darwin-x64': 13.1.5
-      '@next/swc-freebsd-x64': 13.1.5
-      '@next/swc-linux-arm-gnueabihf': 13.1.5
-      '@next/swc-linux-arm64-gnu': 13.1.5
-      '@next/swc-linux-arm64-musl': 13.1.5
-      '@next/swc-linux-x64-gnu': 13.1.5
-      '@next/swc-linux-x64-musl': 13.1.5
-      '@next/swc-win32-arm64-msvc': 13.1.5
-      '@next/swc-win32-ia32-msvc': 13.1.5
-      '@next/swc-win32-x64-msvc': 13.1.5
+      '@next/swc-android-arm-eabi': 13.1.6
+      '@next/swc-android-arm64': 13.1.6
+      '@next/swc-darwin-arm64': 13.1.6
+      '@next/swc-darwin-x64': 13.1.6
+      '@next/swc-freebsd-x64': 13.1.6
+      '@next/swc-linux-arm-gnueabihf': 13.1.6
+      '@next/swc-linux-arm64-gnu': 13.1.6
+      '@next/swc-linux-arm64-musl': 13.1.6
+      '@next/swc-linux-x64-gnu': 13.1.6
+      '@next/swc-linux-x64-musl': 13.1.6
+      '@next/swc-win32-arm64-msvc': 13.1.6
+      '@next/swc-win32-ia32-msvc': 13.1.6
+      '@next/swc-win32-x64-msvc': 13.1.6
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
@@ -10595,8 +10596,8 @@ packages:
     resolution: {integrity: sha512-effkSW9cap879l6CVNdwL5iubVz8tkspqgfiqwgBgFQspV7152WHaLzr5590yR8oFgt7E1d4lO09uUhtAgUPoA==}
     dev: false
 
-  /sass/1.57.1:
-    resolution: {integrity: sha512-O2+LwLS79op7GI0xZ8fqzF7X2m/m8WFfI02dHOdsK5R2ECeS5F62zrwg/relM1rjSLy7Vd/DiMNIvPrQGsA0jw==}
+  /sass/1.58.0:
+    resolution: {integrity: sha512-PiMJcP33DdKtZ/1jSjjqVIKihoDc6yWmYr9K/4r3fVVIEDAluD0q7XZiRKrNJcPK3qkLRF/79DND1H5q1LBjgg==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     dependencies:
@@ -11721,7 +11722,7 @@ packages:
     resolution: {integrity: sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==}
     dev: true
 
-  /ts-loader/9.4.2_3fkjkrd3audxnith3e7fo4fnxi:
+  /ts-loader/9.4.2_hhrrucqyg4eysmfpujvov2ym5u:
     resolution: {integrity: sha512-OmlC4WVmFv5I0PpaxYb+qGeGOdm5giHU7HwDDUjw59emP2UYMHy9fFSDcYgSNoH8sXcj4hGCSEhlDZ9ULeDraA==}
     engines: {node: '>=12.0.0'}
     peerDependencies:
@@ -11732,11 +11733,11 @@ packages:
       enhanced-resolve: 5.12.0
       micromatch: 4.0.5
       semver: 7.3.8
-      typescript: 4.9.4
+      typescript: 4.9.5
       webpack: 5.75.0_esbuild@0.15.18
     dev: true
 
-  /ts-node/10.9.1_awa2wsr5thmg3i7jqycphctjfq:
+  /ts-node/10.9.1_bdgp3l2zgaopogaavxusmetvge:
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -11762,7 +11763,7 @@ packages:
       create-require: 1.1.1
       diff: 4.0.2
       make-error: 1.3.6
-      typescript: 4.9.4
+      typescript: 4.9.5
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
     dev: true
@@ -11773,7 +11774,7 @@ packages:
   /tslib/2.4.1:
     resolution: {integrity: sha512-tGyy4dAjRIEwI7BzsB0lynWgOpfqjUdq91XXAlIWD2OwKBH7oCl/GZG/HT4BOHrTlPMOASlMQ7veyTqpmRcrNA==}
 
-  /tsup/6.5.0_k22f457wtryv7dv7ltdlwpdpdm:
+  /tsup/6.5.0_uujdqti2krmttzhqvubwnsmcci:
     resolution: {integrity: sha512-36u82r7rYqRHFkD15R20Cd4ercPkbYmuvRkz3Q1LCm5BsiFNUgpo36zbjVhCOgvjyxNBWNKHsaD5Rl8SykfzNA==}
     engines: {node: '>=14'}
     hasBin: true
@@ -11804,20 +11805,20 @@ packages:
       source-map: 0.8.0-beta.0
       sucrase: 3.29.0
       tree-kill: 1.2.2
-      typescript: 4.9.4
+      typescript: 4.9.5
     transitivePeerDependencies:
       - supports-color
       - ts-node
     dev: true
 
-  /tsutils/3.21.0_typescript@4.9.4:
+  /tsutils/3.21.0_typescript@4.9.5:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
     engines: {node: '>= 6'}
     peerDependencies:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
     dependencies:
       tslib: 1.14.1
-      typescript: 4.9.4
+      typescript: 4.9.5
     dev: true
 
   /tunnel-agent/0.6.0:
@@ -11894,8 +11895,8 @@ packages:
       is-typedarray: 1.0.0
     dev: true
 
-  /typescript/4.9.4:
-    resolution: {integrity: sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==}
+  /typescript/4.9.5:
+    resolution: {integrity: sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==}
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true

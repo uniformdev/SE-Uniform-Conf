@@ -14,14 +14,16 @@ declare global {
   }
 }
 
+export type EntryProps = {
+  heading: string;
+  buttonText: string;
+  registeredText: string;
+  homeLinkText: string;
+  success: string;
+};
+
 export type RegisterFormProps = {
-  Entry: {
-    heading: any;
-    buttonText: string;
-    registeredText: string;
-    homeLinkText: string;
-    success: string;
-  }
+  Entry: EntryProps
 };
 
 export function RegisterForm(props: RegisterFormProps) {

@@ -8,6 +8,7 @@ import {
 } from "@uniformdev/canvas-contentful";
 import { createClient } from "contentful";
 import { GetStaticPropsContext } from "next";
+import { LOCALE_ENGLISH_UNITED_STATES } from "constants/locales";
 
 const {
 	serverRuntimeConfig: {
@@ -15,19 +16,27 @@ const {
 	},
 } = getConfig();
 
-export const contentfulEnhancer = () => {
-	const client = createClient({
+const createContentfulClient = () =>
+	createClient({
 		space: spaceId,
-		environment: environment,
+		environment,
 		accessToken: deliveryToken,
 	});
 
-	const previewClient = createClient({
+const createPreviewClient = () =>
+	createClient({
 		space: spaceId,
-		environment: environment,
+		environment,
 		accessToken: previewToken,
 		host: "preview.contentful.com",
 	});
+
+const getLocale = (context: GetStaticPropsContext) =>
+	context.locale ?? context.defaultLocale ?? LOCALE_ENGLISH_UNITED_STATES;
+
+export const contentfulEnhancer = () => {
+	const client = createContentfulClient();
+	const previewClient = createPreviewClient();
 
 	return createContentfulEnhancer({
 		client,
@@ -37,30 +46,21 @@ export const contentfulEnhancer = () => {
 			defaultQuery,
 			context,
 		}: CreateContentfulQueryOptions<GetStaticPropsContext>) => {
-			const locale = context.locale ?? context.defaultLocale ?? "en-US";
-			defaultQuery.locale = locale;
-			defaultQuery.select = ["fields"];
-			defaultQuery.include = 2;
-			return defaultQuery;
+			const locale = getLocale(context);
+			return {
+				...defaultQuery,
+				locale,
+				select: ["fields"],
+				include: 2,
+			};
 		},
 	});
 };
 
 export const contentfulQueryEnhancer = () => {
-	const client = createClient({
-		space: spaceId,
-		environment: environment,
-		accessToken: deliveryToken,
-	});
-
-	const previewClient = createClient({
-		space: spaceId,
-		environment: environment,
-		accessToken: previewToken,
-		host: "preview.contentful.com",
-	});
-
-	const clientList = new ContentfulClientList({client, previewClient});
+	const client = createContentfulClient();
+	const previewClient = createPreviewClient();
+	const clientList = new ContentfulClientList({ client, previewClient });
 
 	return createContentfulQueryEnhancer({
 		clients: clientList,
@@ -68,11 +68,13 @@ export const contentfulQueryEnhancer = () => {
 			defaultQuery,
 			context,
 		}: CreateContentfulQueryApiQueryOptions<GetStaticPropsContext>) => {
-			const locale = context.locale ?? context.defaultLocale ?? "en-US";
-			defaultQuery.locale = locale;
-			defaultQuery.select = ["fields"];
-			defaultQuery.include = 2;
-			return defaultQuery;
+			const locale = getLocale(context);
+			return {
+				...defaultQuery,
+				locale,
+				select: ["fields"],
+				include: 2,
+			};
 		},
 	});
-}
+};

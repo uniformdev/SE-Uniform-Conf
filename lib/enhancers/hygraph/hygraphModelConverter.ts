@@ -1,4 +1,5 @@
 import { ComponentInstance } from "@uniformdev/canvas";
+import { COMPONENT_HERO_HYGRAPH } from "constants/components";
 
 export const hygraphModelConverter = ({
 	component,
@@ -8,7 +9,7 @@ export const hygraphModelConverter = ({
 	parameter: any;
 }) => {
 	switch (component.type) {
-		case "HeroHygraph": {
+		case COMPONENT_HERO_HYGRAPH: {
 			const returnValue = {
 				title: parameter?.value[0]?.title || "",
 				description: parameter?.value[0]?.description || "",
