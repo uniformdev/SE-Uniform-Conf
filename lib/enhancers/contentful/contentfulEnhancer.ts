@@ -2,6 +2,8 @@ import getConfig from "next/config";
 import {
 	ContentfulClientList,
 	createContentfulEnhancer,
+	createContentfulMultiEnhancer,
+	CreateContentfulMultiEntryQueryOptions,
 	CreateContentfulQueryApiQueryOptions,
 	createContentfulQueryEnhancer,
 	CreateContentfulQueryOptions,
@@ -46,6 +48,28 @@ export const contentfulEnhancer = () => {
 			defaultQuery,
 			context,
 		}: CreateContentfulQueryOptions<GetStaticPropsContext>) => {
+			const locale = getLocale(context);
+			return {
+				...defaultQuery,
+				locale,
+				select: ["fields"],
+				include: 2,
+			};
+		},
+	});
+};
+
+export const contentfulMultiEnhancer = () => {
+	const client = createContentfulClient();
+	const previewClient = createPreviewClient();
+	const clientList = new ContentfulClientList({ client, previewClient });
+
+	return createContentfulMultiEnhancer({
+		clients: clientList,
+		createQuery: ({
+			defaultQuery,
+			context,
+		}: CreateContentfulMultiEntryQueryOptions<GetStaticPropsContext>) => {
 			const locale = getLocale(context);
 			return {
 				...defaultQuery,
