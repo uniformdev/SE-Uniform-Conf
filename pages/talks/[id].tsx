@@ -24,6 +24,8 @@ import { createClient } from "contentful";
 import { DynamicTalkProvider, PlaceholderTalk } from "lib/providers/DynamicTalkProvider";
 import { Talk } from "@/components/DynamicTalk";
 import { projectMapClient } from "lib/projectMapClient";
+import { DynamicTalkCompositionId } from "constants/compositions";
+import { localeDutchNetherlands, localeEnglishUnitedStates } from "constants/locales";
 
 const {
   serverRuntimeConfig: { projectMapId },
@@ -41,16 +43,15 @@ export default function DynamicTalkPage({
   menuItems: MenuItem[];
   talk: Talk;
 }) {
+  if (composition === undefined) {
+    return null;
+  }
+
   const contextualEditingEnhancer = createUniformApiEnhancer({
     apiUrl: "/api/preview"
   });
 
   const componentStore = RenderComponentResolver();
-
-  if (composition === undefined)
-  {
-    return null;
-  }
 
   return (
     <MenuItemsProvider menuItems={menuItems}>
@@ -78,8 +79,8 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
   var getNodesResult = await projectMapClient.getNodes({ projectMapId, path: '/talks' });
 
-   // dynamic Talk page composition ID
-  let compositionId = '7ab998d3-4a21-423e-bef8-588ab404fcc7';
+  // dynamic Talk page composition ID
+  let compositionId = DynamicTalkCompositionId;
 
   // if there is a node where the path segment matches our id
   // and the node has a composition attached
@@ -155,8 +156,8 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const contentfulResult = await client.getEntries({ content_type: talkContentEntryType });
 
   const paths = contentfulResult.items.flatMap((talk: any) => [
-    { params: { id: talk.fields.slug }, locale: 'en-US' },
-    { params: { id: talk.fields.slug }, locale: 'nl-NL' }
+    { params: { id: talk.fields.slug }, locale: localeEnglishUnitedStates },
+    { params: { id: talk.fields.slug }, locale: localeDutchNetherlands }
   ]);
 
   return {

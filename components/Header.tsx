@@ -6,11 +6,12 @@ import NavMenu from "./NavMenu";
 import Logo from "./Logo";
 import { useUniformContext } from "@uniformdev/context-react";
 import { useRouter } from "next/router";
+import { localeDutchNetherlands, localeEnglishUnitedStates } from "constants/locales";
 
 const locales = {
   locales: [
     {
-      code: 'en-US', flag: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="40" viewBox="0 0 7410 3900">\
+      code: localeEnglishUnitedStates, flag: '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="40" viewBox="0 0 7410 3900">\
     <rect width="7410" height="3900" fill="#b22234"/>\
     <path d="M0,450H7410m0,600H0m0,600H7410m0,600H0m0,600H7410m0,600H0" stroke="#fff" stroke-width="300"/>\
     <rect xmlns="http://www.w3.org/2000/svg" width="2964" height="2100" fill="#3c3b6e"/>\
@@ -36,7 +37,7 @@ const locales = {
     </g>\
     </svg>'},
     {
-      code: 'nl-NL', flag: '<svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 0 9 6">\
+      code: localeDutchNetherlands, flag: '<svg xmlns="http://www.w3.org/2000/svg" height="40" viewBox="0 0 9 6">\
     <rect fill="#21468B" width="9" height="6"/>\
     <rect fill="#FFF" width="9" height="4"/>\
     <rect fill="#AE1C28" width="9" height="2"/>\
