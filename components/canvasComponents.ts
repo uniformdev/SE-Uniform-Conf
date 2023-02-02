@@ -10,7 +10,7 @@ import {
 	DefaultNotImplementedComponent,
 	componentStore,
 } from "@uniformdev/canvas-react";
-import { ArrayTalkList, DynamicTalkList } from "./ArrayTalkList";
+import { ArrayTalkList } from "./ArrayTalkList";
 import { DynamicTalk } from "./DynamicTalk";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
