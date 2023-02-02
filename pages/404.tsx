@@ -79,18 +79,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       revalidate: 30
     };
   } catch (error: any) {
-    if (error?.statusCode === 404) {
-      console.log("Composition not found. Let's respond with our 404 page.");
-      return {
-        props: {
-          composition: undefined,
-          menuItems: await GetMenuItems()
-        },
-        revalidate: 30,
-        notFound: true
-      };
-    } else {
-      throw error;
-    }
+    console.log("An error occurred when we tried to generate our 404 page.")
+    throw error;
   }
 }

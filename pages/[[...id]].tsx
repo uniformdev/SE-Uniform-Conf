@@ -21,6 +21,8 @@ import { RenderComponentResolver } from "../components/canvasComponents";
 import { MenuItem } from "@/components/NavMenu";
 import { MenuItemsProvider } from "lib/providers/MenuItemsProvider";
 import { GetMenuItems } from "lib/helpers/menuItems";
+import { FourOhFourCompositionId, TalkCompositionId, TalksCompositionId } from "constants/compositions";
+import { localeDutchNetherlands, localeEnglishUnitedStates } from "constants/locales";
 
 const {
   serverRuntimeConfig: { projectMapId },
@@ -34,6 +36,10 @@ export default function Page({
   composition: RootComponentInstance;
   menuItems: MenuItem[]
 }) {
+  if (composition === undefined) {
+    return null;
+  }
+
   const contextualEditingEnhancer = createUniformApiEnhancer({
     apiUrl: "/api/preview"
   });
@@ -64,39 +70,54 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   const { preview } = context;
   const locale = context.locale ?? context.defaultLocale ?? 'en-US';
   //API still in development...hence the unstable.
-  const { composition } = await canvasClient.unstable_getCompositionByNodePath({
-    projectMapNodePath: slugString ? `/${slugString}` : "/",
-    state: process.env.NODE_ENV === 'development' || preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
-    projectMapId: projectMapId,
-    unstable_resolveData: true,
-    unstable_dynamicVariables: { locale: locale },
-  });
+  try {
+    const { composition } = await canvasClient.unstable_getCompositionByNodePath({
+      projectMapNodePath: slugString ? `/${slugString}` : "/",
+      state: process.env.NODE_ENV === 'development' || preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
+      projectMapId: projectMapId,
+      unstable_resolveData: true,
+      unstable_dynamicVariables: { locale: locale },
+    });
 
-  await localize({ composition, locale })
-  await enhance({ composition, enhancers: enhancerBuilder, context });
+    await localize({ composition, locale })
+    await enhance({ composition, enhancers: enhancerBuilder, context });
 
-  return {
-    props: {
-      composition,
-      preview: Boolean(preview),
-      menuItems: await GetMenuItems()
-    },
-    revalidate: 30
-  };
+    return {
+      props: {
+        composition,
+        preview: Boolean(preview),
+        menuItems: await GetMenuItems()
+      },
+      revalidate: 30
+    };
+  } catch (error: any) {
+    if (error?.statusCode === 404) {
+      console.log("Composition not found. Let's respond with our 404 page.");
+      return {       
+        revalidate: 30,
+        notFound: true
+      };
+    } else {
+      throw error;
+    }
+  }
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const { nodes } = await projectMapClient.getNodes({ projectMapId });
   const ids = nodes?.filter((node) =>
     node.compositionId! &&
+    // Filter out our 404 page
     // Filter out pages that are children of the talks node
     // but include the talks node itself and the talk-placeholder.
-    (!node.path.startsWith('/talks') || node.pathSegment === 'talks' || node.pathSegment === 'talk'))
+    (node.compositionId !== FourOhFourCompositionId && (!node.path.startsWith('/talks')
+    || node.compositionId === TalksCompositionId || node.compositionId === TalkCompositionId)))
     .map((node) => node.path.split('/').filter(Boolean)) ?? [];
 
+
   const paths = ids.flatMap((id) => [
-    { params: { id }, locale: 'en-US' },
-    { params: { id }, locale: 'nl-NL' }
+    { params: { id }, locale: localeEnglishUnitedStates },
+    { params: { id }, locale: localeDutchNetherlands }
   ]);
 
   return {

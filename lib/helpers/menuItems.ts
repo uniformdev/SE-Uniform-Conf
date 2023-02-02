@@ -1,3 +1,4 @@
+import { FourOhFourCompositionId } from "constants/compositions";
 import { projectMapClient } from "lib/projectMapClient";
 import getConfig from "next/config";
 
@@ -14,7 +15,11 @@ export async function GetMenuItems() {
 	if (tree?.children?.length) {
 		let childItems: Array<{ name: string; url: string }> = [];
 		tree.children.forEach((childItem) => {
-			childItems.push({ name: childItem.name, url: childItem.path });
+      // Filter out our 404 composition.
+      if (childItem.compositionId !== FourOhFourCompositionId)
+      {
+			  childItems.push({ name: childItem.name, url: childItem.path });
+      }
 		});
 
 		return childItems;
