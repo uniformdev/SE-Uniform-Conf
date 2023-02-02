@@ -6,11 +6,13 @@ import {
 	EnhancerBuilder,
 } from "@uniformdev/canvas";
 import {
+	CANVAS_CONTENTFUL_MULTI_PARAMETER_TYPES,
 	CANVAS_CONTENTFUL_PARAMETER_TYPES,
 	CANVAS_CONTENTFUL_QUERY_PARAMETER_TYPES,
 } from "@uniformdev/canvas-contentful";
 import {
 	contentfulEnhancer,
+	contentfulMultiEnhancer,
 	contentfulQueryEnhancer,
 } from "./contentful/contentfulEnhancer";
 import { contentfulModelConverter } from "./contentful/contentfulModelConverter";
@@ -30,6 +32,7 @@ import { hygraphModelConverter } from "./hygraph/hygraphModelConverter";
 import { STRAPI_PARAMETER_TYPES } from "@uniformdev/canvas-strapi";
 import { strapiEnhancer } from "./strapi/strapiEnhancer";
 import { strapiModelConverter } from "./strapi/strapiModelConverter";
+import { contentfulMultiModelConverter } from "./contentful/contentfulMultiModelConverter";
 
 const {
 	serverRuntimeConfig: {
@@ -48,6 +51,18 @@ const enhancers: EnhancerConfiguration[] = [
 		type: CANVAS_CONTENTFUL_PARAMETER_TYPES,
 		enhancer: contentfulEnhancer,
 		converter: contentfulModelConverter,
+		config: [
+			contentfulConfig.spaceId,
+			contentfulConfig.environment,
+			contentfulConfig.previewToken,
+			contentfulConfig.deliveryToken,
+		],
+	},
+	{
+		name: "Contentful Multi",
+		type: CANVAS_CONTENTFUL_MULTI_PARAMETER_TYPES,
+		enhancer: contentfulMultiEnhancer,
+		converter: contentfulMultiModelConverter,
 		config: [
 			contentfulConfig.spaceId,
 			contentfulConfig.environment,
