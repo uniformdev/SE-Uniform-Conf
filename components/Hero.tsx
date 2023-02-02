@@ -2,10 +2,8 @@ import Link from "next/link";
 import Splitter from "./Splitter";
 
 export type ImageProps = {
-
   src: string;
   alt: string;
-
 }
 
 export type EntryProps = {
