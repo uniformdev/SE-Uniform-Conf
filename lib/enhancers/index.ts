@@ -5,9 +5,16 @@ import {
 	compose,
 	EnhancerBuilder,
 } from "@uniformdev/canvas";
-import { CANVAS_CONTENTFUL_PARAMETER_TYPES, CANVAS_CONTENTFUL_QUERY_PARAMETER_TYPES } from "@uniformdev/canvas-contentful";
-import { contentfulEnhancer, contentfulQueryEnhancer } from "./contentful/contentfulEnhancer";
+import {
+	CANVAS_CONTENTFUL_PARAMETER_TYPES,
+	CANVAS_CONTENTFUL_QUERY_PARAMETER_TYPES,
+} from "@uniformdev/canvas-contentful";
+import {
+	contentfulEnhancer,
+	contentfulQueryEnhancer,
+} from "./contentful/contentfulEnhancer";
 import { contentfulModelConverter } from "./contentful/contentfulModelConverter";
+import { contentfulQueryModelConverter } from "./contentful/contentfulQueryModelConverter";
 import { CANVAS_KONTENT_PARAMETER_TYPES } from "@uniformdev/canvas-kontent";
 import { kontentEnhancer } from "./kontent/kontentEnhancer";
 import { kontentModelConverter } from "./kontent/kontentModelConverter";
@@ -23,7 +30,6 @@ import { hygraphModelConverter } from "./hygraph/hygraphModelConverter";
 import { STRAPI_PARAMETER_TYPES } from "@uniformdev/canvas-strapi";
 import { strapiEnhancer } from "./strapi/strapiEnhancer";
 import { strapiModelConverter } from "./strapi/strapiModelConverter";
-import { contentfulQueryModelConverter } from "./contentful/contentfulQueryModelConverter";
 
 const {
 	serverRuntimeConfig: {
@@ -112,13 +118,13 @@ const enhancers: EnhancerConfiguration[] = [
 export const enhancerBuilder = new EnhancerBuilder();
 
 enhancers.forEach((enhancer) => {
-	if (enhancer.config.every((cfg) => cfg !== undefined)) {
+	if (enhancer.config.every((cfg) => cfg)) {
 		enhancerBuilder.parameterType(
 			enhancer.type,
 			compose(enhancer.enhancer(), enhancer.converter)
 		);
 
-		console.log("Registered ", enhancer.name, " Enhancer.");
+		console.log(`Registered ${enhancer.name} Enhancer.`);
 	}
 });
 

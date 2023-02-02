@@ -1,12 +1,14 @@
 import Link from "next/link";
 
+export type EntryProps = {
+  title: string;
+  description: string;
+  audience: string;
+  slug: string;
+};
+
 export type TalkProps = {
-  Entry: {
-    title: string;
-    description: string;
-    audience: string;
-    slug: string;
-  }
+  Entry: EntryProps
 };
 
 export const Talk = (props: TalkProps) => (

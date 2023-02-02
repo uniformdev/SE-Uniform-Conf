@@ -1,4 +1,5 @@
 import { ComponentInstance } from "@uniformdev/canvas";
+import { COMPONENT_HERO_STRAPI } from "constants/components";
 import getConfig from "next/config";
 
 const {
@@ -14,7 +15,7 @@ export const strapiModelConverter = ({
 	component: ComponentInstance;
 	parameter: any;
 }) => {
-	if (component.type === "HeroStrapi") {
+	if (component.type === COMPONENT_HERO_STRAPI) {
 		const returnValue = {
 			title: parameter?.value[0]?.attributes?.Title || "",
 			description: parameter?.value[0]?.attributes?.Description || "",

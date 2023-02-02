@@ -10,10 +10,10 @@ const {
 
 export const sanityEnhancer = () => {
 	const client = new createSanityClient({
-		projectId: projectId,
-		dataset: dataset,
-		useCdn: useCdn,
-		apiVersion: apiVersion,
+		projectId,
+		dataset,
+		useCdn,
+		apiVersion,
 	});
 
 	return createSanityEnhancer({ client });

@@ -1,4 +1,5 @@
 import { ComponentInstance } from "@uniformdev/canvas";
+import { COMPONENT_HERO_KONTENT } from "constants/components";
 
 export const kontentModelConverter = ({
 	component,
@@ -8,7 +9,7 @@ export const kontentModelConverter = ({
 	parameter: any;
 }) => {
 	switch (component.type) {
-		case "HeroKontent": {
+		case COMPONENT_HERO_KONTENT: {
 			const returnValue = {
 				title: parameter?.value?.elements?.title?.value || "",
 				description: parameter?.value?.elements?.description?.value || "",

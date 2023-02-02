@@ -16,8 +16,8 @@ export const contentstackEnhancer = () => {
 	const client = contentstack.Stack({
 		api_key: apiKey,
 		delivery_token: deliveryToken,
-		environment: environment,
-		region: region,
+		environment,
+		region,
 	});
 
 	return createContentstackEnhancer({
@@ -26,9 +26,8 @@ export const contentstackEnhancer = () => {
 			query,
 			context,
 		}: AddContentstackQueryOptions<GetStaticPropsContext>) => {
-			const locale = context.locale ?? context.defaultLocale ?? "en-US";
-			query.language(locale.toLowerCase());
-			return query;
+			const locale = context.locale || context.defaultLocale || "en-US";
+			return query.language(locale.toLowerCase());
 		},
 	});
 };

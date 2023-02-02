@@ -2,6 +2,7 @@ import { ComponentInstance } from "@uniformdev/canvas";
 import createSanityClient from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 import getConfig from "next/config";
+import { COMPONENT_HERO_SANITY } from "constants/components";
 
 const {
 	serverRuntimeConfig: {
@@ -24,7 +25,7 @@ export const sanityModelConverter = ({
 	parameter: any;
 }) => {
 	switch (component.type) {
-		case "HeroSanity": {
+		case COMPONENT_HERO_SANITY: {
 			const returnValue = {
 				title: parameter?.value?.title || "",
 				description: parameter?.value?.description || "",

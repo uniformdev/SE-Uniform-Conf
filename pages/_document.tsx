@@ -7,7 +7,7 @@ import Document, {
   NextScript,
 } from "next/document";
 import { enableNextSsr } from "@uniformdev/context-next";
-import { createUniformContext } from "../lib/context/uniformContext";
+import { createContext } from "../lib/context/uniformContext";
 import getConfig from "next/config";
 
 const gaTrackingId = getConfig()?.publicRuntimeConfig?.gaTrackingId || undefined;
@@ -16,7 +16,7 @@ class MyDocument extends Document {
   static async getInitialProps(
     ctx: DocumentContext
   ): Promise<DocumentInitialProps> {
-    const serverTracker = createUniformContext(ctx);
+    const serverTracker = createContext(ctx);
     enableNextSsr(ctx, serverTracker);
     return await Document.getInitialProps(ctx);
   }

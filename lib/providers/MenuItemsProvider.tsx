@@ -3,6 +3,6 @@ import { createContext, PropsWithChildren } from "react";
 
 export const MenuItemsContext = createContext<MenuItem[]>([]);
 
-export function MenuItemsProvider({ menuItems, children }: PropsWithChildren<{ menuItems: MenuItem[] }>) {
-    return (<MenuItemsContext.Provider value={menuItems}>{children}</MenuItemsContext.Provider>)
-}
+export const MenuItemsProvider = ({ menuItems, children }: PropsWithChildren<{ menuItems: MenuItem[] }>) => (
+    (<MenuItemsContext.Provider value={menuItems}>{children}</MenuItemsContext.Provider>)
+);

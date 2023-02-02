@@ -1,9 +1,11 @@
 import { UniformSlot } from "@uniformdev/canvas-react";
 
+export type EntryProps = {
+  title: string;
+};
+
 export type TalkListProps = {
-  Entry: {
-    title: string;
-  }
+  Entry: EntryProps
 };
 
 export function TalkList(props: TalkListProps) {

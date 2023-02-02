@@ -1,11 +1,12 @@
 import getConfig from "next/config";
+import { DeliveryClient } from "@kentico/kontent-delivery";
 import {
-	AddKontentQueryOptions,
 	createKontentEnhancer,
 	KontentClientList,
+	AddKontentQueryOptions,
 } from "@uniformdev/canvas-kontent";
-import { DeliveryClient } from "@kentico/kontent-delivery";
 import { GetStaticPropsContext } from "next";
+import { LOCALE_ENGLISH_UNITED_STATES } from "constants/locales";
 
 const {
 	serverRuntimeConfig: {
@@ -15,18 +16,19 @@ const {
 
 export const kontentEnhancer = () => {
 	const client = new DeliveryClient({
-		projectId: projectId,
+		projectId,
 		secureApiKey: deliveryKey,
 	});
 
-	const clientList = new KontentClientList({ client });
+	const clients = new KontentClientList({ client });
+
 	return createKontentEnhancer({
-		clients: clientList,
+		clients,
 		addEntryQueryOptions: ({
 			defaultQuery,
 			context,
 		}: AddKontentQueryOptions<GetStaticPropsContext>) => {
-			const locale = context.locale ?? context.defaultLocale ?? "en-US";
+			const locale = context.locale || context.defaultLocale || LOCALE_ENGLISH_UNITED_STATES;
 			defaultQuery.languageParameter(locale);
 			return defaultQuery;
 		},

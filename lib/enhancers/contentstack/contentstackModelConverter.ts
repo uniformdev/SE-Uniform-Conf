@@ -1,26 +1,38 @@
 import { ComponentInstance } from "@uniformdev/canvas";
 
+interface HeroData {
+	title: string;
+	description: string;
+	buttonText: string;
+	buttonLink: string;
+	image: {
+		src: string;
+		alt: string;
+	};
+}
+
 export const contentstackModelConverter = ({
 	component,
 	parameter,
 }: {
 	component: ComponentInstance;
 	parameter: any;
-}) => {
-	switch (component.type) {
-		case "HeroContentstack": {
-			const returnValue = {
-				title: parameter?.value?.title || "",
-				description: parameter?.value?.description || "",
-				buttonText: parameter?.value?.button_text || "",
-				buttonLink: parameter?.value?.button_link_slug || "",
-				image: {
-					src: parameter?.value?.image?.url || "",
-					alt: parameter?.value?.image?.title || "",
-				},
-			};
-
-			return returnValue;
-		}
+}): HeroData => {
+	if (component.type !== "HeroContentstack") {
+		return parameter;
 	}
+
+	const { title = "", description = "", button_text: buttonText = "", button_link_slug: buttonLink = "", image } = parameter?.value || {};
+	const { url: src = "", title: alt = "" } = image || {};
+
+	return {
+		title,
+		description,
+		buttonText,
+		buttonLink,
+		image: {
+			src,
+			alt,
+		},
+	};
 };
