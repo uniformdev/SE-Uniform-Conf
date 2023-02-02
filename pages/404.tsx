@@ -15,6 +15,7 @@ import { MenuItemsProvider } from "lib/providers/MenuItemsProvider";
 import { getNavigationMenu } from "lib/helpers/menuItems";
 import { FOUR_OH_FOUR_COMPOSITION_ID } from "constants/compositions";
 import { GetStaticPropsContext } from "next";
+import { LOCALE_ENGLISH_UNITED_STATES } from "constants/locales";
 
 interface Props {
   composition: RootComponentInstance;
@@ -56,7 +57,7 @@ export default FourOhFour;
 export async function getStaticProps(
   context: GetStaticPropsContext
 ) {
-  const locale = context.locale || context.defaultLocale || "en-US";
+  const locale = context.locale || context.defaultLocale || LOCALE_ENGLISH_UNITED_STATES;
 
   try {
     const { composition } = await canvasClient.getCompositionById({
