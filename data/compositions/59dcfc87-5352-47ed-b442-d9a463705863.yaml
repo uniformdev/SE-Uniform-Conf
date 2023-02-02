@@ -2,15 +2,17 @@ composition:
   _name: Talks
   _id: 59dcfc87-5352-47ed-b442-d9a463705863
   _slug: talks
-  type: talks
-  parameters: {}
+  type: Talks
   slots:
     Footer:
-      - type: Footer
+      - _id: b4e66873-a0d7-428b-9554-8fb759cb3191
+        type: Footer
     Header:
-      - type: Header
+      - _id: 16d864f0-0111-4ff8-937f-0db6d03d6a31
+        type: Header
     Content:
-      - type: DynamicTalkList
+      - _id: f8cd2fd6-dea1-4213-95ac-9fd5585c61c9
+        type: DynamicTalkList
         parameters:
           Entries:
             type: contentfulQuery
@@ -20,6 +22,17 @@ composition:
               source: default
               sortOrder: asc
               contentType: talk
+      - _id: d461b4f5-8a56-441b-ba53-493d6a27761e
+        type: SelectTalkList
+        parameters:
+          Entries:
+            type: contentfulMultiEntry
+            value:
+              source: default
+              entries:
+                - 4vxlCGkZuxFQYComTccjrU
+                - 4eiVl7wuASXnHDBavMvyJr
+                - 6GGPMm8Hi3W0Jq4W887Ae0
 created: '2023-01-30T19:40:26.046581+00:00'
-modified: '2023-01-30T19:40:26.046581+00:00'
+modified: '2023-02-02T20:45:24.895802+00:00'
 pattern: false

@@ -2,7 +2,7 @@ composition:
   _name: Personalization For Developers
   _id: 3c58ec27-b6c1-4be7-ab5f-ef66b88c6be9
   _slug: personalization-for-developers
-  type: dynamicTalkPage
+  type: DynamicTalkPage
   slots:
     Footer:
       - _id: ca61013c-6650-422f-ae14-063b9860fca1

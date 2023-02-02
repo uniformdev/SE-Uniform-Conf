@@ -2,7 +2,7 @@ composition:
   _name: Talk
   _id: 7ab998d3-4a21-423e-bef8-588ab404fcc7
   _slug: talk
-  type: dynamicTalkPage
+  type: DynamicTalkPage
   parameters: {}
   slots:
     Footer:

@@ -227,6 +227,15 @@ composition:
           trackingEventName:
             type: text
             value: P13N Talks
+      - _id: 71b795e7-3491-4b1a-a8f7-6a680593f07a
+        type: WhyAttend
+        variant: whyattendright
+        parameters:
+          Entry:
+            type: contentfulEntry
+            value:
+              source: default
+              entryId: 2R2jeG8L825iF3hrgRzdob
       - _id: dffec2f0-3953-48ab-9229-3bca7bf8a10e
         type: HeroContentstack
         parameters:
@@ -340,5 +349,5 @@ composition:
                   type: localeSelect
                   value: en-US
 created: '2023-01-10T16:49:51.839524+00:00'
-modified: '2023-01-31T13:30:08.757548+00:00'
+modified: '2023-02-02T15:17:57.951719+00:00'
 pattern: false
