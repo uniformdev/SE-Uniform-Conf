@@ -73,7 +73,7 @@ const Page = ({ composition, menuItems }: Props) => {
 export default Page;
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-  const { params, preview, locale = "en-US" } = context;
+  const { params, preview, locale = LOCALE_ENGLISH_UNITED_STATES } = context;
   const nodePath = params?.id ? `/${Array.isArray(params.id) ? params.id.join("/") : params.id}` : "/";
   const env = process.env.NODE_ENV;
   const state = env === 'development' || preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE;

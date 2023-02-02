@@ -5,6 +5,7 @@ import {
 } from "@uniformdev/canvas-contentstack";
 import contentstack from "contentstack";
 import { GetStaticPropsContext } from "next";
+import { LOCALE_ENGLISH_UNITED_STATES } from "constants/locales";
 
 const {
 	serverRuntimeConfig: {
@@ -26,7 +27,7 @@ export const contentstackEnhancer = () => {
 			query,
 			context,
 		}: AddContentstackQueryOptions<GetStaticPropsContext>) => {
-			const locale = context.locale || context.defaultLocale || "en-US";
+			const locale = context.locale || context.defaultLocale || LOCALE_ENGLISH_UNITED_STATES;
 			return query.language(locale.toLowerCase());
 		},
 	});
