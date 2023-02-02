@@ -1,0 +1,24 @@
+composition:
+  _name: '404'
+  _id: 6ade2093-7c94-4926-a83f-4fa2bc855ba5
+  _slug: '404'
+  type: Page
+  slots:
+    Footer:
+      - _id: 6419bb9c-1810-419a-8fe8-1727a0df9208
+        type: Footer
+    Header:
+      - _id: 6361d63a-a58a-4195-b014-f6c3a79b224a
+        type: Header
+    Content:
+      - _id: eca5e2a2-a30c-4304-a471-ff1ebafac7f2
+        type: HeroContentful
+        parameters:
+          Entry:
+            type: contentfulEntry
+            value:
+              source: default
+              entryId: 2BhPtYn1zoN1Il9wXsghR1
+created: '2023-02-02T09:58:03.822866+00:00'
+modified: '2023-02-02T10:02:46.808396+00:00'
+pattern: false
