@@ -1,4 +1,4 @@
-id: dynamicTalkPage
+id: DynamicTalkPage
 name: Dynamic Talk Page
 icon: shape-zigzag
 parameters: []
@@ -21,7 +21,7 @@ slots:
       - Footer
     inheritAllowedComponents: false
 defaults:
-  type: dynamicTalkPage
+  type: DynamicTalkPage
   slots:
     Footer:
       - type: Footer

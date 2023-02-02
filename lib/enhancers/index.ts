@@ -16,7 +16,7 @@ import {
 	contentfulQueryEnhancer,
 } from "./contentful/contentfulEnhancer";
 import { contentfulModelConverter } from "./contentful/contentfulModelConverter";
-import { contentfulQueryModelConverter } from "./contentful/contentfulQueryModelConverter";
+import { contentfulArrayModelConverter } from "./contentful/contentfulArrayModelConverter";
 import { CANVAS_KONTENT_PARAMETER_TYPES } from "@uniformdev/canvas-kontent";
 import { kontentEnhancer } from "./kontent/kontentEnhancer";
 import { kontentModelConverter } from "./kontent/kontentModelConverter";
@@ -32,7 +32,6 @@ import { hygraphModelConverter } from "./hygraph/hygraphModelConverter";
 import { STRAPI_PARAMETER_TYPES } from "@uniformdev/canvas-strapi";
 import { strapiEnhancer } from "./strapi/strapiEnhancer";
 import { strapiModelConverter } from "./strapi/strapiModelConverter";
-import { contentfulMultiModelConverter } from "./contentful/contentfulMultiModelConverter";
 
 const {
 	serverRuntimeConfig: {
@@ -62,7 +61,7 @@ const enhancers: EnhancerConfiguration[] = [
 		name: "Contentful Multi",
 		type: CANVAS_CONTENTFUL_MULTI_PARAMETER_TYPES,
 		enhancer: contentfulMultiEnhancer,
-		converter: contentfulMultiModelConverter,
+		converter: contentfulArrayModelConverter,
 		config: [
 			contentfulConfig.spaceId,
 			contentfulConfig.environment,
@@ -74,7 +73,7 @@ const enhancers: EnhancerConfiguration[] = [
 		name: "Contentful Query",
 		type: CANVAS_CONTENTFUL_QUERY_PARAMETER_TYPES,
 		enhancer: contentfulQueryEnhancer,
-		converter: contentfulQueryModelConverter,
+		converter: contentfulArrayModelConverter,
 		config: [
 			contentfulConfig.spaceId,
 			contentfulConfig.environment,

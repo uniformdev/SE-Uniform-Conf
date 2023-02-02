@@ -14,3 +14,4 @@ export const COMPONENT_HEADER = "Header";
 export const COMPONENT_FOOTER = "Footer";
 export const COMPONENT_DYNAMIC_TALK_LIST = "DynamicTalkList";
 export const COMPONENT_DYNAMIC_TALK = "DynamicTalk";
+export const COMPONENT_SELECT_TALK_LIST = "SelectTalkList";

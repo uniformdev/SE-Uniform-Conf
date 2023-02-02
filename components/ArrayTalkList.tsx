@@ -7,11 +7,11 @@ type Talk = {
   slug: string;
 }
 
-export type DynamicTalkListProps = {
+export type ArrayTalkListProps = {
   Entries: Talk[];
 };
 
-export function DynamicTalkList(props: DynamicTalkListProps) {
+export function ArrayTalkList(props: ArrayTalkListProps) {
   return (
     <div className="pt-24">
       <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
