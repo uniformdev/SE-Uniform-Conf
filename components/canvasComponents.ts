@@ -15,6 +15,7 @@ import { DynamicTalk } from "./DynamicTalk";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 import { COMPONENT_DYNAMIC_TALK, COMPONENT_DYNAMIC_TALK_LIST, COMPONENT_FOOTER, COMPONENT_HEADER, COMPONENT_HERO_CONTENTFUL, COMPONENT_HERO_CONTENTSTACK, COMPONENT_HERO_HYGRAPH, COMPONENT_HERO_KONTENT, COMPONENT_HERO_SANITY, COMPONENT_HERO_STRAPI, COMPONENT_REGISTRATION_FORM, COMPONENT_SELECT_TALK_LIST, COMPONENT_TALK, COMPONENT_TALK_LIST, COMPONENT_WHY_ATTEND } from "constants/components";
+import { HeroStrapi } from "./HeroStrapi";
 
 const components: UniformComponent[] = [
 	{
@@ -24,9 +25,12 @@ const components: UniformComponent[] = [
 			COMPONENT_HERO_KONTENT,
 			COMPONENT_HERO_SANITY,
 			COMPONENT_HERO_HYGRAPH,
-			COMPONENT_HERO_STRAPI,
 		],
 		component: Hero,
+	},
+	{
+		type: COMPONENT_HERO_STRAPI,
+		component: HeroStrapi
 	},
 	{
 		type: COMPONENT_TALK_LIST,

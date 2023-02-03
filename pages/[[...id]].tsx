@@ -29,6 +29,7 @@ import {
   LOCALE_DUTCH_NETHERLANDS,
   LOCALE_ENGLISH_UNITED_STATES
 } from "constants/locales";
+import { LocaleProvider } from "lib/providers/LocaleProvider";
 
 const {
   serverRuntimeConfig: { projectMapId }
@@ -38,9 +39,10 @@ interface Props {
   composition: RootComponentInstance;
   preview: boolean;
   menuItems: MenuItem[];
+  locale: string
 }
 
-const Page = ({ composition, menuItems }: Props) => {
+const Page = ({ composition, menuItems, locale }: Props) => {
   if (!composition) return null;
 
   const contextualEditingEnhancer = createUniformApiEnhancer({
@@ -50,23 +52,25 @@ const Page = ({ composition, menuItems }: Props) => {
   const componentStore = RenderComponentResolver();
 
   return (
-    <MenuItemsProvider menuItems={menuItems}>
-      <Head>
-        <title>{`UniformConf${composition._name ? ` | ${composition._name}` : ""}`}</title>
-        <meta name="description" content="UniformConf"></meta>
-      </Head>
-      <div>
-        <UniformComposition
-          data={composition}
-          resolveRenderer={componentStore}
-          contextualEditingEnhancer={contextualEditingEnhancer}
-        >
-          <UniformSlot name="Header" />
-          <UniformSlot name="Content" />
-          <UniformSlot name="Footer" />
-        </UniformComposition>
-      </div>
-    </MenuItemsProvider>
+    <LocaleProvider locale={locale}>
+      <MenuItemsProvider menuItems={menuItems}>
+        <Head>
+          <title>{`UniformConf${composition._name ? ` | ${composition._name}` : ""}`}</title>
+          <meta name="description" content="UniformConf"></meta>
+        </Head>
+        <div>
+          <UniformComposition
+            data={composition}
+            resolveRenderer={componentStore}
+            contextualEditingEnhancer={contextualEditingEnhancer}
+          >
+            <UniformSlot name="Header" />
+            <UniformSlot name="Content" />
+            <UniformSlot name="Footer" />
+          </UniformComposition>
+        </div>
+      </MenuItemsProvider>
+    </LocaleProvider>
   );
 };
 
@@ -95,6 +99,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
         composition,
         isPreview: Boolean(preview),
         menuItems: await getNavigationMenu(),
+        locale: locale
       },
       revalidate: 30,
     };

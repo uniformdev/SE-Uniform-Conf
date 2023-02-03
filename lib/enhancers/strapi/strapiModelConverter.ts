@@ -27,6 +27,26 @@ export const strapiModelConverter = ({
 						parameter?.value[0]?.attributes?.Image?.data?.attributes?.url || "",
 				alt: "",
 			},
+			locale: parameter?.value[0]?.attributes.locale,
+			localizations: parameter?.value[0]?.attributes?.localizations?.data?.map(
+				(localization: any) => {
+					return {
+						Entry: {
+							title: localization.attributes?.Title || "",
+							description: localization.attributes?.Description || "",
+							buttonText: localization.attributes?.ButtonText || "",
+							buttonLink: localization.attributes?.ButtonLinkSlug || "",
+							image: {
+								src:
+									apiHost +
+										localization.attributes?.Image?.data?.attributes?.url || "",
+								alt: "",
+							},
+							locale: localization.attributes?.locale,
+						},
+					};
+				}
+			),
 		};
 
 		return returnValue;
