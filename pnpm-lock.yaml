@@ -27,7 +27,6 @@ specifiers:
   '@uniformdev/canvas-sanity': ^18.8.0
   '@uniformdev/canvas-strapi': ^17.1.0
   '@uniformdev/cli': ^18.8.0
-  '@uniformdev/cli': ^18.7.0
   '@uniformdev/context': ^18.8.0
   '@uniformdev/context-devtools': ^18.8.0
   '@uniformdev/context-gtag': ^18.8.0
