@@ -7,16 +7,15 @@ const handler = createPreviewHandler({
 	secret: () => getConfig().serverRuntimeConfig.previewSecret,
 	enhance: async (composition, { req }) => {
 		const locale = req.query.locale;
-				return await enhance({
+		return await enhance({
 			composition,
 			enhancers: enhancerBuilder,
 			context: { preview: true, locale },
 		});
 	},
 	resolveFullPath: (options) => {
-		const path = options.path ? options.path : '';
-		if (path.startsWith('/'))
-		{
+		const path = options.path ? options.path : "";
+		if (path.startsWith("/")) {
 			return `/${options.locale}${path}`;
 		}
 
