@@ -46,7 +46,7 @@ const Page = ({ composition, menuItems, locale }: Props) => {
   if (!composition) return null;
 
   const contextualEditingEnhancer = createUniformApiEnhancer({
-    apiUrl: "/api/preview"
+    apiUrl: `/api/preview?locale=${locale}`
   });
 
   const componentStore = RenderComponentResolver();
