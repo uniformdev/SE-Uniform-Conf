@@ -64,7 +64,7 @@
     "@uniformdev/canvas-contentstack": "^18.8.0",
     "@uniformdev/canvas-graphcms": "^17.1.0",
     "@uniformdev/canvas-kontent": "^18.8.0",
-    "@uniformdev/canvas-next": "^18.8.0",
+    "@uniformdev/canvas-next": "18.8.1-alpha.1",
     "@uniformdev/canvas-react": "^18.8.0",
     "@uniformdev/canvas-sanity": "^18.8.0",
     "@uniformdev/canvas-strapi": "^17.1.0",

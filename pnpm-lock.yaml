@@ -22,7 +22,7 @@ specifiers:
   '@uniformdev/canvas-contentstack': ^18.8.0
   '@uniformdev/canvas-graphcms': ^17.1.0
   '@uniformdev/canvas-kontent': ^18.8.0
-  '@uniformdev/canvas-next': ^18.8.0
+  '@uniformdev/canvas-next': 18.8.1-alpha.1
   '@uniformdev/canvas-react': ^18.8.0
   '@uniformdev/canvas-sanity': ^18.8.0
   '@uniformdev/canvas-strapi': ^17.1.0
@@ -71,7 +71,7 @@ dependencies:
   '@uniformdev/canvas-contentstack': 18.8.0_contentstack@3.16.0
   '@uniformdev/canvas-graphcms': 17.1.0_mvbpkrlomotgouznb4aiye7i74
   '@uniformdev/canvas-kontent': 18.8.0_urs7zdscilrnwhemglwzxpuwo4
-  '@uniformdev/canvas-next': 18.8.0_3vryta7zmbcsw4rrqf4axjqggm
+  '@uniformdev/canvas-next': 18.8.1-alpha.1_3vryta7zmbcsw4rrqf4axjqggm
   '@uniformdev/canvas-react': 18.8.0_biqbaboplfbrettd7655fr4n2y
   '@uniformdev/canvas-sanity': 18.8.0_@sanity+client@4.0.1
   '@uniformdev/canvas-strapi': 17.1.0_strapi-sdk-js@2.2.0
@@ -291,9 +291,9 @@ packages:
       '@babel/helper-compilation-targets': 7.20.7_@babel+core@7.20.12
       '@babel/helper-module-transforms': 7.20.11
       '@babel/helpers': 7.20.13
-      '@babel/parser': 7.20.7
+      '@babel/parser': 7.20.15
       '@babel/template': 7.20.7
-      '@babel/traverse': 7.20.12
+      '@babel/traverse': 7.20.13
       '@babel/types': 7.20.7
       convert-source-map: 1.9.0
       debug: 4.3.4
@@ -364,7 +364,7 @@ packages:
       '@babel/helper-split-export-declaration': 7.18.6
       '@babel/helper-validator-identifier': 7.19.1
       '@babel/template': 7.20.7
-      '@babel/traverse': 7.20.12
+      '@babel/traverse': 7.20.13
       '@babel/types': 7.20.7
     transitivePeerDependencies:
       - supports-color
@@ -459,23 +459,6 @@ packages:
       '@babel/code-frame': 7.18.6
       '@babel/parser': 7.20.7
       '@babel/types': 7.20.7
-
-  /@babel/traverse/7.20.12:
-    resolution: {integrity: sha512-MsIbFN0u+raeja38qboyF8TIT7K0BFzz/Yd/77ta4MsUsmP2RAnidIlwq7d5HFQrH/OZJecGV6B71C4zAgpoSQ==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/code-frame': 7.18.6
-      '@babel/generator': 7.20.7
-      '@babel/helper-environment-visitor': 7.18.9
-      '@babel/helper-function-name': 7.19.0
-      '@babel/helper-hoist-variables': 7.18.6
-      '@babel/helper-split-export-declaration': 7.18.6
-      '@babel/parser': 7.20.7
-      '@babel/types': 7.20.7
-      debug: 4.3.4
-      globals: 11.12.0
-    transitivePeerDependencies:
-      - supports-color
 
   /@babel/traverse/7.20.12_supports-color@5.5.0:
     resolution: {integrity: sha512-MsIbFN0u+raeja38qboyF8TIT7K0BFzz/Yd/77ta4MsUsmP2RAnidIlwq7d5HFQrH/OZJecGV6B71C4zAgpoSQ==}
@@ -2595,16 +2578,16 @@ packages:
       '@uniformdev/canvas': 18.8.0
     dev: false
 
-  /@uniformdev/canvas-next/18.8.0_3vryta7zmbcsw4rrqf4axjqggm:
-    resolution: {integrity: sha512-S0OCStVAckyENdGB3eJR4cirVmk9rNiOd9Bq/Crlrtq/xjVhjqqYhX98K5XcLbGW/6IzZZV56n99NfNKjWbPpA==}
+  /@uniformdev/canvas-next/18.8.1-alpha.1_3vryta7zmbcsw4rrqf4axjqggm:
+    resolution: {integrity: sha512-JgXuudW4sRPMrTlRmvOp6hA8qYGYhnSq21EOVeUsjhXp/mXPMR/yPZ8xzcpMriy2kHgV/5Mv4zGbGvcgsVpwBQ==}
     peerDependencies:
       next: '>= 12.0.0'
       react: '>= 16 || 17 || 18'
       react-dom: '>=16'
     dependencies:
-      '@uniformdev/canvas': 18.8.0
-      '@uniformdev/canvas-react': 18.8.0_biqbaboplfbrettd7655fr4n2y
-      '@uniformdev/project-map': 18.8.0
+      '@uniformdev/canvas': 18.8.1-alpha.1
+      '@uniformdev/canvas-react': 18.8.1-alpha.1_biqbaboplfbrettd7655fr4n2y
+      '@uniformdev/project-map': 18.8.1-alpha.1
       next: 13.1.6_fcop3xylqakmbilfhdeuva2xj4
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
@@ -2619,6 +2602,19 @@ packages:
       '@uniformdev/canvas': 18.8.0
       '@uniformdev/context': 18.8.0
       '@uniformdev/context-react': 18.8.0_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
+  /@uniformdev/canvas-react/18.8.1-alpha.1_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-occtRTXFQ6hBSjCoZa9BxlZf057VaWSPh/DRTpw7rtJEPb7L//2mb3zg+2eB6NnXLqQELGC6kSV24aizFM+pRA==}
+    peerDependencies:
+      react: '>= 16 || 17 || 18'
+      react-dom: '>=16'
+    dependencies:
+      '@uniformdev/canvas': 18.8.1-alpha.1
+      '@uniformdev/context': 18.8.1-alpha.1
+      '@uniformdev/context-react': 18.8.1-alpha.1_biqbaboplfbrettd7655fr4n2y
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
@@ -2657,6 +2653,12 @@ packages:
     resolution: {integrity: sha512-RJeHza4gu6EXNb5SUw9xvSKIpG7qBNeFqsMeZh4/iuke19DPVJgiX5pHBmuylMsBGK5wTL1uCS1XsLJaV1DM5w==}
     dependencies:
       '@uniformdev/context': 18.8.0
+    dev: false
+
+  /@uniformdev/canvas/18.8.1-alpha.1:
+    resolution: {integrity: sha512-SZk9WBRf44PVjL3PzmRONkQHO9qMJ7pIVO5k971Js6N5qppZ8f+qRQrj3jqrk3PKE0vIYUeEKlbeB3Y8uXWIVw==}
+    dependencies:
+      '@uniformdev/context': 18.8.1-alpha.1
     dev: false
 
   /@uniformdev/cli/18.7.0:
@@ -2730,6 +2732,19 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
+  /@uniformdev/context-react/18.8.1-alpha.1_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-fQ65mkSJ6EMOqj+oLpkjNoRZ/XAjCu3UB5AQVtyyFlj+AIFqHBok7RqVSsVJ2TzUXLppW92wLuukbif2TKZm1Q==}
+    peerDependencies:
+      react: '>=16.13.1 || 17 || 18'
+      react-dom: '>=16.13.1'
+    dependencies:
+      '@uniformdev/context': 18.8.1-alpha.1
+      cookie: 0.5.0
+      dequal: 2.0.3
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+    dev: false
+
   /@uniformdev/context/17.7.0:
     resolution: {integrity: sha512-BtCk4DSTzqSW6Ze8v9lOsOFOtEYmy7v8MtIaRpkPy+O4zr392+roxUQW9mefxH0co8ArLCoyG3a+bKtvEGAHwQ==}
     dependencies:
@@ -2742,6 +2757,16 @@ packages:
 
   /@uniformdev/context/18.8.0:
     resolution: {integrity: sha512-ETn95/+wNJ6QMJ2Be/aNqjm3usjMVcEHUtuyFyHnflaSoIqpLiNobv4se69lPpi6GBw6BzXJMsGT/B1KjowMcg==}
+    dependencies:
+      dequal: 2.0.3
+      js-cookie: 3.0.1
+      mitt: 3.0.0
+      p-limit: 3.1.0
+      rfdc: 1.3.0
+    dev: false
+
+  /@uniformdev/context/18.8.1-alpha.1:
+    resolution: {integrity: sha512-p0mZDLuyuug6ufenn0pipPkvzGxVudB0c7d1urhfkQ4yoKiUfm+uAbw/qA2gVAcWwpu1GTGAXXox1wbZf+CLGg==}
     dependencies:
       dequal: 2.0.3
       js-cookie: 3.0.1
@@ -2776,6 +2801,14 @@ packages:
     dependencies:
       '@uniformdev/canvas': 18.8.0
       '@uniformdev/context': 18.8.0
+      p-limit: 3.1.0
+    dev: false
+
+  /@uniformdev/project-map/18.8.1-alpha.1:
+    resolution: {integrity: sha512-sPgTXsPA4ORvL/Sm2/TfP5Z1xBWlFwGNDVVgAw3iRnV0ycd00UsIW8WcHRE6M0covxYlat3w7IMpZRWVbsICpw==}
+    dependencies:
+      '@uniformdev/canvas': 18.8.1-alpha.1
+      '@uniformdev/context': 18.8.1-alpha.1
       p-limit: 3.1.0
     dev: false
 
