@@ -20,13 +20,14 @@ import { LOCALE_ENGLISH_UNITED_STATES } from "constants/locales";
 interface Props {
   composition: RootComponentInstance;
   menuItems: MenuItem[];
+  locale: string;
 }
 
-const FourOhFour = ({ composition, menuItems }: Props) => {
+const FourOhFour = ({ composition, menuItems, locale }: Props) => {
   if (!composition) return null;
 
   const contextualEditingEnhancer = createUniformApiEnhancer({
-    apiUrl: "/api/preview",
+    apiUrl: `/api/preview?locale=${locale}`
   });
 
   const componentResolver = RenderComponentResolver();
@@ -71,6 +72,7 @@ export async function getStaticProps(
       props: {
         composition,
         menuItems: await getNavigationMenu(),
+        locale: locale
       },
       revalidate: 30,
     };

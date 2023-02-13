@@ -36,18 +36,21 @@ interface Props {
   composition: RootComponentInstance;
   menuItems: MenuItem[];
   talk: Talk;
+  locale: string
 }
 
 const DynamicTalkPage = ({
   composition,
   menuItems,
-  talk
+  talk,
+  locale
 }: Props ) => {
   if (!composition) return null;
 
   const contextEditingEnhancer = createUniformApiEnhancer({
-    apiUrl: "/api/preview",
+    apiUrl: `/api/preview?locale=${locale}`
   });
+  
   const componentStore = RenderComponentResolver();
 
   return (
@@ -122,6 +125,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       preview: Boolean(preview),
       menuItems: await getNavigationMenu(),
       talk: talks.items.length ? talks.items[0] : PlaceholderTalk,
+      locale: locale
     },
     revalidate: 30,
   };

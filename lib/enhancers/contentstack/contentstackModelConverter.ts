@@ -1,4 +1,5 @@
 import { ComponentInstance } from "@uniformdev/canvas";
+import { COMPONENT_HERO_CONTENTSTACK } from "constants/components";
 
 interface HeroData {
 	title: string;
@@ -18,7 +19,7 @@ export const contentstackModelConverter = ({
 	component: ComponentInstance;
 	parameter: any;
 }): HeroData => {
-	if (component.type !== "HeroContentstack") {
+	if (component.type !== COMPONENT_HERO_CONTENTSTACK) {
 		return parameter;
 	}
 
