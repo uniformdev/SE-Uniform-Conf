@@ -88,7 +88,8 @@ export async function getStaticProps(context: GetStaticPropsContext) {
       state,
       projectMapId,
       unstable_resolveData: true,
-      unstable_dynamicVariables: { locale },
+      unstable_dynamicVariables: { Locale: locale, locale },
+      unstable_dataDiagnostics: true
     });
 
     await localize({ composition, locale });
