@@ -15,6 +15,7 @@ const nextConfig = {
 		previewSecret: process.env.UNIFORM_PREVIEW_SECRET,
 		apiKey: process.env.UNIFORM_API_KEY,
 		apiHost: process.env.UNIFORM_CLI_BASE_URL || "https://uniform.app",
+		edgeApiHost: process.env.UNIFORM_EDGE_API_URL || "https://uniform.global",
 		contentfulConfig: {
 			spaceId: process.env.CONTENTFUL_SPACE_ID,
 			environment: process.env.CONTENTFUL_ENVIRONMENT,
