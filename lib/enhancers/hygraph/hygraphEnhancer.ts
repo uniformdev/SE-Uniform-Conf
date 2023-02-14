@@ -24,8 +24,8 @@ export const hygraphEnhancer = () => {
 			context,
 		}: GetEntryQueryOptionsArgs<GetStaticPropsContext>) => {
 			const locale = context.locale || context.defaultLocale || LOCALE_ENGLISH_UNITED_STATES;
-			defaultEntryQueryOptions.locale = locale.replace('-', '_');
-			defaultEntryQueryOptions.fallbackLocale = (context.defaultLocale || LOCALE_ENGLISH_UNITED_STATES).replace('-', '_');
+			// defaultEntryQueryOptions.locale = locale.replace('-', '_');
+			// defaultEntryQueryOptions.fallbackLocale = (context.defaultLocale || LOCALE_ENGLISH_UNITED_STATES).replace('-', '_');
 			return defaultEntryQueryOptions;
 		},
 	});
