@@ -2,7 +2,7 @@ import { ComponentInstance } from "@uniformdev/canvas";
 import getConfig from "next/config";
 import { COMPONENT_HERO_SANITY } from "constants/components";
 import imageUrlBuilder from "@sanity/image-url";
-import createClient from "@sanity/client";
+import { createClient } from "@sanity/client";
 
 const {
 	serverRuntimeConfig: {
