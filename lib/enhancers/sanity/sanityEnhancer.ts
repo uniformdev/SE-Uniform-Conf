@@ -1,6 +1,6 @@
 import getConfig from "next/config";
 import { createSanityEnhancer } from "@uniformdev/canvas-sanity";
-import createSanityClient from "@sanity/client";
+import SanityClient from "@sanity/client";
 
 const {
 	serverRuntimeConfig: {
@@ -9,7 +9,7 @@ const {
 } = getConfig();
 
 export const sanityEnhancer = () => {
-	const client = new createSanityClient({
+	const client = new SanityClient({
 		projectId,
 		dataset,
 		useCdn,
