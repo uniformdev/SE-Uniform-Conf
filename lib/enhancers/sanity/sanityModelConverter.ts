@@ -1,8 +1,8 @@
 import { ComponentInstance } from "@uniformdev/canvas";
-import createSanityClient from "@sanity/client";
-import imageUrlBuilder from "@sanity/image-url";
 import getConfig from "next/config";
 import { COMPONENT_HERO_SANITY } from "constants/components";
+import imageUrlBuilder from "@sanity/image-url";
+import createClient from "@sanity/client";
 
 const {
 	serverRuntimeConfig: {
@@ -38,7 +38,7 @@ export const sanityModelConverter = ({
 			};
 
 			if (sanityConfigured) {
-				const client = new createSanityClient({
+				const client = createClient({
 					projectId: cdnProjectId,
 					dataset: dataset,
 					useCdn: useCdn,
