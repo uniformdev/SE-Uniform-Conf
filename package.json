@@ -56,7 +56,7 @@
     "@analytics/google-analytics": "1.0.5",
     "@kentico/kontent-delivery": "^11.13.0",
     "@react-hook/window-scroll": "1.3.0",
-    "@sanity/client": "^5.2.1",
+    "@sanity/client": "5.2.1",
     "@sanity/image-url": "^1.0.2",
     "@uniformdev/canvas": "18.11.0",
     "@uniformdev/canvas-algolia": "^17.8.0",
