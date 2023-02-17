@@ -1,6 +1,6 @@
 import { Hero } from "./Hero";
 import { TalkList } from "./TalkList";
-import { WhyAttend, WhyAttendLeft, WhyAttendRight } from "./WhyAttend";
+import { WhyAttendLeft, WhyAttendRight } from "./WhyAttend";
 import { Talk } from "./Talk";
 import { RegisterForm } from "./RegisterForm";
 import {
