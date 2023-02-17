@@ -88,26 +88,14 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 		projectMapId,
 		path: "/talks",
 	});
-	let compositionId = DYNAMIC_TALK_COMPOSITION_ID;
+
+	let compositionId = undefined;
 
 	nodesResult?.nodes?.forEach((node) => {
 		if (node.pathSegment === slug && node.compositionId) {
 			compositionId = node.compositionId;
 		}
 	});
-
-	const { composition } = await canvasClient.getCompositionById({
-		state:
-			preview || process.env.NODE_ENV === "development"
-				? CANVAS_DRAFT_STATE
-				: CANVAS_PUBLISHED_STATE,
-		compositionId,
-		unstable_resolveData: true,
-		unstable_dynamicVariables: { locale },
-	});
-
-	await localize({ composition, locale });
-	await enhance({ composition, enhancers: enhancerBuilder, context });
 
 	const {
 		serverRuntimeConfig: {
@@ -126,6 +114,30 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 		content_type: TALK_CONTENT_ENTRY_TYPE,
 		"fields.slug": slug || "",
 	});
+
+	if (compositionId === undefined) {
+		if (talks.total > 0) {
+            compositionId = DYNAMIC_TALK_COMPOSITION_ID
+		} else {
+			return {
+				revalidate: 30,
+				notFound: true,
+			};
+		}
+	}
+
+	const { composition } = await canvasClient.getCompositionById({
+		state:
+			preview || process.env.NODE_ENV === "development"
+				? CANVAS_DRAFT_STATE
+				: CANVAS_PUBLISHED_STATE,
+		compositionId,
+		unstable_resolveData: true,
+		unstable_dynamicVariables: { locale },
+	});
+
+	await localize({ composition, locale });
+	await enhance({ composition, enhancers: enhancerBuilder, context });
 
 	return {
 		props: {
