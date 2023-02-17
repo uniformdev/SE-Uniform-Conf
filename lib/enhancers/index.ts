@@ -32,6 +32,7 @@ import { hygraphModelConverter } from "./hygraph/hygraphModelConverter";
 import { STRAPI_PARAMETER_TYPES } from "@uniformdev/canvas-strapi";
 import { strapiEnhancer } from "./strapi/strapiEnhancer";
 import { strapiModelConverter } from "./strapi/strapiModelConverter";
+import { isDevelopmentEnvironment } from "lib/helpers/environmentUtilities";
 
 const {
 	serverRuntimeConfig: {
@@ -138,7 +139,9 @@ enhancers.forEach((enhancer) => {
 			compose(enhancer.enhancer(), enhancer.converter)
 		);
 
-		console.log(`Registered ${enhancer.name} Enhancer.`);
+		if (isDevelopmentEnvironment()) {
+			console.log(`Registered ${enhancer.name} Enhancer.`);
+		}
 	}
 });
 

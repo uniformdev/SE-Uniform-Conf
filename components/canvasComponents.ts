@@ -36,6 +36,7 @@ import {
 	VARIANT_WHY_ATTEND_LEFT,
 	VARIANT_WHY_ATTEND_RIGHT,
 } from "constants/variants";
+import { isDevelopmentEnvironment } from "lib/helpers/environmentUtilities";
 
 const components: UniformComponent[] = [
 	{
@@ -94,9 +95,17 @@ const components: UniformComponent[] = [
 
 components.forEach((component: UniformComponent) => {
 	component.types.forEach((type: string) => {
-		console.log("Registered component of type:", type);
+		if (isDevelopmentEnvironment()) {
+			if (component.variantId !== undefined) {
+				console.log(
+					`Registered component of type: ${type} with variant: ${component.variantId}`
+				);
+			} else {
+				console.log(`Registered component of type: ${type}`);
+			}
+		}
 		registerUniformComponent({
-			type: type,
+			type,
 			component: component.component,
 			variantId: component.variantId,
 		});
