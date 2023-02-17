@@ -3,8 +3,6 @@ import { GetStaticPaths, GetStaticPropsContext } from "next";
 import Head from "next/head";
 import {
 	RootComponentInstance,
-	CANVAS_DRAFT_STATE,
-	CANVAS_PUBLISHED_STATE,
 	enhance,
 	localize,
 	createUniformApiEnhancer,
@@ -30,6 +28,7 @@ import {
 	LOCALE_ENGLISH_UNITED_STATES,
 } from "constants/locales";
 import { TALK_CONTENT_ENTRY_TYPE } from "constants/contentful";
+import { getCanvasState } from "lib/helpers/canvasUtilities";
 
 const {
 	serverRuntimeConfig: { projectMapId },
@@ -117,7 +116,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
 	if (compositionId === undefined) {
 		if (talks.total > 0) {
-            compositionId = DYNAMIC_TALK_COMPOSITION_ID
+			compositionId = DYNAMIC_TALK_COMPOSITION_ID;
 		} else {
 			return {
 				revalidate: 30,
@@ -127,10 +126,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 	}
 
 	const { composition } = await canvasClient.getCompositionById({
-		state:
-			preview || process.env.NODE_ENV === "development"
-				? CANVAS_DRAFT_STATE
-				: CANVAS_PUBLISHED_STATE,
+		state: getCanvasState(preview),
 		compositionId,
 		unstable_resolveData: true,
 		unstable_dynamicVariables: { locale },

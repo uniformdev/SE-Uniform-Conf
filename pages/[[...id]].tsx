@@ -3,8 +3,6 @@ import { GetStaticPaths, GetStaticPropsContext } from "next";
 import Head from "next/head";
 import {
 	RootComponentInstance,
-	CANVAS_DRAFT_STATE,
-	CANVAS_PUBLISHED_STATE,
 	enhance,
 	localize,
 	createUniformApiEnhancer,
@@ -27,6 +25,8 @@ import {
 	LOCALE_ENGLISH_UNITED_STATES,
 } from "constants/locales";
 import { LocaleProvider } from "lib/providers/LocaleProvider";
+import { getCanvasState } from "lib/helpers/canvasUtilities";
+import { isDevelopmentEnvironment } from "lib/helpers/environmentUtilities";
 
 const {
 	serverRuntimeConfig: { projectMapId },
@@ -80,17 +80,12 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 	const nodePath = params?.id
 		? `/${Array.isArray(params.id) ? params.id.join("/") : params.id}`
 		: "/";
-	const env = process.env.NODE_ENV;
-	const state =
-		env === "development" || preview
-			? CANVAS_DRAFT_STATE
-			: CANVAS_PUBLISHED_STATE;
 
 	try {
 		const { composition } =
 			await canvasClient.unstable_getCompositionByNodePath({
 				projectMapNodePath: nodePath,
-				state,
+				state: getCanvasState(preview),
 				projectMapId,
 				unstable_resolveData: true,
 				unstable_dynamicVariables: { locale },
@@ -110,7 +105,9 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 		};
 	} catch (error: any) {
 		if (error?.statusCode === 404) {
-			console.log("Composition not found. Responding with 404 page.");
+			if (isDevelopmentEnvironment()) {
+				console.log("Composition not found. Responding with 404 page.");
+			}
 			return {
 				revalidate: 30,
 				notFound: true,
