@@ -14,7 +14,23 @@ import { ArrayTalkList } from "./ArrayTalkList";
 import { DynamicTalk } from "./DynamicTalk";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
-import { COMPONENT_DYNAMIC_TALK, COMPONENT_DYNAMIC_TALK_LIST, COMPONENT_FOOTER, COMPONENT_HEADER, COMPONENT_HERO_CONTENTFUL, COMPONENT_HERO_CONTENTSTACK, COMPONENT_HERO_HYGRAPH, COMPONENT_HERO_KONTENT, COMPONENT_HERO_SANITY, COMPONENT_HERO_STRAPI, COMPONENT_REGISTRATION_FORM, COMPONENT_SELECT_TALK_LIST, COMPONENT_TALK, COMPONENT_TALK_LIST, COMPONENT_WHY_ATTEND } from "constants/components";
+import {
+	COMPONENT_DYNAMIC_TALK,
+	COMPONENT_DYNAMIC_TALK_LIST,
+	COMPONENT_FOOTER,
+	COMPONENT_HEADER,
+	COMPONENT_HERO_CONTENTFUL,
+	COMPONENT_HERO_CONTENTSTACK,
+	COMPONENT_HERO_HYGRAPH,
+	COMPONENT_HERO_KONTENT,
+	COMPONENT_HERO_SANITY,
+	COMPONENT_HERO_STRAPI,
+	COMPONENT_REGISTRATION_FORM,
+	COMPONENT_SELECT_TALK_LIST,
+	COMPONENT_TALK,
+	COMPONENT_TALK_LIST,
+	COMPONENT_WHY_ATTEND,
+} from "constants/components";
 import { HeroStrapi } from "./HeroStrapi";
 
 const components: UniformComponent[] = [
@@ -30,7 +46,7 @@ const components: UniformComponent[] = [
 	},
 	{
 		type: COMPONENT_HERO_STRAPI,
-		component: HeroStrapi
+		component: HeroStrapi,
 	},
 	{
 		type: COMPONENT_TALK_LIST,
@@ -57,20 +73,26 @@ const components: UniformComponent[] = [
 		component: Footer,
 	},
 	{
-		type: [
-			COMPONENT_DYNAMIC_TALK_LIST,
-			COMPONENT_SELECT_TALK_LIST
-		],
-		component: ArrayTalkList
+		type: [COMPONENT_DYNAMIC_TALK_LIST, COMPONENT_SELECT_TALK_LIST],
+		component: ArrayTalkList,
 	},
 	{
 		type: COMPONENT_DYNAMIC_TALK,
-		component: DynamicTalk
-	}
+		component: DynamicTalk,
+	},
 ];
 
-components.forEach((component) => {
-	registerUniformComponent(component);
+components.forEach((component: UniformComponent) => {
+	if (Array.isArray(component.type)) {
+		component.type.forEach((type: string) => {
+			registerUniformComponent({ type: type, component: component.component });
+		});
+	} else {
+		registerUniformComponent({
+			type: component.type,
+			component: component.component,
+		});
+	}
 });
 
 type UniformComponent = {
