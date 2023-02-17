@@ -1,6 +1,12 @@
 import { Asset } from "contentful";
 import { ComponentInstance } from "@uniformdev/canvas";
-import { COMPONENT_HERO_CONTENTFUL, COMPONENT_REGISTRATION_FORM, COMPONENT_TALK, COMPONENT_TALK_LIST, COMPONENT_WHY_ATTEND } from "constants/components";
+import {
+	COMPONENT_HERO_CONTENTFUL,
+	COMPONENT_REGISTRATION_FORM,
+	COMPONENT_TALK,
+	COMPONENT_TALK_LIST,
+	COMPONENT_WHY_ATTEND,
+} from "constants/components";
 
 type ContentfulData = {
 	fields: {

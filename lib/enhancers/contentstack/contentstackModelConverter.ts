@@ -23,7 +23,13 @@ export const contentstackModelConverter = ({
 		return parameter;
 	}
 
-	const { title = "", description = "", button_text: buttonText = "", button_link_slug: buttonLink = "", image } = parameter?.value || {};
+	const {
+		title = "",
+		description = "",
+		button_text: buttonText = "",
+		button_link_slug: buttonLink = "",
+		image,
+	} = parameter?.value || {};
 	const { url: src = "", title: alt = "" } = image || {};
 
 	return {

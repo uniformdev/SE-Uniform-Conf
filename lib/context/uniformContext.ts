@@ -3,7 +3,7 @@ import {
 	ManifestV2,
 	enableContextDevTools,
 	ContextPlugin,
-	enableDebugConsoleLogDrain
+	enableDebugConsoleLogDrain,
 } from "@uniformdev/context";
 import { enableGoogleGtagAnalytics } from "@uniformdev/context-gtag";
 import { NextCookieTransitionDataStore } from "@uniformdev/context-next";
@@ -19,7 +19,7 @@ export function createContext(serverContext?: NextPageContext): Context {
 		enableContextDevTools(),
 		enableDebugConsoleLogDrain("debug"),
 	];
-	
+
 	if (gaTrackingId) {
 		plugins.push(enableGoogleGtagAnalytics({ emitAll: true }));
 	}

@@ -44,8 +44,8 @@ const nextConfig = {
 		},
 		strapiConfig: {
 			apiHost: process.env.STRAPI_API_HOST,
-			apiToken: process.env.STRAPI_API_TOKEN
-		}
+			apiToken: process.env.STRAPI_API_TOKEN,
+		},
 	},
 	publicRuntimeConfig: {
 		gaTrackingId: process.env.GA4_ID,

@@ -1,8 +1,5 @@
 import getConfig from "next/config";
-import {
-	createEnhancer,
-	StrapiClient,
-} from "@uniformdev/canvas-strapi";
+import { createEnhancer, StrapiClient } from "@uniformdev/canvas-strapi";
 
 const {
 	serverRuntimeConfig: {

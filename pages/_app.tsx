@@ -7,13 +7,13 @@ import "../styles/style.css";
 const clientContext = createContext();
 
 export default function UniformConfApp({
-  Component,
-  pageProps,
-  serverUniformContext,
+	Component,
+	pageProps,
+	serverUniformContext,
 }: UniformAppProps) {
-  return (
-    <UniformContext context={serverUniformContext ?? clientContext}>
-      <Component {...pageProps} />
-    </UniformContext>
-  );
+	return (
+		<UniformContext context={serverUniformContext ?? clientContext}>
+			<Component {...pageProps} />
+		</UniformContext>
+	);
 }
