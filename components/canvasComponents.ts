@@ -1,6 +1,6 @@
 import { Hero } from "./Hero";
 import { TalkList } from "./TalkList";
-import { WhyAttend } from "./WhyAttend";
+import { WhyAttendLeft, WhyAttendRight } from "./WhyAttend";
 import { Talk } from "./Talk";
 import { RegisterForm } from "./RegisterForm";
 import {
@@ -32,6 +32,10 @@ import {
 	COMPONENT_WHY_ATTEND,
 } from "constants/components";
 import { HeroStrapi } from "./HeroStrapi";
+import {
+	VARIANT_WHY_ATTEND_LEFT,
+	VARIANT_WHY_ATTEND_RIGHT,
+} from "constants/variants";
 
 const components: UniformComponent[] = [
 	{
@@ -58,7 +62,13 @@ const components: UniformComponent[] = [
 	},
 	{
 		types: [COMPONENT_WHY_ATTEND],
-		component: WhyAttend,
+		variantId: VARIANT_WHY_ATTEND_LEFT,
+		component: WhyAttendLeft,
+	},
+	{
+		types: [COMPONENT_WHY_ATTEND],
+		variantId: VARIANT_WHY_ATTEND_RIGHT,
+		component: WhyAttendRight,
 	},
 	{
 		types: [COMPONENT_REGISTRATION_FORM],
@@ -84,6 +94,7 @@ const components: UniformComponent[] = [
 
 components.forEach((component: UniformComponent) => {
 	component.types.forEach((type: string) => {
+		console.log("Registered component of type:", type);
 		registerUniformComponent({
 			type: type,
 			component: component.component,
