@@ -35,7 +35,7 @@ import { HeroStrapi } from "./HeroStrapi";
 
 const components: UniformComponent[] = [
 	{
-		type: [
+		types: [
 			COMPONENT_HERO_CONTENTFUL,
 			COMPONENT_HERO_CONTENTSTACK,
 			COMPONENT_HERO_KONTENT,
@@ -45,58 +45,56 @@ const components: UniformComponent[] = [
 		component: Hero,
 	},
 	{
-		type: COMPONENT_HERO_STRAPI,
+		types: [COMPONENT_HERO_STRAPI],
 		component: HeroStrapi,
 	},
 	{
-		type: COMPONENT_TALK_LIST,
+		types: [COMPONENT_TALK_LIST],
 		component: TalkList,
 	},
 	{
-		type: COMPONENT_TALK,
+		types: [COMPONENT_TALK],
 		component: Talk,
 	},
 	{
-		type: COMPONENT_WHY_ATTEND,
+		types: [COMPONENT_WHY_ATTEND],
 		component: WhyAttend,
 	},
 	{
-		type: COMPONENT_REGISTRATION_FORM,
+		types: [COMPONENT_REGISTRATION_FORM],
 		component: RegisterForm,
 	},
 	{
-		type: COMPONENT_HEADER,
+		types: [COMPONENT_HEADER],
 		component: Header,
 	},
 	{
-		type: COMPONENT_FOOTER,
+		types: [COMPONENT_FOOTER],
 		component: Footer,
 	},
 	{
-		type: [COMPONENT_DYNAMIC_TALK_LIST, COMPONENT_SELECT_TALK_LIST],
+		types: [COMPONENT_DYNAMIC_TALK_LIST, COMPONENT_SELECT_TALK_LIST],
 		component: ArrayTalkList,
 	},
 	{
-		type: COMPONENT_DYNAMIC_TALK,
+		types: [COMPONENT_DYNAMIC_TALK],
 		component: DynamicTalk,
 	},
 ];
 
 components.forEach((component: UniformComponent) => {
-	if (Array.isArray(component.type)) {
-		component.type.forEach((type: string) => {
-			registerUniformComponent({ type: type, component: component.component });
-		});
-	} else {
+	component.types.forEach((type: string) => {
 		registerUniformComponent({
-			type: component.type,
+			type: type,
 			component: component.component,
+			variantId: component.variantId,
 		});
-	}
+	});
 });
 
 type UniformComponent = {
-	type: string | string[];
+	types: string[];
+	variantId?: string;
 	component: React.ComponentType<ComponentProps<any>>;
 };
 

@@ -12,6 +12,8 @@ export async function getNavigationMenu(): Promise<MenuItem[]> {
 	const children = tree?.children || [];
 
 	return children
-		.filter(({ compositionId }) => compositionId !== FOUR_OH_FOUR_COMPOSITION_ID)
+		.filter(
+			({ compositionId }) => compositionId !== FOUR_OH_FOUR_COMPOSITION_ID
+		)
 		.map(({ name, path }) => ({ name, url: path }));
 }

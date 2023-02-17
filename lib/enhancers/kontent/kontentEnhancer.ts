@@ -28,7 +28,8 @@ export const kontentEnhancer = () => {
 			defaultQuery,
 			context,
 		}: AddKontentQueryOptions<GetStaticPropsContext>) => {
-			const locale = context.locale || context.defaultLocale || LOCALE_ENGLISH_UNITED_STATES;
+			const locale =
+				context.locale || context.defaultLocale || LOCALE_ENGLISH_UNITED_STATES;
 			defaultQuery.languageParameter(locale);
 			return defaultQuery;
 		},
