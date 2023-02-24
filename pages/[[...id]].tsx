@@ -83,7 +83,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
 	try {
 		const { composition } =
-			await canvasClient.unstable_getCompositionByNodePath({
+			await canvasClient.getCompositionByNodePath({
 				projectMapNodePath: nodePath,
 				state: getCanvasState(preview),
 				projectMapId,
