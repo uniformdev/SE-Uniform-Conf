@@ -91,7 +91,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 	let compositionId = undefined;
 
 	nodesResult?.nodes?.forEach((node) => {
-		if (node.pathSegment === slug && node.compositionId) {
+		if (node.pathSegment === slug && node.compositionId && node.compositionId !== DYNAMIC_TALK_COMPOSITION_ID) {
 			compositionId = node.compositionId;
 		}
 	});
