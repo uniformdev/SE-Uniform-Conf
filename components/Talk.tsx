@@ -11,6 +11,18 @@ export type TalkProps = {
 	Entry: EntryProps;
 };
 
+const AudienceLabel: React.FC<{ audienceName?: string }> = ({
+	audienceName,
+}) => (
+	<span
+		className={`ml-6 px-6 inline-flex text-xs leading-5 font-semibold rounded-full bg-${
+			audienceName === "Developers" ? "green" : "indigo"
+		}-100 text-${audienceName === "Developers" ? "green" : "indigo"}-800`}
+	>
+		{audienceName}
+	</span>
+);
+
 export const Talk = (props: TalkProps) => (
 	<div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow space-y-2 pt-2">
 		<div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden">
@@ -35,20 +47,4 @@ export const Talk = (props: TalkProps) => (
 			{props?.Entry?.description}
 		</div>
 	</div>
-);
-
-export interface AudienceLabelProps {
-	audienceName?: string;
-}
-
-const AudienceLabel: React.FC<AudienceLabelProps> = ({ audienceName }) => (
-	<span
-		className={
-			audienceName === "Developers"
-				? "ml-6 px-6 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
-				: "ml-6 px-6 inline-flex text-xs leading-5 font-semibold rounded-full bg-indigo-100 text-indigo-800"
-		}
-	>
-		{audienceName}
-	</span>
 );

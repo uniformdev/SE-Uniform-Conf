@@ -15,6 +15,18 @@ export type Talk = {
 	};
 };
 
+const AudienceLabel: React.FC<{ audienceName?: string }> = ({
+	audienceName,
+}) => (
+	<span
+		className={`ml-6 px-6 inline-flex text-xs leading-5 font-semibold rounded-full bg-${
+			audienceName === "Developers" ? "green" : "indigo"
+		}-100 text-${audienceName === "Developers" ? "green" : "indigo"}-800`}
+	>
+		{audienceName}
+	</span>
+);
+
 export function DynamicTalk() {
 	let talk = useContext(DynamicTalkContext);
 
@@ -24,12 +36,11 @@ export function DynamicTalk() {
 	// Components only have an ID when loaded in preview mode.
 	if (component.data?._id) {
 		const composition = useUniformCurrentComposition();
-		if (composition.data?.parameters?.TalkPreviewEntry?.value) {
-			const previewEntry = composition.data?.parameters?.TalkPreviewEntry
-				.value as Talk;
-			if (previewEntry?.fields) {
-				talk = previewEntry;
-			}
+		const previewEntry = composition?.data?.parameters?.TalkPreviewEntry
+			?.value as Talk;
+
+		if (previewEntry?.fields) {
+			talk = previewEntry;
 		}
 	}
 
@@ -76,19 +87,3 @@ export function DynamicTalk() {
 		</div>
 	);
 }
-
-export interface AudienceLabelProps {
-	audienceName?: string;
-}
-
-const AudienceLabel: React.FC<AudienceLabelProps> = ({ audienceName }) => (
-	<span
-		className={
-			audienceName === "Developers"
-				? "ml-6 px-6 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
-				: "ml-6 px-6 inline-flex text-xs leading-5 font-semibold rounded-full bg-indigo-100 text-indigo-800"
-		}
-	>
-		{audienceName}
-	</span>
-);
