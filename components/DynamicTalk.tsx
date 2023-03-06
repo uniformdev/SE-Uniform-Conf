@@ -1,3 +1,7 @@
+import {
+	useUniformCurrentComponent,
+	useUniformCurrentComposition,
+} from "@uniformdev/canvas-react";
 import { DynamicTalkContext } from "lib/providers/DynamicTalkProvider";
 import Link from "next/link";
 import { useContext } from "react";
@@ -12,7 +16,23 @@ export type Talk = {
 };
 
 export function DynamicTalk() {
-	const talk = useContext(DynamicTalkContext);
+	let talk = useContext(DynamicTalkContext);
+
+	const component = useUniformCurrentComponent();
+
+	// If a preview overwrite is set, we show that version instead.
+	// Components only have an ID when loaded in preview mode.
+	if (component.data?._id) {
+		const composition = useUniformCurrentComposition();
+		if (composition.data?.parameters?.TalkPreviewEntry?.value) {
+			const previewEntry = composition.data?.parameters?.TalkPreviewEntry
+				.value as Talk;
+			if (previewEntry?.fields) {
+				talk = previewEntry;
+			}
+		}
+	}
+
 	return (
 		<div className="pt-24">
 			<div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">

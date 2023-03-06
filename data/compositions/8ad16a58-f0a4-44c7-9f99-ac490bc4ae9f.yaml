@@ -252,102 +252,32 @@ composition:
             value:
               source: default
               entryId: 4CHJuBQLA1jI9ntIFkGHVe
-      - _id: 0bcade84-1400-4afd-9820-15a17777357e
-        type: HeroKontent
+      - _id: 2ef19938-735b-4a31-96d4-dc13b4d9190c
+        type: HeroStrapi
         parameters:
           Entry:
-            type: kontentEntry
+            type: strapi-content
+            value:
+              entries:
+                - id: 1-api::hero.hero
+                  cmsId: '1'
+                  contentType:
+                    id: api::hero.hero
+                    name: Hero
+                    schema:
+                      pluralName: heroes
+          locale:
+            type: localeSelect
+            value: nl-NL
+      - _id: 58a2fbf4-65cf-42d6-a27c-69b029fca4c0
+        type: HeroHygraph
+        parameters:
+          Entry:
+            type: graphcms-entry
             value:
               source: default
-              entryCodename: welcome_to_uniformconf
-      - _id: bf7d795e-6ef2-48ea-96a2-e0e2fdfb3664
-        type: $localization
-        slots:
-          localized:
-            - _id: 2ef19938-735b-4a31-96d4-dc13b4d9190c
-              type: HeroStrapi
-              parameters:
-                Entry:
-                  type: strapi-content
-                  value:
-                    entries:
-                      - id: 2-api::hero.hero
-                        cmsId: '2'
-                        contentType:
-                          id: api::hero.hero
-                          name: Hero
-                          schema:
-                            pluralName: heroes
-                locale:
-                  type: localeSelect
-                  value: nl-NL
-            - _id: 4f27322c-4ac4-491c-be03-6b6994f9f469
-              type: HeroStrapi
-              parameters:
-                Entry:
-                  type: strapi-content
-                  value:
-                    entries:
-                      - id: 1-api::hero.hero
-                        cmsId: '1'
-                        contentType:
-                          id: api::hero.hero
-                          name: Hero
-                          schema:
-                            pluralName: heroes
-                locale:
-                  type: localeSelect
-                  value: en-US
-      - _id: 51575222-e6a5-4fd7-8196-d26397b13127
-        type: $localization
-        slots:
-          localized:
-            - _id: 83a3f267-7501-461e-8eb8-5bb30a4a3b18
-              type: HeroHygraph
-              parameters:
-                Entry:
-                  type: graphcms-entry
-                  value:
-                    source: default
-                    entryIds:
-                      - clcujarxv1d4k0butfn5z8gkw
-                locale:
-                  type: localeSelect
-                  value: en-US
-            - _id: ad0c7221-3c63-4992-8b68-3e074cd71cac
-              type: HeroHygraph
-              parameters:
-                Entry:
-                  type: graphcms-entry
-                  value:
-                    source: default
-                    entryIds:
-                      - clcujbjim1cwk0aw21lqjcy90
-                locale:
-                  type: localeSelect
-                  value: nl-NL
-      - _id: 7020a06e-742e-49de-906e-1ca1d1b3e58e
-        type: $localization
-        slots:
-          localized:
-            - _id: 1b9082f4-8a52-46f8-831a-f03473a5beb3
-              type: HeroSanity
-              parameters:
-                Entry:
-                  type: sanityEntrySelector
-                  value: bf105509-992a-4013-b3d6-3a755ee98f23
-                locale:
-                  type: localeSelect
-                  value: nl-NL
-            - _id: ac3e7872-b9e1-4427-9313-41a783e5004e
-              type: HeroSanity
-              parameters:
-                Entry:
-                  type: sanityEntrySelector
-                  value: d55fdeef-23ba-4368-98fd-7eea213bbec1
-                locale:
-                  type: localeSelect
-                  value: en-US
+              entryIds:
+                - clcujarxv1d4k0butfn5z8gkw
 created: '2023-01-10T16:49:51.839524+00:00'
-modified: '2023-02-02T15:17:57.951719+00:00'
+modified: '2023-03-06T12:47:23.800154+00:00'
 pattern: false

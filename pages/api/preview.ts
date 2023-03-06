@@ -7,7 +7,7 @@ const handler = createPreviewHandler({
 	secret: () => getConfig().serverRuntimeConfig.previewSecret,
 	enhance: async (composition, { req }) => {
 		const locale = req.query.locale;
-		return await enhance({
+		await enhance({
 			composition,
 			enhancers: enhancerBuilder,
 			context: { preview: true, locale },

@@ -3,14 +3,22 @@ composition:
   _id: 7ab998d3-4a21-423e-bef8-588ab404fcc7
   _slug: talk
   type: DynamicTalkPage
-  parameters: {}
+  parameters:
+    TalkPreviewEntry:
+      type: contentfulEntry
+      value:
+        source: default
+        entryId: ''
   slots:
     Footer:
-      - type: Footer
+      - _id: 2e606166-3f02-49a9-aadd-f65025e964a4
+        type: Footer
     Header:
-      - type: Header
+      - _id: 22bed862-4b5c-4ec4-b9c2-156bdbbcf4f4
+        type: Header
     Content:
-      - type: DynamicTalk
-created: '2023-01-31T22:17:23.429817+00:00'
-modified: '2023-01-31T22:17:23.429817+00:00'
+      - _id: 18d1dcde-3331-4ecb-955e-74b78fd81f8d
+        type: DynamicTalk
+created: '2023-02-02T20:59:44.800054+00:00'
+modified: '2023-03-06T17:16:08.151449+00:00'
 pattern: false
