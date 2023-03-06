@@ -1,7 +1,3 @@
-export type ComponentProps = {
-	variant: string;
-};
-
 export type ImageProps = {
 	src: string;
 	alt: string;
@@ -19,7 +15,6 @@ export type EntryProps = {
 
 export type WhyAttendProps = {
 	Entry: EntryProps;
-	component: ComponentProps;
 };
 
 export function WhyAttendLeft(props: WhyAttendProps) {
