@@ -1,7 +1,19 @@
 id: DynamicTalkPage
 name: Dynamic Talk Page
 icon: shape-zigzag
-parameters: []
+parameters:
+  - id: TalkPreviewEntry
+    name: Talk Preview Selection
+    type: contentfulEntry
+    helpText: >-
+      This field can be used to preview any talk in Canvas. This selection is
+      only used for preview purposes.
+    typeConfig:
+      source: default
+      allowedContentTypes:
+        talk:
+          id: talk
+          name: Talk
 useTeamPermissions: true
 slots:
   - id: Header
@@ -30,5 +42,5 @@ defaults:
     Content:
       - type: DynamicTalk
 canBeComposition: true
-created: '2023-01-30T22:39:24.604731+00:00'
-updated: '2023-01-31T19:13:05.977854+00:00'
+created: '2023-02-02T20:59:28.582776+00:00'
+updated: '2023-03-06T16:36:22.579078+00:00'

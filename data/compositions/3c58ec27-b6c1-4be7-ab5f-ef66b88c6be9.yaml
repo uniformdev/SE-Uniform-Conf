@@ -3,6 +3,12 @@ composition:
   _id: 3c58ec27-b6c1-4be7-ab5f-ef66b88c6be9
   _slug: personalization-for-developers
   type: DynamicTalkPage
+  parameters:
+    TalkPreviewEntry:
+      type: contentfulEntry
+      value:
+        source: default
+        entryId: ''
   slots:
     Footer:
       - _id: ca61013c-6650-422f-ae14-063b9860fca1
@@ -21,6 +27,6 @@ composition:
               entryId: N0rzm4xIQbPt3bvQNpKQ6
       - _id: 60df15ca-3428-45c8-b849-be2322cf6597
         type: DynamicTalk
-created: '2023-01-31T19:12:41.349054+00:00'
-modified: '2023-01-31T19:15:48.829744+00:00'
+created: '2023-02-02T21:00:10.22394+00:00'
+modified: '2023-03-06T17:37:37.769788+00:00'
 pattern: false
