@@ -126,8 +126,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 					compositionId &&
 					compositionId !== FOUR_OH_FOUR_COMPOSITION_ID &&
 					(!path.startsWith("/talks") ||
-						compositionId === TALKS_COMPOSITION_ID ||
-						compositionId === DYNAMIC_TALK_COMPOSITION_ID)
+						compositionId === TALKS_COMPOSITION_ID)
 			)
 			?.map(({ path }) => path.split("/").filter(Boolean)) ?? []
 	).flatMap((id) => [
