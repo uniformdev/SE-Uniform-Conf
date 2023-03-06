@@ -7,6 +7,7 @@ import {
 	COMPONENT_TALK_LIST,
 	COMPONENT_WHY_ATTEND,
 } from "constants/components";
+import { COMPOSITION_DYNAMIC_TALK_PAGE } from "constants/compositions";
 
 type ContentfulData = {
 	fields: {
@@ -50,7 +51,6 @@ export const contentfulModelConverter = ({
 }) => {
 	const data = parameter?.value as ContentfulData | undefined;
 	if (!data) return {};
-
 	switch (component.type) {
 		case COMPONENT_HERO_CONTENTFUL:
 			return {
@@ -84,6 +84,15 @@ export const contentfulModelConverter = ({
 				registeredText: data.fields.registeredText || "",
 				homeLinkText: data.fields.homeLinkText || "",
 				success: data.fields.success || "",
+			};
+		case COMPOSITION_DYNAMIC_TALK_PAGE:
+			return {
+				fields: {
+					title: data.fields.title || "",
+					intro: data.fields.intro || "",
+					audience: data.fields.audience || "",
+					slug: data.fields.slug || "",
+				},
 			};
 		default:
 			return {};
