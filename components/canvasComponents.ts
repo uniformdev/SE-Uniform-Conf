@@ -63,6 +63,10 @@ const components: UniformComponent[] = [
 	},
 	{
 		types: [COMPONENT_WHY_ATTEND],
+		component: WhyAttendLeft,
+	},
+	{
+		types: [COMPONENT_WHY_ATTEND],
 		variantId: VARIANT_WHY_ATTEND_LEFT,
 		component: WhyAttendLeft,
 	},
