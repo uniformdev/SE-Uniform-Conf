@@ -18,7 +18,7 @@ export function ArrayTalkList(props: ArrayTalkListProps) {
 				<fieldset>
 					<section className="bg-white border-b py-8">
 						<div className="container mx-auto flex flex-wrap pt-4 pb-12">
-							{props.Entries.map((talk) => {
+							{props?.Entries?.map((talk) => {
 								return (
 									<div
 										key={talk?.title}
