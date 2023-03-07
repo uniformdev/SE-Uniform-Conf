@@ -1,6 +1,6 @@
 {
 	"name": "@uniformdev/uniform-canvas-vnext-nextjs-playground",
-	"version": "18.15.0",
+	"version": "18.19.0",
 	"private": true,
 	"license": "Apache-2.0",
 	"scripts": {
