@@ -1,38 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# UniformConf Next.js Starter
+
+This is a [Next.js](https://nextjs.org/) application with enhancers for multiple CMS systems.
 
 ## Getting Started
 
-First, run the development server:
+### Install packages
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```shell
+pnpm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Import CMS Content
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+Import the relevant CMS export into your CMS. 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+Import help: https://www.contentful.com/developers/docs/tutorials/cli/import-and-export/
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Path:
+```shell
+data/contentful/contentful-export-siy7a16chotr-master-2023-01-10T14-52-24.json
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Create a Uniform project
 
-## Learn More
+Create an empty project at uniform.app
 
-To learn more about Next.js, take a look at the following resources:
+### Setup Environment Variables
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Create your .env file based on the example provided (.env.example) and remove the keys related to CMS platforms that you're not using.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Import and publish Uniform packages and Uniforms Intent Manifest
 
-## Deploy on Vercel
+```shell
+pnpm run push
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### [Optional] Update Project Map in env file if necessary.
+If you are not importing the Project Map definition from this project you need to setup your own Project Map. In your Uniform Project navigate to Settings > Canvas Settings > scroll down to the <strong>Project map</strong> section. 
+Copy the ID and add it to <strong>UNIFORM_PROJECT_MAP_ID</strong> in the .env file.
+### Setup Preview
+Add a value to <strong>UNIFORM_PREVIEW_SECRET</strong> in the .env file. (Remember to save the file!)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+In your Uniform Project navigate to Settings > Canvas Settings. 
+If you just want to run everything with default settings, add
+```shell
+http://localhost:3210/api/preview?secret=previewsecret_from_env_file
+```
+to the <strong>Preview Configuration</strong>
+### [Optional] Add 1 or more integrations to your project
+
+Optionally add 1 or more relevant integrations to your Uniform project.
+
+### Run the development server
+
+```shell
+pnpm run dev
+```
+
+Open <http://localhost:3210> with your browser to see the result.
