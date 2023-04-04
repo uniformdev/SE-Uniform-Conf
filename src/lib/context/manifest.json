@@ -1,0 +1,56 @@
+{
+  "project": {
+    "pz": {
+      "enr": {
+        "1": {
+          "cap": 100
+        }
+      },
+      "sig": {
+        "callForPapersCampaign": {
+          "str": 50,
+          "cap": 100,
+          "dur": "p",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "type": "QS",
+                "match": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "unfrmconf"
+                },
+                "queryName": "utm_campaign"
+              }
+            ]
+          }
+        },
+        "registeredCookie": {
+          "str": 50,
+          "cap": 100,
+          "dur": "t",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "type": "CK",
+                "match": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "true"
+                },
+                "cookieName": "unfrmconf_registered"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "test": {
+      "demo": {}
+    }
+  }
+}
