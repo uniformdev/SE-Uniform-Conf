@@ -1,4 +1,4 @@
-import { Asset } from "contentful";
+import { Asset, AssetFile } from "contentful";
 import { ComponentInstance } from "@uniformdev/canvas";
 import {
 	COMPONENT_HERO_CONTENTFUL,
@@ -28,13 +28,13 @@ type ContentfulData = {
 
 const transformImage = (image: Asset | undefined) => {
 	if (!image) return {};
-
-	let { url } = image.fields?.file || {};
+	const assetFile = image.fields?.file as AssetFile || {};
+	let url = assetFile?.url;
 	if (url && url.startsWith("//")) {
 		url = url.replace("//", "https://");
 	}
 
-	const { width, height } = image.fields?.file?.details?.image || {};
+	const { width, height } = assetFile?.details?.image || {};
 	return {
 		src: url,
 		alt: image.fields?.title,

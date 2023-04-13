@@ -3,16 +3,13 @@ import {
 	useUniformCurrentComponent,
 	useUniformCurrentComposition,
 } from "@uniformdev/canvas-react";
+import { FieldsType } from "contentful";
 import Link from "next/link";
 import { useContext } from "react";
 
-export type Talk = {
-	fields: {
-		title: string;
-		audience: string[];
-		intro: string;
-		slug: string;
-	};
+export type Talk<Id = string, Fields extends FieldsType = FieldsType> = {
+	contentTypeId: Id;
+	fields: Fields
 };
 
 const AudienceLabel: React.FC<{ audienceName?: string }> = ({
