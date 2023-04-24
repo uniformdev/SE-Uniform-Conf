@@ -111,7 +111,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 	const talks = await client.getEntries<Talk>({
 		locale,
 		content_type: TALK_CONTENT_ENTRY_TYPE,
-		"fields.slug": slug || "",
+		'fields.slug': slug || ""
 	});
 
 	if (compositionId === undefined) {
@@ -127,9 +127,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
 	const { composition } = await canvasClient.getCompositionById({
 		state: getCanvasState(preview),
-		compositionId,
-		unstable_resolveData: true,
-		unstable_dynamicVariables: { locale },
+		compositionId
 	});
 
 	await localize({ composition, locale });

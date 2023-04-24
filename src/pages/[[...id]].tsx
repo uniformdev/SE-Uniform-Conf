@@ -79,9 +79,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 			await canvasClient.getCompositionByNodePath({
 				projectMapNodePath: nodePath,
 				state: getCanvasState(preview),
-				projectMapId,
-				unstable_resolveData: true,
-				unstable_dynamicVariables: { locale },
+				projectMapId
 			});
 
 		await localize({ composition, locale });
