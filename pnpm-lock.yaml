@@ -17,59 +17,59 @@ dependencies:
     specifier: ^1.0.2
     version: 1.0.2
   '@uniformdev/canvas':
-    specifier: 19.0.0
-    version: 19.0.0
+    specifier: 19.3.0
+    version: 19.3.0
   '@uniformdev/canvas-algolia':
     specifier: ^17.8.0
     version: 17.8.0(algoliasearch@4.17.0)
   '@uniformdev/canvas-contentful':
-    specifier: 19.0.0
-    version: 19.0.0(@contentful/rich-text-html-renderer@16.0.3)(contentful@10.1.0)
+    specifier: 19.3.0
+    version: 19.3.0(@contentful/rich-text-html-renderer@16.0.3)(contentful@10.1.4)
   '@uniformdev/canvas-contentstack':
-    specifier: 19.0.0
-    version: 19.0.0(contentstack@3.17.1)
+    specifier: 19.3.0
+    version: 19.3.0(contentstack@3.17.1)
   '@uniformdev/canvas-graphcms':
     specifier: ^17.1.0
     version: 17.1.0(graphql-request@6.0.0)(graphql@16.6.0)
   '@uniformdev/canvas-kontent':
-    specifier: 19.0.0
-    version: 19.0.0(@contentful/rich-text-html-renderer@16.0.3)(@kentico/kontent-delivery@11.13.0)
+    specifier: 19.3.0
+    version: 19.3.0(@contentful/rich-text-html-renderer@16.0.3)(@kentico/kontent-delivery@11.13.0)
   '@uniformdev/canvas-next':
-    specifier: 19.0.0
-    version: 19.0.0(next@13.3.0)(react-dom@18.2.0)(react@18.2.0)
+    specifier: 19.3.0
+    version: 19.3.0(next@13.3.4)(react-dom@18.2.0)(react@18.2.0)
   '@uniformdev/canvas-react':
-    specifier: 19.0.0
-    version: 19.0.0(react-dom@18.2.0)(react@18.2.0)
+    specifier: 19.3.0
+    version: 19.3.0(react-dom@18.2.0)(react@18.2.0)
   '@uniformdev/canvas-sanity':
-    specifier: 19.0.0
-    version: 19.0.0(@sanity/client@5.4.2)
+    specifier: 19.3.0
+    version: 19.3.0(@sanity/client@5.4.2)
   '@uniformdev/canvas-strapi':
     specifier: ^17.1.0
     version: 17.1.0(strapi-sdk-js@2.2.0)
   '@uniformdev/context':
-    specifier: 19.0.0
-    version: 19.0.0
+    specifier: 19.3.0
+    version: 19.3.0
   '@uniformdev/context-devtools':
-    specifier: 19.0.0
-    version: 19.0.0(@types/react@18.0.38)(react-dom@18.2.0)(react@18.2.0)(zod@3.21.4)
+    specifier: 19.3.0
+    version: 19.3.0(@types/react@18.2.0)(react-dom@18.2.0)(react@18.2.0)(zod@3.21.4)
   '@uniformdev/context-gtag':
-    specifier: 19.0.0
-    version: 19.0.0
+    specifier: 19.3.0
+    version: 19.3.0
   '@uniformdev/context-next':
-    specifier: 19.0.0
-    version: 19.0.0(next@13.3.0)(react-dom@18.2.0)(react@18.2.0)
+    specifier: 19.3.0
+    version: 19.3.0(next@13.3.4)(react-dom@18.2.0)(react@18.2.0)
   '@uniformdev/context-react':
-    specifier: 19.0.0
-    version: 19.0.0(react-dom@18.2.0)(react@18.2.0)
+    specifier: 19.3.0
+    version: 19.3.0(react-dom@18.2.0)(react@18.2.0)
   '@uniformdev/project-map':
-    specifier: 19.0.0
-    version: 19.0.0
+    specifier: 19.3.0
+    version: 19.3.0
   analytics:
     specifier: 0.8.1
     version: 0.8.1(@types/dlv@1.1.2)
   contentful:
-    specifier: ^10.1.0
-    version: 10.1.0
+    specifier: ^10.1.4
+    version: 10.1.4
   contentstack:
     specifier: ^3.17.1
     version: 3.17.1
@@ -80,8 +80,8 @@ dependencies:
     specifier: ^6.0.0
     version: 6.0.0(graphql@16.6.0)
   next:
-    specifier: 13.3.0
-    version: 13.3.0(react-dom@18.2.0)(react@18.2.0)(sass@1.62.0)
+    specifier: 13.3.4
+    version: 13.3.4(react-dom@18.2.0)(react@18.2.0)(sass@1.62.1)
   react:
     specifier: 18.2.0
     version: 18.2.0
@@ -103,20 +103,20 @@ devDependencies:
     specifier: 0.5.1
     version: 0.5.1
   '@types/node':
-    specifier: 18.16.0
-    version: 18.16.0
+    specifier: 18.16.3
+    version: 18.16.3
   '@types/react':
-    specifier: 18.0.38
-    version: 18.0.38
+    specifier: 18.2.0
+    version: 18.2.0
   '@types/react-dom':
-    specifier: 18.0.11
-    version: 18.0.11
+    specifier: 18.2.1
+    version: 18.2.1
   '@types/styled-components':
     specifier: 5.1.26
     version: 5.1.26
   '@uniformdev/cli':
-    specifier: ^19.0.0
-    version: 19.0.0
+    specifier: ^19.3.0
+    version: 19.3.0
   autoprefixer:
     specifier: ^10.4.14
     version: 10.4.14(postcss@8.4.23)
@@ -130,11 +130,11 @@ devDependencies:
     specifier: ^2.8.8
     version: 2.8.8
   sass:
-    specifier: 1.62.0
-    version: 1.62.0
+    specifier: 1.62.1
+    version: 1.62.1
   tailwindcss:
-    specifier: 3.3.1
-    version: 3.3.1(postcss@8.4.23)
+    specifier: 3.3.2
+    version: 3.3.2
   ts-loader:
     specifier: 9.4.2
     version: 9.4.2(typescript@5.0.4)(webpack@5.77.0)
@@ -233,6 +233,11 @@ packages:
       '@algolia/logger-common': 4.17.0
       '@algolia/requester-common': 4.17.0
     dev: false
+
+  /@alloc/quick-lru@5.2.0:
+    resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
+    engines: {node: '>=10'}
+    dev: true
 
   /@analytics/cookie-utils@0.2.10:
     resolution: {integrity: sha512-k7oyW1PkMCnEdCYmHCLLXAsKavQh5ZRh5EeugBEUTlPJs8x8ajF+W1T0PYVDS26Impkea1sJR2etv/6l2pKtlg==}
@@ -469,7 +474,7 @@ packages:
     resolution: {integrity: sha512-G/YwXTkv7Den9mXDO7AhLWkE3q+I92B+VqAE+dYG4NGPaHZGvt3G8Q0p9vmE+sq7rTGphUbAvmQ9YpbfMQGGlA==}
     dev: false
 
-  /@emotion/react@11.10.5(@types/react@18.0.38)(react@18.2.0):
+  /@emotion/react@11.10.5(@types/react@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-TZs6235tCJ/7iF6/rvTaOH4oxQg2gMAcdHemjwLKIjKz4rRuYe1HJ2TQJKnAcRAfOUDdU8XoDadCe1rl72iv8A==}
     peerDependencies:
       '@babel/core': ^7.0.0
@@ -488,7 +493,7 @@ packages:
       '@emotion/use-insertion-effect-with-fallbacks': 1.0.0(react@18.2.0)
       '@emotion/utils': 1.2.0
       '@emotion/weak-memoize': 0.3.0
-      '@types/react': 18.0.38
+      '@types/react': 18.2.0
       hoist-non-react-statics: 3.3.2
       react: 18.2.0
     dev: false
@@ -628,12 +633,12 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@next/env@13.3.0:
-    resolution: {integrity: sha512-AjppRV4uG3No7L1plinoTQETH+j2F10TEnrMfzbTUYwze5sBUPveeeBAPZPm8OkJZ1epq9OyYKhZrvbD6/9HCQ==}
+  /@next/env@13.3.4:
+    resolution: {integrity: sha512-oTK/wRV2qga86m/4VdrR1+/56UA6U1Qv3sIgowB+bZjahniZLEG5BmmQjfoGv7ZuLXBZ8Eec6hkL9BqJcrEL2g==}
     dev: false
 
-  /@next/swc-darwin-arm64@13.3.0:
-    resolution: {integrity: sha512-DmIQCNq6JtccLPPBzf0dgh2vzMWt5wjxbP71pCi5EWpWYE3MsP6FcRXi4MlAmFNDQOfcFXR2r7kBeG1LpZUh1w==}
+  /@next/swc-darwin-arm64@13.3.4:
+    resolution: {integrity: sha512-vux7RWfzxy1lD21CMwZsy9Ej+0+LZdIIj1gEhVmzOQqQZ5N56h8JamrjIVCfDL+Lpj8KwOmFZbPHE8qaYnL2pg==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [darwin]
@@ -641,8 +646,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-darwin-x64@13.3.0:
-    resolution: {integrity: sha512-oQoqFa88OGgwnYlnAGHVct618FRI/749se0N3S8t9Bzdv5CRbscnO0RcX901+YnNK4Q6yeiizfgO3b7kogtsZg==}
+  /@next/swc-darwin-x64@13.3.4:
+    resolution: {integrity: sha512-1tb+6JT98+t7UIhVQpKL7zegKnCs9RKU6cKNyj+DYKuC/NVl49/JaIlmwCwK8Ibl+RXxJrK7uSXSIO71feXsgw==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [darwin]
@@ -650,8 +655,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-linux-arm64-gnu@13.3.0:
-    resolution: {integrity: sha512-Wzz2p/WqAJUqTVoLo6H18WMeAXo3i+9DkPDae4oQG8LMloJ3if4NEZTnOnTUlro6cq+S/W4pTGa97nWTrOjbGw==}
+  /@next/swc-linux-arm64-gnu@13.3.4:
+    resolution: {integrity: sha512-UqcKkYTKslf5YAJNtZ5XV1D5MQJIkVtDHL8OehDZERHzqOe7jvy41HFto33IDPPU8gJiP5eJb3V9U26uifqHjw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -659,8 +664,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-linux-arm64-musl@13.3.0:
-    resolution: {integrity: sha512-xPVrIQOQo9WXJYgmoTlMnAD/HlR/1e1ZIWGbwIzEirXBVBqMARUulBEIKdC19zuvoJ477qZJgBDCKtKEykCpyQ==}
+  /@next/swc-linux-arm64-musl@13.3.4:
+    resolution: {integrity: sha512-HE/FmE8VvstAfehyo/XsrhGgz97cEr7uf9IfkgJ/unqSXE0CDshDn/4as6rRid74eDR8/exi7c2tdo49Tuqxrw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
@@ -668,8 +673,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-linux-x64-gnu@13.3.0:
-    resolution: {integrity: sha512-jOFlpGuPD7W2tuXVJP4wt9a3cpNxWAPcloq5EfMJRiXsBBOjLVFZA7boXYxEBzSVgUiVVr1V9T0HFM7pULJ1qA==}
+  /@next/swc-linux-x64-gnu@13.3.4:
+    resolution: {integrity: sha512-xU+ugaupGA4SL5aK1ZYEqVHrW3TPOhxVcpaJLfpANm2443J4GfxCmOacu9XcSgy5c51Mq7C9uZ1LODKHfZosRQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -677,8 +682,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-linux-x64-musl@13.3.0:
-    resolution: {integrity: sha512-2OwKlzaBgmuet9XYHc3KwsEilzb04F540rlRXkAcjMHL7eCxB7uZIGtsVvKOnQLvC/elrUegwSw1+5f7WmfyOw==}
+  /@next/swc-linux-x64-musl@13.3.4:
+    resolution: {integrity: sha512-cZvmf5KcYeTfIK6bCypfmxGUjme53Ep7hx94JJtGrYgCA1VwEuYdh+KouubJaQCH3aqnNE7+zGnVEupEKfoaaA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
@@ -686,8 +691,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-win32-arm64-msvc@13.3.0:
-    resolution: {integrity: sha512-OeHiA6YEvndxT46g+rzFK/MQTfftKxJmzslERMu9LDdC6Kez0bdrgEYed5eXFK2Z1viKZJCGRlhd06rBusyztA==}
+  /@next/swc-win32-arm64-msvc@13.3.4:
+    resolution: {integrity: sha512-7dL+CAUAjmgnVbjXPIpdj7/AQKFqEUL3bKtaOIE1JzJ5UMHHAXCPwzQtibrsvQpf9MwcAmiv8aburD3xH1xf8w==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [win32]
@@ -695,8 +700,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-win32-ia32-msvc@13.3.0:
-    resolution: {integrity: sha512-4aB7K9mcVK1lYEzpOpqWrXHEZympU3oK65fnNcY1Qc4HLJFLJj8AViuqQd4jjjPNuV4sl8jAwTz3gN5VNGWB7w==}
+  /@next/swc-win32-ia32-msvc@13.3.4:
+    resolution: {integrity: sha512-qplTyzEl1vPkS+/DRK3pKSL0HeXrPHkYsV7U6gboHYpfqoHY+bcLUj3gwVUa9PEHRIoq4vXvPzx/WtzE6q52ng==}
     engines: {node: '>= 10'}
     cpu: [ia32]
     os: [win32]
@@ -704,8 +709,8 @@ packages:
     dev: false
     optional: true
 
-  /@next/swc-win32-x64-msvc@13.3.0:
-    resolution: {integrity: sha512-Reer6rkLLcoOvB0dd66+Y7WrWVFH7sEEkF/4bJCIfsSKnTStTYaHtwIJAwbqnt9I392Tqvku0KkoqZOryWV9LQ==}
+  /@next/swc-win32-x64-msvc@13.3.4:
+    resolution: {integrity: sha512-usdvZT7JHrTuXC+4OKN5mCzUkviFkCyJJTkEz8jhBpucg+T7s83e7owm3oNFzmj5iKfvxU2St6VkcnSgpFvEYA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [win32]
@@ -798,8 +803,8 @@ packages:
     engines: {node: '>=10.0.0'}
     dev: false
 
-  /@swc/helpers@0.4.14:
-    resolution: {integrity: sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==}
+  /@swc/helpers@0.5.1:
+    resolution: {integrity: sha512-sJ902EfIzn1Fa+qYmjdQqh8tPsoxyBz+8yBKC2HKUxyezKJFwPGOn7pv4WY6QuQW//ySQi5lJjA/ZT9sNWWNTg==}
     dependencies:
       tslib: 2.5.0
     dev: false
@@ -841,7 +846,7 @@ packages:
   /@types/hoist-non-react-statics@3.3.1:
     resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==}
     dependencies:
-      '@types/react': 18.0.38
+      '@types/react': 18.2.0
       hoist-non-react-statics: 3.3.2
     dev: true
 
@@ -861,8 +866,8 @@ packages:
     resolution: {integrity: sha512-km+Vyn3BYm5ytMO13k9KTp27O75rbQ0NFw+U//g+PX7VZyjCioXaRFisqSIJRECljcTv73G3i6BpglNGHgUQ5A==}
     dev: false
 
-  /@types/node@18.16.0:
-    resolution: {integrity: sha512-BsAaKhB+7X+H4GnSjGhJG9Qi8Tw+inU9nJDwmD5CgOmBLEI6ArdhikpLX7DjbjDRDTbqZzU2LSQNZg8WGPiSZQ==}
+  /@types/node@18.16.3:
+    resolution: {integrity: sha512-OPs5WnnT1xkCBiuQrZA4+YAV4HEJejmHneyraIaxsbev5yCEr6KMwINNFP9wQeFIw8FWcoTqF3vQsa5CDaI+8Q==}
     dev: true
 
   /@types/parse-json@4.0.0:
@@ -876,20 +881,20 @@ packages:
     resolution: {integrity: sha512-FGa1F62FT09qcrueBA6qYTrJPVDzah9a+493+o2PCXsesWHIn27G98TsSMs3WPNbZIEj4+VJf6saSFpvD+3Zsw==}
     dev: false
 
-  /@types/react-dom@18.0.11:
-    resolution: {integrity: sha512-O38bPbI2CWtgw/OoQoY+BRelw7uysmXbWvw3nLWO21H1HSh+GOlqPuXshJfjmpNlKiiSDG9cc1JZAaMmVdcTlw==}
+  /@types/react-dom@18.2.1:
+    resolution: {integrity: sha512-8QZEV9+Kwy7tXFmjJrp3XUKQSs9LTnE0KnoUb0YCguWBiNW0Yfb2iBMYZ08WPg35IR6P3Z0s00B15SwZnO26+w==}
     dependencies:
-      '@types/react': 18.0.38
+      '@types/react': 18.2.0
     dev: true
 
   /@types/react-transition-group@4.4.5:
     resolution: {integrity: sha512-juKD/eiSM3/xZYzjuzH6ZwpP+/lejltmiS3QEzV/vmb/Q8+HfDmxu+Baga8UEMGBqV88Nbg4l2hY/K2DkyaLLA==}
     dependencies:
-      '@types/react': 18.0.38
+      '@types/react': 18.2.0
     dev: false
 
-  /@types/react@18.0.38:
-    resolution: {integrity: sha512-ExsidLLSzYj4cvaQjGnQCk4HFfVT9+EZ9XZsQ8Hsrcn8QNgXtpZ3m9vSIC2MWtx7jHictK6wYhQgGh6ic58oOw==}
+  /@types/react@18.2.0:
+    resolution: {integrity: sha512-0FLj93y5USLHdnhIhABk83rm8XEGA7kH3cr+YUlvxoUGp1xNt/DINUMvqPxLyOQMzLmZe8i4RTHbvb8MC7NmrA==}
     dependencies:
       '@types/prop-types': 15.7.5
       '@types/scheduler': 0.16.3
@@ -902,7 +907,7 @@ packages:
     resolution: {integrity: sha512-KuKJ9Z6xb93uJiIyxo/+ksS7yLjS1KzG6iv5i78dhVg/X3u5t1H7juRWqVmodIdz6wGVaIApo1u01kmFRdJHVw==}
     dependencies:
       '@types/hoist-non-react-statics': 3.3.1
-      '@types/react': 18.0.38
+      '@types/react': 18.2.0
       csstype: 3.1.2
     dev: true
 
@@ -915,23 +920,23 @@ packages:
       algoliasearch: 4.17.0
     dev: false
 
-  /@uniformdev/canvas-contentful@19.0.0(@contentful/rich-text-html-renderer@16.0.3)(contentful@10.1.0):
-    resolution: {integrity: sha512-YfjBmQsx6W05rNfGYwlO2UtozB1P7USkCLbEUH1b4FCzH/BRgY4wyq86LsX9UgFUCaOe9WebjQmG7jFK/lk7Qw==}
+  /@uniformdev/canvas-contentful@19.3.0(@contentful/rich-text-html-renderer@16.0.3)(contentful@10.1.4):
+    resolution: {integrity: sha512-qn7uzyxPYogr1Y0wcAjLtDIiW+rsu2Bdj48vH67teVKXIOYUjIF6jhFWsv7+EFA++ZHj53J4ykEGw9Wxwp+xaA==}
     peerDependencies:
       '@contentful/rich-text-html-renderer': '>= 14'
       contentful: '>= 8'
     dependencies:
       '@contentful/rich-text-html-renderer': 16.0.3
-      '@uniformdev/canvas': 19.0.0
-      contentful: 10.1.0
+      '@uniformdev/canvas': 19.3.0
+      contentful: 10.1.4
     dev: false
 
-  /@uniformdev/canvas-contentstack@19.0.0(contentstack@3.17.1):
-    resolution: {integrity: sha512-jtJKorFUYYJfylG4MdQQ3AD5pH3aknZ5sy7wDht0dOeemhl56TCCJ1uWH2BJaEwdEAIDIeyW9f3LoDm0TtYwqA==}
+  /@uniformdev/canvas-contentstack@19.3.0(contentstack@3.17.1):
+    resolution: {integrity: sha512-WgAWKm59MTaFkgU47+k1dd+bjksz+Pi28v/V+UjPie1G9Hsx7FfOCWwiSeKozj7p6m7EetTLVdTXasLcOgr6Hg==}
     peerDependencies:
       contentstack: '>=3.13'
     dependencies:
-      '@uniformdev/canvas': 19.0.0
+      '@uniformdev/canvas': 19.3.0
       contentstack: 3.17.1
     dev: false
 
@@ -947,52 +952,53 @@ packages:
       graphql-request: 6.0.0(graphql@16.6.0)
     dev: false
 
-  /@uniformdev/canvas-kontent@19.0.0(@contentful/rich-text-html-renderer@16.0.3)(@kentico/kontent-delivery@11.13.0):
-    resolution: {integrity: sha512-1pAJVdEaZOSNEHPh2lCrA31tflH1OKBT9H1daLMFZRkox5K8Qv2xuaIyH3X20LDblCJ8TG9cDef8jPtvB1s9oA==}
+  /@uniformdev/canvas-kontent@19.3.0(@contentful/rich-text-html-renderer@16.0.3)(@kentico/kontent-delivery@11.13.0):
+    resolution: {integrity: sha512-5Uvo63sSqeNv7u1TqsdmYRzZ6UwWl8+2Ki5EBUdzWMgnqw7g0R2Nhoten5OfI+nP8ZMxqpw7wR8m9V07TgFtEA==}
     peerDependencies:
       '@contentful/rich-text-html-renderer': '>= 14'
       '@kentico/kontent-delivery': '>=11.0.0'
     dependencies:
       '@contentful/rich-text-html-renderer': 16.0.3
       '@kentico/kontent-delivery': 11.13.0
-      '@uniformdev/canvas': 19.0.0
+      '@uniformdev/canvas': 19.3.0
     dev: false
 
-  /@uniformdev/canvas-next@19.0.0(next@13.3.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-eOaHCVs2zsng6pDYYE2hcyn8w5OXq4MXaMnvlvgqQ4UT2lvaqaSZTYGlmuPHmrnm15QF/jX1Fo6rcUNRfeouqQ==}
+  /@uniformdev/canvas-next@19.3.0(next@13.3.4)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-JfpdpflWxnkSoVx7PO2xeyV4Eb/xYbN15Flt5qiDiV2XKgvzCPt7MvjQHYQG2XCyp1WwIhN1aWJjYHzgteib1Q==}
     peerDependencies:
       next: '>= 12.0.0'
       react: '>= 16 || 17 || 18'
       react-dom: '>=16'
     dependencies:
-      '@uniformdev/canvas': 19.0.0
-      '@uniformdev/canvas-react': 19.0.0(react-dom@18.2.0)(react@18.2.0)
-      '@uniformdev/project-map': 19.0.0
-      next: 13.3.0(react-dom@18.2.0)(react@18.2.0)(sass@1.62.0)
+      '@uniformdev/canvas': 19.3.0
+      '@uniformdev/canvas-react': 19.3.0(react-dom@18.2.0)(react@18.2.0)
+      '@uniformdev/project-map': 19.3.0
+      chalk: 5.2.0
+      next: 13.3.4(react-dom@18.2.0)(react@18.2.0)(sass@1.62.1)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@uniformdev/canvas-react@19.0.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-w2hLocUZdNyhF1xJvJpih2IgDCPYqSoX2dFyXixfLIvF5kEl1dDyveEvn6gTxho6AXos9EdSQFZ5J7glfD7Viw==}
+  /@uniformdev/canvas-react@19.3.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-E0XP++PLhvNbYCshQkatzF06ZDBsjGDOA9Ti8Nc4U59j8yfuUBIj+h/mL4KSkFoWCyepgXdjC1KOJb+eIcVU6g==}
     peerDependencies:
       react: '>= 16 || 17 || 18'
       react-dom: '>=16'
     dependencies:
-      '@uniformdev/canvas': 19.0.0
-      '@uniformdev/context': 19.0.0
-      '@uniformdev/context-react': 19.0.0(react-dom@18.2.0)(react@18.2.0)
+      '@uniformdev/canvas': 19.3.0
+      '@uniformdev/context': 19.3.0
+      '@uniformdev/context-react': 19.3.0(react-dom@18.2.0)(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@uniformdev/canvas-sanity@19.0.0(@sanity/client@5.4.2):
-    resolution: {integrity: sha512-IhLvZZGmZNiKaTECrVUtTZrqbV2NxAn9sEarLO1qpoF9YoqoVmIKeoHo+gi3xMKFZ6fKmbIda/NDTcxDxz+w2w==}
+  /@uniformdev/canvas-sanity@19.3.0(@sanity/client@5.4.2):
+    resolution: {integrity: sha512-fHhRPHOi9BwOMLU08lovGC2LI1gwHfhUDLMR04rIUhwONAsZ0nX2BIQXBhOjKCMDHWQys/GkALC/zkv1TotEkA==}
     peerDependencies:
       '@sanity/client': '>=2.13.0'
     dependencies:
       '@sanity/client': 5.4.2
-      '@uniformdev/canvas': 19.0.0
+      '@uniformdev/canvas': 19.3.0
     dev: false
 
   /@uniformdev/canvas-strapi@17.1.0(strapi-sdk-js@2.2.0):
@@ -1016,18 +1022,19 @@ packages:
       '@uniformdev/context': 17.7.0
     dev: false
 
-  /@uniformdev/canvas@19.0.0:
-    resolution: {integrity: sha512-ZF1bY/+jyacTiZqdQ8nf6HjKHRps8aGVwDuT8KeKfnXX5b+8APcNcmgLa6hJS/CtT0XApQ/89cftf33veDt3HA==}
+  /@uniformdev/canvas@19.3.0:
+    resolution: {integrity: sha512-Fnm3bmLnJLTmWbye9X3VdafFZlkb+24EEf9DKos4AHIh1imA+sHwNoLV90pP06OtkfyrJ3I7c717Zj3P/aD0kg==}
     dependencies:
-      '@uniformdev/context': 19.0.0
+      '@uniformdev/context': 19.3.0
 
-  /@uniformdev/cli@19.0.0:
-    resolution: {integrity: sha512-lPVtWKlBZEe4EQs5len9F5oQRNxMgGUWq/AUGPLUz0A8aGXj0Usl2TRm1FMRoaVVhGOyrnrIjx6vBEefdFhtRA==}
+  /@uniformdev/cli@19.3.0:
+    resolution: {integrity: sha512-ov88+PftqTghlRkLEov9c/gjCcz/KDOekD+yCoEvILW84upoXNwDI9dAa/Rwis3oQO6XM+YEikfdPOdwsp5OXQ==}
     hasBin: true
     dependencies:
-      '@uniformdev/canvas': 19.0.0
-      '@uniformdev/context': 19.0.0
-      '@uniformdev/project-map': 19.0.0
+      '@uniformdev/canvas': 19.3.0
+      '@uniformdev/context': 19.3.0
+      '@uniformdev/project-map': 19.3.0
+      '@uniformdev/redirect': 19.3.0
       chalk: 5.2.0
       diff: 5.1.0
       dotenv: 16.0.3
@@ -1036,7 +1043,7 @@ packages:
       graphql: 16.6.0
       graphql-request: 6.0.0(graphql@16.6.0)
       https-proxy-agent: 5.0.1
-      inquirer: 9.1.5
+      inquirer: 9.2.0
       isomorphic-git: 1.21.0
       isomorphic-unfetch: 3.1.0
       js-yaml: 4.1.0
@@ -1044,7 +1051,7 @@ packages:
       lodash.isequalwith: 4.4.0
       open: 9.1.0
       ora: 6.3.0
-      posthog-node: 2.6.0
+      posthog-node: 3.1.1
       slugify: 1.6.6
       yargs: 17.7.1
       zod: 3.21.4
@@ -1054,15 +1061,15 @@ packages:
       - supports-color
     dev: true
 
-  /@uniformdev/context-devtools@19.0.0(@types/react@18.0.38)(react-dom@18.2.0)(react@18.2.0)(zod@3.21.4):
-    resolution: {integrity: sha512-8lVamNLdDCH6CeB4TUTLQEzAipmDKQYV58ZtI8lzAewJeAl6FF6ZchLKwA+Osj79xbt1fSiXc9E026AIRMOdaA==}
+  /@uniformdev/context-devtools@19.3.0(@types/react@18.2.0)(react-dom@18.2.0)(react@18.2.0)(zod@3.21.4):
+    resolution: {integrity: sha512-TizEeKT+4wtPJNxUj4l7EA0wiHl7zaFVdex8DK7wupoPCV1fs2C6kLmaaT9BUGbqKdOGGDSDYedAkHp6Bc68hw==}
     peerDependencies:
       react: '>=17 || 17 || 18'
       react-dom: '>=17'
     dependencies:
-      '@emotion/react': 11.10.5(@types/react@18.0.38)(react@18.2.0)
-      '@uniformdev/context': 19.0.0
-      '@uniformdev/design-system': 19.0.0(@types/react@18.0.38)(react-dom@18.2.0)(react@18.2.0)(zod@3.21.4)
+      '@emotion/react': 11.10.5(@types/react@18.2.0)(react@18.2.0)
+      '@uniformdev/context': 19.3.0
+      '@uniformdev/design-system': 19.3.0(@types/react@18.2.0)(react-dom@18.2.0)(react@18.2.0)(zod@3.21.4)
       formik: 2.2.9(react@18.2.0)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -1075,33 +1082,33 @@ packages:
       - zod
     dev: false
 
-  /@uniformdev/context-gtag@19.0.0:
-    resolution: {integrity: sha512-f1bFXeXQmPeKyiav5V+jB0F1zAriS6ngu+fhBYmnHzTa3NzLHx/r+F8T1XmDINgcS5MxK3zGmfHJNQ5Mk22CeQ==}
+  /@uniformdev/context-gtag@19.3.0:
+    resolution: {integrity: sha512-ndox7/Amt+hCsTN/5jA+7tc+PyGGUjgCBqTWMYVgf2L2PwQIRCLolWaxwi+GRr/iyyl6c5dnmteHhX5xAoyARw==}
     dependencies:
-      '@uniformdev/context': 19.0.0
+      '@uniformdev/context': 19.3.0
     dev: false
 
-  /@uniformdev/context-next@19.0.0(next@13.3.0)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-y3U2Ld8Nw1gczXjRxp/x5P+BH7vD/3buvrIrnu46jKIT9UUIBCGsel6Jvyim2JT0Ps7x62Dzh3yQ1UJMDWTd8A==}
+  /@uniformdev/context-next@19.3.0(next@13.3.4)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-4I2p33m3EhteJY9rQBwgsTUPn8xvz8066cUsoxPJG5BqrWGRbVH/9ZXN10gS20MFfVwj+Xz76X36O4DJO8bJrw==}
     peerDependencies:
       next: '>= 12.0.0'
       react: '>=16.13.1 || 17 || 18'
       react-dom: '>=16.13.1'
     dependencies:
-      '@uniformdev/context': 19.0.0
+      '@uniformdev/context': 19.3.0
       cookie: 0.5.0
-      next: 13.3.0(react-dom@18.2.0)(react@18.2.0)(sass@1.62.0)
+      next: 13.3.4(react-dom@18.2.0)(react@18.2.0)(sass@1.62.1)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
-  /@uniformdev/context-react@19.0.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-/1XMNfftprwOEhq4A5s8z1qPGuMj9MnUBJYbx7Oy16HzIvqj/lVterxAEUp3DltZZRleYfIb7PBPtQX13edPvg==}
+  /@uniformdev/context-react@19.3.0(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-UtKEFWE6AeHmeq1GcVT6/+qSaIrnzTDBBp9mnwLue1RCIh/dBDqeh8KMclcBka0tprtGNGbq275qLXIvNdk3Ug==}
     peerDependencies:
       react: '>=16.13.1 || 17 || 18'
       react-dom: '>=16.13.1'
     dependencies:
-      '@uniformdev/context': 19.0.0
+      '@uniformdev/context': 19.3.0
       cookie: 0.5.0
       dequal: 2.0.3
       react: 18.2.0
@@ -1118,22 +1125,22 @@ packages:
       rfdc: 1.3.0
     dev: false
 
-  /@uniformdev/context@19.0.0:
-    resolution: {integrity: sha512-XEbImKtM1Nrrh7ntg3RZOBvu73ehcqogaxisy8joMPsSqfIB0j+ffW3qLG7vgHQ/zFfEsnai+bvtNg2EwNhYTQ==}
+  /@uniformdev/context@19.3.0:
+    resolution: {integrity: sha512-mOkVWZtsgQGz+iL2TYfBFBD8rwk7gw0fWwreInCLgLcJv/LhhJbSM6D5cXhLGK5ReVLk/XU28A8vp+UOFFMrKw==}
     dependencies:
       dequal: 2.0.3
-      js-cookie: 3.0.1
+      js-cookie: 3.0.5
       mitt: 3.0.0
       p-limit: 3.1.0
       rfdc: 1.3.0
 
-  /@uniformdev/design-system@19.0.0(@types/react@18.0.38)(react-dom@18.2.0)(react@18.2.0)(zod@3.21.4):
-    resolution: {integrity: sha512-la5mcXGAG7cIz5RouRXvA2fZs4t7sG9XAAwl90xI8WDkeRhxVRFF3mp2ludZkuveu2e6S5N51sfa8gSIbPIP0Q==}
+  /@uniformdev/design-system@19.3.0(@types/react@18.2.0)(react-dom@18.2.0)(react@18.2.0)(zod@3.21.4):
+    resolution: {integrity: sha512-qWGwAhCfa+tbaRYM1LfzjfESJbzLEs8eF1iIT19f65IFDeAX+n/Qa92/TH9l1tUS1v7M0FvTN4kGrn6AWRGAWA==}
     peerDependencies:
       react: '>=17 || 17 || 18'
       react-dom: '>=17'
     dependencies:
-      '@emotion/react': 11.10.5(@types/react@18.0.38)(react@18.2.0)
+      '@emotion/react': 11.10.5(@types/react@18.2.0)(react@18.2.0)
       '@monaco-editor/react': 4.5.0(monaco-editor@0.37.1)(react-dom@18.2.0)(react@18.2.0)
       lottie-react: 2.4.0(react-dom@18.2.0)(react@18.2.0)
       monaco-editor: 0.37.1
@@ -1143,7 +1150,7 @@ packages:
       react-hotkeys-hook: 4.4.0(react-dom@18.2.0)(react@18.2.0)
       react-icons: 4.8.0(react@18.2.0)
       react-paginate: 8.1.5(react@18.2.0)
-      react-select: 5.7.2(@types/react@18.0.38)(react-dom@18.2.0)(react@18.2.0)
+      react-select: 5.7.2(@types/react@18.2.0)(react-dom@18.2.0)(react@18.2.0)
       react-use: 17.4.0(react-dom@18.2.0)(react@18.2.0)
       reakit: 1.3.11(react-dom@18.2.0)(react@18.2.0)
       zod-to-json-schema: 3.20.4(zod@3.21.4)
@@ -1153,11 +1160,18 @@ packages:
       - zod
     dev: false
 
-  /@uniformdev/project-map@19.0.0:
-    resolution: {integrity: sha512-san5S8nuCrnBKqNuDO+S/mwFjTU6oXC/TvSwipsfJhEFTYOSNwOVvg+lSpmwmMQBEQvY9fKRPexBwW/Ju4s7OA==}
+  /@uniformdev/project-map@19.3.0:
+    resolution: {integrity: sha512-IO1DbSqiDtr13K6iPtMRkNqk6ocq5GokngsJtrAGM9yQeraOjxMLteLX2norCemIth07GZ0826bN0DMdKgzrEw==}
     dependencies:
-      '@uniformdev/canvas': 19.0.0
-      '@uniformdev/context': 19.0.0
+      '@uniformdev/canvas': 19.3.0
+      '@uniformdev/context': 19.3.0
+
+  /@uniformdev/redirect@19.3.0:
+    resolution: {integrity: sha512-bdnyYnbG8xBqzmxFNGT/SDX6fwGDzdOgDO5bVgT/AwhwxL2G+SFG9QYkC0vEP5J9zKltxWH3iC4xECXf9oA7Sw==}
+    dependencies:
+      '@uniformdev/context': 19.3.0
+      p-limit: 3.1.0
+    dev: true
 
   /@webassemblyjs/ast@1.11.1:
     resolution: {integrity: sha512-ukBh14qFLjxTQNTXocdyksN5QdM28S1CxHt2rdskFyL+xFV7VremuBLVbmCePj+URalXBENx/9Lm7lnhihtCSw==}
@@ -1476,7 +1490,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.21.0
       cosmiconfig: 7.1.0
-      resolve: 1.22.1
+      resolve: 1.22.2
     dev: false
 
   /babel-plugin-styled-components@2.0.7(styled-components@5.3.10):
@@ -1633,7 +1647,6 @@ packages:
   /chalk@5.2.0:
     resolution: {integrity: sha512-ree3Gqw/nazQAPuJJEy+avdl7QfZMcUvmHIKgEZkGL+xOBzRvup5Hxo6LHuMceSxOabuJLJm5Yp/92R9eMmMvA==}
     engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
-    dev: true
 
   /chardet@0.7.0:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
@@ -1754,8 +1767,8 @@ packages:
       qs: 6.11.1
     dev: false
 
-  /contentful@10.1.0:
-    resolution: {integrity: sha512-5xhzPQhCirZ0PoC4YFPC4NTKWjf9TU4iricvf/ETWiHiHROQYPm2NdPrHz55IZ7AHH6kvqUeGDEtmxz+Idg2gw==}
+  /contentful@10.1.4:
+    resolution: {integrity: sha512-bqZz/+loNM4otOSlkA2vuRtney6mk/Px3H8VHWlppxodPvHqEUv9OiwXFRxXsa73fIWMN/7xKi+EYOt5JnXOEg==}
     engines: {node: '>=12'}
     dependencies:
       '@contentful/rich-text-types': 16.0.3
@@ -2577,8 +2590,8 @@ packages:
       fast-loops: 1.1.3
     dev: false
 
-  /inquirer@9.1.5:
-    resolution: {integrity: sha512-3ygAIh8gcZavV9bj6MTdYddG2zPSYswP808fKS46NOwlF0zZljVpnLCHODDqItWJDbDpLb3aouAxGaJbkxoppA==}
+  /inquirer@9.2.0:
+    resolution: {integrity: sha512-WWERbVqjsTXjXub1ZW0ZHDit1dyHqy0T9XIkky9TnmKAPrjU9Jkd59nZPK0dUuM3s73GZAZu2Jo4iFU3XSPVLA==}
     engines: {node: '>=14.18.0'}
     dependencies:
       ansi-escapes: 6.1.0
@@ -2843,7 +2856,7 @@ packages:
     resolution: {integrity: sha512-7vuh85V5cdDofPyxn58nrPjBktZo0u9x1g8WtjQol+jZDaE+fhN+cIvTj11GndBnMnyfrUOG1sZQxCdjKh+DKg==}
     engines: {node: '>= 10.13.0'}
     dependencies:
-      '@types/node': 18.16.0
+      '@types/node': 18.16.3
       merge-stream: 2.0.0
       supports-color: 8.1.1
     dev: true
@@ -2860,6 +2873,11 @@ packages:
   /js-cookie@3.0.1:
     resolution: {integrity: sha512-+0rgsUXZu4ncpPxRL+lNEptWMOWl9etvPHc/koSRp6MPwpRYAhmk0dUG00J4bxVV3r9uUzfo24wW0knS07SKSw==}
     engines: {node: '>=12'}
+    dev: false
+
+  /js-cookie@3.0.5:
+    resolution: {integrity: sha512-cEiJEAEoIbWfCZYKWhVwFuvPX1gETRYPw6LlaTKoxD3s2AkXzkCjnp6h0V77ozyqj0jakteJ4YqDJT830+lVGw==}
+    engines: {node: '>=14'}
 
   /js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -3145,9 +3163,9 @@ packages:
     resolution: {integrity: sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==}
     dev: true
 
-  /next@13.3.0(react-dom@18.2.0)(react@18.2.0)(sass@1.62.0):
-    resolution: {integrity: sha512-OVTw8MpIPa12+DCUkPqRGPS3thlJPcwae2ZL4xti3iBff27goH024xy4q2lhlsdoYiKOi8Kz6uJoLW/GXwgfOA==}
-    engines: {node: '>=14.6.0'}
+  /next@13.3.4(react-dom@18.2.0)(react@18.2.0)(sass@1.62.1):
+    resolution: {integrity: sha512-sod7HeokBSvH5QV0KB+pXeLfcXUlLrGnVUXxHpmhilQ+nQYT3Im2O8DswD5e4uqbR8Pvdu9pcWgb1CbXZQZlmQ==}
+    engines: {node: '>=16.8.0'}
     hasBin: true
     peerDependencies:
       '@opentelemetry/api': ^1.1.0
@@ -3166,25 +3184,25 @@ packages:
       sass:
         optional: true
     dependencies:
-      '@next/env': 13.3.0
-      '@swc/helpers': 0.4.14
+      '@next/env': 13.3.4
+      '@swc/helpers': 0.5.1
       busboy: 1.6.0
       caniuse-lite: 1.0.30001474
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
-      sass: 1.62.0
+      sass: 1.62.1
       styled-jsx: 5.1.1(react@18.2.0)
     optionalDependencies:
-      '@next/swc-darwin-arm64': 13.3.0
-      '@next/swc-darwin-x64': 13.3.0
-      '@next/swc-linux-arm64-gnu': 13.3.0
-      '@next/swc-linux-arm64-musl': 13.3.0
-      '@next/swc-linux-x64-gnu': 13.3.0
-      '@next/swc-linux-x64-musl': 13.3.0
-      '@next/swc-win32-arm64-msvc': 13.3.0
-      '@next/swc-win32-ia32-msvc': 13.3.0
-      '@next/swc-win32-x64-msvc': 13.3.0
+      '@next/swc-darwin-arm64': 13.3.4
+      '@next/swc-darwin-x64': 13.3.4
+      '@next/swc-linux-arm64-gnu': 13.3.4
+      '@next/swc-linux-arm64-musl': 13.3.4
+      '@next/swc-linux-x64-gnu': 13.3.4
+      '@next/swc-linux-x64-musl': 13.3.4
+      '@next/swc-win32-arm64-msvc': 13.3.4
+      '@next/swc-win32-ia32-msvc': 13.3.4
+      '@next/swc-win32-x64-msvc': 13.3.4
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
@@ -3476,16 +3494,16 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /postcss-import@14.1.0(postcss@8.4.23):
-    resolution: {integrity: sha512-flwI+Vgm4SElObFVPpTIT7SU7R3qk2L7PyduMcokiaVKuWv9d/U+Gm/QAd8NDLuykTWTkcrjOeD2Pp1rMeBTGw==}
-    engines: {node: '>=10.0.0'}
+  /postcss-import@15.1.0(postcss@8.4.23):
+    resolution: {integrity: sha512-hpr+J05B2FVYUAXHeK1YyI267J/dDDhMU6B6civm8hSY1jYJnBXxzKDKDswzJmtLHryrjhnDjqqp/49t8FALew==}
+    engines: {node: '>=14.0.0'}
     peerDependencies:
       postcss: ^8.0.0
     dependencies:
       postcss: 8.4.23
       postcss-value-parser: 4.2.0
       read-cache: 1.0.0
-      resolve: 1.22.1
+      resolve: 1.22.2
     dev: true
 
   /postcss-js@4.0.1(postcss@8.4.23):
@@ -3498,9 +3516,9 @@ packages:
       postcss: 8.4.23
     dev: true
 
-  /postcss-load-config@3.1.4(postcss@8.4.23):
-    resolution: {integrity: sha512-6DiM4E7v4coTE4uzA8U//WhtPwyhiim3eyjEMFCnUpzbrkK9wJHgKDT2mR+HbtSrd/NubVaYTOpSpjUl8NQeRg==}
-    engines: {node: '>= 10'}
+  /postcss-load-config@4.0.1(postcss@8.4.23):
+    resolution: {integrity: sha512-vEJIc8RdiBRu3oRAI0ymerOn+7rPuMvRXslTvZUKZonDHFIczxztIyJ1urxM1x9JXEikvpWWTUUqal5j/8QgvA==}
+    engines: {node: '>= 14'}
     peerDependencies:
       postcss: '>=8.0.9'
       ts-node: '>=9.0.0'
@@ -3512,11 +3530,11 @@ packages:
     dependencies:
       lilconfig: 2.1.0
       postcss: 8.4.23
-      yaml: 1.10.2
+      yaml: 2.2.2
     dev: true
 
-  /postcss-nested@6.0.0(postcss@8.4.23):
-    resolution: {integrity: sha512-0DkamqrPcmkBDsLn+vQDIrtkSbNkv5AD/M322ySo9kqFkCIYklym2xEmWkwo+Y3/qZo34tzEPNUw4y7yMCdv5w==}
+  /postcss-nested@6.0.1(postcss@8.4.23):
+    resolution: {integrity: sha512-mEp4xPMi5bSWiMbsgoPfcP74lsWLHkQbZc3sY+jWYd65CUwXrUaTp0fmNpa01ZcETKlIgUdFN/MpS2xZtqL9dQ==}
     engines: {node: '>=12.0'}
     peerDependencies:
       postcss: ^8.2.14
@@ -3554,11 +3572,12 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /posthog-node@2.6.0:
-    resolution: {integrity: sha512-/BiFw/jwdP0uJSRAIoYqLoBTjZ612xv74b1L/a3T/p1nJVL8e0OrHuxbJW56c6WVW/IKm9gBF/zhbqfaz0XgJQ==}
+  /posthog-node@3.1.1:
+    resolution: {integrity: sha512-OUSYcnLHbzvY/dxNsbUGoYuTZz5XNx48BkfiCkOIJZMFvot5VPQ0KWEjX+kzYxEwHeXbjW9plqsOVcYCYfidgg==}
     engines: {node: '>=15.0.0'}
     dependencies:
       axios: 0.27.2
+      rusha: 0.8.14
     transitivePeerDependencies:
       - debug
     dev: true
@@ -3612,11 +3631,6 @@ packages:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
     dev: true
 
-  /quick-lru@5.1.1:
-    resolution: {integrity: sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==}
-    engines: {node: '>=10'}
-    dev: true
-
   /randombytes@2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
     dependencies:
@@ -3667,7 +3681,7 @@ packages:
       react: 18.2.0
     dev: false
 
-  /react-select@5.7.2(@types/react@18.0.38)(react-dom@18.2.0)(react@18.2.0):
+  /react-select@5.7.2(@types/react@18.2.0)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-cTlJkQ8YjV6T/js8wW0owTzht0hHGABh29vjLscY4HfZGkv7hc3FFTmRp9NzY/Ib1uQ36GieAKEjxpHdpCFpcA==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -3675,7 +3689,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.21.0
       '@emotion/cache': 11.10.5
-      '@emotion/react': 11.10.5(@types/react@18.0.38)(react@18.2.0)
+      '@emotion/react': 11.10.5(@types/react@18.2.0)(react@18.2.0)
       '@floating-ui/dom': 1.2.5
       '@types/react-transition-group': 4.4.5
       memoize-one: 6.0.0
@@ -3683,7 +3697,7 @@ packages:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-transition-group: 4.4.5(react-dom@18.2.0)(react@18.2.0)
-      use-isomorphic-layout-effect: 1.1.2(@types/react@18.0.38)(react@18.2.0)
+      use-isomorphic-layout-effect: 1.1.2(@types/react@18.2.0)(react@18.2.0)
     transitivePeerDependencies:
       - '@babel/core'
       - '@types/react'
@@ -3871,6 +3885,15 @@ packages:
       is-core-module: 2.11.0
       path-parse: 1.0.7
       supports-preserve-symlinks-flag: 1.0.0
+    dev: true
+
+  /resolve@1.22.2:
+    resolution: {integrity: sha512-Sb+mjNHOULsBv818T40qSPeRiuWLyaGMa5ewydRLFimneixmVy2zdivRl+AF6jaYPC8ERxGDmFSiqui6SfPd+g==}
+    hasBin: true
+    dependencies:
+      is-core-module: 2.11.0
+      path-parse: 1.0.7
+      supports-preserve-symlinks-flag: 1.0.0
 
   /restore-cursor@4.0.0:
     resolution: {integrity: sha512-I9fPXU9geO9bHOt9pHHOhOkYerIMsmVaWB0rA2AI9ERh/+x/i7MV5HKBNrg+ljO5eoPVgCcnFuRjJ9uH6I/3eg==}
@@ -3912,6 +3935,10 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
+  /rusha@0.8.14:
+    resolution: {integrity: sha512-cLgakCUf6PedEu15t8kbsjnwIFFR2D4RfL+W3iWFJ4iac7z4B0ZI8fxy4R3J956kAI68HclCFGL8MPoUVC3qVA==}
+    dev: true
+
   /rxjs@7.8.0:
     resolution: {integrity: sha512-F2+gxDshqmIub1KdvZkaEfGDwLNpPvk9Fs6LD/MyQxNgMds/WH9OdDDXOmxUZpME+iSK3rQCctkL0DYyytUqMg==}
     dependencies:
@@ -3936,8 +3963,8 @@ packages:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
     dev: true
 
-  /sass@1.62.0:
-    resolution: {integrity: sha512-Q4USplo4pLYgCi+XlipZCWUQz5pkg/ruSSgJ0WRDSb/+3z9tXUOkQ7QPYn4XrhZKYAK4HlpaQecRwKLJX6+DBg==}
+  /sass@1.62.1:
+    resolution: {integrity: sha512-NHpxIzN29MXvWiuswfc1W3I0N8SXBd8UR26WntmDlRYf0bSADnwnOjsyMZ3lMezSlArD33Vs3YFhp7dWvL770A==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -4304,11 +4331,12 @@ packages:
     resolution: {integrity: sha512-GP6WDNWf+o403jrEp9c5jibKavrtLW+/qYGhFxFrG8maXhwTBI7gLLhiBb0o7uFccWN+EOS9aMO6cGHWAO07OA==}
     dev: false
 
-  /sucrase@3.31.0:
-    resolution: {integrity: sha512-6QsHnkqyVEzYcaiHsOKkzOtOgdJcb8i54x6AV2hDwyZcY9ZyykGZVw6L/YN98xC0evwTP6utsWWrKRaa8QlfEQ==}
+  /sucrase@3.32.0:
+    resolution: {integrity: sha512-ydQOU34rpSyj2TGyz4D2p8rbktIOZ8QY9s+DGLvFU1i5pWJE8vkpruCjGCMHsdXwnD7JDcS+noSwM/a7zyNFDQ==}
     engines: {node: '>=8'}
     hasBin: true
     dependencies:
+      '@jridgewell/gen-mapping': 0.3.2
       commander: 4.1.1
       glob: 7.1.6
       lines-and-columns: 1.2.4
@@ -4341,16 +4369,14 @@ packages:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
 
-  /tailwindcss@3.3.1(postcss@8.4.23):
-    resolution: {integrity: sha512-Vkiouc41d4CEq0ujXl6oiGFQ7bA3WEhUZdTgXAhtKxSy49OmKs8rEfQmupsfF0IGW8fv2iQkp1EVUuapCFrZ9g==}
-    engines: {node: '>=12.13.0'}
+  /tailwindcss@3.3.2:
+    resolution: {integrity: sha512-9jPkMiIBXvPc2KywkraqsUfbfj+dHDb+JPWtSJa9MLFdrPyazI7q6WX2sUrm7R9eVR7qqv3Pas7EvQFzxKnI6w==}
+    engines: {node: '>=14.0.0'}
     hasBin: true
-    peerDependencies:
-      postcss: ^8.0.9
     dependencies:
+      '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
       chokidar: 3.5.3
-      color-name: 1.1.4
       didyoumean: 1.2.2
       dlv: 1.1.3
       fast-glob: 3.2.12
@@ -4363,15 +4389,14 @@ packages:
       object-hash: 3.0.0
       picocolors: 1.0.0
       postcss: 8.4.23
-      postcss-import: 14.1.0(postcss@8.4.23)
+      postcss-import: 15.1.0(postcss@8.4.23)
       postcss-js: 4.0.1(postcss@8.4.23)
-      postcss-load-config: 3.1.4(postcss@8.4.23)
-      postcss-nested: 6.0.0(postcss@8.4.23)
+      postcss-load-config: 4.0.1(postcss@8.4.23)
+      postcss-nested: 6.0.1(postcss@8.4.23)
       postcss-selector-parser: 6.0.11
       postcss-value-parser: 4.2.0
-      quick-lru: 5.1.1
-      resolve: 1.22.1
-      sucrase: 3.31.0
+      resolve: 1.22.2
+      sucrase: 3.32.0
     transitivePeerDependencies:
       - ts-node
     dev: true
@@ -4579,7 +4604,7 @@ packages:
       requires-port: 1.0.0
     dev: false
 
-  /use-isomorphic-layout-effect@1.1.2(@types/react@18.0.38)(react@18.2.0):
+  /use-isomorphic-layout-effect@1.1.2(@types/react@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-49L8yCO3iGT/ZF9QttjwLF/ZD9Iwto5LnH5LmEdk/6cFmXddqi2ulF0edxTwjj+7mqvpVVGQWvbXZdn32wRSHA==}
     peerDependencies:
       '@types/react': '*'
@@ -4588,7 +4613,7 @@ packages:
       '@types/react':
         optional: true
     dependencies:
-      '@types/react': 18.0.38
+      '@types/react': 18.2.0
       react: 18.2.0
     dev: false
 
@@ -4755,6 +4780,12 @@ packages:
   /yaml@1.10.2:
     resolution: {integrity: sha512-r3vXyErRCYJ7wg28yvBY5VSoAF8ZvlcW9/BwUzEtUsjvX/DKs24dIkuwjtuprwJJHsbyUbLApepYTR1BN4uHrg==}
     engines: {node: '>= 6'}
+    dev: false
+
+  /yaml@2.2.2:
+    resolution: {integrity: sha512-CBKFWExMn46Foo4cldiChEzn7S7SRV+wqiluAb6xmueD/fGyRHIhX8m14vVGgeFWjN540nKCNVj6P21eQjgTuA==}
+    engines: {node: '>= 14'}
+    dev: true
 
   /yargs-parser@21.1.1:
     resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==}
