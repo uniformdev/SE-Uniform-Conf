@@ -1,0 +1,38 @@
+composition:
+  _name: Developers
+  _id: 2ef20258-cd64-488c-a9d5-5d4140639f9e
+  _slug: developers
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Developers
+  slots:
+    body:
+      - _id: 3bd903e8-c5e5-4778-9959-1ee89c583657
+        type: hero
+        _pattern: 5881d8b4-53ba-44f3-b2bc-76780331ed34
+        _dataResources:
+          Contentful Hero Content:
+            type: contentfulHero
+            variables:
+              entryIds: 2viemq4DCI47ZfC7IybE9a
+              contentTypeId: hero
+    footer:
+      - _id: f7c2a075-f0ff-4808-a140-db9c2950d478
+        type: footer
+    header:
+      - _id: 14138fa6-139f-4378-8432-921a35704946
+        type: header
+  _overrides:
+    3bd903e8-c5e5-4778-9959-1ee89c583657:
+      parameters:
+        $enr:
+          type: $enr
+          value:
+            - cat: '1'
+              key: '1'
+              str: 50
+created: '2023-05-03T20:03:26.83066+00:00'
+modified: '2023-05-03T21:42:00.46328+00:00'
+pattern: false

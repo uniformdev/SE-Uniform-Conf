@@ -1,0 +1,45 @@
+id: contentfulRegistrationForm
+displayName: Contentful Registration Form
+ttl: 30
+path: /entries
+custom:
+  include: 1
+  searchField:
+    id: fields.heading
+    type: Symbol
+  allowContentTypeIds:
+    - registrationForm
+method: GET
+purgeKey: 46afc30a-1104-41fa-a750-d12dd5fa5800
+archetype: singleEntry
+variables:
+  limit:
+    type: text
+    default: '5'
+    displayName: Limit
+  order:
+    type: text
+    default: ''
+    displayName: Order
+  keyword:
+    type: text
+    default: ''
+    displayName: Search Text
+  entryIds:
+    type: text
+    default: ''
+    displayName: Entry Ids
+  contentTypeId:
+    type: text
+    default: registrationForm
+    displayName: Content Type
+parameters:
+  - key: include
+    value: '1'
+  - key: sys.id[in]
+    value: ${entryIds}
+longTermCache:
+  enabled: false
+  ttlInHours: 24
+dataSourceId: uniformConference
+allowedOnComponents: []

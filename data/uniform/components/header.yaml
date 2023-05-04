@@ -1,0 +1,9 @@
+id: header
+name: Header
+icon: border-top
+parameters: []
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-05-03T12:44:28.254235+00:00'
+updated: '2023-05-03T12:44:28.254235+00:00'

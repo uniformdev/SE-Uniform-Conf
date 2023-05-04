@@ -1,0 +1,47 @@
+id: page
+name: Page
+icon: file-document
+parameters:
+  - id: pageTitle
+    name: Page Title
+    type: text
+    helpText: ''
+    typeConfig: null
+useTeamPermissions: true
+slots:
+  - id: header
+    name: Header
+    allowedComponents:
+      - header
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: body
+    name: Body
+    allowedComponents:
+      - hero
+      - whyAttend
+      - talkList
+      - $personalization
+      - registrationForm
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: footer
+    name: Footer
+    allowedComponents:
+      - footer
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+defaults:
+  type: page
+  slots:
+    footer:
+      - type: footer
+    header:
+      - type: header
+titleParameter: pageTitle
+canBeComposition: true
+created: '2023-05-03T12:34:57.774812+00:00'
+updated: '2023-05-03T21:03:59.840415+00:00'

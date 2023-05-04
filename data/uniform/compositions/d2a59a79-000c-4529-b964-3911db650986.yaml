@@ -1,0 +1,45 @@
+composition:
+  _name: Registration Form Contentful
+  _id: d2a59a79-000c-4529-b964-3911db650986
+  type: registrationForm
+  parameters:
+    heading:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Contentful Registration Form Content/fields/heading
+    success:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Contentful Registration Form Content/fields/success
+    buttonText:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Contentful Registration Form Content/fields/buttonText
+    homeLinkText:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Contentful Registration Form Content/fields/homeLinkText
+    registeredText:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Contentful Registration Form Content/fields/registeredText
+  _dataResources:
+    Contentful Registration Form Content:
+      type: contentfulRegistrationForm
+      variables:
+        entryIds: 1ieiO4ikK5Mx1w0i1EGAvB
+        contentTypeId: registrationForm
+      isPatternParameter: true
+created: '2023-05-03T21:10:17.608552+00:00'
+modified: '2023-05-03T21:11:23.549702+00:00'
+pattern: true

@@ -1,0 +1,9 @@
+id: footer
+name: Footer
+icon: border-bottom
+parameters: []
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-05-03T12:44:47.444105+00:00'
+updated: '2023-05-03T12:44:47.444105+00:00'

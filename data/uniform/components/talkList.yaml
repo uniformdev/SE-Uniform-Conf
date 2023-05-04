@@ -1,0 +1,22 @@
+id: talkList
+name: Talk List
+icon: view-cols
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig: null
+useTeamPermissions: true
+slots:
+  - id: talks
+    name: Talks
+    allowedComponents:
+      - talk
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: title
+canBeComposition: false
+created: '2023-05-03T14:52:31.956882+00:00'
+updated: '2023-05-03T21:13:59.175974+00:00'

@@ -1,0 +1,277 @@
+composition:
+  _name: Home
+  _id: d5c3e9a9-22a1-4e32-8fff-9dcce1cb410d
+  _slug: /
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Home
+  slots:
+    body:
+      - _id: 3e6c5065-0141-4f7f-bb39-c77e4c9d6fdf
+        type: $personalization
+        slots:
+          pz:
+            - _id: db1766a3-d5b9-4896-95e3-a990fb93d6f2
+              type: hero
+              _pattern: 5881d8b4-53ba-44f3-b2bc-76780331ed34
+              _dataResources:
+                Contentful Hero Content:
+                  type: contentfulHero
+                  variables:
+                    entryIds: 7hcStxNFKJCaUroZ5GPxQE
+                    contentTypeId: hero
+            - _id: aa37eb9f-05af-40e1-b070-25e3ca3eded2
+              type: hero
+              _pattern: 5881d8b4-53ba-44f3-b2bc-76780331ed34
+              _dataResources:
+                Contentful Hero Content:
+                  type: contentfulHero
+                  variables:
+                    entryIds: 7EQvlYWfqu0s2y92BqEEJV
+                    contentTypeId: hero
+            - _id: 359e01af-d19e-411a-bac5-06c451ade18e
+              type: hero
+              _pattern: 5881d8b4-53ba-44f3-b2bc-76780331ed34
+              _dataResources:
+                Contentful Hero Content:
+                  type: contentfulHero
+                  variables:
+                    entryIds: 7oDALbrtFTBzBPVX1qbvF8
+                    contentTypeId: hero
+            - _id: f7fa363d-13c0-4767-b182-e49d6b4a54c7
+              type: hero
+              _pattern: 5881d8b4-53ba-44f3-b2bc-76780331ed34
+              _dataResources:
+                Contentful Hero Content:
+                  type: contentfulHero
+                  variables:
+                    entryIds: 4CHJuBQLA1jI9ntIFkGHVe
+                    contentTypeId: hero
+        parameters:
+          trackingEventName:
+            type: text
+            value: P13N Hero
+      - _id: 179de16a-435e-4683-a17f-0ab909a309d7
+        type: $personalization
+        slots:
+          pz:
+            - _id: faea9403-4139-4ccb-8be4-38f2655a8e3f
+              type: talkList
+              slots:
+                talks:
+                  - _id: 3333bb6f-78fe-4cda-86f3-7f2be2299f57
+                    type: talk
+                    _pattern: 8707a315-5112-4d99-89c3-b343de256b1e
+                    _dataResources:
+                      Contentful Talk Content:
+                        type: contentfulTalk
+                        variables:
+                          entryIds: 4eiVl7wuASXnHDBavMvyJr
+                          contentTypeId: talk
+                  - _id: a7f6f237-a477-4609-8a8f-f23b63ea136e
+                    type: talk
+                    _pattern: 8707a315-5112-4d99-89c3-b343de256b1e
+                  - _id: 1283473c-cbb5-4ef4-ad1d-192154d33403
+                    type: talk
+                    _pattern: 8707a315-5112-4d99-89c3-b343de256b1e
+                    _dataResources:
+                      Contentful Talk Content:
+                        type: contentfulTalk
+                        variables:
+                          entryIds: 6GGPMm8Hi3W0Jq4W887Ae0
+                          contentTypeId: talk
+              parameters:
+                title:
+                  type: text
+                  value: Our Talks For Developers
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: '1_1'
+                        r: '50'
+                        op: '>='
+                    name: 'Talk List: Our Talks For Developers'
+            - _id: 65813f9e-979f-4b63-8311-a37e69b124fb
+              type: talkList
+              slots:
+                talks:
+                  - _id: 267c550d-d0d7-4cde-b970-c9bbf30b63e3
+                    type: talk
+                    _pattern: 8707a315-5112-4d99-89c3-b343de256b1e
+                    _dataResources:
+                      Contentful Talk Content:
+                        type: contentfulTalk
+                        variables:
+                          entryIds: 6oHJVoV4O7nLJG8bjoVcoZ
+                          contentTypeId: talk
+                  - _id: 68b8ccb2-3ffb-4a61-b7a9-0d9ff20d6440
+                    type: talk
+                    _pattern: 8707a315-5112-4d99-89c3-b343de256b1e
+                    _dataResources:
+                      Contentful Talk Content:
+                        type: contentfulTalk
+                        variables:
+                          entryIds: 7IxWILLYiArU26r2UqtnaI
+                          contentTypeId: talk
+                  - _id: aa88497e-f0aa-46aa-b139-2da5e4fd88b4
+                    type: talk
+                    _pattern: 8707a315-5112-4d99-89c3-b343de256b1e
+                    _dataResources:
+                      Contentful Talk Content:
+                        type: contentfulTalk
+                        variables:
+                          entryIds: pkZcUE4SpYHTO1RtvyBxR
+                          contentTypeId: talk
+              parameters:
+                title:
+                  type: text
+                  value: Our Talks For Marketers
+                $pzCrit:
+                  type: $pzCrit
+                  value:
+                    crit:
+                      - l: '1_2'
+                        r: '50'
+                        op: '>='
+                    name: 'Talk List: Our Talks For Marketers'
+            - _id: 5f742507-04f6-4c81-9912-25532309b1c6
+              type: talkList
+              slots:
+                talks:
+                  - _id: 3febf448-9ebf-4e18-a0a9-5684b66d8f7e
+                    type: talk
+                    _pattern: 8707a315-5112-4d99-89c3-b343de256b1e
+                    _dataResources:
+                      Contentful Talk Content:
+                        type: contentfulTalk
+                        variables:
+                          entryIds: 6PsGmWBFN867pyLaLjrGbc
+                          contentTypeId: talk
+                  - _id: a09e9443-f2a3-49b5-9155-76d86a5e5434
+                    type: talk
+                    _pattern: 8707a315-5112-4d99-89c3-b343de256b1e
+                    _dataResources:
+                      Contentful Talk Content:
+                        type: contentfulTalk
+                        variables:
+                          entryIds: sH4CQoSSMRFBipBQuovNg
+                          contentTypeId: talk
+              parameters:
+                title:
+                  type: text
+                  value: Our Talks For Everyone
+        parameters:
+          trackingEventName:
+            type: text
+            value: P13N Talk List
+      - _id: 2aad7687-1645-42da-9d51-b041d5ed998b
+        type: whyAttend
+        _pattern: f072dfa6-8dc3-43cd-953f-ac35fc367109
+    footer:
+      - _id: 8e442265-2fc0-45d8-97ed-ccd012968e6b
+        type: footer
+    header:
+      - _id: 370bad60-8c73-4531-bd6c-0a2bc5fbd7ca
+        type: header
+  _overrides:
+    2aad7687-1645-42da-9d51-b041d5ed998b:
+      variant: left
+      parameters:
+        title:
+          type: text
+          value: unresolved
+          connectedData:
+            syntax: jptr
+            pointer: /Contentful Why Attend Content/fields/title
+        description:
+          type: text
+          value: unresolved
+          connectedData:
+            syntax: jptr
+            pointer: /Contentful Why Attend Content/fields/description
+    359e01af-d19e-411a-bac5-06c451ade18e:
+      parameters:
+        title:
+          type: text
+          value: unresolved
+          connectedData:
+            syntax: jptr
+            pointer: /Contentful Hero Content/fields/title
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: '1_2'
+                r: '50'
+                op: '>='
+            name: 'Hero: Howdy, marketer! '
+        buttonText:
+          type: text
+          value: null
+        showButton:
+          type: checkbox
+          value: null
+    aa37eb9f-05af-40e1-b070-25e3ca3eded2:
+      parameters:
+        title:
+          type: text
+          value: unresolved
+          connectedData:
+            syntax: jptr
+            pointer: /Contentful Hero Content/fields/title
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: '1_1'
+                r: '50'
+                op: '>='
+            name: 'Hero: Hey, developer! '
+        buttonText:
+          type: text
+          value: null
+        showButton:
+          type: checkbox
+          value: null
+    db1766a3-d5b9-4896-95e3-a990fb93d6f2:
+      parameters:
+        title:
+          type: text
+          value: unresolved
+          connectedData:
+            syntax: jptr
+            pointer: /Contentful Hero Content/fields/title
+        $pzCrit:
+          type: $pzCrit
+          value:
+            crit:
+              - l: registeredCookie
+                r: '0'
+                op: '>'
+            name: 'Hero: Hey, developer! '
+        buttonText:
+          type: text
+          value: null
+        showButton:
+          type: checkbox
+          value: null
+    f7fa363d-13c0-4767-b182-e49d6b4a54c7:
+      parameters:
+        title:
+          type: text
+          value: unresolved
+          connectedData:
+            syntax: jptr
+            pointer: /Contentful Hero Content/fields/title
+        buttonText:
+          type: text
+          value: null
+        showButton:
+          type: checkbox
+          value: null
+created: '2023-05-03T12:41:39.967115+00:00'
+modified: '2023-05-03T21:13:14.557385+00:00'
+pattern: false

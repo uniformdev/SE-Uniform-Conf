@@ -1,0 +1,46 @@
+id: contentfulWhyAttend
+displayName: Contentful Why Attend
+ttl: 30
+path: /entries
+custom:
+  include: 1
+  imagePath: image
+  searchField:
+    id: fields.title
+    type: Symbol
+  allowContentTypeIds:
+    - whyAttend
+method: GET
+purgeKey: 774cd9a7-c907-452b-a0bb-3a3cb0815e30
+archetype: singleEntry
+variables:
+  limit:
+    type: text
+    default: '5'
+    displayName: Limit
+  order:
+    type: text
+    default: ''
+    displayName: Order
+  keyword:
+    type: text
+    default: ''
+    displayName: Search Text
+  entryIds:
+    type: text
+    default: ''
+    displayName: Entry Ids
+  contentTypeId:
+    type: text
+    default: whyAttend
+    displayName: Content Type
+parameters:
+  - key: include
+    value: '1'
+  - key: sys.id[in]
+    value: ${entryIds}
+longTermCache:
+  enabled: false
+  ttlInHours: 24
+dataSourceId: uniformConference
+allowedOnComponents: []

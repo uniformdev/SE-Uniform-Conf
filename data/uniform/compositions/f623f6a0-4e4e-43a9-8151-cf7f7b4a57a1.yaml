@@ -1,0 +1,38 @@
+composition:
+  _name: Marketers
+  _id: f623f6a0-4e4e-43a9-8151-cf7f7b4a57a1
+  _slug: marketers
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Marketers
+  slots:
+    body:
+      - _id: 4bfec579-8dda-438f-8c06-efeaf9d337a4
+        type: hero
+        _pattern: 5881d8b4-53ba-44f3-b2bc-76780331ed34
+        _dataResources:
+          Contentful Hero Content:
+            type: contentfulHero
+            variables:
+              entryIds: 7tgiG1wIzaVVwvoNPHGZX
+              contentTypeId: hero
+    footer:
+      - _id: 6ad0e2e7-f9cd-4938-a95a-f505ef360a75
+        type: footer
+    header:
+      - _id: 0d394b96-7eb6-426b-b732-1e571eae3e09
+        type: header
+  _overrides:
+    4bfec579-8dda-438f-8c06-efeaf9d337a4:
+      parameters:
+        $enr:
+          type: $enr
+          value:
+            - cat: '1'
+              key: '2'
+              str: 50
+created: '2023-05-03T20:05:52.828885+00:00'
+modified: '2023-05-03T21:42:07.651867+00:00'
+pattern: false

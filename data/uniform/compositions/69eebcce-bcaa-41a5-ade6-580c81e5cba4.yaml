@@ -1,0 +1,23 @@
+composition:
+  _name: Register
+  _id: 69eebcce-bcaa-41a5-ade6-580c81e5cba4
+  _slug: register
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Register
+  slots:
+    body:
+      - _id: 694fed55-0947-4fba-b755-1bdb5c125772
+        type: registrationForm
+        _pattern: d2a59a79-000c-4529-b964-3911db650986
+    footer:
+      - _id: d18a8e17-b062-4d57-9598-c314ad9423c3
+        type: footer
+    header:
+      - _id: 62629235-a7a1-4e0d-9afb-6f51572a1639
+        type: header
+created: '2023-05-03T21:08:30.507423+00:00'
+modified: '2023-05-03T21:41:53.253892+00:00'
+pattern: false

@@ -1,0 +1,45 @@
+id: hero
+name: Hero
+icon: format-heading
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: description
+    name: Description
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: false
+      linesCount: '3'
+  - id: image
+    name: Image
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: buttonLink
+    name: Button Link
+    type: link
+    helpText: ''
+    typeConfig:
+      linkTypes:
+        tel: false
+        email: false
+  - id: buttonText
+    name: Button Text
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: showButton
+    name: Show Button
+    type: checkbox
+    helpText: ''
+    typeConfig: null
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2023-05-03T12:39:48.871403+00:00'
+updated: '2023-05-03T21:13:22.713794+00:00'

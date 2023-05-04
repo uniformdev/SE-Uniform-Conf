@@ -1,0 +1,42 @@
+composition:
+  _name: Hero Contentful
+  _id: 5881d8b4-53ba-44f3-b2bc-76780331ed34
+  type: hero
+  parameters:
+    image:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Contentful Hero Content/fields/image/fields/file/url
+    title:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Contentful Hero Content/fields/title
+    description:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Contentful Hero Content/fields/description
+  _dataResources:
+    Contentful Hero Content:
+      type: contentfulHero
+      variables:
+        entryIds: 4CHJuBQLA1jI9ntIFkGHVe
+        contentTypeId: hero
+      isPatternParameter: true
+      ignorePatternParameterDefault: false
+  _overridability:
+    parameters:
+      image: 'yes'
+      title: 'yes'
+      buttonLink: 'yes'
+      buttonText: 'yes'
+      showButton: 'yes'
+      description: 'yes'
+created: '2023-05-03T12:40:04.822474+00:00'
+modified: '2023-05-03T14:25:19.464324+00:00'
+pattern: true

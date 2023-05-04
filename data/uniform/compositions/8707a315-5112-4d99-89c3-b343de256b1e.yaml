@@ -1,0 +1,38 @@
+composition:
+  _name: Talk Contentful
+  _id: 8707a315-5112-4d99-89c3-b343de256b1e
+  type: talk
+  parameters:
+    intro:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Contentful Talk Content/fields/intro
+    title:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Contentful Talk Content/fields/title
+    audience:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Contentful Talk Content/fields/audience/0
+  _dataResources:
+    Contentful Talk Content:
+      type: contentfulTalk
+      variables:
+        entryIds: 3L6ZXx4bSPcfcL5hs9AnnJ
+        contentTypeId: talk
+      isPatternParameter: true
+  _overridability:
+    parameters:
+      intro: 'yes'
+      title: 'yes'
+      audience: 'yes'
+created: '2023-05-03T15:07:02.966376+00:00'
+modified: '2023-05-03T15:07:44.751027+00:00'
+pattern: true

@@ -1,0 +1,46 @@
+id: contentfulHero
+displayName: Contentful Hero
+ttl: 30
+path: /entries
+custom:
+  include: 1
+  imagePath: image
+  searchField:
+    id: fields.title
+    type: Symbol
+  allowContentTypeIds:
+    - hero
+method: GET
+purgeKey: 5f6e9ea4-d505-4f17-8d19-4841b241a8ad
+archetype: singleEntry
+variables:
+  limit:
+    type: text
+    default: '5'
+    displayName: Limit
+  order:
+    type: text
+    default: ''
+    displayName: Order
+  keyword:
+    type: text
+    default: ''
+    displayName: Search Text
+  entryIds:
+    type: text
+    default: ''
+    displayName: Entry Ids
+  contentTypeId:
+    type: text
+    default: hero
+    displayName: Content Type
+parameters:
+  - key: include
+    value: '1'
+  - key: sys.id[in]
+    value: ${entryIds}
+longTermCache:
+  enabled: false
+  ttlInHours: 24
+dataSourceId: uniformConference
+allowedOnComponents: []

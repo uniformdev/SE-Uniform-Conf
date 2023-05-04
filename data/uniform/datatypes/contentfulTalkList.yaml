@@ -1,0 +1,45 @@
+id: contentfulTalkList
+displayName: Contentful Talk List
+ttl: 30
+path: /entries
+custom:
+  include: 1
+  searchField:
+    id: fields.title
+    type: Symbol
+  allowContentTypeIds:
+    - talkList
+method: GET
+purgeKey: 1485e90b-83e9-4ed4-9710-d1af8c802e05
+archetype: singleEntry
+variables:
+  limit:
+    type: text
+    default: '5'
+    displayName: Limit
+  order:
+    type: text
+    default: ''
+    displayName: Order
+  keyword:
+    type: text
+    default: ''
+    displayName: Search Text
+  entryIds:
+    type: text
+    default: ''
+    displayName: Entry Ids
+  contentTypeId:
+    type: text
+    default: talkList
+    displayName: Content Type
+parameters:
+  - key: include
+    value: '1'
+  - key: sys.id[in]
+    value: ${entryIds}
+longTermCache:
+  enabled: false
+  ttlInHours: 24
+dataSourceId: uniformConference
+allowedOnComponents: []

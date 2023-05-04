@@ -1,0 +1,45 @@
+id: contentfulTalk
+displayName: Contentful Talk
+ttl: 30
+path: /entries
+custom:
+  include: 1
+  searchField:
+    id: fields.title
+    type: Symbol
+  allowContentTypeIds:
+    - talk
+method: GET
+purgeKey: 6af6b765-d647-4172-a71f-6acab86bfd49
+archetype: singleEntry
+variables:
+  limit:
+    type: text
+    default: '5'
+    displayName: Limit
+  order:
+    type: text
+    default: ''
+    displayName: Order
+  keyword:
+    type: text
+    default: ''
+    displayName: Search Text
+  entryIds:
+    type: text
+    default: ''
+    displayName: Entry Ids
+  contentTypeId:
+    type: text
+    default: talk
+    displayName: Content Type
+parameters:
+  - key: include
+    value: '1'
+  - key: sys.id[in]
+    value: ${entryIds}
+longTermCache:
+  enabled: false
+  ttlInHours: 24
+dataSourceId: uniformConference
+allowedOnComponents: []

@@ -1,0 +1,34 @@
+{
+  "project": {
+    "pz": {
+      "enr": {
+        "1": {
+          "cap": 100
+        }
+      },
+      "sig": {
+        "registeredCookie": {
+          "str": 50,
+          "cap": 100,
+          "dur": "t",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "type": "CK",
+                "match": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "true"
+                },
+                "cookieName": "unfrmconf_registered"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "test": {}
+  }
+}

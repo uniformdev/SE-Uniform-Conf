@@ -1,0 +1,29 @@
+composition:
+  _name: '404'
+  _id: 4c672407-c37d-411c-8d93-cfe7628e2e0b
+  _slug: '404'
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: '404'
+  slots:
+    body:
+      - _id: 5d3a3c57-1f16-4f82-a5bc-678fce802eb1
+        type: hero
+        _pattern: 5881d8b4-53ba-44f3-b2bc-76780331ed34
+        _dataResources:
+          Contentful Hero Content:
+            type: contentfulHero
+            variables:
+              entryIds: 2BhPtYn1zoN1Il9wXsghR1
+              contentTypeId: hero
+    footer:
+      - _id: 96b378ce-7ecd-4792-ba61-c661240c0622
+        type: footer
+    header:
+      - _id: d9c48299-895c-4e39-a8f4-66b7a3c1f4a7
+        type: header
+created: '2023-05-03T20:51:06.59659+00:00'
+modified: '2023-05-03T21:41:40.074391+00:00'
+pattern: false
