@@ -40,17 +40,26 @@ export function Hero(props: HeroProps): JSX.Element {
 			<div className="pt-24">
 				<div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
 					<div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left min-h-500">
-						<h1 className="my-4 text-5xl font-bold leading-tight">
-							<UniformText parameterId="title" />
-						</h1>
-						<p className="leading-normal text-2xl mb-8">
-							<UniformText parameterId="description" />
-						</p>
+						<UniformText
+							as="h1"
+							className="my-4 text-5xl font-bold leading-tight"
+							parameterId="title"
+							placeholder="This is the title of the hero"
+						/>
+						<UniformText
+							as="p"
+							className="leading-normal text-2xl mb-8"
+							parameterId="description"
+							placeholder="This is the description of the hero"
+						/>
 						{props.showButton && props?.buttonText && props?.buttonLink ? (
 							<Link prefetch={false} href={props.buttonLink || "#"}>
-								<button className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">
-									<UniformText parameterId="buttonText" />
-								</button>
+								<UniformText
+									as="button"
+									className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg"
+									parameterId="buttonText"
+									placeholder="The button text"
+								/>
 							</Link>
 						) : null}
 					</div>

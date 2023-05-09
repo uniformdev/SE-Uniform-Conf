@@ -69,7 +69,10 @@ export function WhyAttend(props: WhyAttendProps): JSX.Element {
 		<section className="bg-white border-b py-8">
 			<div
 				className="container mx-auto flex flex-wrap pt-4 pb-12"
-				style={{ flexDirection: props.imagePosition === ImagePosition.Left ? "row" : "row-reverse" }}
+				style={{
+					flexDirection:
+						props.imagePosition === ImagePosition.Left ? "row" : "row-reverse",
+				}}
 			>
 				{props.image ? (
 					<div className="w-1/2">
@@ -85,13 +88,19 @@ export function WhyAttend(props: WhyAttendProps): JSX.Element {
 				) : null}
 				<div className="w-1/2">
 					<div className="p-10">
-						<h2 className="w-full my-2 text-4xl font-bold leading-tight text-center text-gray-800">
-							<UniformText parameterId="title" />
-						</h2>
+						<UniformText
+							as="h2"
+							className="w-full my-2 text-4xl font-bold leading-tight text-center text-gray-800"
+							parameterId="title"
+							placeholder="This is the title text"
+						/>
 						<hr />
-						<p className="text-gray-800 p-10 whitespace-pre-line">
-							<UniformText parameterId="description" />
-						</p>
+						<UniformText
+							as="p"
+							className="text-gray-800 p-10 whitespace-pre-line"
+							parameterId="description"
+							placeholder="This is the description text"
+						/>
 					</div>
 				</div>
 			</div>

@@ -69,34 +69,46 @@ export function RegistrationForm(props: RegistrationFormProps): JSX.Element {
 					<div className="flex flex-col w-full md:w-2/5 justify-center items-start text-center md:text-left">
 						<p className="uppercase tracking-loose w-full">Uniform conf</p>
 						{registered ? (
-							<h1 className="my-4 text-5xl font-bold leading-tight">
-								<UniformText parameterId="success" />
-							</h1>
+							<UniformText
+								as="h1"
+								className="my-4 text-5xl font-bold leading-tight"
+								parameterId="success"
+								placeholder="This is the title text shown upon being registered."
+							/>
 						) : (
-							<h1 className="my-4 text-5xl font-bold leading-tight">
-								<UniformText parameterId="heading" />
-							</h1>
+							<UniformText
+								as="h1"
+								className="my-4 text-5xl font-bold leading-tight"
+								parameterId="heading"
+								placeholder="This is the heading text."
+							/>
 						)}
 						<form>
 							{registered ? (
 								<>
-									<p className="pb-16">
-										<UniformText parameterId="registeredText" />
-									</p>
+									<UniformText
+										as="p"
+										className="pb-16"
+										parameterId="registeredText"
+										placeholder="This is the text shown upon being registered."
+									/>
 									<Link legacyBehavior href="/">
-										<a className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg">
-											<UniformText parameterId="homeLinkText" />
-										</a>
+										<UniformText
+											as="a"
+											className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg"
+											parameterId="homeLinkText"
+											placeholder="The home link text"
+										/>
 									</Link>
 								</>
 							) : (
-								<button
-									type="button"
+								<UniformText
+									as="button"
 									onClick={onRegister}
 									className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg"
-								>
-									<UniformText parameterId="buttonText" />
-								</button>
+									parameterId="buttonText"
+									placeholder="The button text"
+								/>
 							)}
 						</form>
 					</div>
