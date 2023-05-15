@@ -157,7 +157,7 @@ export function Header(): JSX.Element {
 				</div>
 				<div
 					id="nav-content"
-					className={`w-full flex-grow lg:flex lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 lg:bg-transparent text-black p-4 lg:p-0 z-20 ${
+					className={`w-full flex-grow lg:items-center lg:w-auto lg:block mt-2 lg:mt-0 lg:bg-transparent text-black p-4 lg:p-0 z-20 ${
 						submenuVisible ? "bg-gray-100" : "hidden bg-white"
 					}  ${isScrolled ? "bg-white" : "bg-gray-100"}`}
 				>
