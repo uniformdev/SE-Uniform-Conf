@@ -3,6 +3,10 @@ composition:
   _id: 3686af50-99f9-473d-8a88-76bd436439f3
   _slug: talks
   type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Talks
   slots:
     body:
       - _id: 591c1588-cf54-45b6-aabf-3a77fb12a08a
@@ -77,5 +81,5 @@ composition:
         sortFieldId: ''
         contentTypeId: talk
 created: '2023-05-23T13:04:57.18253+00:00'
-modified: '2023-05-25T20:35:15.202951+00:00'
+modified: '2023-05-25T21:09:55.075938+00:00'
 pattern: false

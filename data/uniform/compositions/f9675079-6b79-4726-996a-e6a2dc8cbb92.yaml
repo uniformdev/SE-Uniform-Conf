@@ -3,11 +3,21 @@ composition:
   _id: f9675079-6b79-4726-996a-e6a2dc8cbb92
   _slug: personalization-and-jamstack
   type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Personalization and Jamstack
   slots:
     body:
       - _id: 13499bef-6dcd-48bf-bc4a-3b3a0f39c064
         type: talkBlock
         parameters:
+          body:
+            type: text
+            value: unresolved
+            connectedData:
+              syntax: jptr
+              pointer: /Contentful Talk Content/fields/body
           intro:
             type: text
             value: unresolved
@@ -50,5 +60,5 @@ composition:
         entryIds: 7IxWILLYiArU26r2UqtnaI
         contentTypeId: talk
 created: '2023-05-25T11:24:50.43188+00:00'
-modified: '2023-05-25T11:34:28.551707+00:00'
+modified: '2023-05-25T21:10:54.341448+00:00'
 pattern: false

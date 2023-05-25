@@ -293,7 +293,7 @@
         "id": "talk",
         "type": "ContentType",
         "createdAt": "2023-03-06T22:30:26.692Z",
-        "updatedAt": "2023-05-03T15:09:02.905Z",
+        "updatedAt": "2023-05-25T20:53:28.604Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -301,8 +301,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 3,
-        "publishedAt": "2023-05-03T15:09:02.905Z",
+        "publishedVersion": 7,
+        "publishedAt": "2023-05-25T20:53:28.604Z",
         "firstPublishedAt": "2023-03-06T22:30:28.941Z",
         "createdBy": {
           "sys": {
@@ -318,8 +318,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 2,
-        "version": 4,
+        "publishedCounter": 4,
+        "version": 8,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -389,6 +389,17 @@
           "type": "Symbol",
           "localized": false,
           "required": true,
+          "validations": [
+          ],
+          "disabled": false,
+          "omitted": false
+        },
+        {
+          "id": "body",
+          "name": "Body",
+          "type": "Text",
+          "localized": false,
+          "required": false,
           "validations": [
           ],
           "disabled": false,
@@ -760,7 +771,7 @@
             "linkType": "Space"
           }
         },
-        "version": 4,
+        "version": 8,
         "createdAt": "2023-03-06T22:30:29.075Z",
         "createdBy": {
           "sys": {
@@ -769,7 +780,7 @@
             "linkType": "User"
           }
         },
-        "updatedAt": "2023-05-03T15:09:03.467Z",
+        "updatedAt": "2023-05-25T20:53:29.122Z",
         "updatedBy": {
           "sys": {
             "id": "3CYK5AqtUQsHiTCblzpoYQ",
@@ -811,6 +822,11 @@
         {
           "fieldId": "slug",
           "widgetId": "singleLine",
+          "widgetNamespace": "builtin"
+        },
+        {
+          "fieldId": "body",
+          "widgetId": "markdown",
           "widgetNamespace": "builtin"
         }
       ]
@@ -1286,7 +1302,7 @@
         "id": "4eiVl7wuASXnHDBavMvyJr",
         "type": "Entry",
         "createdAt": "2023-03-06T22:30:55.505Z",
-        "updatedAt": "2023-03-06T22:30:59.555Z",
+        "updatedAt": "2023-05-25T21:09:22.835Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1294,8 +1310,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-03-06T22:30:59.555Z",
+        "publishedVersion": 4,
+        "publishedAt": "2023-05-25T21:09:22.835Z",
         "firstPublishedAt": "2023-03-06T22:30:59.555Z",
         "createdBy": {
           "sys": {
@@ -1311,8 +1327,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 5,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1341,11 +1357,14 @@
           ]
         },
         "intro": {
-          "en-US": "Learn what Jamstack is in this introductory course for both developers and marketers.",
+          "en-US": "Learn what Jamstack is in this introductory course for developers.",
           "nl-NL": "Leer wat Jamstack is in deze introductiesessie voor zowel ontwikkelaars als marketeers."
         },
         "slug": {
           "en-US": "jamstack-101"
+        },
+        "body": {
+          "en-US": "Are you ready to revolutionize your web development workflow? Welcome to \"Jamstack 101,\" an immersive introductory course that will take you on a journey into the world of modern web development with Jamstack.\n\nIn this course, we will demystify the Jamstack architecture, its core principles, and how it has transformed the way websites and web applications are built, deployed, and scaled. Whether you are a seasoned developer or just starting your coding journey, this course will provide you with a solid foundation in Jamstack concepts and techniques.\n\nOur adventure begins with an exploration of the Jamstack philosophy. We will dive into the three foundational elements of Jamstack: JavaScript, APIs, and Markup. You will understand how these components work together to create fast, secure, and scalable websites.\n\nNext, we'll take a closer look at the decoupled nature of Jamstack development. We'll discuss the separation of concerns, how content management systems (CMS) fit into the Jamstack ecosystem, and the benefits of pre-rendering and static site generation. You'll gain insights into the Jamstack's impact on performance, SEO, and developer experience.\n\nAs we progress, we'll delve into the tools and technologies that power Jamstack development. We'll explore popular static site generators like Gatsby, Next.js, and Hugo, and discover how they simplify the process of building static websites. We'll also cover headless CMS platforms and their role in managing content for Jamstack applications.\n\nBut that's not all! We'll also introduce you to the concept of serverless functions and APIs. You'll learn how to leverage services like AWS Lambda, Netlify Functions, or Firebase Cloud Functions to add dynamic functionality to your static sites.\n\nTo ensure you have a hands-on learning experience, we'll guide you through practical exercises and demos. You'll build your own Jamstack projects, implement dynamic features, and deploy them to a global content delivery network (CDN) for optimal performance.\n\nBy the end of this course, you will have a solid understanding of Jamstack principles, tools, and best practices. You'll be equipped to embark on your own Jamstack projects and take advantage of the scalability, security, and developer experience benefits it offers.\n\nGet ready to unlock the power of Jamstack and elevate your web development skills to new heights. Enroll in \"Jamstack 101\" today and embrace the future of modern web development!\n"
         }
       }
     },
@@ -1452,7 +1471,7 @@
         "id": "3IwIot1CNI1uT9MBRqIuvX",
         "type": "Entry",
         "createdAt": "2023-03-06T22:30:56.441Z",
-        "updatedAt": "2023-03-06T22:31:01.638Z",
+        "updatedAt": "2023-05-25T21:08:14.745Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1460,8 +1479,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-03-06T22:31:01.638Z",
+        "publishedVersion": 5,
+        "publishedAt": "2023-05-25T21:08:14.745Z",
         "firstPublishedAt": "2023-03-06T22:31:01.638Z",
         "createdBy": {
           "sys": {
@@ -1477,8 +1496,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 3,
+        "version": 6,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1503,7 +1522,7 @@
         },
         "audience": {
           "en-US": [
-            "Marketers"
+            "Developers"
           ]
         },
         "intro": {
@@ -1512,6 +1531,9 @@
         },
         "slug": {
           "en-US": "scripts-and-performance"
+        },
+        "body": {
+          "en-US": "Web performance is a critical factor for any successful online operation. Fast-loading websites improve user experience, increase conversion rates, and enhance SEO. However, it's a well-known fact that JavaScript can significantly affect a website's performance, and this issue becomes even more pronounced when it comes to third-party scripts.\n\nThird-party scripts can bring many benefits to your site, such as enabling social sharing, displaying ads, or providing analytics. However, they also add an additional load to your site and can dramatically impact its performance. The volume of JavaScript from these scripts can sometimes even surpass the JavaScript required to render your site.\n\nIn this talk, we will explore the impact of third-party scripts on performance, the challenges they present, and potential solutions to minimize their adverse effects.\n\nWe will start with an overview of how third-party scripts can impact performance. We will look at common categories of third-party scripts, their typical sizes, and how they affect key performance metrics such as Time to Interactive (TTI) and Page Load Time.\n\nNext, we will delve into specific examples, demonstrating the impact of popular third-party scripts on real-world websites. Using these examples, we will show how even seemingly innocuous scripts can significantly degrade performance.\n\nFollowing that, we will discuss strategies for managing third-party scripts effectively. We will look at techniques such as script auditing, asynchronous loading, and the use of Content Security Policies (CSPs). \n\nAfter that, we will highlight tools and resources available to help you assess and control the impact of third-party scripts. These include browser developer tools, performance auditing tools, and online resources.\n\nLastly, we will present a step-by-step action plan to help you minimize the impact of third-party scripts on your site's performance. From identifying problem scripts to implementing changes and monitoring their effects, this actionable guide will equip you with the knowledge and skills to improve your site's performance despite the presence of third-party scripts.\n\nBy the end of this session, you'll have a comprehensive understanding of the challenges posed by third-party scripts, as well as practical strategies and techniques for overcoming them.\n"
         }
       }
     },
@@ -1531,7 +1553,7 @@
         "id": "6GGPMm8Hi3W0Jq4W887Ae0",
         "type": "Entry",
         "createdAt": "2023-03-06T22:30:56.453Z",
-        "updatedAt": "2023-03-06T22:31:01.252Z",
+        "updatedAt": "2023-05-25T21:08:35.803Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1539,8 +1561,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-03-06T22:31:01.252Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-05-25T21:08:35.803Z",
         "firstPublishedAt": "2023-03-06T22:31:01.252Z",
         "createdBy": {
           "sys": {
@@ -1556,8 +1578,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1591,6 +1613,9 @@
         },
         "slug": {
           "en-US": "edge-side-computing"
+        },
+        "body": {
+          "en-US": "In the era of the internet, speed and efficiency are king. As businesses and developers continue to seek out methods to improve web performance, a new computing model has arisen on the horizon: Edge-Side Computing (ESC). This new paradigm involves executing logic closer to the user by taking advantage of the servers located on the edge of the internet, hence the term 'edge-side'. \n\nIn this session, we will introduce the basics of edge-side computing, explaining how it can dramatically improve performance, enhance security, and promote scalability in your applications.\n\nOur discussion will kick off with an overview of edge-side computing. We will examine how ESC stands in contrast to traditional cloud computing models, highlighting the advantages and use cases best suited to this innovative approach. \n\nNext, we will delve into the architecture of an edge-side computing system. You will learn about the roles of edge servers, how they interact with the central cloud, and the flow of data and computation in an ESC setup.\n\nFollowing this, we will delve into the practical benefits of edge-side computing. We'll discuss the improvements you can expect in latency, bandwidth usage, and resilience against network failures. Furthermore, we'll explore how ESC supports data privacy and compliance by keeping data closer to its origin.\n\nIn the latter half of our session, we'll walk you through the process of integrating edge-side logic into your application. You'll learn about serverless functions, the concept of edge computing that allows you to run code on the edge without managing any servers.\n\nFinally, we will explore some of the popular tools and platforms that can help you get started with edge-side computing, including Cloudflare Workers, Fastly Compute@Edge, and Akamai EdgeWorkers.\n\nBy the end of this talk, you'll have a fundamental understanding of edge-side computing and its benefits. You'll also be equipped with practical knowledge on how to start implementing edge-side logic into your applications, setting the stage for unparalleled performance and efficiency.\n\nThis field is still relatively new, and there is plenty to explore. This session will provide a robust foundation from which you can continue to explore and experiment with edge-side computing. So join us as we step into the future of web development!\n"
         }
       }
     },
@@ -1697,7 +1722,7 @@
         "id": "3qTWWoreFUvRPHndh3YcqY",
         "type": "Entry",
         "createdAt": "2023-03-06T22:30:56.467Z",
-        "updatedAt": "2023-03-06T22:31:02.444Z",
+        "updatedAt": "2023-05-25T21:06:06.752Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1705,8 +1730,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-03-06T22:31:02.444Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-05-25T21:06:06.752Z",
         "firstPublishedAt": "2023-03-06T22:31:02.444Z",
         "createdBy": {
           "sys": {
@@ -1722,8 +1747,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1757,6 +1782,9 @@
         },
         "slug": {
           "en-US": "jamstack-enterprise-architects"
+        },
+        "body": {
+          "en-US": "The way we build and deploy web applications has changed significantly over the past few years. The Jamstack architecture – a modern web development architecture based on client-side JavaScript, reusable APIs, and prebuilt Markup – is at the forefront of this revolution. By decoupling the front end from the back end, the Jamstack allows developers to deliver faster, more secure, and more scalable websites and applications. \n\nHowever, adopting a new architecture can be a challenge, especially in an enterprise context where the stakes are high and the potential for disruption is significant. This session aims to guide enterprise architects through the process of adopting the Jamstack, highlighting the benefits it can bring and addressing the challenges it may pose. \n\nFirstly, we will provide an overview of the Jamstack architecture, explaining its key principles and the benefits it can offer. We'll discuss how the Jamstack can increase developer productivity, improve performance, enhance security, and reduce costs. We'll also highlight some of the enterprises that have already embraced the Jamstack and the successes they've achieved.\n\nNext, we'll discuss some of the considerations that enterprise architects need to keep in mind when adopting the Jamstack. These include choosing the right static site generator, integrating with existing CMS and other backend systems, managing the CDN layer, and ensuring the transition does not disrupt existing workflows.\n\nFollowing this, we'll dive into a case study, showing how a major enterprise successfully adopted the Jamstack, the steps they took, the challenges they faced, and the benefits they realized. We believe that seeing the Jamstack in action, in a real-world context, will provide a valuable perspective.\n\nFinally, we'll provide a roadmap for adopting the Jamstack in an enterprise setting, giving you a step-by-step guide that you can follow to ensure a smooth and successful transition.\n\nBy the end of this session, you'll have a solid understanding of what the Jamstack is, the benefits it can bring to an enterprise, and the steps required to implement it. More importantly, you'll have the confidence to make informed decisions about whether and how to adopt the Jamstack in your own organization.\n"
         }
       }
     },
@@ -1856,7 +1884,7 @@
         "id": "4vxlCGkZuxFQYComTccjrU",
         "type": "Entry",
         "createdAt": "2023-03-06T22:30:56.483Z",
-        "updatedAt": "2023-03-06T22:31:03.268Z",
+        "updatedAt": "2023-05-25T21:04:49.704Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1864,8 +1892,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-03-06T22:31:03.268Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-05-25T21:04:49.704Z",
         "firstPublishedAt": "2023-03-06T22:31:03.268Z",
         "createdBy": {
           "sys": {
@@ -1881,8 +1909,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1916,6 +1944,9 @@
         },
         "slug": {
           "en-US": "personalization-for-developers"
+        },
+        "body": {
+          "en-US": "The web is no longer a one-size-fits-all platform. Today's users expect personalized experiences that adapt to their needs and preferences. As developers, it's our job to make these tailored experiences possible. But how can we incorporate personalization into our websites without sacrificing the speed, security, and developer experience advantages of the Jamstack architecture? That's what this session is all about.\n\nWe'll begin by defining what we mean by personalization. From content and product recommendations to tailored user interfaces, personalization can take many forms, and understanding the possibilities is the first step towards implementing effective personalization strategies.\n\nNext, we'll discuss why personalization is crucial in today's web landscape. We'll look at the benefits personalization can bring, from increased user engagement and conversion rates to improved user satisfaction, and discuss why developers can't afford to ignore it.\n\nOnce we've established the why, we'll dive into the how. We'll explore the challenges of implementing personalization on static, pre-rendered sites and discuss how serverless functions, edge computing, and modern APIs can help overcome these challenges.\n\nWe'll then delve into specific techniques for implementing personalization on Jamstack sites. You'll learn about tools and services that can help you add personalization features to your sites without having to build everything from scratch. We'll also discuss best practices for maintaining performance and privacy when dealing with personalized content.\n\nFinally, we'll walk you through a live coding session where we'll add personalization features to a Jamstack site. You'll see first-hand how the concepts we've discussed translate into code. By the end of the session, you'll have a solid foundation for implementing personalization on your own projects.\n\nJoin us for this deep dive into personalization for developers and learn how to take your Jamstack sites to the next level.\n"
         }
       }
     },
@@ -1935,7 +1966,7 @@
         "id": "6oHJVoV4O7nLJG8bjoVcoZ",
         "type": "Entry",
         "createdAt": "2023-03-06T22:30:56.532Z",
-        "updatedAt": "2023-03-06T22:31:03.680Z",
+        "updatedAt": "2023-05-25T21:03:52.202Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -1943,8 +1974,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-03-06T22:31:03.680Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-05-25T21:03:52.202Z",
         "firstPublishedAt": "2023-03-06T22:31:03.680Z",
         "createdBy": {
           "sys": {
@@ -1960,8 +1991,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -1995,6 +2026,9 @@
         },
         "slug": {
           "en-US": "friends-with-webdev-team"
+        },
+        "body": {
+          "en-US": "Have you ever felt like there's a language barrier separating you from your organization's web development team? Do the phrases \"Pull Request,\" \"JavaScript fatigue,\" and \"CSS Hell\" sound like foreign languages to you? Fear not! In this interactive session, we aim to bridge the gap between non-technical team members and developers through the universal language of humor - specifically, web dev memes!\n\nWe'll start by demystifying the world of web development. You'll gain a basic understanding of what developers do all day and why it sometimes takes longer than expected to change the color of a button. This foundational knowledge will set the stage for you to better communicate with your dev team.\n\nNext, we'll dive into the heart of meme culture in the web development world. What is a \"10x developer?\" Why are semicolons such a big deal? And what on earth does it mean to \"turn it off and on again?\" We'll explain the inside jokes behind popular web dev memes and how they can be used to lighten the mood, foster team cohesion, and facilitate better communication.\n\nThe highlight of the session will be a crash course in creating your own web dev memes. We'll show you how to use popular meme formats to joke about shared experiences, frustrations, and victories in the world of web development. Not a designer? Don't worry - we'll introduce you to easy-to-use tools that can turn anyone into a meme artist.\n\nRemember, the goal isn't to become a web development expert - it's to find common ground that can help bridge communication gaps. By understanding and participating in the culture, you can foster a more inclusive, enjoyable work environment for everyone.\n\nJoin us for this interactive session and unlock the power of memes to become unbelievably cool in the eyes of your web development team. Who knows? You might even get a few laughs along the way.\n"
         }
       }
     },
@@ -2161,7 +2195,7 @@
         "id": "3L6ZXx4bSPcfcL5hs9AnnJ",
         "type": "Entry",
         "createdAt": "2023-03-06T22:30:57.461Z",
-        "updatedAt": "2023-03-06T22:31:05.826Z",
+        "updatedAt": "2023-05-25T21:00:44.861Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2169,8 +2203,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-03-06T22:31:05.826Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-05-25T21:00:44.861Z",
         "firstPublishedAt": "2023-03-06T22:31:05.826Z",
         "createdBy": {
           "sys": {
@@ -2186,8 +2220,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2221,6 +2255,9 @@
         },
         "slug": {
           "en-US": "next-nextjs"
+        },
+        "body": {
+          "en-US": "If you're a developer eager to learn about the latest advancements in Next.js, then this is the session for you. We'll be delving deep into the newest features of this popular React framework, showcasing the powerful tools it brings to your web development toolbox.\n\nAs the developers behind Next.js continue to push the boundaries of what's possible with server-side rendering and static generation, they've also kept a keen focus on developer experience. With each new release, Next.js becomes more robust, more powerful, and easier to use.\n\nWe'll start the session by exploring the new features introduced in the latest release. From there, we'll provide a comprehensive overview of how these enhancements can benefit your projects, whether you're building a personal portfolio or an enterprise-level web application.\n\nBut we're not stopping at just showcasing these new features. We'll also guide you through real-life coding examples, demonstrating how these advancements in Next.js can be leveraged in your own projects. You'll witness firsthand the power and flexibility of Next.js, making your development process smoother and more efficient.\n\nFollowing this, we'll have a discussion on the future of Next.js. What can we expect from the next iterations of the framework? What areas are the Next.js team focusing on? This is your chance to get insights directly from industry insiders.\n\nFinally, we'll open the floor for an interactive Q&A session. Whether you have specific queries about your projects or broader questions about Next.js, our expert panel is here to provide answers.\n\nThis talk is exclusively designed with developers in mind. Whether you're a seasoned Next.js developer or just starting out with the framework, you'll leave with a wealth of knowledge that can instantly be applied to your projects.\n\nJoin us as we unpack the latest and greatest in Next.js, and equip yourself with the skills and understanding to take your web development journey to the next level.\n"
         }
       }
     },
@@ -2240,7 +2277,7 @@
         "id": "7IxWILLYiArU26r2UqtnaI",
         "type": "Entry",
         "createdAt": "2023-03-06T22:30:57.466Z",
-        "updatedAt": "2023-03-06T22:31:05.475Z",
+        "updatedAt": "2023-05-25T21:01:25.469Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2248,8 +2285,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-03-06T22:31:05.475Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-05-25T21:01:25.469Z",
         "firstPublishedAt": "2023-03-06T22:31:05.475Z",
         "createdBy": {
           "sys": {
@@ -2265,8 +2302,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2300,6 +2337,9 @@
         },
         "slug": {
           "en-US": "personalization-and-jamstack"
+        },
+        "body": {
+          "en-US": "In this age of digital marketing, personalization has become the name of the game. Yet, with the rise of the Jamstack architecture, many marketers are left grappling with how to implement effective personalization strategies. In this session, we aim to demystify this complex subject, providing marketers with a practical guide to successfully leveraging personalization in a Jamstack environment.\n\nFirst, we will introduce the concept of Jamstack for those unfamiliar with it. A modern web development architecture based on client-side JavaScript, reusable APIs, and prebuilt Markup, Jamstack offers numerous benefits, including performance, security, and scalability. Yet, when it comes to personalization, some marketers may feel somewhat adrift.\n\nWe will delve into the challenges of implementing personalization within a Jamstack architecture. How do you deliver personalized experiences when content is prebuilt and served statically? This question, among others, will be addressed, providing a clear understanding of the obstacles marketers may face in this context.\n\nBut it's not all about challenges. We will also explore the solutions that exist to help marketers run effective personalization on Jamstack sites. From third-party APIs to serverless functions, the world of Jamstack is rich with tools that can be used to deliver personalized content and features.\n\nWe will then move onto practical examples, demonstrating how these solutions can be applied in real-world situations. Attendees will get an in-depth look at how personalized marketing campaigns can be launched and managed within a Jamstack site, providing them with actionable insights they can take away and implement in their own strategies.\n\nTo wrap up, we will open up the floor for a Q&A session, where attendees will have the opportunity to ask specific questions about their own personalization challenges. Our panel of experts will be on hand to provide tailored advice and guidance.\n\nThis session is aimed at marketers of all levels, offering valuable insights that can be used to enhance personalization strategies in a Jamstack setting. Join us and empower yourself with the knowledge to tackle personalization on a Jamstack site head-on.\n"
         }
       }
     },
@@ -2386,7 +2426,7 @@
         "id": "pkZcUE4SpYHTO1RtvyBxR",
         "type": "Entry",
         "createdAt": "2023-03-06T22:30:57.469Z",
-        "updatedAt": "2023-03-06T22:31:05.105Z",
+        "updatedAt": "2023-05-25T21:02:37.300Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2394,8 +2434,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 1,
-        "publishedAt": "2023-03-06T22:31:05.105Z",
+        "publishedVersion": 3,
+        "publishedAt": "2023-05-25T21:02:37.300Z",
         "firstPublishedAt": "2023-03-06T22:31:05.105Z",
         "createdBy": {
           "sys": {
@@ -2411,8 +2451,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 1,
-        "version": 2,
+        "publishedCounter": 2,
+        "version": 4,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2446,6 +2486,9 @@
         },
         "slug": {
           "en-US": "marketers-web-performance"
+        },
+        "body": {
+          "en-US": "In today's online marketplace, performance isn't just a technical consideration – it's a critical marketing component. Superior web performance can dramatically improve user experience, increase engagement rates, and boost SEO rankings. In this talk, we will unravel the intricacies of web performance and offer actionable strategies for marketers to make it a priority in their organizations.\n\nTo begin, we'll provide a breakdown of web performance and why it matters. From site speed to load times, we'll explore the key elements of web performance and their impact on user experience and SEO. It's essential for marketers to understand these facets, as they play a pivotal role in enhancing online visibility and attracting potential customers.\n\nWe'll then delve into the correlation between web performance and SEO. Search engines have made it clear: website speed matters. The faster your site loads, the higher your chances of achieving a better search engine ranking. But how exactly does this work? We'll provide insights into the algorithms search engines use to determine rankings, helping marketers understand how improving web performance can bolster SEO efforts.\n\nNext, we'll tackle the challenge of making web performance a priority within your organization. All too often, performance is an afterthought - something considered only after a site has been designed and built. We'll share effective strategies for positioning performance as a key feature from the outset, aligning both marketing and technical teams on this crucial objective.\n\nWe'll also discuss practical steps for improving web performance. This will include tactics for optimizing images, reducing HTTP requests, leveraging caching, and more. All explained in a way that's accessible to marketers, so you can be a part of these important conversations within your organization.\n\nFinally, we'll open the floor to questions and facilitate a discussion around the challenges and opportunities that come with prioritizing web performance.\n\nDon't miss this chance to delve deep into the world of web performance from a marketer's perspective. Enhance your understanding, improve your strategy, and drive your organization towards superior web performance with the insights from this session.\n"
         }
       }
     },
@@ -2708,7 +2751,7 @@
         "id": "6PsGmWBFN867pyLaLjrGbc",
         "type": "Entry",
         "createdAt": "2023-05-03T15:09:22.139Z",
-        "updatedAt": "2023-05-03T15:11:29.467Z",
+        "updatedAt": "2023-05-25T20:53:58.713Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2716,8 +2759,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 8,
-        "publishedAt": "2023-05-03T15:11:29.467Z",
+        "publishedVersion": 10,
+        "publishedAt": "2023-05-25T20:53:58.713Z",
         "firstPublishedAt": "2023-05-03T15:09:58.631Z",
         "createdBy": {
           "sys": {
@@ -2733,8 +2776,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 2,
-        "version": 9,
+        "publishedCounter": 3,
+        "version": 11,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2768,6 +2811,9 @@
         },
         "slug": {
           "en-US": "opening-keynote"
+        },
+        "body": {
+          "en-US": "When you hear the phrase \"Opening Keynote\", it may sound like just another presentation. However, the keynote we are talking about is anything but ordinary. It's not just a speech; it's an event that marks the beginning of a journey. It's a keynote that speaks to everyone - developers, marketers, and all other audiences.\n\nThis keynote is designed to inspire, to ignite passion, and to set the tone for the event. It is a rallying call, setting the stage for an event dedicated to pushing boundaries and forging new paths. The keynote is not just a speech. It's a showcase of the energy, passion, and potential that every attendee brings.\n\nWhat makes this keynote unique is that it caters to all audiences. It speaks to developers, marketers, and all other individuals, regardless of their roles or expertise. It's about breaking down barriers and silos. It's about fostering a shared understanding and a shared vision.\n\nFor developers, the keynote will delve into the latest trends, techniques, and technologies. It's a chance to look under the hood, to explore the building blocks that are driving innovation. It's about inspiring developers to dream, to create, and to push the boundaries of what's possible.\n\nFor marketers, the keynote will provide insights into understanding and engaging with customers. It's about decoding the customer journey, making sense of data, and crafting compelling narratives. It's about empowering marketers to connect, to inspire, and to drive growth.\n\nThe keynote is more than just a speech. It's a call to action. It's a call to dream, to create, and to innovate. It's a call to step out of your comfort zone, to challenge the status quo, and to make a difference.\n\nSo, as we gather for the Opening Keynote, let us remember that we are not just attendees at an event. We are pioneers, explorers, and innovators. We are a community, united by our shared passion, our shared vision, and our shared journey. And as we embark on this journey, let the keynote serve as a beacon, guiding us towards a future filled with endless possibilities."
         }
       }
     },
@@ -2787,7 +2833,7 @@
         "id": "sH4CQoSSMRFBipBQuovNg",
         "type": "Entry",
         "createdAt": "2023-05-03T15:10:06.876Z",
-        "updatedAt": "2023-05-03T15:11:14.202Z",
+        "updatedAt": "2023-05-25T21:00:16.302Z",
         "environment": {
           "sys": {
             "id": "master",
@@ -2795,8 +2841,8 @@
             "linkType": "Environment"
           }
         },
-        "publishedVersion": 9,
-        "publishedAt": "2023-05-03T15:11:14.202Z",
+        "publishedVersion": 11,
+        "publishedAt": "2023-05-25T21:00:16.302Z",
         "firstPublishedAt": "2023-05-03T15:10:54.840Z",
         "createdBy": {
           "sys": {
@@ -2812,8 +2858,8 @@
             "id": "3CYK5AqtUQsHiTCblzpoYQ"
           }
         },
-        "publishedCounter": 2,
-        "version": 10,
+        "publishedCounter": 3,
+        "version": 12,
         "publishedBy": {
           "sys": {
             "type": "Link",
@@ -2847,6 +2893,9 @@
         },
         "slug": {
           "en-US": "closing-keynote"
+        },
+        "body": {
+          "en-US": "As our grand finale approaches, we promise you it's worth every second of your time. The closing keynote of our conference promises to be a spectacle you won't forget.\n\nWe'll be diving into the future of our industry, exploring the trends and technologies that are set to shape the coming decade. Expect a talk brimming with insights from industry leaders, visionaries, and innovators, bringing you the latest breakthroughs and their impact on society and businesses alike.\n\nThis talk is a whirlwind tour of what's next, packed with inspiration and provocations that will challenge the way you think and work. You'll leave equipped with ideas, strategies, and practical tools for navigating the exciting landscape that lies ahead.\n\nDon't miss this chance to gain an in-depth understanding of the future of our industry. Whether you're a developer, marketer, or part of the broader audience, there's something in it for everyone. We guarantee you'll leave feeling inspired and excited about what the future holds. So grab that last cup of coffee for the day and join us for a session that's sure to make a lasting impression.\n\nWe understand that this might mean pushing your schedule, perhaps risking missing your flight. But we assure you, the insights and experiences you'll gain from this keynote will be worth more than just making your flight on time.\n\nIt's more than a closing note. It's a vision of the future, a roadmap, and a call to action. So stay back, take that risk. Trust us, it's that good.\n"
         }
       }
     }

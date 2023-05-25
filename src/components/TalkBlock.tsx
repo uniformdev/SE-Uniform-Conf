@@ -29,11 +29,13 @@ const audienceColorMap: AudienceColorMap = {
  @prop {string} title - The title to display on the TalkBlock component.
  @prop {string} intro - The intro to display on the TalkBlock component.
  @prop {string} audience - The audience label to display on the TalkBlock component.
+ @prop {string} body - The body to display on the TalkBlock component.
 */
 export type TalkBlockProps = {
 	title?: string;
 	intro?: string;
 	audience?: string;
+	body?: string;
 };
 
 /**
@@ -69,37 +71,33 @@ function AudienceLabel({
 */
 export function TalkBlock(props: TalkBlockProps): JSX.Element {
 	return (
-		<div className="pt-24">
-			<div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
-				<fieldset>
-					<section className="bg-white border-b py-8">
-						<div className="container mx-auto flex flex-wrap pt-4 pb-12">
-							<div className="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
-								<div className="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow space-y-2 pt-2">
-									<div className="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden">
-										<div className="mt-3 mb-3 flex items-center justify-start">
-											<AudienceLabel audienceName={props?.audience || "None"} />
-										</div>
-									</div>
+		<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-20 bg-white">
+			<div className="text-right">
+				<h2 className="text-base text-indigo-600 font-semibold tracking-wide uppercase">
+					<AudienceLabel audienceName={props?.audience || "None"} />
+				</h2>
+			</div>
+			<div className="text-center">
+				<UniformText
+					as="p"
+					parameterId="title"
+					placeholder="The title of the talk"
+					className="mt-1 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900"
+				/>
 
-									<UniformText
-										as="div"
-										className="w-full font-bold text-xl text-gray-800 px-6"
-										parameterId="title"
-										placeholder="The title of the talk"
-									/>
+				<UniformText
+					as="p"
+					parameterId="intro"
+					placeholder="This is the introduction of the talk"
+					className="max-w-2xl mt-5 mx-auto text-xl text-gray-500"
+				/>
 
-									<UniformText
-										as="div"
-										className="text-gray-800 px-6 pb-6 text-sm"
-										parameterId="intro"
-										placeholder="This is the description of the talk"
-									/>
-								</div>
-							</div>
-						</div>
-					</section>
-				</fieldset>
+				<UniformText
+					as="p"
+					className="mt-4 text-gray-700 text-lg leading-relaxed"
+					parameterId="body"
+					placeholder="This is the body of the talk"
+				/>
 			</div>
 		</div>
 	);

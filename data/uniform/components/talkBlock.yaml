@@ -19,9 +19,16 @@ parameters:
     type: text
     helpText: ''
     typeConfig: null
+  - id: body
+    name: Body
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+      linesCount: '20'
 useTeamPermissions: true
 slots: []
 titleParameter: title
 canBeComposition: false
 created: '2023-05-23T13:22:27.484181+00:00'
-updated: '2023-05-23T13:22:27.484181+00:00'
+updated: '2023-05-25T20:55:38.580883+00:00'
