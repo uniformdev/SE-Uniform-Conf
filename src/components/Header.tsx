@@ -161,6 +161,7 @@ export function Header(): JSX.Element {
 						submenuVisible ? "bg-gray-100" : "hidden bg-white"
 					}  ${isScrolled ? "bg-white" : "bg-gray-100"}`}
 				>
+					    <div className="flex items-center justify-between">  
 					<NavMenu />
 					<ActionLink
 						onClick={async () => {
@@ -173,6 +174,7 @@ export function Header(): JSX.Element {
 						isScrolled={isScrolled}
 						icon={<LockIcon />}
 					/>
+					</div>
 				</div>
 			</div>
 			<hr className="border-b border-gray-100 opacity-25 my-0 py-0" />
