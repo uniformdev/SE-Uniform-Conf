@@ -1,9 +1,9 @@
 /**
- A component that displays a decorative SVG graphic, used as a divider in the UI.
- 
- @function
- @returns {JSX.Element} - Rendered Splitter component
-*/
+ * A component that displays a decorative SVG graphic, used as a divider in the UI.
+ *
+ * @function
+ * @returns {JSX.Element} - Rendered Splitter component
+ */
 function Splitter(): JSX.Element {
 	return (
 		<div className="relative -mt-12 lg:-mt-24 -z-10">

@@ -12,12 +12,11 @@ import useScrollPosition from "@react-hook/window-scroll";
 import { useUniformContext } from "@uniformdev/context-react";
 
 /**
- HamburgerIcon functional component that displays a SVG icon representing the hamburger menu.
- 
- @function 
-
- @returns {JSX.Element} - Rendered HamburgerIcon SVG
-*/
+ * HamburgerIcon functional component that displays a SVG icon representing the hamburger menu.
+ *
+ * @function
+ * @returns {JSX.Element} - Rendered HamburgerIcon SVG
+ */
 function HamburgerIcon(): JSX.Element {
 	return (
 		<svg
@@ -32,12 +31,11 @@ function HamburgerIcon(): JSX.Element {
 }
 
 /**
- LockIcon functional component that displays a SVG icon representing the lock icon.
-
- @function
-
- @returns {JSX.Element} - Rendered LockIcon SVG
-*/
+ * LockIcon functional component that displays a SVG icon representing the lock icon.
+ *
+ * @function
+ * @returns {JSX.Element} - Rendered LockIcon SVG
+ */
 function LockIcon(): JSX.Element {
 	return (
 		<svg
@@ -51,15 +49,15 @@ function LockIcon(): JSX.Element {
 }
 
 /**
-ActionLink functional component that displays a button link with an icon and a label.
+ * ActionLinkProps type definition.
+ * Describes the properties for the ActionLink component.
 
-@function
-@param {React.MouseEventHandler<HTMLButtonElement>} onClick - The function to execute when the button is clicked.
-@param {string} label - The label to display on the button.
-@param {boolean} isScrolled - Flag indicating if the user has scrolled the page.
-@param {React.ReactElement} icon - The SVG icon element to display on the button.
-@returns {JSX.Element} - Rendered ActionLink component
-*/
+ * @interface ActionLinkProps
+ * @prop {React.MouseEventHandler<HTMLButtonElement>} onClick - The event handler for the button's click event.
+ * @prop {string} label - The text to display on the ActionLink component.
+ * @prop {boolean} isScrolled - Flag indicating if the component has been scrolled.
+ * @prop {React.ReactElement} icon - The icon to display on the ActionLink component.
+ */
 type ActionLinkProps = {
 	onClick: React.MouseEventHandler<HTMLButtonElement>;
 	label: string;
@@ -67,6 +65,16 @@ type ActionLinkProps = {
 	icon: React.ReactElement;
 };
 
+/**
+ * ActionLink functional component that displays a button link with an icon and a label.
+ *
+ * @function
+ * @param {React.MouseEventHandler<HTMLButtonElement>} onClick - The function to execute when the button is clicked.
+ * @param {string} label - The label to display on the button.
+ * @param {boolean} isScrolled - Flag indicating if the user has scrolled the page.
+ * @param {React.ReactElement} icon - The SVG icon element to display on the button.
+ * @returns {JSX.Element} - Rendered ActionLink component
+ */
 function ActionLink({
 	onClick,
 	label,
@@ -92,12 +100,11 @@ function ActionLink({
 }
 
 /**
- Header functional component that displays the header of the web application.
-
- @function 
-
- @returns {JSX.Element} - Rendered Header component
-*/
+ * Header functional component that displays the header of the web application.
+ *
+ * @function
+ * @returns {JSX.Element} - Rendered Header component
+ */
 export function Header(): JSX.Element {
 	// State hooks for controlling the visibility of the submenu and the scroll position of the page
 	const [submenuVisible, setSubmenuVisible] = useState(false);
@@ -161,19 +168,19 @@ export function Header(): JSX.Element {
 						submenuVisible ? "bg-gray-100" : "hidden bg-white"
 					}  ${isScrolled ? "bg-white" : "bg-gray-100"}`}
 				>
-					    <div className="flex items-center justify-between">  
-					<NavMenu />
-					<ActionLink
-						onClick={async () => {
-							setSubmenuVisible(false);
-							await context.forget(true);
-							document.cookie =
-								"unfrmconf_registered=; Path=/; samesite=lax; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
-						}}
-						label="Forget me"
-						isScrolled={isScrolled}
-						icon={<LockIcon />}
-					/>
+					<div className="flex items-center justify-between">
+						<NavMenu />
+						<ActionLink
+							onClick={async () => {
+								setSubmenuVisible(false);
+								await context.forget(true);
+								document.cookie =
+									"unfrmconf_registered=; Path=/; samesite=lax; Expires=Thu, 01 Jan 1970 00:00:01 GMT;";
+							}}
+							label="Forget me"
+							isScrolled={isScrolled}
+							icon={<LockIcon />}
+						/>
 					</div>
 				</div>
 			</div>

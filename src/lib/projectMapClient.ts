@@ -10,11 +10,11 @@ const {
 } = getConfig();
 
 /**
- Creates a ProjectMapClient instance with the extracted configuration values.
-  
- @function
- @returns {ProjectMapClient} - Returns a ProjectMapClient instance.
-*/
+ * Creates a ProjectMapClient instance with the extracted configuration values.
+ *
+ * @function
+ * @returns {ProjectMapClient} - Returns a ProjectMapClient instance.
+ */
 export function createProjectMapClient() {
 	return new ProjectMapClient({
 		apiKey,

@@ -32,11 +32,11 @@ interface Props {
 }
 
 /**
- TalkPage component that renders a composition with header, content, and footer slots.
-
- @param {Props} { composition, menuItems } - Composition data and menu items.
- @returns {JSX.Element | null} - Returns the rendered page or null.
-*/
+ * TalkPage component that renders a composition with header, content, and footer slots.
+ *
+ * @param {Props} { composition, menuItems } - Composition data and menu items.
+ * @returns {JSX.Element | null} - Returns the rendered page or null.
+ */
 const TalkPage = ({ composition, menuItems }: Props) => {
 	// If the composition is not available, return null
 	if (!composition) return null;
@@ -75,16 +75,15 @@ const TalkPage = ({ composition, menuItems }: Props) => {
 };
 
 /**
- Retrieves server-side props for the page using Uniform's getServerSideProps functionality.
-
- @param {object} requestOptions - Options for the request to Uniform.
- @param {object} requestOptions.state - The state of the Uniform canvas.
- @returns {Promise<object>} - The server-side props.
-*/
+ * Retrieves server-side props for the page using Uniform's getServerSideProps functionality.
+ *
+ * @param {object} requestOptions - Options for the request to Uniform.
+ * @param {object} requestOptions.state - The state of the Uniform canvas.
+ * @returns {Promise<object>} - The server-side props.
+ */
 export const getServerSideProps = unstable_withUniformGetServerSideProps({
 	requestOptions: {
 		state: getCanvasState(),
-		
 	},
 	silent: true,
 	/**

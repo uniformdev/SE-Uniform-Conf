@@ -24,7 +24,7 @@ const topMarginMap: TopMarginMap = {
 	20: "mt-20",
 	24: "mt-24",
 	28: "mt-28",
-	32: "mt-32"
+	32: "mt-32",
 };
 
 /**
@@ -39,12 +39,12 @@ export type TalkListProps = {
 };
 
 /**
- The TalkList component displays a list of talks.
-
- @function
- @param {TalkListProps} props - Props for the TalkList component
- @returns {JSX.Element} - Rendered TalkList component
-*/
+ * The TalkList component displays a list of talks.
+ *
+ * @function
+ * @param {TalkListProps} props - Props for the TalkList component
+ * @returns {JSX.Element} - Rendered TalkList component
+ */
 export function TalkList(props: TalkListProps): JSX.Element {
 	const marginTopClass = topMarginMap[props.marginTop ?? 0] || "mt-0";
 	return (

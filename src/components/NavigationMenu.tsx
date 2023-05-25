@@ -12,12 +12,12 @@ export interface MenuItem {
 }
 
 /**
- Navigational Menu, functional component that displays the navigation menu.
- Retrieves the menu items from the MenuItemsContext.
-
- @function
- @returns {JSX.Element} - Rendered Navigation Menu component
-*/
+ * Navigational Menu, functional component that displays the navigation menu.
+ * Retrieves the menu items from the MenuItemsContext.
+ *
+ * @function
+ * @returns {JSX.Element} - Rendered Navigation Menu component
+ */
 function NavigationMenu(): JSX.Element {
 	// Retrieve the menu items from the MenuItemsContext
 	const menuItems = useContext(MenuItemsContext);
@@ -44,6 +44,6 @@ function NavigationMenu(): JSX.Element {
 			})}
 		</ul>
 	);
-};
+}
 
 export default NavigationMenu;

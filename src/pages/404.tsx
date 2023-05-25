@@ -25,11 +25,11 @@ interface Props {
 }
 
 /**
- FourOhFour component which renders the 404 page.
-
- @param {Props} { composition, menuItems } - Composition data and menu items.
- @returns {JSX.Element | null} - Returns the rendered 404 page or null.
-*/
+ * FourOhFour component which renders the 404 page.
+ *
+ * @param {Props} { composition, menuItems } - Composition data and menu items.
+ * @returns {JSX.Element | null} - Returns the rendered 404 page or null.
+ */
 const FourOhFour = ({ composition, menuItems }: Props) => {
 	// If the composition is not available, return null
 	if (!composition) return null;
@@ -71,10 +71,10 @@ const FourOhFour = ({ composition, menuItems }: Props) => {
 export default FourOhFour;
 
 /**
- getStaticProps function to fetch the composition and menu items for static site generation.
-
- @returns {Promise<{ props: { composition: RootComponentInstance; menuItems: MenuItem[] }; revalidate: number } | void>} - Returns the fetched data as props or throws an error.
-*/
+ * getStaticProps function to fetch the composition and menu items for static site generation.
+ *
+ * @returns {Promise<{ props: { composition: RootComponentInstance; menuItems: MenuItem[] }; revalidate: number } | void>} - Returns the fetched data as props or throws an error.
+ */
 export async function getStaticProps() {
 	try {
 		const canvasClient = createCanvasClient();

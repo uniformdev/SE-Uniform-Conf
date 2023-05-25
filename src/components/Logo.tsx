@@ -1,8 +1,8 @@
 /**
- Logo component that displays a logo SVG.
-
- @function 
- @returns {JSX.Element} - Rendered Logo SVG
+ * Logo component that displays a logo SVG.
+ *
+ * @function 
+ * @returns {JSX.Element} - Rendered Logo SVG
 */
 function Logo(): JSX.Element {
 	return (

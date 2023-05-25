@@ -8,12 +8,12 @@ import "@/styles/globals.css";
 
 // Main UniformConfApp component
 /**
- UniformConfApp component that wraps the entire application with the Uniform context.
- 
- @function
- @param {UniformAppProps} { Component, pageProps, serverUniformContext } - UniformAppProps object containing Component, pageProps, and serverUniformContext.
- @returns {React.ReactElement} - Returns the wrapped application component.
-*/ export default function UniformConfApp({
+ * UniformConfApp component that wraps the entire application with the Uniform context.
+ *
+ * @function
+ * @param {UniformAppProps} { Component, pageProps, serverUniformContext } - UniformAppProps object containing Component, pageProps, and serverUniformContext.
+ * @returns {React.ReactElement} - Returns the wrapped application component.
+ */ export default function UniformConfApp({
 	Component,
 	pageProps,
 	serverUniformContext,

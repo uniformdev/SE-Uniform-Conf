@@ -2,20 +2,20 @@
 import { UniformText } from "@uniformdev/canvas-react";
 
 /**
- Interface for the audienceColorMap object.
- 
- @interface AudienceColorMap
-*/
+ * Interface for the audienceColorMap object.
+ *
+ * @interface AudienceColorMap
+ */
 interface AudienceColorMap {
 	[key: string]: string;
 }
 
 /**
- Object that maps audience names to their respective classes.
- 
- @constant
- @type {AudienceColorMap}
-*/
+ * Object that maps audience names to their respective classes.
+ *
+ *  @constant
+ * @type {AudienceColorMap}
+ */
 const audienceColorMap: AudienceColorMap = {
 	Developers: "bg-green-100 text-green-800",
 	Marketers: "bg-indigo-100 text-indigo-800",
@@ -23,14 +23,14 @@ const audienceColorMap: AudienceColorMap = {
 };
 
 /**
- Props for the TalkBlock component
-
- @interface TalkBlockProps 
- @prop {string} title - The title to display on the TalkBlock component.
- @prop {string} intro - The intro to display on the TalkBlock component.
- @prop {string} audience - The audience label to display on the TalkBlock component.
- @prop {string} body - The body to display on the TalkBlock component.
-*/
+ * Props for the TalkBlock component
+ *
+ * @interface TalkBlockProps
+ * @prop {string} title - The title to display on the TalkBlock component.
+ * @prop {string} intro - The intro to display on the TalkBlock component.
+ * @prop {string} audience - The audience label to display on the TalkBlock component.
+ * @prop {string} body - The body to display on the TalkBlock component.
+ */
 export type TalkBlockProps = {
 	title?: string;
 	intro?: string;
@@ -39,13 +39,13 @@ export type TalkBlockProps = {
 };
 
 /**
- AudienceLabel functional component that displays the label for a specific audience.
- 
- @function
- @param {object} props - The properties for the AudienceLabel component.
- @param {string} props.audienceName - The name of the audience to display the label for.
- @returns {JSX.Element} - Rendered AudienceLabel component
-*/
+ * AudienceLabel functional component that displays the label for a specific audience.
+ *
+ * @function
+ * @param {object} props - The properties for the AudienceLabel component.
+ * @param {string} props.audienceName - The name of the audience to display the label for.
+ * @returns {JSX.Element} - Rendered AudienceLabel component
+ */
 function AudienceLabel({
 	audienceName,
 }: {
@@ -63,12 +63,12 @@ function AudienceLabel({
 }
 
 /**
- TalkBlock functional component that displays a talk item.
- 
- @function
- @param {TalkBlockProps} props - The properties for the TalkBlock component.
- @returns {JSX.Element} - Rendered TalkBlock component
-*/
+ * TalkBlock functional component that displays a talk item.
+ *
+ * @function
+ * @param {TalkBlockProps} props - The properties for the TalkBlock component.
+ * @returns {JSX.Element} - Rendered TalkBlock component
+ */
 export function TalkBlock(props: TalkBlockProps): JSX.Element {
 	return (
 		<div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-20 bg-white">

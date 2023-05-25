@@ -11,11 +11,11 @@ const {
 } = getConfig();
 
 /**
- Function to get the navigation menu items.
-
- @function
- @returns {Promise<MenuItem[]>} - Returns a promise that resolves with an array of menu items.
-*/
+ * Function to get the navigation menu items.
+ *
+ * @function
+ * @returns {Promise<MenuItem[]>} - Returns a promise that resolves with an array of menu items.
+ */
 export async function getNavigationMenu(): Promise<MenuItem[]> {
 	const projectMapClient = createProjectMapClient();
 	const tree = await projectMapClient.getSubtree({ projectMapId, depth: 1 });

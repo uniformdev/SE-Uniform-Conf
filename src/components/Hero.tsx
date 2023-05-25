@@ -8,16 +8,17 @@ import { UniformText } from "@uniformdev/canvas-react";
 import Link from "next/link";
 
 /**
- HeroProps type definition. 
- Describes the properties for the Hero component.
-
- @prop {string} title - The title to display on the hero section.
- @prop {string} description - The description to display on the hero section.
- @prop {string} image - The image to display on the hero section.
- @prop {string} buttonText - The text to display on the hero button.
- @prop {string} buttonLink - The link to redirect the user when the hero button is clicked.
- @prop {boolean} showButton - Flag indicating if the hero button should be displayed.
-*/
+ * HeroProps type definition.
+ * Describes the properties for the Hero component.
+ *
+ * @interface HeroProps
+ * @prop {string} title - The title to display on the hero section.
+ * @prop {string} description - The description to display on the hero section.
+ * @prop {string} image - The image to display on the hero section.
+ * @prop {string} buttonText - The text to display on the hero button.
+ * @prop {string} buttonLink - The link to redirect the user when the hero button is clicked.
+ * @prop {boolean} showButton - Flag indicating if the hero button should be displayed.
+ */
 export type HeroProps = {
 	title?: string;
 	description?: string;
@@ -28,12 +29,12 @@ export type HeroProps = {
 };
 
 /**
- Hero functional component that displays the hero section of the web application.
-
- @function 
- @param {HeroProps} props - The props object.
- @returns {JSX.Element} - Rendered Hero component
-*/
+ * Hero functional component that displays the hero section of the web application.
+ *
+ * @function
+ * @param {HeroProps} props - The props object.
+ * @returns {JSX.Element} - Rendered Hero component
+ */
 export function Hero(props: HeroProps): JSX.Element {
 	return (
 		<>

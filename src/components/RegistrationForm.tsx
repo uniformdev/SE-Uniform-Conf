@@ -13,16 +13,16 @@ import { useUniformContext } from "@uniformdev/context-react";
 import { UniformText } from "@uniformdev/canvas-react";
 
 /**
- RegistrationFormProps type definition.
- Describes the properties for the RegistrationForm component.
-
- @interface RegistrationFormProps 
- @prop {string} heading - The title to display on the registration form.
- @prop {string} buttonText - The text to display on the register button.
- @prop {string} registeredText - The text to display when the user is registered.
- @prop {string} homeLinkText - The text to display on the back-to-home button.
- @prop {string} success - The text to display when the user is registered.
-*/
+ * RegistrationFormProps type definition.
+ * Describes the properties for the RegistrationForm component.
+ *
+ * @interface RegistrationFormProps
+ * @prop {string} heading - The title to display on the registration form.
+ * @prop {string} buttonText - The text to display on the register button.
+ * @prop {string} registeredText - The text to display when the user is registered.
+ * @prop {string} homeLinkText - The text to display on the back-to-home button.
+ * @prop {string} success - The text to display when the user is registered.
+ */
 export type RegistrationFormProps = {
 	heading: string;
 	buttonText: string;
@@ -32,13 +32,13 @@ export type RegistrationFormProps = {
 };
 
 /**
- RegistrationForm component.
- Displays a registration form and handles user registration.
-
- @function 
- @param {RegistrationFormProps} props - The properties for the RegistrationForm component. 
- @returns {JSX.Element} The rendered RegistrationForm component.
-*/
+ * RegistrationForm component.
+ * Displays a registration form and handles user registration.
+ *
+ * @function
+ * @param {RegistrationFormProps} props - The properties for the RegistrationForm component.
+ * @returns {JSX.Element} The rendered RegistrationForm component.
+ */
 export function RegistrationForm(props: RegistrationFormProps): JSX.Element {
 	const [registered, setRegistered] = useState<boolean>(
 		typeof document !== "undefined"
@@ -48,12 +48,12 @@ export function RegistrationForm(props: RegistrationFormProps): JSX.Element {
 	const { context } = useUniformContext();
 
 	/**
- onRegister function.
- Handles user registration and updates the application state.
-
- @function
- @returns {void}
-*/
+	 * onRegister function.
+	 * Handles user registration and updates the application state.
+	 *
+	 * @function
+	 * @returns {void}
+	 */
 	function onRegister(): void {
 		document.cookie = "unfrmconf_registered=true; path=/; samesite=lax";
 		context.update({

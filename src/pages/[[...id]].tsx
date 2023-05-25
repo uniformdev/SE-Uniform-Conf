@@ -35,11 +35,11 @@ interface Props {
 }
 
 /**
- Page component that renders a composition with header, content, and footer slots.
-
- @param {Props} { composition, menuItems } - Composition data and menu items.
- @returns {JSX.Element | null} - Returns the rendered page or null.
-*/
+ * Page component that renders a composition with header, content, and footer slots.
+ *
+ * @param {Props} { composition, menuItems } - Composition data and menu items.
+ * @returns {JSX.Element | null} - Returns the rendered page or null.
+ */
 const Page = ({ composition, menuItems }: Props) => {
 	// If the composition is not available, return null
 	if (!composition) return null;
@@ -78,11 +78,11 @@ const Page = ({ composition, menuItems }: Props) => {
 };
 
 /**
- getStaticProps function to fetch the composition and menu items for static site generation.
- 
- @param {GetStaticPropsContext} context - Context object containing parameters and preview flag.
- @returns {Promise<{ props: { composition: RootComponentInstance; isPreview: boolean; menuItems: MenuItem[] }; revalidate: number } | { revalidate: number; notFound: boolean } | void>} - Returns the fetched data as props, notFound, or throws an error.
-*/
+ * getStaticProps function to fetch the composition and menu items for static site generation.
+ *
+ * @param {GetStaticPropsContext} context - Context object containing parameters and preview flag.
+ * @returns {Promise<{ props: { composition: RootComponentInstance; isPreview: boolean; menuItems: MenuItem[] }; revalidate: number } | { revalidate: number; notFound: boolean } | void>} - Returns the fetched data as props, notFound, or throws an error.
+ */
 export async function getStaticProps(context: GetStaticPropsContext) {
 	const { params, preview } = context;
 	const nodePath = params?.id
@@ -120,10 +120,10 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 }
 
 /**
- getStaticPaths function to determine the static paths for static site generation.
- 
- @returns {Promise<{ paths: { params: { id: string[] } }[]; fallback: "blocking" }>} - Returns the paths and fallback settings.
-*/
+ * getStaticPaths function to determine the static paths for static site generation.
+ *
+ * @returns {Promise<{ paths: { params: { id: string[] } }[]; fallback: "blocking" }>} - Returns the paths and fallback settings.
+ */
 export const getStaticPaths: GetStaticPaths = async () => {
 	const projectMapClient = createProjectMapClient();
 	const { nodes } = await projectMapClient.getNodes({ projectMapId });

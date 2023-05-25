@@ -36,9 +36,9 @@ import {
 import { isDevelopmentEnvironment } from "@/lib/helpers/environmentUtilities";
 
 /**
- Represents a Uniform Component object with its types, optional variantId,
- and the component itself.
-*/
+ * Represents a Uniform Component object with its types, optional variantId,
+ * and the component itself.
+ */
 type UniformComponent = {
 	types: string[];
 	variantId?: string;
@@ -112,10 +112,10 @@ components.forEach((component: UniformComponent) => {
 });
 
 /**
- Function to create a component store resolver.
- 
- @returns {RenderComponentResolver} - Returns a component store resolver.
-*/
+ * Function to create a component store resolver.
+ *
+ * @returns {RenderComponentResolver} - Returns a component store resolver.
+ */
 export const renderComponentResolver = () => {
 	return createComponentStoreResolver({
 		store: componentStore,

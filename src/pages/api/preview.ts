@@ -5,24 +5,25 @@ import getConfig from "next/config";
 import { createPreviewHandler } from "@uniformdev/canvas-next";
 
 /**
- Configuration values for the Next.js app.
-*/
+ * Configuration values for the Next.js app.
+ */
 const config = getConfig();
 
 /**
- Function to retrieve the preview secret from the app configuration.
- 
- @returns {string} - Returns the preview secret from the configuration.
-*/
+ * Function to retrieve the preview secret from the app configuration.
+ *
+ * @function
+ * @returns {string} - Returns the preview secret from the configuration.
+ */
 const getPreviewSecret = (): string => {
-  return config.serverRuntimeConfig.previewSecret;
+	return config.serverRuntimeConfig.previewSecret;
 };
 
 /**
  Creates a preview handler for Next.js using the secret and enhancers.
 */
 const handler = createPreviewHandler({
-  secret: getPreviewSecret,
+	secret: getPreviewSecret,
 });
 
 /**

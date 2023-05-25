@@ -10,16 +10,16 @@ const {
 } = getConfig();
 
 /**
- Creates a new instance of CanvasClient using the extracted configuration values.
- 
- @function
- @returns {CanvasClient} The created CanvasClient instance.
-*/
+ * Creates a new instance of CanvasClient using the extracted configuration values.
+ *
+ * @function
+ * @returns {CanvasClient} The created CanvasClient instance.
+ */
 export function createCanvasClient() {
 	return new CanvasClient({
 		apiKey,
 		apiHost,
 		projectId,
-		edgeApiHost
+		edgeApiHost,
 	});
 }

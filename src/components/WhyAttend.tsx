@@ -2,29 +2,29 @@
 import { UniformText } from "@uniformdev/canvas-react";
 
 /**
- ImagePosition enum represents the position of the image within the WhyAttend component.
- 
- @enum {number}
- @property {number} Left - The image should be displayed on the left side of the text.
- @property {number} Right - The image should be displayed on the right side of the text.
-*/
+ * ImagePosition enum represents the position of the image within the WhyAttend component.
+ *
+ * @enum {number}
+ * @property {number} Left - The image should be displayed on the left side of the text.
+ * @property {number} Right - The image should be displayed on the right side of the text.
+ */
 enum ImagePosition {
 	Left,
 	Right,
 }
 
 /**
- Props for the WhyAttend components
-
- @interface WhyAttendProps
- @prop {string} title - The title to display on the WhyAttend component.
- @prop {string} description - The description to display on the WhyAttend component.
- @prop {string} image - The image to display on the WhyAttend component.
- @prop {string} buttonText - The button text to display on the WhyAttend component.
- @prop {string} buttonLink - The button link to display on the WhyAttend component.
- @prop {boolean} showButton - Whether to show the button on the WhyAttend component.
- @prop {ImagePosition} imagePosition - The position of the image on the WhyAttend component.
-*/
+ * Props for the WhyAttend components
+ *
+ * @interface WhyAttendProps
+ * @prop {string} title - The title to display on the WhyAttend component.
+ * @prop {string} description - The description to display on the WhyAttend component.
+ * @prop {string} image - The image to display on the WhyAttend component.
+ * @prop {string} buttonText - The button text to display on the WhyAttend component.
+ * @prop {string} buttonLink - The button link to display on the WhyAttend component.
+ * @prop {boolean} showButton - Whether to show the button on the WhyAttend component.
+ * @prop {ImagePosition} imagePosition - The position of the image on the WhyAttend component.
+ */
 export type WhyAttendProps = {
 	title?: string;
 	description?: string;
@@ -36,34 +36,34 @@ export type WhyAttendProps = {
 };
 
 /**
- Component variant of WhyAttend that displays the image on the left side
-
- @function
- @param {WhyAttendProps} props - Props for WhyAttendLeft component
- @returns {JSX.Element} - Rendered WhyAttendRight component
-*/
+ * Component variant of WhyAttend that displays the image on the left side
+ *
+ * @function
+ * @param {WhyAttendProps} props - Props for WhyAttendLeft component
+ * @returns {JSX.Element} - Rendered WhyAttendRight component
+ */
 export function WhyAttendLeft(props: WhyAttendProps): JSX.Element {
 	return <WhyAttend {...props} imagePosition={ImagePosition.Left} />;
 }
 
 /**
- Component variant of WhyAttend that displays the image on the right side
-
- @function
- @param {WhyAttendProps} props - Props for WhyAttendRight component
- @returns {JSX.Element} - Rendered WhyAttendRight component
-*/
+ * Component variant of WhyAttend that displays the image on the right side
+ *
+ * @function
+ * @param {WhyAttendProps} props - Props for WhyAttendRight component
+ * @returns {JSX.Element} - Rendered WhyAttendRight component
+ */
 export function WhyAttendRight(props: WhyAttendProps): JSX.Element {
 	return <WhyAttend {...props} imagePosition={ImagePosition.Right} />;
 }
 
 /**
- WhyAttend functional component that either displays the image on the left or the right side
-
- @function
- @param {WhyAttendProps} props - Props for WhyAttendLeft component
- @returns {JSX.Element} - Rendered WhyAttendRight component
-*/
+ * WhyAttend functional component that either displays the image on the left or the right side
+ *
+ * @function
+ * @param {WhyAttendProps} props - Props for WhyAttendLeft component
+ * @returns {JSX.Element} - Rendered WhyAttendRight component
+ */
 export function WhyAttend(props: WhyAttendProps): JSX.Element {
 	return (
 		<section className="bg-white border-b py-8">
