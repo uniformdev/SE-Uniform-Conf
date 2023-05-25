@@ -3,6 +3,12 @@ composition:
   _id: 8707a315-5112-4d99-89c3-b343de256b1e
   type: talk
   parameters:
+    slug:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Contentful Talk Content/fields/slug
     intro:
       type: text
       value: unresolved
@@ -33,6 +39,6 @@ composition:
       intro: 'yes'
       title: 'yes'
       audience: 'yes'
-created: '2023-05-03T15:07:02.966376+00:00'
-modified: '2023-05-03T15:07:44.751027+00:00'
+created: '2023-05-23T13:04:54.35254+00:00'
+modified: '2023-05-25T10:40:56.978094+00:00'
 pattern: true

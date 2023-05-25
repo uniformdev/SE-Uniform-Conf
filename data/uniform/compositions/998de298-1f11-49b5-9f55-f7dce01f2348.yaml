@@ -1,0 +1,37 @@
+composition:
+  _name: Talk Block Contentful
+  _id: 998de298-1f11-49b5-9f55-f7dce01f2348
+  type: talkBlock
+  parameters:
+    intro:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Contentful Talks Query Content/items/0/fields/intro
+    title:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Contentful Talks Query Content/items/0/fields/title
+    audience:
+      type: text
+      value: unresolved
+      connectedData:
+        syntax: jptr
+        pointer: /Contentful Talks Query Content/items/0/fields/audience/0
+  _dataResources:
+    Contentful Talks Query Content:
+      type: contentfulTalksQuery
+      variables:
+        limit: '1'
+        order: ''
+        keyword: ''
+        sortOrder: asc
+        sortFieldId: ''
+        contentTypeId: talk
+      isPatternParameter: true
+created: '2023-05-23T13:23:12.577307+00:00'
+modified: '2023-05-23T13:30:47.557113+00:00'
+pattern: true

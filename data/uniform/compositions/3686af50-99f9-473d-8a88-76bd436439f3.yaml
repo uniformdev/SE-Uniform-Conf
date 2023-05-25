@@ -1,0 +1,78 @@
+composition:
+  _name: Talks
+  _id: 3686af50-99f9-473d-8a88-76bd436439f3
+  _slug: talks
+  type: page
+  slots:
+    body:
+      - _id: 591c1588-cf54-45b6-aabf-3a77fb12a08a
+        type: talkList
+        slots:
+          talks:
+            - _id: f0b00448-67a9-4571-9058-5755ed8591cf
+              type: $loop
+              slots:
+                body:
+                  - _id: 89683d9e-6189-4821-829a-97d4088299ca
+                    type: talk
+                    parameters:
+                      slug:
+                        type: text
+                        value: unresolved
+                        connectedData:
+                          syntax: jptr
+                          pointer: >-
+                            /Contentful Talks Query Content items Loop
+                            Item/fields/slug
+                      intro:
+                        type: text
+                        value: unresolved
+                        connectedData:
+                          syntax: jptr
+                          pointer: >-
+                            /Contentful Talks Query Content items Loop
+                            Item/fields/intro
+                      title:
+                        type: text
+                        value: unresolved
+                        connectedData:
+                          syntax: jptr
+                          pointer: >-
+                            /Contentful Talks Query Content items Loop
+                            Item/fields/title
+                      audience:
+                        type: text
+                        value: unresolved
+                        connectedData:
+                          syntax: jptr
+                          pointer: >-
+                            /Contentful Talks Query Content items Loop
+                            Item/fields/audience/0
+              _dataResources:
+                Contentful Talks Query Content items Loop Item:
+                  type: sys-reserved-loop
+                  variables:
+                    connectedData: /Contentful Talks Query Content/items
+        parameters:
+          title:
+            type: text
+            value: Our Talks
+    footer:
+      - _id: 5d66e75c-2a50-4012-8416-a63b497b5c51
+        type: footer
+    header:
+      - _id: 53cee9d2-5993-4b2f-a27d-122172624c96
+        type: header
+  _dataResources:
+    Contentful Talks Query Content:
+      type: contentfulTalksQuery
+      variables:
+        limit: '100'
+        order: ''
+        keyword: ''
+        sortOrder: asc
+        sortFieldId: ''
+        contentTypeId: talk
+created: '2023-05-23T13:04:57.18253+00:00'
+modified: '2023-05-25T10:59:48.519922+00:00'
+pattern: false

@@ -1,0 +1,44 @@
+composition:
+  _name: Dynamic Talk
+  _id: 5b7e8954-202f-45fd-8f5c-c23320979d1e
+  _slug: ':*talkSlug'
+  type: page
+  slots:
+    body:
+      - _id: 1cee1513-581e-4408-ab52-68eba1a617a3
+        type: talkBlock
+        _pattern: 998de298-1f11-49b5-9f55-f7dce01f2348
+        _dataResources:
+          Contentful Talk Content:
+            type: contentfulTalk
+            variables:
+              entryIds: ''
+              contentTypeId: talk
+          Contentful Talks Query Content:
+            type: contentfulTalksQuery
+            variables:
+              limit: '1'
+              order: ''
+              keyword: ${talkSlug}
+              sortOrder: asc
+              sortFieldId: ''
+              contentTypeId: talk
+    footer:
+      - _id: dc163874-a0b5-41a2-90db-a02f55dc79e3
+        type: footer
+    header:
+      - _id: 93b6f102-e906-48db-ba22-3e808e875700
+        type: header
+  _dataResources:
+    Contentful Talks Query Content:
+      type: contentfulTalksQuery
+      variables:
+        limit: '1'
+        order: ''
+        keyword: ${talkSlug}
+        sortOrder: asc
+        sortFieldId: ''
+        contentTypeId: talk
+created: '2023-05-23T13:04:46.990969+00:00'
+modified: '2023-05-25T10:30:16.806245+00:00'
+pattern: false

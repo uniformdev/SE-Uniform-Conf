@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=<https://canary.uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://canary.uniform.app/schemas/json-schema/component-definition/v1.json
 id: registrationForm
 name: Registration Form
 icon: format-center
@@ -31,5 +33,5 @@ useTeamPermissions: true
 slots: []
 titleParameter: heading
 canBeComposition: false
-created: '2023-05-03T21:03:54.558434+00:00'
-updated: '2023-05-03T21:13:53.532017+00:00'
+created: '2023-05-23T13:04:42.12696+00:00'
+updated: '2023-05-23T13:04:42.12696+00:00'

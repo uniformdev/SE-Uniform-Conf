@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=<https://canary.uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://canary.uniform.app/schemas/json-schema/component-definition/v1.json
 id: talkList
 name: Talk List
 icon: view-cols
@@ -13,10 +15,11 @@ slots:
     name: Talks
     allowedComponents:
       - talk
+      - $loop
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
 titleParameter: title
 canBeComposition: false
-created: '2023-05-03T14:52:31.956882+00:00'
-updated: '2023-05-03T21:13:59.175974+00:00'
+created: '2023-05-23T13:04:42.747378+00:00'
+updated: '2023-05-23T13:04:42.747378+00:00'

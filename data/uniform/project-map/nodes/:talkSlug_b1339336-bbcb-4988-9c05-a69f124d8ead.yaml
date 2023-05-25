@@ -1,0 +1,9 @@
+id: b1339336-bbcb-4988-9c05-a69f124d8ead
+name: Dynamic Talk
+type: composition
+data: {}
+order: 500
+path: /talks/:talkSlug
+compositionId: 5b7e8954-202f-45fd-8f5c-c23320979d1e
+pathSegment: ':talkSlug'
+projectMapId: 6a74ad73-ab3c-4abb-b0f2-fc9d5c63035b

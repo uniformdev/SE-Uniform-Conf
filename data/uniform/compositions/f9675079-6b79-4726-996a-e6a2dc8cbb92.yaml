@@ -1,0 +1,54 @@
+composition:
+  _name: Personalization and Jamstack
+  _id: f9675079-6b79-4726-996a-e6a2dc8cbb92
+  _slug: personalization-and-jamstack
+  type: page
+  slots:
+    body:
+      - _id: 13499bef-6dcd-48bf-bc4a-3b3a0f39c064
+        type: talkBlock
+        parameters:
+          intro:
+            type: text
+            value: unresolved
+            connectedData:
+              syntax: jptr
+              pointer: /Contentful Talk Content/fields/intro
+          title:
+            type: text
+            value: unresolved
+            connectedData:
+              syntax: jptr
+              pointer: /Contentful Talk Content/fields/title
+          audience:
+            type: text
+            value: unresolved
+            connectedData:
+              syntax: jptr
+              pointer: /Contentful Talk Content/fields/audience/0
+      - _id: c297559d-0d7f-4a29-ade4-4cb7efbc41ae
+        type: hero
+        parameters:
+          title:
+            type: text
+            value: Overwritten composition example 1
+          description:
+            type: text
+            value: >-
+              This one is manually re-created and is not using any dynamic page
+              logic
+    footer:
+      - _id: b1b11e17-8aa4-44fb-8265-f4b894ad0136
+        type: footer
+    header:
+      - _id: 9b2e9596-e809-4602-ba94-1ea658f1592c
+        type: header
+  _dataResources:
+    Contentful Talk Content:
+      type: contentfulTalk
+      variables:
+        entryIds: 7IxWILLYiArU26r2UqtnaI
+        contentTypeId: talk
+created: '2023-05-25T11:24:50.43188+00:00'
+modified: '2023-05-25T11:34:28.551707+00:00'
+pattern: false
