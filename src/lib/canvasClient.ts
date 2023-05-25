@@ -6,7 +6,7 @@ import { CanvasClient } from "@uniformdev/canvas";
 
 // Extract required configuration values
 const {
-	serverRuntimeConfig: { apiKey, apiHost, projectId },
+	serverRuntimeConfig: { apiKey, apiHost, edgeApiHost, projectId },
 } = getConfig();
 
 /**
@@ -20,5 +20,6 @@ export function createCanvasClient() {
 		apiKey,
 		apiHost,
 		projectId,
+		edgeApiHost
 	});
 }

@@ -1,5 +1,6 @@
 // Canvas-related imports
 import { UniformText } from "@uniformdev/canvas-react";
+import Link from "next/link";
 
 /**
  Interface for the audienceColorMap object.
@@ -29,11 +30,13 @@ const audienceColorMap: AudienceColorMap = {
  @prop {string} title - The title to display on the Talk component.
  @prop {string} intro - The intro to display on the Talk component.
  @prop {string} audience - The audience label to display on the Talk component.
+ @prop {string} slug - The slug to the remote entry.
 */
 export type TalkProps = {
 	title?: string;
 	intro?: string;
 	audience?: string;
+	slug?: string;
 };
 
 /**
@@ -75,13 +78,18 @@ export function Talk(props: TalkProps): JSX.Element {
 					<AudienceLabel audienceName={props?.audience || "None"} />
 				</div>
 			</div>
-
-			<UniformText
-				as="div"
-				className="w-full font-bold text-xl text-gray-800 px-6"
-				parameterId="title"
-				placeholder="The title of the talk"
-			/>
+			<Link
+				legacyBehavior
+				href={"/talks/" + props?.slug}
+				className="flex flex-wrap"
+			>
+				<UniformText
+					as="div"
+					className="w-full font-bold text-xl text-gray-800 px-6"
+					parameterId="title"
+					placeholder="The title of the talk"
+				/>
+			</Link>
 
 			<UniformText
 				as="div"

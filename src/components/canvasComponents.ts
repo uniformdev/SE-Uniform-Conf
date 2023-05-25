@@ -3,6 +3,7 @@ import { Hero } from "./Hero";
 import { TalkList } from "./TalkList";
 import { WhyAttendLeft, WhyAttendRight } from "./WhyAttend";
 import { Talk } from "./Talk";
+import { TalkBlock } from "./TalkBlock";
 import { RegistrationForm } from "./RegistrationForm";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
@@ -24,6 +25,7 @@ import {
 	COMPONENT_HERO,
 	COMPONENT_REGISTRATION_FORM,
 	COMPONENT_TALK,
+	COMPONENT_TALK_BLOCK,
 	COMPONENT_TALK_LIST,
 	COMPONENT_WHY_ATTEND,
 } from "@/constants/components";
@@ -56,6 +58,10 @@ const components: UniformComponent[] = [
 	{
 		types: [COMPONENT_TALK],
 		component: Talk,
+	},
+	{
+		types: [COMPONENT_TALK_BLOCK],
+		component: TalkBlock,
 	},
 	{
 		types: [COMPONENT_WHY_ATTEND],
