@@ -57,6 +57,9 @@ composition:
           title:
             type: text
             value: Our Talks
+          marginTop:
+            type: select
+            value: '20'
     footer:
       - _id: 5d66e75c-2a50-4012-8416-a63b497b5c51
         type: footer
@@ -74,5 +77,5 @@ composition:
         sortFieldId: ''
         contentTypeId: talk
 created: '2023-05-23T13:04:57.18253+00:00'
-modified: '2023-05-25T10:59:48.519922+00:00'
+modified: '2023-05-25T20:35:15.202951+00:00'
 pattern: false

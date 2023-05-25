@@ -9,6 +9,30 @@ parameters:
     type: text
     helpText: ''
     typeConfig: null
+  - id: marginTop
+    name: Margin Top
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: '0'
+          value: '0'
+        - text: '4'
+          value: '4'
+        - text: '8'
+          value: '8'
+        - text: '12'
+          value: '12'
+        - text: '16'
+          value: '16'
+        - text: '20'
+          value: '20'
+        - text: '24'
+          value: '24'
+        - text: '28'
+          value: '28'
+        - text: '32'
+          value: '32'
 useTeamPermissions: true
 slots:
   - id: talks
@@ -22,4 +46,4 @@ slots:
 titleParameter: title
 canBeComposition: false
 created: '2023-05-23T13:04:42.747378+00:00'
-updated: '2023-05-23T13:04:42.747378+00:00'
+updated: '2023-05-25T20:28:50.299128+00:00'
