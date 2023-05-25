@@ -84,7 +84,9 @@ const TalkPage = ({ composition, menuItems }: Props) => {
 export const getServerSideProps = unstable_withUniformGetServerSideProps({
 	requestOptions: {
 		state: getCanvasState(),
+		
 	},
+	silent: true,
 	/**
 	 Handles the composition data for the page.
 	 
