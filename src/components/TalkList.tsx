@@ -21,7 +21,7 @@ export type TalkListProps = {
 export function TalkList(props: TalkListProps): JSX.Element {
 	return (
 		<fieldset>
-			<section className="bg-white border-b py-8">
+			<section className="bg-white border-b py-8 mt-20">
 				<div className="container mx-auto flex flex-wrap pt-4 pb-12">
 					<UniformText
 						as="h1"
