@@ -82,15 +82,13 @@ const TalkPage = ({ composition, menuItems }: Props) => {
  * @returns {Promise<object>} - The server-side props.
  */
 export const getServerSideProps = unstable_withUniformGetServerSideProps({
-	requestOptions: {
-		state: getCanvasState(),
-	},
 	silent: true,
+	
 	/**
-	 Handles the composition data for the page.
-	 
-	 @param {object} composition - The composition data.
-	 @returns {Promise<object>} - The composition props.
+	* Handles the composition data for the page.
+	* 
+	* @param {object} composition - The composition data.
+	* @returns {Promise<object>} - The composition props.
 	*/
 	async handleComposition(composition) {
 		if (
