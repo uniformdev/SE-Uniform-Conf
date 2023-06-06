@@ -1,6 +1,6 @@
 {
 	"name": "se-uniform-conf-ngm",
-	"version": "19.15.0",
+	"version": "19.17.0",
 	"private": true,
 	"license": "Apache-2.0",
 	"scripts": {
@@ -55,21 +55,21 @@
 	},
 	"dependencies": {
 		"@react-hook/window-scroll": "1.3.0",
-		"@uniformdev/canvas": "19.15.0",
-		"@uniformdev/canvas-contentful": "19.15.0",
-		"@uniformdev/canvas-next": "19.15.0",
-		"@uniformdev/canvas-react": "19.15.0",
-		"@uniformdev/context": "19.15.0",
-		"@uniformdev/context-devtools": "19.15.0",
-		"@uniformdev/context-next": "19.15.0",
-		"@uniformdev/context-react": "19.15.0",
-		"@uniformdev/project-map": "19.15.0",
+		"@uniformdev/canvas": "19.17.0",
+		"@uniformdev/canvas-contentful": "19.17.0",
+		"@uniformdev/canvas-next": "19.17.0",
+		"@uniformdev/canvas-react": "19.17.0",
+		"@uniformdev/context": "19.17.0",
+		"@uniformdev/context-devtools": "19.17.0",
+		"@uniformdev/context-next": "19.17.0",
+		"@uniformdev/context-react": "19.17.0",
+		"@uniformdev/project-map": "19.17.0",
 		"cookie": "0.5.0",
 		"graphql-request": "^6.1.0",
 		"next": "13.4.4",
 		"react": "18.2.0",
 		"react-dom": "18.2.0",
-		"styled-components": "5.3.11"
+		"styled-components": "6.0.0-rc.3"
 	},
 	"devDependencies": {
 		"@types/cookie": "0.5.1",
@@ -77,7 +77,7 @@
 		"@types/react": "18.2.8",
 		"@types/react-dom": "18.2.4",
 		"@types/styled-components": "5.1.26",
-		"@uniformdev/cli": "^19.15.0",
+		"@uniformdev/cli": "^19.17.0",
 		"autoprefixer": "^10.4.14",
 		"npm-run-all": "4.1.5",
 		"postcss": "^8.4.24",
