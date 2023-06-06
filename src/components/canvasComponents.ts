@@ -15,7 +15,6 @@ import {
 	createComponentStoreResolver,
 	DefaultNotImplementedComponent,
 	componentStore,
-	RenderComponentResolver,
 } from "@uniformdev/canvas-react";
 
 // Local imports
