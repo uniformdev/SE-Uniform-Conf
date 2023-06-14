@@ -8,7 +8,7 @@ import {
 	createUniformApiEnhancer,
 } from "@uniformdev/canvas";
 import { UniformSlot, UniformComposition } from "@uniformdev/canvas-react";
-import { unstable_withUniformGetServerSideProps } from "@uniformdev/canvas-next/route";
+import { withUniformGetServerSideProps } from "@uniformdev/canvas-next/route";
 
 // Local imports
 import { MenuItem } from "@/components/NavigationMenu";
@@ -81,7 +81,7 @@ const TalkPage = ({ composition, menuItems }: Props) => {
  * @param {object} requestOptions.state - The state of the Uniform canvas.
  * @returns {Promise<object>} - The server-side props.
  */
-export const getServerSideProps = unstable_withUniformGetServerSideProps({
+export const getServerSideProps = withUniformGetServerSideProps({
 	silent: true,
 	
 	/**
