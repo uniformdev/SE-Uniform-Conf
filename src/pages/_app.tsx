@@ -23,7 +23,10 @@ import "@/styles/globals.css";
 
 	return (
 		// Provide the Uniform context to the application
-		<UniformContext context={serverUniformContext ?? clientContext}>
+		<UniformContext
+			context={serverUniformContext ?? clientContext}
+			outputType={process.env.NODE_ENV === "development" ? "standard" : "edge"}
+		>
 			<Component {...pageProps} />
 		</UniformContext>
 	);
