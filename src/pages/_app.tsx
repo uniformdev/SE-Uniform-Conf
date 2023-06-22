@@ -12,7 +12,10 @@ export default function UniformConfApp({
 	serverUniformContext,
 }: UniformAppProps) {
 	return (
-		<UniformContext context={serverUniformContext ?? clientContext}>
+		<UniformContext
+			context={serverUniformContext ?? clientContext}
+			outputType={process.env.NODE_ENV === "development" ? "standard" : "edge"}
+		>
 			<Component {...pageProps} />
 		</UniformContext>
 	);

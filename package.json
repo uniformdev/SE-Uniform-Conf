@@ -69,6 +69,7 @@
 		"@uniformdev/canvas-strapi": "^17.1.0",
 		"@uniformdev/context": "19.17.0",
 		"@uniformdev/context-devtools": "19.17.0",
+		"@uniformdev/context-edge-vercel": "^19.27.0",
 		"@uniformdev/context-gtag": "19.17.0",
 		"@uniformdev/context-next": "19.17.0",
 		"@uniformdev/context-react": "19.17.0",
