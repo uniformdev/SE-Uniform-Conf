@@ -4,6 +4,15 @@ id: hero
 name: Hero
 icon: format-heading
 parameters:
+  - id: group_content
+    name: Content
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - description
+        - title
+        - image
   - id: title
     name: Title
     type: text
@@ -18,6 +27,25 @@ parameters:
       linesCount: '3'
   - id: image
     name: Image
+    type: image
+    helpText: ''
+    typeConfig: null
+  - id: group_button
+    name: Button
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - showButton
+        - buttonText
+        - buttonLink
+  - id: showButton
+    name: Show Button
+    type: checkbox
+    helpText: ''
+    typeConfig: null
+  - id: buttonText
+    name: Button Text
     type: text
     helpText: ''
     typeConfig: null
@@ -29,19 +57,9 @@ parameters:
       linkTypes:
         tel: false
         email: false
-  - id: buttonText
-    name: Button Text
-    type: text
-    helpText: ''
-    typeConfig: null
-  - id: showButton
-    name: Show Button
-    type: checkbox
-    helpText: ''
-    typeConfig: null
 useTeamPermissions: true
 slots: []
 titleParameter: title
 canBeComposition: false
 created: '2023-05-23T13:04:41.482215+00:00'
-updated: '2023-05-23T13:04:41.482215+00:00'
+updated: '2023-06-22T21:16:34.654177+00:00'

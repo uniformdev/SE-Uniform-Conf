@@ -4,6 +4,15 @@ id: whyAttend
 name: Why Attend
 icon: bulb
 parameters:
+  - id: group_content
+    name: Content
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - image
+        - description
+        - title
   - id: title
     name: Title
     type: text
@@ -27,7 +36,7 @@ slots: []
 titleParameter: title
 canBeComposition: false
 created: '2023-05-23T13:04:43.044742+00:00'
-updated: '2023-05-23T13:04:43.044742+00:00'
+updated: '2023-06-22T21:20:04.942664+00:00'
 variants:
   - id: left
     name: Left

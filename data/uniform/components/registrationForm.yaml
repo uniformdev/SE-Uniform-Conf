@@ -4,6 +4,17 @@ id: registrationForm
 name: Registration Form
 icon: format-center
 parameters:
+  - id: group_content
+    name: Content
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - success
+        - homeLinkText
+        - registeredText
+        - buttonText
+        - heading
   - id: heading
     name: Heading
     type: text
@@ -11,6 +22,11 @@ parameters:
     typeConfig: null
   - id: buttonText
     name: Button Text
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: success
+    name: Success
     type: text
     helpText: ''
     typeConfig: null
@@ -24,14 +40,9 @@ parameters:
     type: text
     helpText: ''
     typeConfig: null
-  - id: success
-    name: Success
-    type: text
-    helpText: ''
-    typeConfig: null
 useTeamPermissions: true
 slots: []
 titleParameter: heading
 canBeComposition: false
 created: '2023-05-23T13:04:42.12696+00:00'
-updated: '2023-05-23T13:04:42.12696+00:00'
+updated: '2023-06-22T21:18:33.17083+00:00'

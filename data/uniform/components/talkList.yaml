@@ -4,11 +4,25 @@ id: talkList
 name: Talk List
 icon: view-cols
 parameters:
+  - id: group_content
+    name: Content
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - title
   - id: title
     name: Title
     type: text
     helpText: ''
     typeConfig: null
+  - id: group_styling
+    name: Styling
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - marginTop
   - id: marginTop
     name: Margin Top
     type: select
@@ -46,4 +60,4 @@ slots:
 titleParameter: title
 canBeComposition: false
 created: '2023-05-23T13:04:42.747378+00:00'
-updated: '2023-05-25T20:28:50.299128+00:00'
+updated: '2023-06-22T21:17:11.020844+00:00'

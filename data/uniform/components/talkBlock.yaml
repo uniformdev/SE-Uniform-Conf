@@ -4,18 +4,18 @@ id: talkBlock
 name: Talk Block
 icon: image-text
 parameters:
+  - id: group_content
+    name: Content
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - title
+        - body
+        - audience
+        - intro
   - id: title
     name: Title
-    type: text
-    helpText: ''
-    typeConfig: null
-  - id: intro
-    name: Intro
-    type: text
-    helpText: ''
-    typeConfig: null
-  - id: audience
-    name: Audience
     type: text
     helpText: ''
     typeConfig: null
@@ -26,9 +26,19 @@ parameters:
     typeConfig:
       multiline: true
       linesCount: '20'
+  - id: audience
+    name: Audience
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: intro
+    name: Intro
+    type: text
+    helpText: ''
+    typeConfig: null
 useTeamPermissions: true
 slots: []
 titleParameter: title
 canBeComposition: false
 created: '2023-05-23T13:22:27.484181+00:00'
-updated: '2023-05-25T20:55:38.580883+00:00'
+updated: '2023-06-22T21:19:26.742339+00:00'

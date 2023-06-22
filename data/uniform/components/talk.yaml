@@ -4,6 +4,16 @@ id: talk
 name: Talk
 icon: mic
 parameters:
+  - id: group_content
+    name: Content
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - title
+        - slug
+        - audience
+        - intro
   - id: title
     name: Title
     type: text
@@ -29,4 +39,4 @@ slots: []
 titleParameter: title
 canBeComposition: false
 created: '2023-05-23T13:04:42.448463+00:00'
-updated: '2023-05-25T10:40:47.17392+00:00'
+updated: '2023-06-22T21:19:03.508107+00:00'
