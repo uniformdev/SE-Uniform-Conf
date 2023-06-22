@@ -69,7 +69,12 @@ export function Hero(props: HeroProps): JSX.Element {
 							<img
 								className="w-full md:w-4/5 z-50 min-h-500 max-h-500"
 								height={500}
-								src={`https://${props.image}`}
+								src={
+									props?.image.startsWith("https") ||
+									props?.image.startsWith("http")
+										? props?.image
+										: `https://${props.image}`
+								}
 								alt={props?.title}
 							/>
 						)}
