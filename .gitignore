@@ -37,7 +37,9 @@ wrangler.toml
 
 #.npmrc
 .npmrc
-lib/context/manifest.json
+
+#manifest
+src/lib/context/manifest.json
 
 # env
 .env
