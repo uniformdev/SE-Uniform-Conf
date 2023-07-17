@@ -87,7 +87,6 @@ export function Talk(props: TalkProps): JSX.Element {
 					as="div"
 					className="w-full font-bold text-xl text-gray-800 px-6"
 					parameterId="title"
-					placeholder="The title of the talk"
 				/>
 			</Link>
 
@@ -95,7 +94,6 @@ export function Talk(props: TalkProps): JSX.Element {
 				as="div"
 				className="text-gray-800 px-6 pb-6 text-sm"
 				parameterId="intro"
-				placeholder="This is the description of the talk"
 			/>
 		</div>
 	);

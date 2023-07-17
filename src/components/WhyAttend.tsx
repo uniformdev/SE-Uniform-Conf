@@ -92,14 +92,12 @@ export function WhyAttend(props: WhyAttendProps): JSX.Element {
 							as="h2"
 							className="w-full my-2 text-4xl font-bold leading-tight text-center text-gray-800"
 							parameterId="title"
-							placeholder="This is the title text"
 						/>
 						<hr />
 						<UniformText
 							as="p"
 							className="text-gray-800 p-10 whitespace-pre-line"
 							parameterId="description"
-							placeholder="This is the description text"
 						/>
 					</div>
 				</div>

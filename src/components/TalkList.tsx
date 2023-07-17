@@ -55,7 +55,6 @@ export function TalkList(props: TalkListProps): JSX.Element {
 						as="h1"
 						className="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800"
 						parameterId="title"
-						placeholder="This is the title text"
 					/>
 					<UniformSlot name="talks">
 						{({ child, key }) => (

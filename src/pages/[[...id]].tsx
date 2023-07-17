@@ -55,11 +55,10 @@ const Page = ({ composition, menuItems }: Props) => {
 	return (
 		<MenuItemsProvider menuItems={menuItems}>
 			<Head>
-				<title>{`UniformConf${
-					composition.parameters?.pageTitle?.value
-						? ` | ${composition.parameters.pageTitle.value}`
-						: ""
-				}`}</title>
+				<title>{`UniformConf${composition.parameters?.pageTitle?.value
+					? ` | ${composition.parameters.pageTitle.value}`
+					: ""
+					}`}</title>
 				<meta name="description" content="UniformConf"></meta>
 			</Head>
 			<div>
@@ -67,6 +66,7 @@ const Page = ({ composition, menuItems }: Props) => {
 					data={composition}
 					resolveRenderer={componentStore}
 					contextualEditingEnhancer={contextualEditingEnhancer}
+					contextualEditingDefaultPlaceholder={({ id }) => { return `This is a placeholder for the ${id} field` }}
 				>
 					<UniformSlot name="header" />
 					<UniformSlot name="body" />

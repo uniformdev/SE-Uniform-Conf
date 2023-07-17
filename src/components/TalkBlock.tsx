@@ -81,14 +81,12 @@ export function TalkBlock(props: TalkBlockProps): JSX.Element {
 				<UniformText
 					as="p"
 					parameterId="title"
-					placeholder="The title of the talk"
 					className="mt-1 text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900"
 				/>
 
 				<UniformText
 					as="p"
 					parameterId="intro"
-					placeholder="This is the introduction of the talk"
 					className="max-w-2xl mt-5 mx-auto text-xl text-gray-500"
 				/>
 
@@ -96,7 +94,6 @@ export function TalkBlock(props: TalkBlockProps): JSX.Element {
 					as="p"
 					className="mt-4 text-gray-700 text-lg leading-relaxed"
 					parameterId="body"
-					placeholder="This is the body of the talk"
 				/>
 			</div>
 		</div>

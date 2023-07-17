@@ -73,14 +73,12 @@ export function RegistrationForm(props: RegistrationFormProps): JSX.Element {
 								as="h1"
 								className="my-4 text-5xl font-bold leading-tight"
 								parameterId="success"
-								placeholder="This is the title text shown upon being registered."
 							/>
 						) : (
 							<UniformText
 								as="h1"
 								className="my-4 text-5xl font-bold leading-tight"
 								parameterId="heading"
-								placeholder="This is the heading text."
 							/>
 						)}
 						<form>
@@ -90,14 +88,12 @@ export function RegistrationForm(props: RegistrationFormProps): JSX.Element {
 										as="p"
 										className="pb-16"
 										parameterId="registeredText"
-										placeholder="This is the text shown upon being registered."
 									/>
 									<Link legacyBehavior href="/">
 										<UniformText
 											as="a"
 											className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg"
 											parameterId="homeLinkText"
-											placeholder="The home link text"
 										/>
 									</Link>
 								</>
@@ -107,7 +103,6 @@ export function RegistrationForm(props: RegistrationFormProps): JSX.Element {
 									onClick={onRegister}
 									className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg"
 									parameterId="buttonText"
-									placeholder="The button text"
 								/>
 							)}
 						</form>
