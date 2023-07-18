@@ -20,6 +20,7 @@ import { isDevelopmentEnvironment } from "@/lib/helpers/environmentUtilities";
 import { FOUR_OH_FOUR_COMPOSITION_ID } from "@/constants/compositions";
 import { createProjectMapClient } from "@/lib/projectMapClient";
 import { renderComponentResolver } from "@/components/canvasComponents";
+import { createRouteClient } from "@/lib/routeClient";
 
 // Extract configuration values
 const {
@@ -66,7 +67,9 @@ const Page = ({ composition, menuItems }: Props) => {
 					data={composition}
 					resolveRenderer={componentStore}
 					contextualEditingEnhancer={contextualEditingEnhancer}
-					contextualEditingDefaultPlaceholder={({ id }) => { return `This is a placeholder for the ${id} field` }}
+					contextualEditingDefaultPlaceholder={({ id }) => {
+						return `This is a placeholder for the ${id} field`;
+					}}
 				>
 					<UniformSlot name="header" />
 					<UniformSlot name="body" />
@@ -90,21 +93,24 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 		: "/";
 
 	try {
-		const canvasClient = createCanvasClient();
-		const { composition } = await canvasClient.getCompositionByNodePath({
-			projectMapNodePath: nodePath,
+		const routeClient = createRouteClient();
+		const result = await routeClient.getRoute({
+			path: nodePath,
 			state: getCanvasState(preview),
 			projectMapId,
 		});
 
-		return {
-			props: {
-				composition,
-				isPreview: Boolean(preview),
-				menuItems: await getNavigationMenu(),
-			},
-			revalidate: 30,
-		};
+		if (result.type === "composition") {
+			let composition = result.compositionApiResponse.composition;
+			return {
+				props: {
+					composition,
+					isPreview: Boolean(preview),
+					menuItems: await getNavigationMenu(),
+				},
+				revalidate: 30,
+			};
+		}
 	} catch (error: any) {
 		if (error?.statusCode === 404) {
 			if (isDevelopmentEnvironment()) {
